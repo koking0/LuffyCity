@@ -11,8 +11,8 @@
         <div class="btn rotatez" data-rotate="z">rotatez</div>
       </div>
     </div>
-    <canvas width="2560" height="1000"
-            style="min-width: 1200px; width: 101%; height: 650px;position: absolute; left: -1px; top: -130px;z-index: 1; background: #080516"
+    <canvas width="2560" height="520"
+            style="min-width: 1200px; width: 101%; height: 520px;position: absolute; left: -1px;z-index: 1; background: #080516"
     ></canvas>
     <div class="light-head"><h1>轻课是什么？怎么学习？</h1>
       <p>路飞学城&amp;老男孩IT打造的线下面授同步网络班，报名此课程学员无需来线<br>下，也可在线同步学习50万+年薪名师的精品前沿课程</p>
@@ -394,10 +394,9 @@
 
   .light-course .discipline {
     width: 100%;
-    height: 1850px;
+    height: 1650px;
     background: #f8f8f8;
     padding-top: 140px;
-    padding-bottom: 140px;
     margin-top: 520px;
   }
 
@@ -503,7 +502,6 @@
     height: 652px;
     margin: 0 auto;
     padding-top: 140px;
-    padding-bottom: 80px;
   }
 
   .title {
@@ -585,10 +583,10 @@
 
   .light-course .advantage {
     width: 100%;
-    height: 280px;
+    height: 200px;
     background: url(//hcdn1.luffycity.com/static/frontend/course/100/light-home-headbg_1556603653.9273884.png) no-repeat;
     background-size: 100% 100%;
-    padding-top: 83px;
+    padding-top: 80px;
   }
 
   .title {
@@ -630,7 +628,7 @@
   .light-course .compare .compare-list dl {
     text-align: center;
     cursor: pointer;
-    font-family: PingFangSC-Regular;
+
   }
 
   .light-course .compare .compare-list dl dd {
@@ -668,7 +666,7 @@
   }
 
   .light-course .compare .compare-item .item1 p {
-    font-family: PingFangSC-Regular;
+
     font-size: 18px;
     color: #333;
     margin-bottom: 10px;
@@ -679,7 +677,7 @@
   }
 
   .light-course .compare .compare-item .item1 span {
-    font-family: PingFangSC-Regular;
+
     font-size: 16px;
     color: #9b9b9b;
     line-height: 24px;
@@ -696,7 +694,7 @@
   }
 
   .light-course .compare .compare-item .item1 p {
-    font-family: PingFangSC-Regular;
+
     font-size: 18px;
     color: #333;
     margin-bottom: 10px;
@@ -707,7 +705,7 @@
   }
 
   .light-course .compare .compare-item .item1 span {
-    font-family: PingFangSC-Regular;
+
     font-size: 16px;
     color: #9b9b9b;
     line-height: 24px;
@@ -735,7 +733,7 @@
     display: flex;
     -ms-flex-align: center;
     align-items: center;
-    font-family: PingFangSC-Regular;
+
   }
 
   .light-course .compare .compare-item .item3 li img {
@@ -793,14 +791,22 @@
   }
 
   .light-course .compare .compare-item .item4 .li2 p {
-    font-family: PingFangSC-Regular;
+
     font-size: 18px;
     color: #333;
     margin-bottom: 7px;
   }
+  .light-course .discipline .discipline-list dl dd {
+    width: 100%;
+    height: 212px;
+    background: #fff;
+    padding: 18px 0;
+    position: relative;
+    box-sizing: border-box;
+  }
 
   .light-course .compare .compare-item .item4 .li2 span {
-    font-family: PingFangSC-Regular;
+
     font-size: 16px;
     color: #9b9b9b;
     line-height: 24px;
@@ -814,7 +820,7 @@
   }
 
   .light-course .compare .compare-item .item4 .li3 p {
-    font-family: PingFangSC-Regular;
+
     font-size: 18px;
     color: #333;
     display: -ms-flexbox;
@@ -838,7 +844,7 @@
     display: flex;
     -ms-flex-align: center;
     align-items: center;
-    font-family: PingFangSC-Regular;
+
     font-size: 16px;
     color: #9b9b9b;
     line-height: 30px;
@@ -860,7 +866,7 @@
     display: flex;
     -ms-flex-align: center;
     align-items: center;
-    font-family: PingFangSC-Regular;
+
     font-size: 16px;
     color: #9b9b9b;
     line-height: 30px;
@@ -871,7 +877,7 @@
     display: flex;
     -ms-flex-align: center;
     align-items: center;
-    font-family: PingFangSC-Regular;
+
     font-size: 16px;
     color: #9b9b9b;
     line-height: 30px;
@@ -886,14 +892,14 @@
   }
 
   .light-course .compare .compare-item .item4 .li2 p {
-    font-family: PingFangSC-Regular;
+
     font-size: 18px;
     color: #333;
     margin-bottom: 7px;
   }
 
   .light-course .compare .compare-item .item4 .li2 span {
-    font-family: PingFangSC-Regular;
+
     font-size: 16px;
     color: #9b9b9b;
     line-height: 24px;
@@ -904,14 +910,14 @@
   }
 
   .light-course .compare .compare-item .item4 .li2 p {
-    font-family: PingFangSC-Regular;
+
     font-size: 18px;
     color: #333;
     margin-bottom: 7px;
   }
 
   .light-course .compare .compare-item .item4 .li2 span {
-    font-family: PingFangSC-Regular;
+
     font-size: 16px;
     color: #9b9b9b;
     line-height: 24px;
@@ -922,14 +928,14 @@
   }
 
   .light-course .compare .compare-item .item4 .li2 p {
-    font-family: PingFangSC-Regular;
+
     font-size: 18px;
     color: #333;
     margin-bottom: 7px;
   }
 
   .light-course .compare .compare-item .item4 .li2 span {
-    font-family: PingFangSC-Regular;
+
     font-size: 16px;
     color: #9b9b9b;
     line-height: 24px;
@@ -952,7 +958,6 @@
     width: 1080px;
     height: auto;
     margin: 0 auto;
-    padding-top: 100px;
     padding-bottom: 126px;
   }
 
@@ -981,7 +986,6 @@
     height: 909px;
     background: #f5f5f6;
     padding-top: 72px;
-    padding-bottom: 126px;
   }
 
   .light-course .question .question-list {
@@ -1006,7 +1010,7 @@
     padding-bottom: 30px;
     padding-top: 30px;
     border-bottom: 1px dashed #cecece;
-    font-family: PingFangSC-Regular;
+
   }
 
   .light-course .question .question-list li p {
