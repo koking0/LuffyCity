@@ -12,41 +12,56 @@
       </div>
     </div>
     <canvas width="2560" height="520"
-            style="min-width: 1200px; width: 101%; height: 520px;position: absolute; left: -1px;z-index: 1; background: #080516"
-    ></canvas>
-    <div class="light-head"><h1>轻课是什么？怎么学习？</h1>
+            style="min-width: 1200px; width: 101%; height: 520px;position: absolute; left: -1px;z-index: 1; background: #080516"></canvas>
+    <div class="light-head">
+      <h1>轻课是什么？怎么学习？</h1>
       <p>路飞学城&amp;老男孩IT打造的线下面授同步网络班，报名此课程学员无需来线<br>下，也可在线同步学习50万+年薪名师的精品前沿课程</p>
-      <button><img alt=""
-                   src="//hcdn1.luffycity.com/static/frontend/course/86/下载 (4)_1556593146.779957.svg">名师在讲课ing...
+      <button>
+        <img alt="" src="//hcdn1.luffycity.com/static/frontend/course/86/下载 (4)_1556593146.779957.svg">名师在讲课ing...
       </button>
       <ul>
-        <li>老男孩线下班开班<img alt=""
-                         src="//hcdn1.luffycity.com/static/frontend/course/86/下载 (5)_1556593146.6907642.svg">
+        <li>
+          <span>老男孩线下班开班</span>
+          <img alt="" src="//hcdn1.luffycity.com/static/frontend/course/86/下载 (5)_1556593146.6907642.svg">
         </li>
-        <li>讲师随堂录屏<img alt=""
-                       src="//hcdn1.luffycity.com/static/frontend/course/86/下载 (5)_1556593146.6907642.svg">
+        <li>
+          <span>讲师随堂录屏</span>
+          <img alt="" src="//hcdn1.luffycity.com/static/frontend/course/86/下载 (5)_1556593146.6907642.svg">
         </li>
-        <li>视频上传至路飞平台<img alt=""
-                          src="//hcdn1.luffycity.com/static/frontend/course/86/下载 (5)_1556593146.6907642.svg">
+        <li>
+          <span>视频上传至路飞平台</span>
+          <img alt="" src="//hcdn1.luffycity.com/static/frontend/course/86/下载 (5)_1556593146.6907642.svg">
         </li>
         <li>线上学员同步学习</li>
       </ul>
     </div>
     <div class="discipline divtest sdiv on" data-animation="on">
-      <h1 class="title"><p class="h1">正在上课的学科</p> <span class="p">老男孩教育50万年薪金牌名师亲自上阵授课，名师更易出高徒</span>
+      <h1 class="title">
+        <p class="h1">正在上课的学科</p>
+        <span class="p">老男孩教育50万年薪金牌名师亲自上阵授课，名师更易出高徒</span>
       </h1>
       <div class="discipline-list div-3">
         <dl>
-          <dt><img src="//hcdn2.luffycity.com/media/frontend/degreecourse/web.png"></dt>
-          <dd><h3>大前端-Web全栈高级进阶之路</h3> <h4>5个月全面深入学习一线大厂前端岗位必备技能</h4>
-            <p>周期：5个月</p> <span>¥7999<i>面授班原价19800</i></span></dd>
+          <dt>
+            <img src="//hcdn2.luffycity.com/media/frontend/degreecourse/web.png">
+          </dt>
+          <dd>
+            <h3>大前端-Web全栈高级进阶之路</h3>
+            <h4>5个月全面深入学习一线大厂前端岗位必备技能</h4>
+            <p>周期：5个月</p>
+            <span>¥7999<i>面授班原价19800</i>
+            </span>
+          </dd>
         </dl>
         <dl>
-          <dt><img
-            src="//hcdn1.luffycity.com/static/frontend/degreecourse/18/light-wusir_1565070479.922035.png">
+          <dt>
+            <img src="//hcdn1.luffycity.com/static/frontend/degreecourse/18/light-wusir_1565070479.922035.png">
           </dt>
-          <dd><h3>Python开发工程师</h3> <h4>大学生、小白想要进入IT行业首选课程</h4>
-            <p>周期：6～10个月</p> <span>¥ 4980<i>面授班原价21800</i></span></dd>
+          <dd>
+            <h3>Python开发工程师</h3>
+            <h4>大学生、小白想要进入IT行业首选课程</h4>
+            <p>周期：6～10个月</p> <span>¥ 4980<i>面授班原价21800</i></span>
+          </dd>
         </dl>
         <dl>
           <dt><img src="//hcdn2.luffycity.com/media/frontend/light_course/new-media.png">
@@ -490,7 +505,6 @@
 
   .light-course .discipline .discipline-list dl dd span i {
     font-style: normal;
-
     font-size: 14px;
     color: #838383;
     text-decoration: line-through;
@@ -499,7 +513,7 @@
 
   .light-course .server {
     width: 1080px;
-    height: 652px;
+    height: 500px;
     margin: 0 auto;
     padding-top: 140px;
   }
@@ -537,6 +551,10 @@
     align-items: center;
     -ms-flex-pack: center;
     justify-content: center;
+  }
+
+  .light-course .server .server-list dl:hover {
+    background-color: rgb(248, 248, 248);
   }
 
   .light-course .server .server-list {

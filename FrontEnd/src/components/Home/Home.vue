@@ -8,98 +8,145 @@
       </el-carousel>
     </div>
     <div class="home-courses">
-      <div class="title"><h1>自学编程必备免费+实战教程</h1>
-        <p>这些课程是决定你能否成为编程奇才的关键教程— 免费+实战，我们送给你了</p></div>
+      <div class="title">
+        <h1>自学编程必备免费+实战教程</h1>
+        <p>这些课程是决定你能否成为编程奇才的关键教程— 免费+实战，我们送给你了</p>
+      </div>
       <div class="content">
-        <div class="more"><a class="line-center" target="_blank"
-                             href="https://www.luffycity.com/courses">更多实战<img
-          src="//hcdn1.luffycity.com/static/frontend/index/home-right_1567483307.3430119.png"></a>
+        <div class="more">
+          <router-link :to="{name:'PracticalLessons'}">
+            <span>更多实战</span>
+            <img src="static/images/home-right_1567483307.3430119.png" alt="home-right">
+          </router-link>
         </div>
         <div class="courses">
-          <ul class="free"><a target="_blank" href="https://www.luffycity.com/free/124">
+          <ul class="free">
+            <a target="_blank" href="https://www.luffycity.com/free/124">
+              <li>
+                <div class="img-box">
+                  <div></div>
+                  <img src="//hcdn1.luffycity.com/static/frontend/public_class/PY1@2x_1566529821.1110113.png">
+                </div>
+                <div class="course-item">
+                  <p class="title">跟随Alex金角大王3周上手Python开发</p>
+                  <div class="item-number">
+                    <p class="num">
+                      <img src="//hcdn1.luffycity.com/static/frontend/public_class/bofang_1567070083.9337127.png">
+                      <span>784人在学</span>
+                      <span>19小时 </span>
+                    </p>
+                    <p class="price"><span class="price1">免费</span></p>
+                  </div>
+                </div>
+              </li>
+            </a> <a target="_blank" href="https://www.luffycity.com/free/131">
             <li>
               <div class="img-box">
                 <div></div>
-                <img
-                  src="//hcdn1.luffycity.com/static/frontend/public_class/PY1@2x_1566529821.1110113.png"></div>
-              <div class="course-item"><p class="title">跟随Alex金角大王3周上手Python开发</p>
-                <div class="item-number"><p class="num"><img
-                  src="//hcdn1.luffycity.com/static/frontend/public_class/bofang_1567070083.9337127.png">
-                  <span>784人在学</span> <span>19小时 </span></p>
-                  <p class="price"><span class="price1">免费</span></p></div>
+                <img src="//hcdn1.luffycity.com/static/frontend/public_class/Linux1@2x_1566529820.6731546.png">
+              </div>
+              <div class="course-item">
+                <p class="title">跟随Redhat认证专家讲师2周玩转Linux</p>
+                <div class="item-number">
+                  <p class="num">
+                    <img src="//hcdn1.luffycity.com/static/frontend/public_class/bofang_1567070083.9337127.png">
+                    <span>106人在学</span>
+                    <span>16小时</span>
+                  </p>
+                  <p class="price"><span class="price1">免费</span></p>
+                </div>
               </div>
             </li>
-          </a> <a target="_blank" href="https://www.luffycity.com/free/131">
-            <li>
-              <div class="img-box">
-                <div></div>
-                <img
-                  src="//hcdn1.luffycity.com/static/frontend/public_class/Linux1@2x_1566529820.6731546.png"></div>
-              <div class="course-item"><p class="title">跟随Redhat认证专家讲师2周玩转Linux</p>
-                <div class="item-number"><p class="num"><img
-                  src="//hcdn1.luffycity.com/static/frontend/public_class/bofang_1567070083.9337127.png">
-                  <span>106人在学</span> <span>16小时</span></p>
-                  <p class="price"><span class="price1">免费</span></p></div>
-              </div>
-            </li>
-          </a> <a target="_blank" href="https://www.luffycity.com/free/143">
-            <li>
-              <div class="img-box">
-                <div></div>
-                <img
-                  src="//hcdn1.luffycity.com/static/frontend/public_class/web1@2x(1)_1566529822.6339395.png"></div>
-              <div class="course-item"><p class="title">3天搞定网站开发三剑客之HTML</p>
-                <div class="item-number"><p class="num"><img
-                  src="//hcdn1.luffycity.com/static/frontend/public_class/bofang_1567070083.9337127.png">
-                  <span>51人在学</span> <span>8小时</span></p>
-                  <p class="price"><span class="price1">免费</span></p></div>
-              </div>
-            </li>
-          </a></ul>
-          <ul class="combat"><a target="_blank"
-                                href="https://www.luffycity.com/courses/10/details-introduce">
-            <li>
-              <div class="img-box">
-                <div></div>
-                <img
-                  src="//hcdn1.luffycity.com/static/frontend/index/algorithm@2x_1567483301.520899.png"></div>
-              <div class="course-item"><p class="title">轻松学好开发人员必备的数据结构及算法知识</p>
-                <div class="item-number"><p class="num"><img
-                  src="//hcdn1.luffycity.com/static/frontend/public_class/bofang_1567070083.9337127.png">
-                  <span>3877人在学</span> <span>20小时</span></p>
-                  <p class="price"><span class="price1">¥ 79.20</span> <span
-                    class="price2">¥ 99.00</span></p></div>
-              </div>
-            </li>
-          </a> <a target="_blank" href="https://www.luffycity.com/courses/111/details-introduce">
-            <li>
-              <div class="img-box">
-                <div></div>
-                <img src="//hcdn1.luffycity.com/static/frontend/index/K8s@2x_1567483309.490485.png">
-              </div>
-              <div class="course-item"><p class="title">2周学会当下最热门的云计算架构之k8s实战</p>
-                <div class="item-number"><p class="num"><img
-                  src="//hcdn1.luffycity.com/static/frontend/public_class/bofang_1567070083.9337127.png">
-                  <span>919人在学</span> <span>13小时</span></p>
-                  <p class="price"><span class="price1">¥ 78.97</span> <span
-                    class="price2">¥ 149.00</span></p></div>
-              </div>
-            </li>
-          </a> <a target="_blank" href="https://www.luffycity.com/courses/123/details-introduce">
-            <li>
-              <div class="img-box">
-                <div></div>
-                <img src="//hcdn1.luffycity.com/static/frontend/index/go@2x_1567483307.2209833.png">
-              </div>
-              <div class="course-item"><p class="title">微服务这么火，还不会的是没机会进大厂了</p>
-                <div class="item-number"><p class="num"><img
-                  src="//hcdn1.luffycity.com/static/frontend/public_class/bofang_1567070083.9337127.png">
-                  <span>470人在学</span> <span>12小时</span></p>
-                  <p class="price"><span class="price1">¥ 99.00</span> <span
-                    class="price2">¥ 198.00</span></p></div>
-              </div>
-            </li>
-          </a></ul>
+          </a>
+            <a target="_blank" href="https://www.luffycity.com/free/143">
+              <li>
+                <div class="img-box">
+                  <div></div>
+                  <img src="//hcdn1.luffycity.com/static/frontend/public_class/web1@2x(1)_1566529822.6339395.png">
+                </div>
+                <div class="course-item">
+                  <p class="title">3天搞定网站开发三剑客之HTML</p>
+                  <div class="item-number">
+                    <p class="num">
+                      <img src="//hcdn1.luffycity.com/static/frontend/public_class/bofang_1567070083.9337127.png">
+                      <span>51人在学</span>
+                      <span>8小时</span>
+                    </p>
+                    <p class="price">
+                      <span class="price1">免费</span>
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </a>
+          </ul>
+          <ul class="combat">
+            <a target="_blank" href="https://www.luffycity.com/courses/10/details-introduce">
+              <li>
+                <div class="img-box">
+                  <div></div>
+                  <img src="//hcdn1.luffycity.com/static/frontend/index/algorithm@2x_1567483301.520899.png">
+                </div>
+                <div class="course-item">
+                  <p class="title">轻松学好开发人员必备的数据结构及算法知识</p>
+                  <div class="item-number">
+                    <p class="num">
+                      <img src="//hcdn1.luffycity.com/static/frontend/public_class/bofang_1567070083.9337127.png">
+                      <span>3877人在学</span>
+                      <span>20小时</span>
+                    </p>
+                    <p class="price">
+                      <span class="price1">¥ 79.20</span>
+                      <span class="price2">¥ 99.00</span>
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </a>
+            <a target="_blank" href="https://www.luffycity.com/courses/111/details-introduce">
+              <li>
+                <div class="img-box">
+                  <div></div>
+                  <img src="//hcdn1.luffycity.com/static/frontend/index/K8s@2x_1567483309.490485.png">
+                </div>
+                <div class="course-item">
+                  <p class="title">2周学会当下最热门的云计算架构之k8s实战</p>
+                  <div class="item-number">
+                    <p class="num">
+                      <img src="//hcdn1.luffycity.com/static/frontend/public_class/bofang_1567070083.9337127.png">
+                      <span>919人在学</span>
+                      <span>13小时</span>
+                    </p>
+                    <p class="price">
+                      <span class="price1">¥ 78.97</span>
+                      <span class="price2">¥ 149.00</span>
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </a>
+            <a target="_blank" href="https://www.luffycity.com/courses/123/details-introduce">
+              <li>
+                <div class="img-box">
+                  <div></div>
+                  <img src="//hcdn1.luffycity.com/static/frontend/index/go@2x_1567483307.2209833.png">
+                </div>
+                <div class="course-item">
+                  <p class="title">微服务这么火，还不会的是没机会进大厂了</p>
+                  <div class="item-number">
+                    <p class="num">
+                      <img src="//hcdn1.luffycity.com/static/frontend/public_class/bofang_1567070083.9337127.png">
+                      <span>470人在学</span>
+                      <span>12小时</span>
+                    </p>
+                    <p class="price">
+                      <span class="price1">¥ 99.00</span>
+                      <span class="price2">¥ 198.00</span>
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </a></ul>
         </div>
       </div>
     </div>
@@ -379,132 +426,129 @@
           <li>学员上课笔记</li>
           <li>作业批改</li>
         </ul>
-        <div class="outcomes-items"><h1>路飞学员成果</h1>
-          <div class="module-wrap classmate-say"> <!--v-for-start-->
+        <div class="outcomes-items">
+          <h1>路飞学员成果</h1>
+          <div class="module-wrap classmate-say">
             <section key="0">
               <dl>
-                <dt class="user-img"><img alt=""
-                                          src="//hcdn1.luffycity.com/static/frontend/head_portrait/logo@2x.png">
+                <dt class="user-img">
+                  <img alt="" src="//hcdn1.luffycity.com/static/frontend/head_portrait/logo@2x.png">
                 </dt>
-                <dd><p class="name">刘**</p>
-                  <p class="intro"><span>电商运营经理 | 立白集团</span><span>2020-05-01报名</span>
-                  </p></dd>
+                <dd>
+                  <p class="name">刘**</p>
+                  <p class="intro">
+                    <span>电商运营经理 | 立白集团</span>
+                    <span>2020-05-01报名</span>
+                  </p>
+                </dd>
               </dl>
               <ul>
-                <li><span>报名课程：</span>
+                <li>
+                  <span>报名课程：</span>
                   <article>Python全栈开发（中级）</article>
                 </li>
-                <li><span>为何报此课：</span>
+                <li>
+                  <span>为何报此课：</span>
                   <article>
                     主要目的提升个人能力，目前主要希望学习爬虫和数据分析方面的技巧，毕竟在电商销售行业目前，复盘都是结合数据来的，但是目前个人能力还是仅限excel，个人会一些VBA，正是因为这样，也知道学好pyhton的重要性
                   </article>
                 </li>
-                <li><span>为何选路飞：</span>
+                <li>
+                  <span>为何选路飞：</span>
                   <article>
                     看了Alex老师的视频，更加下决心要学好python，以前自己自学过，进度非常慢，因为大学专业不是计算机，理解一些计算机的运行方式以及相关的专业词汇很绕，感觉很浪费时间，为了提高效率，选择报班。
                   </article>
                 </li>
-                <li><span>你的期待：</span>
+                <li>
+                  <span>你的期待：</span>
                   <article>6个月后能通过爬虫获取数据，并结合现有数据，进行数据分析，给项目运营带来有价值的参考。</article>
                 </li>
               </ul>
             </section>
             <section key="1">
               <dl>
-                <dt class="user-img"><img alt=""
-                                          src="//hcdn1.luffycity.comstatic/frontend/head_portrait/logo@2x.png">
+                <dt class="user-img">
+                  <img alt="" src="//hcdn1.luffycity.comstatic/frontend/head_portrait/logo@2x.png">
                 </dt>
-                <dd><p class="name">王**</p>
-                  <p class="intro"><span>运维工程师 | 更美app</span><span>2020-04-28报名</span>
+                <dd>
+                  <p class="name">王**</p>
+                  <p class="intro">
+                    <span>运维工程师 | 更美app</span>
+                    <span>2020-04-28报名</span>
                   </p></dd>
               </dl>
               <ul>
-                <li><span>报名课程：</span>
+                <li>
+                  <span>报名课程：</span>
                   <article>Python全栈开发（中级）</article>
                 </li>
-                <li><span>为何报此课：</span>
+                <li>
+                  <span>为何报此课：</span>
                   <article>运维要会开发 提升自己。运维不会开发不行。多挣钱。还得写这么多。不会开发发展有瓶颈。</article>
                 </li>
-                <li><span>为何选路飞：</span>
+                <li>
+                  <span>为何选路飞：</span>
                   <article>入行就是老男孩、从linux培训班开始的。实际运维工作已经满三年。好评。好的没话说。真的真的 。oldboy，人生导师，指路明灯</article>
                 </li>
-                <li><span>你的期待：</span>
+                <li>
+                  <span>你的期待：</span>
                   <article>有成熟的、独立的平台开发能力。差异化发展，要做运维工程师中，开发能力最牛逼的那帮人。</article>
                 </li>
               </ul>
-            </section><!--v-for-end--> </div>
+            </section>
+          </div>
           <div class="module-wrap offer-wall" style="display: none;">
-            <div class="offer-wall-contain"> <!--v-for-start--><!--v-for-end--> </div>
+            <div class="offer-wall-contain"></div>
           </div>
-          <div class="module-wrap classmate-speech" style="display: none;"> <!--v-for-start-->
-            <!--v-for-end--> </div>
+          <div class="module-wrap classmate-speech" style="display: none;"></div>
           <div class="module-wrap lecture-notes" style="display: none;">
-            <div class="lecture-notes-contain"> <!--v-for-start--><!--v-for-end--> </div>
+            <div class="lecture-notes-contain"></div>
           </div>
-          <div class="module-wrap home-homework" style="display: none;"><img
-            src="//hcdn1.luffycity.com/static/frontend/index/QQ20190903-0_1567505672.220265.jpeg">
+          <div class="module-wrap home-homework" style="display: none;">
+            <img src="//hcdn1.luffycity.com/static/frontend/index/QQ20190903-0_1567505672.220265.jpeg">
             <img src="//hcdn1.luffycity.com/static/frontend/index/QQ20190903-1_1567505672.3231828.jpeg">
             <img src="//hcdn1.luffycity.com/static/frontend/index/QQ20190903-2_1567505674.3654132.jpeg">
             <img src="//hcdn1.luffycity.com/static/frontend/index/QQ20190903-3_1567505672.7459126.jpeg">
           </div>
-          <a target="_blank" class="look-more" href="https://www.luffycity.com/students">查看更多</a></div>
+          <a target="_blank" class="look-more" href="https://www.luffycity.com/students">查看更多</a>
+        </div>
       </div>
     </div>
-    <div class="know-luffy"><h1>带你认识路飞学城</h1>
+    <div class="know-luffy">
+      <h1>带你认识路飞学城</h1>
       <ul class="luffy-items">
-        <li><img
-          src="//hcdn1.luffycity.com/static/frontend/index/qiye@2x_1567483310.1013422.png">
-          <p>路飞的愿景</p> <span>成为中国社会公认的最受信赖IT教育品牌</span></li>
-        <li><img
-          src="//hcdn1.luffycity.com/static/frontend/index/diannao@2x_1567483308.2864695.png">
-          <p>路飞的使命</p> <span>为学员提供高质量的IT课程和服务，帮助年轻<br
-          >人通过努力学习获得体面的工作和生活</span></li>
-        <li><img
-          src="//hcdn1.luffycity.com/static/frontend/index/renwu@2x_1567483310.1931462.png">
-          <p>路飞的价值观</p> <span>诚实正直、追求卓越、团队精神、信守承诺<br>公平正义</span></li>
+        <li>
+          <img src="//hcdn1.luffycity.com/static/frontend/index/qiye@2x_1567483310.1013422.png">
+          <p>路飞的愿景</p>
+          <span>成为中国社会公认的最受信赖IT教育品牌</span>
+        </li>
+        <li>
+          <img src="//hcdn1.luffycity.com/static/frontend/index/diannao@2x_1567483308.2864695.png">
+          <p>路飞的使命</p>
+          <span>为学员提供高质量的IT课程和服务，帮助年轻<br>人通过努力学习获得体面的工作和生活</span>
+        </li>
+        <li>
+          <img src="//hcdn1.luffycity.com/static/frontend/index/renwu@2x_1567483310.1931462.png">
+          <p>路飞的价值观</p>
+          <span>诚实正直、追求卓越、团队精神、信守承诺<br>公平正义</span>
+        </li>
       </ul>
-      <button><img class="img1"
-                   src="//hcdn1.luffycity.com/static/frontend/index/bofang-2@2x_1567483306.3789.png">
-        <img class="img2"
-             src="//hcdn1.luffycity.com/static/frontend/index/bofang-bak14@2x_1567483306.550233.png"> 带你认识路飞学城
+      <button>
+        <img class="img1" src="//hcdn1.luffycity.com/static/frontend/index/bofang-2@2x_1567483306.3789.png">
+        <img class="img2" src="//hcdn1.luffycity.com/static/frontend/index/bofang-bak14@2x_1567483306.550233.png">
+        <span>带你认识路飞学城</span>
       </button>
     </div>
-    <div class="home-img"><img alt="" src=""
-                               style="max-width: 1403px; max-height: 737px;"></div>
-    <ul class="side" id="sideShow" style="display: block;">
-      <a target="_blank" href="#">
-        <li>
-          <img src="//hcdn2.luffycity.com/media/frontend/about_us/market-check-2.svg" alt="market-check">
-          <p>监察</p>
-          <span>市场<br>监察</span>
-        </li>
-      </a>
-      <a target="_blank" href="#">
-        <li>
-          <img src="//hcdn1.luffycity.com/static/frontend/activity/side-feedback_1564141045.0403872.svg"
-               alt="side-feedback">
-          <p>反馈</p><span>意见<br>反馈</span>
-        </li>
-      </a>
-      <a target="_blank" href="#">
-        <li>
-          <img src="//hcdn1.luffycity.com/static/frontend/activity/side-help_1564141045.205138.svg" alt="side-help">
-          <p>帮助</p><span>帮助<br>中心</span>
-        </li>
-      </a>
-      <li>
-        <img src="//hcdn1.luffycity.com/static/frontend/activity/side-consult_1564141044.7659125.svg"
-             alt="side-consult">
-        <p>咨询</p> <span>在线<br>咨询</span>
-      </li>
-      <li>
-        <img class="wechat" src="/static/images/side-wechat_1564141045.4245212.svg" alt="side-wechat">
-      </li>
-    </ul>
+    <div class="home-img">
+      <img alt="" src="" style="max-width: 1403px; max-height: 737px;"></div>
+
+
   </div>
 </template>
 
 <script>
+  import Side from "../Common/Side";
+
   export default {
     name: "Home",
     data() {
@@ -524,6 +568,9 @@
           }
         ]
       };
+    },
+    components: {
+      Side,
     },
   }
 </script>
@@ -890,8 +937,8 @@
 
   .luffy-city .study-problem ul li {
     text-align: center;
-    width: 279px;.luffy-city .solve-problem .content-item sectio
-    height: 244px;
+    width: 279px;
+  . luffy-city . solve-problem . content-item sectio height: 244 px;
     background: #fff;
     margin-right: 21px;
     margin-bottom: 34px;
@@ -988,37 +1035,45 @@
   .luffy-city .solve-problem .content-item section {
     position: absolute;
   }
+
   .luffy-city .solve-problem .item2 {
     right: 236px;
     top: 110px;
   }
+
   .luffy-city .solve-problem .item3 {
     left: 240px;
     top: 207px;
   }
+
   .luffy-city .solve-problem .item4 {
     right: 157px;
     bottom: 115px;
   }
+
   .luffy-city .home-teacher .teacher-wrap .left, .luffy-city .home-teacher .teacher-wrap .right {
     width: 29px;
     height: 54px;
     position: absolute;
     top: 180px;
   }
+
   .luffy-city .home-teacher .teacher-wrap .right {
     right: 0;
   }
+
   .luffy-city .home-teacher .teacher-wrap .left, .luffy-city .home-teacher .teacher-wrap .right {
     width: 29px;
     height: 54px;
     position: absolute;
     top: 180px;
   }
+
   .luffy-city .solve-problem .item5 {
     left: 240px;
     bottom: 50px;
   }
+
   .luffy-city .home-teacher .teacher-page {
     display: -ms-flexbox;
     display: flex;
@@ -1028,6 +1083,7 @@
     justify-content: center;
     margin-top: 50px;
   }
+
   .luffy-city .home-teacher .teacher-page li {
     width: 76px;
     height: 73px;
@@ -1039,17 +1095,20 @@
     align-items: flex-end;
     cursor: pointer;
   }
+
   .luffy-city .home-teacher .teacher-page .this img {
     width: 72px;
     height: 65px;
     border: 2px solid #ffc210;
   }
+
   .luffy-city .home-teacher .teacher-page li img {
     width: 67px;
     height: 64px;
     border-radius: 8px;
     border: 2px solid #eee;
   }
+
   .luffy-city .solve-problem .item1 {
     left: 240px;
     top: 0;
@@ -1238,7 +1297,7 @@
   .luffy-city .learn-outcomes .outcomes-cotent .side {
     width: 282px;
     height: 784px;
-    background: linear-gradient(180deg,rgba(25,28,36,.28),#1b1d26 43%,rgba(27,29,39,.21));
+    background: linear-gradient(180deg, rgba(25, 28, 36, .28), #1b1d26 43%, rgba(27, 29, 39, .21));
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -1253,10 +1312,12 @@
     box-shadow: -2px 0 0 0 #ffc210;
     background: linear-gradient(270deg, #1b1d26, #353949);
   }
+
   .luffy-city .learn-outcomes .outcomes-cotent .outcomes-items .classmate-say section ul {
     color: #fff;
     margin-top: 18px;
   }
+
   .luffy-city .learn-outcomes .outcomes-cotent .outcomes-items .classmate-say section ul li {
     display: -ms-flexbox;
     display: flex;
@@ -1264,12 +1325,14 @@
     align-items: flex-start;
     margin-bottom: 10px;
   }
+
   .luffy-city .learn-outcomes .outcomes-cotent .outcomes-items .classmate-say section ul li span {
     width: 100px;
     height: auto;
     font-weight: 300;
     display: inline-block;
   }
+
   .luffy-city .learn-outcomes .outcomes-cotent .outcomes-items .classmate-say section ul li article {
     width: 760px;
     color: #fff;
@@ -1279,6 +1342,7 @@
     white-space: nowrap;
     overflow: hidden;
   }
+
   .luffy-city .learn-outcomes .outcomes-cotent .side li {
     height: 80px;
     color: #fff;
@@ -1502,46 +1566,5 @@
     height: 16px;
     margin-right: 8px;
     transition: all .2s ease-in-out;
-  }
-
-  #sideShow {
-    width: 50px;
-    height: auto;
-    position: fixed;
-    right: 10px;
-    bottom: 50%;
-    margin-bottom: -108px;
-    z-index: 10;
-    display: none;
-  }
-
-  #sideShow li {
-    width: 100%;
-    height: 50px;
-    background: #ccc;
-    border-radius: 2px;
-    font-size: 12px;
-    color: #fff;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin-bottom: 4px;
-    cursor: pointer;
-    transition: all .2s ease-in-out;
-    position: relative;
-  }
-
-  .side li img {
-    width: 24px;
-    height: auto;
-  }
-
-  .side li span {
-    display: none;
   }
 </style>

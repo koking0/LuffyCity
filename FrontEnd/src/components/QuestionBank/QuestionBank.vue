@@ -8,9 +8,9 @@
             <div><p class="name"></p>
               <p class="ranking">班级排名：第<span>&nbsp;84&nbsp;</span>名</p></div>
           </div>
-          <div class="more_choice"><p class="switch_cls">选择班级:</p> <!--v-for-start--><span
+          <div class="more_choice"><p class="switch_cls">选择班级:</p> <span
             class="choose" key="0">Python全栈中级开发</span><span key="1">能力等级测试</span>
-            <!--v-for-end--> </div>
+             </div>
         </div>
         <div class="top_cont2">
           <div class="Chart_Box">
@@ -38,7 +38,7 @@
       <div class="loading" style="display: none;"><img
         src="//hcdn1.luffycity.com/static/frontend/activity/loading-tiku_1564127715.6831748.gif">
       </div>
-      <main style=""> <!--v-for-start-->
+      <main style="">
         <section class="mask_box" key="0"> <!--v-if-->
           <div class="imgbac"><img alt=""
                                    src="//hcdn1.luffycity.com/static/frontend/index/luffyX_1524209193.9734485.svg">
@@ -62,7 +62,7 @@
                                    src="//hcdn1.luffycity.com/static/frontend/index/错题本_1524198512.8152263.svg">
           </div>
           <p class="hoverp">我的错题本</p>
-          <p class="hoverp">近30天: 新增错题0道, 待复习0道</p></section><!--v-for-end-->
+          <p class="hoverp">近30天: 新增错题0道, 待复习0道</p></section>
         <section class="mask_box">
           <div class="imgbac forthcoming"><img
             src="//hcdn1.luffycity.com/static/frontend/activity/icon5_1564141064.267903.svg">
@@ -268,7 +268,7 @@
 
   .question_box .main header {
     text-align: center;
-    font-size: .36rem;
+    font-size: 28px;
     color: #4a4a4a;
     margin-bottom: .6rem;
   }
@@ -284,28 +284,26 @@
   }
 
   .question_box .main .loading img {
-    width: .5rem;
-    height: .5rem;
+    width: 15px;
+    height: 15px;
   }
 
   .question_box .main main {
-    width: 12rem;
+    width: 1200px;
     margin: 0 auto;
     overflow: hidden;
   }
 
   .question_box .main main .mask_box:first-of-type, .question_box .main main .mask_box:nth-of-type(4) {
-    margin-left: .3rem;
+    margin-left: 300px;
   }
 
   .question_box .main main .mask_box {
-    width: 3.5rem;
-    height: 3.7rem;
+    width: 300px;
+    height: 300px;
     background: #fff;
-    margin-top: .1rem;
-    margin-bottom: .5rem;
-    margin-right: .3rem;
     border-radius: 2px;
+    margin: 30px 59px;
     float: left;
     display: -ms-flexbox;
     display: flex;
@@ -319,8 +317,8 @@
   }
 
   .question_box .main main .mask_box .imgbac {
-    width: .85rem;
-    height: .85rem;
+    width: 85px;
+    height: 85px;
     border-radius: 100%;
     background: #56cbc4;
     display: -ms-flexbox;
@@ -329,7 +327,7 @@
     align-items: center;
     -ms-flex-pack: center;
     justify-content: center;
-    margin-top: .62rem;
+    margin-top: 62px;
   }
 
   .question_box .main main .mask_box .imgbac img {
@@ -340,27 +338,27 @@
   .question_box .main main .mask_box p:first-of-type {
     font-size: .18rem;
     color: #4a4a4a;
-    padding-top: .3rem;
-    padding-bottom: .18rem;
+    padding-top: 18px;
+    padding-bottom: 10px;
   }
 
   .question_box .main main .hoverp {
-    padding: 0 .3rem;
+    padding: 0 3px;
     box-sizing: border-box;
   }
 
   .question_box .main main .mask_box p:nth-of-type(2) {
-    font-size: .16rem;
+    font-size: 16px;
     color: #5d6870;
   }
 
   .question_box .main main .hoverp {
-    padding: 0 .3rem;
+    padding: 0 3px;
     box-sizing: border-box;
   }
 
   .question_box .main main .mask_box:first-of-type, .question_box .main main .mask_box:nth-of-type(4) {
-    margin-left: .3rem;
+    margin-left: 3px;
   }
 
   .question_box .maskbox {

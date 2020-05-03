@@ -4,8 +4,9 @@ import Axios from 'axios'
 Axios.defaults.baseURL = 'https://www.luffycity.com/api/v1/'
 
 // 分类列表API
-export const categoryList = ()=>{
-  return Axios.get('free/category/').then(res=>res.data);
+export const getContent = (url)=>{
+  console.log(url);
+  return Axios.get(url).then(res=>res.data);
 }
 // 免费课程详情数据
 export const courseDetail = (courseId) => {

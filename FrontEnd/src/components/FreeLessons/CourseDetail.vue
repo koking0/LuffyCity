@@ -42,26 +42,6 @@
                 <img src="//hcdn1.luffycity.com/static/frontend/public_class/dui@2x_1567043311.9183662.png">
                 <p>理解Web框架核心原理</p>
               </li>
-              <li key="1">
-                <img src="//hcdn1.luffycity.com/static/frontend/public_class/dui@2x_1567043311.9183662.png">
-                <p>从零开始开发一个自己的Web框架</p>
-              </li>
-              <li key="2">
-                <img src="//hcdn1.luffycity.com/static/frontend/public_class/dui@2x_1567043311.9183662.png">
-                <p>学会Django框架各组件（URL、Views、ORM、Templates）等的使用</p>
-              </li>
-              <li key="3">
-                <img src="//hcdn1.luffycity.com/static/frontend/public_class/dui@2x_1567043311.9183662.png">
-                <p>掌握Django框架高级特性如中间件、Session、信号、Channel等的使用</p>
-              </li>
-              <li key="4">
-                <img src="//hcdn1.luffycity.com/static/frontend/public_class/dui@2x_1567043311.9183662.png">
-                <p>实战案例：图书管理系统开发</p>
-              </li>
-              <li key="5">
-                <img src="//hcdn1.luffycity.com/static/frontend/public_class/dui@2x_1567043311.9183662.png">
-                <p>实战案例：问卷调查系统开发</p>
-              </li>
             </ul>
           </div>
           <div class="course-outline">
@@ -194,33 +174,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="preview-video beyond">
-      <div class="content" id="videoContent">
-        <div class="title">
-          <h1>正在播放： - </h1>
-          <div class="close">
-            <img src="//hcdn1.luffycity.com/static/frontend/activity/Shape@2x_1568185800.6213546.png"></div>
-        </div>
-        <div class="video" id="freeVideo"></div>
-        <ul>
-          <li key="0">
-            <img alt="" src="//hcdn1.luffycity.com/static/frontend/public_class/PY4@2x_1566529821.493215.png">
-            <img src="//hcdn1.luffycity.com/static/frontend/activity/bofang2@2x_1568185800.6839051.png">
-            <p>Django介绍</p>
-          </li>
-          <li key="1">
-            <img alt="" src="//hcdn1.luffycity.com/static/frontend/public_class/PY4@2x_1566529821.493215.png">
-            <img src="//hcdn1.luffycity.com/static/frontend/activity/bofang2@2x_1568185800.6839051.png">
-            <p>Http协议介绍</p>
-          </li>
-          <li key="2">
-            <img alt="" src="//hcdn1.luffycity.com/static/frontend/public_class/PY4@2x_1566529821.493215.png">
-            <img src="//hcdn1.luffycity.com/static/frontend/activity/bofang2@2x_1568185800.6839051.png">
-            <p>Http协议本质是基于Socket实现的</p>
-          </li>
-        </ul>
       </div>
     </div>
   </div>

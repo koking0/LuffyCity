@@ -19,25 +19,23 @@
         <div>
           <ul>
             <li v-for="(course, index) in courseDetail" :key="course.id" @click="detailHandler(course.id)">
-              <a target="_blank" href="">
-                <div class="img-box">
-                  <div></div>
-                  <img alt="" :src="course.course_img">
+              <div class="img-box">
+                <img alt="" :src="course.course_img">
+              </div>
+              <div class="course-item">
+                <p class="title">{{course.course_slogan}}</p>
+                <div class="item-number">
+                  <p class="num">
+                    <img src="/static/images/bofang_1567070083.9337127.png">
+                    {{course.learn_number}}人在学
+                  </p>
+                  <p class="time">
+                    <span>{{getLevelName(course.level)}}</span>
+                    <span>{{course.hours}}小时</span>
+                  </p>
                 </div>
-                <div class="course-item">
-                  <p class="title">{{course.course_slogan}}</p>
-                  <div class="item-number">
-                    <p class="num">
-                      <img src="/static/images/bofang_1567070083.9337127.png">
-                      {{course.learn_number}}人在学
-                    </p>
-                    <p class="time">
-                      <span>{{getLevelName(course.level)}}</span>
-                      <span>{{course.hours}}小时</span>
-                    </p>
-                  </div>
-                </div>
-              </a></li>
+              </div>
+            </li>
           </ul>
         </div>
       </section>
@@ -63,7 +61,7 @@
     methods: {
       // 处理分类列表
       getCategoryList() {
-        this.$http.categoryList().then(res => {
+        this.$http.getContent('free/category/').then(res => {
           this.categoryList = res.data;
           let allItem = {id: 0, name: '全部', courses: []}
           for (let i = 0; i < this.categoryList.length; i++) {
@@ -106,11 +104,11 @@
         this.getAllCategoryList();
       },
       // 课程详情事件
-      detailHandler(id){
+      detailHandler(id) {
         this.$router.push({
-          name:"course.detail",
-          params:{
-            detailId:id
+          name: "course.detail",
+          params: {
+            detailId: id
           }
         })
       }

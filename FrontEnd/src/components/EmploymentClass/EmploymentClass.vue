@@ -1,201 +1,264 @@
 <template>
-  <div class="box" _v-5ac1c0f4="">
-    <div class="employment-head" _v-5ac1c0f4="">
-      <div id="jsi-water-line-container" class="container" _v-5ac1c0f4="">
+  <div class="box">
+    <div class="employment-head">
+      <div id="jsi-water-line-container" class="container">
         <canvas width="1423" height="520"></canvas>
       </div>
-      <div class="head-content" _v-5ac1c0f4=""><h1 _v-5ac1c0f4="">名师授课 + 1V1辅导</h1>
-        <p _v-5ac1c0f4="">业内领先的 “在线1V1辅导+闯关” 学习模式，提供逐行审阅代码、 1v1名企在职<br _v-5ac1c0f4="">导师辅导答疑、 推荐就业等服务</p>
-        <button _v-5ac1c0f4="">了解1000+师兄的就业去向</button>
-        <ul _v-5ac1c0f4="">
-          <li _v-5ac1c0f4="">10年线下培训经验<img alt="" _v-5ac1c0f4=""
-                                           src="//hcdn1.luffycity.com/static/frontend/course/86/下载 (5)_1556593146.6907642.svg">
+      <div class="head-content">
+        <h1>名师授课 + 1V1辅导</h1>
+        <p>业内领先的 “在线1V1辅导+闯关” 学习模式，提供逐行审阅代码、 1v1名企在职<br>导师辅导答疑、 推荐就业等服务</p>
+        <button>了解1000+师兄的就业去向</button>
+        <ul>
+          <li>
+            <span>10年线下培训经验</span>
+            <img alt="" src="//hcdn1.luffycity.com/static/frontend/course/86/下载 (5)_1556593146.6907642.svg">
           </li>
-          <li _v-5ac1c0f4="">100+位精英讲师<img alt="" _v-5ac1c0f4=""
-                                           src="//hcdn1.luffycity.com/static/frontend/course/86/下载 (5)_1556593146.6907642.svg">
+          <li>
+            <span>100+位精英讲师</span>
+            <img alt="" src="//hcdn1.luffycity.com/static/frontend/course/86/下载 (5)_1556593146.6907642.svg">
           </li>
-          <li _v-5ac1c0f4="">20000+毕业学员验证<img alt="" _v-5ac1c0f4=""
-                                              src="//hcdn1.luffycity.com/static/frontend/course/86/下载 (5)_1556593146.6907642.svg">
+          <li>
+            <span>20000+毕业学员验证</span>
+            <img alt="" src="//hcdn1.luffycity.com/static/frontend/course/86/下载 (5)_1556593146.6907642.svg">
           </li>
-          <li _v-5ac1c0f4="">95.8%就业率保证</li>
+          <li>95.8%就业率保证</li>
         </ul>
       </div>
     </div>
-    <div class="employment-course divtest sdiv on" data-animation="on" _v-5ac1c0f4="">
-      <div class="title" _v-5ac1c0f4=""><h1 class="h1" _v-5ac1c0f4="">正在开班学科</h1>
-        <p class="p" _v-5ac1c0f4="">网红讲师 + 在线1V1名企导师辅导 + 闯关学习，逐行审阅代码、视频1v1考核等服务，助你高薪就业</p></div>
-      <ul class="div-3" _v-5ac1c0f4=""><a target="_blank" _v-5ac1c0f4=""
-                                          href="https://www.luffycity.com/micro/python-middle">
-        <li _v-5ac1c0f4=""><img _v-5ac1c0f4=""
-                                src="//hcdn1.luffycity.com/static/frontend/index/AI@2x_1567483301.224543.png">
-          <div class="course-item" _v-5ac1c0f4=""><p class="title" _v-5ac1c0f4="">迎上AI风口，抓住行业红利，0基础6个月炼成人工智能时代热门人才</p>
-            <div class="num" _v-5ac1c0f4=""><p _v-5ac1c0f4=""><span _v-5ac1c0f4="">学习周期：319小时</span> <span
-              _v-5ac1c0f4="">学员评论：15753条</span></p>
-              <p _v-5ac1c0f4=""><img _v-5ac1c0f4=""
-                                     src="//hcdn1.luffycity.com/static/frontend/public_class/bofang_1567070083.9337127.png">
-                <span _v-5ac1c0f4="">2061人</span></p></div>
+    <div class="employment-course divtest sdiv on" data-animation="on">
+      <div class="title">
+        <h1 class="h1">正在开班学科</h1>
+        <p class="p">网红讲师 + 在线1V1名企导师辅导 + 闯关学习，逐行审阅代码、视频1v1考核等服务，助你高薪就业</p>
+      </div>
+      <ul class="div-3">
+        <a target="_blank" href="https://www.luffycity.com/micro/python-middle">
+          <li>
+            <img src="/static/images/AI@2x_1567483301.224543.png" alt="AI">
+            <div class="course-item">
+              <p class="title">迎上AI风口，抓住行业红利，0基础6个月炼成人工智能时代热门人才</p>
+              <div class="num">
+                <p>
+                  <span>学习周期：319小时</span>
+                  <span>学员评论：15753条</span>
+                </p>
+                <p>
+                  <img src="/static/images/bofang_1567070083.9337127.png" alt="bofang">
+                  <span>2061人</span>
+                </p>
+              </div>
+            </div>
+          </li>
+        </a>
+        <a target="_blank" href="https://www.luffycity.com/micro/linux-middle">
+          <li>
+            <img src="/static/images/Linuxyun@2x_1567483310.010623.png" alt="Linuxyun">
+            <div class="course-item">
+              <p class="title">玩转Linux，不写代码也能高薪，零基础首选，年薪30万不是梦！</p>
+              <div class="num">
+                <p>
+                  <span>学习周期：167小时</span>
+                  <span>学员评论：3947条</span>
+                </p>
+                <p>
+                  <img src="/static/images/bofang_1567070083.9337127.png" alt="bofang">
+                  <span>768人</span>
+                </p>
+              </div>
+            </div>
+          </li>
+        </a> <a target="_blank" href="https://www.luffycity.com/micro/python-high">
+        <li>
+          <img src="/static/images/AI@2x(1)_1570514562.7293007.png" alt="AI@2x(1)">
+          <div class="course-item">
+            <p class="title">新增数据分析、人工智能和Golang语言开发课程，助你抢占薪资制高点</p>
+            <div class="num">
+              <p>
+                <span>学习周期：178小时</span>
+                <span>学员评论：360条</span>
+              </p>
+              <p>
+                <img src="/static/images/bofang_1567070083.9337127.png" alt="bofang">
+                <span>434人</span>
+              </p>
+            </div>
           </div>
         </li>
-      </a> <a target="_blank" _v-5ac1c0f4="" href="https://www.luffycity.com/micro/linux-middle">
-        <li _v-5ac1c0f4=""><img _v-5ac1c0f4=""
-                                src="//hcdn1.luffycity.com/static/frontend/index/Linuxyun@2x_1567483310.010623.png">
-          <div class="course-item" _v-5ac1c0f4=""><p class="title" _v-5ac1c0f4="">玩转Linux，不写代码也能高薪，零基础首选，年薪30万不是梦！</p>
-            <div class="num" _v-5ac1c0f4=""><p _v-5ac1c0f4=""><span _v-5ac1c0f4="">学习周期：167小时</span> <span
-              _v-5ac1c0f4="">学员评论：3947条</span></p>
-              <p _v-5ac1c0f4=""><img _v-5ac1c0f4=""
-                                     src="//hcdn1.luffycity.com/static/frontend/public_class/bofang_1567070083.9337127.png">
-                <span _v-5ac1c0f4="">768人</span></p></div>
+      </a> <a target="_blank" href="https://www.luffycity.com/micro/linux-high">
+        <li>
+          <img src="static/images/Linuxyun@2x_1570514760.3316157.png" alt="Linuxyun@2x">
+          <div class="course-item">
+            <p class="title">新增python自动化开发课程，向自动化运维方向奋进！</p>
+            <div class="num"><p>
+              <span>学习周期：110小时</span>
+              <span>学员评论：734条</span>
+            </p>
+              <p>
+                <img src="/static/images/bofang_1567070083.9337127.png" alt="bofang">
+                <span>1162人</span>
+              </p>
+            </div>
           </div>
         </li>
-      </a> <a target="_blank" _v-5ac1c0f4="" href="https://www.luffycity.com/micro/python-high">
-        <li _v-5ac1c0f4=""><img _v-5ac1c0f4=""
-                                src="//hcdn1.luffycity.com/static/frontend/degreecourse/1/AI@2x(1)_1570514562.7293007.png">
-          <div class="course-item" _v-5ac1c0f4=""><p class="title" _v-5ac1c0f4="">新增数据分析、人工智能和Golang语言开发课程，助你抢占薪资制高点</p>
-            <div class="num" _v-5ac1c0f4=""><p _v-5ac1c0f4=""><span _v-5ac1c0f4="">学习周期：178小时</span> <span
-              _v-5ac1c0f4="">学员评论：360条</span></p>
-              <p _v-5ac1c0f4=""><img _v-5ac1c0f4=""
-                                     src="//hcdn1.luffycity.com/static/frontend/public_class/bofang_1567070083.9337127.png">
-                <span _v-5ac1c0f4="">434人</span></p></div>
-          </div>
+      </a>
+      </ul>
+    </div>
+    <div class="why-choose divtest sdiv on" data-animation="on">
+      <div class="title">
+        <h1 class="h1">为什么选择路飞就业班课程？</h1>
+        <p class="p">
+          <span>因学员一方面渴望成长，一方面又因时间限制无法来线下全日制学习，故我们将10年教学成果精心设计，汇聚整合到线上。<br>旨在帮助有志向的年轻人通过努力学习，获得体面的工作和生活。</span>
+        </p>
+      </div>
+      <ul class="div-3">
+        <li>
+          <p>
+            <img src="static/images/salary@2x_1570514840.5431542.png" alt="salary@2x">
+            <span></span>
+          </p>
+          <p>总计毕业人数（人）</p>
         </li>
-      </a> <a target="_blank" _v-5ac1c0f4="" href="https://www.luffycity.com/micro/linux-high">
-        <li _v-5ac1c0f4=""><img _v-5ac1c0f4=""
-                                src="//hcdn1.luffycity.com/static/frontend/degreecourse/1/Linuxyun@2x_1570514760.3316157.png">
-          <div class="course-item" _v-5ac1c0f4=""><p class="title" _v-5ac1c0f4="">新增python自动化开发课程，向自动化运维方向奋进！</p>
-            <div class="num" _v-5ac1c0f4=""><p _v-5ac1c0f4=""><span _v-5ac1c0f4="">学习周期：110小时</span> <span
-              _v-5ac1c0f4="">学员评论：734条</span></p>
-              <p _v-5ac1c0f4=""><img _v-5ac1c0f4=""
-                                     src="//hcdn1.luffycity.com/static/frontend/public_class/bofang_1567070083.9337127.png">
-                <span _v-5ac1c0f4="">1162人</span></p></div>
-          </div>
+        <li>
+          <p>
+            <img src="static/images/95@2x_1570515194.9583223.png" alt="95@2x">
+            <span></span>
+          </p>
+          <p>就业率</p>
         </li>
-      </a></ul>
-    </div>
-    <div class="why-choose divtest sdiv on" data-animation="on" _v-5ac1c0f4="">
-      <div class="title" _v-5ac1c0f4=""><h1 class="h1" _v-5ac1c0f4="">为什么选择路飞就业班课程？</h1>
-        <p class="p" _v-5ac1c0f4="">因学员一方面渴望成长，一方面又因时间限制无法来线下全日制学习，故我们将10年教学成果精心设计，汇聚整合到线上。<br _v-5ac1c0f4="">旨在帮助有志向的年轻人通过努力学习，获得体面的工作和生活。
-        </p></div>
-      <ul class="div-3" _v-5ac1c0f4="">
-        <li _v-5ac1c0f4=""><p _v-5ac1c0f4=""><img _v-5ac1c0f4=""
-                                                  src="//hcdn1.luffycity.com/static/frontend/degreecourse/1/salary@2x_1570514840.5431542.png">
-          <span _v-5ac1c0f4=""></span></p>
-          <p _v-5ac1c0f4="">总计毕业人数（人）</p></li>
-        <li _v-5ac1c0f4=""><p _v-5ac1c0f4=""><img _v-5ac1c0f4=""
-                                                  src="//hcdn1.luffycity.com/static/frontend/degreecourse/1/95@2x_1570515194.9583223.png">
-          <span _v-5ac1c0f4=""></span></p>
-          <p _v-5ac1c0f4="">就业率</p></li>
-        <li _v-5ac1c0f4=""><p _v-5ac1c0f4=""><img _v-5ac1c0f4=""
-                                                  src="//hcdn1.luffycity.com/static/frontend/degreecourse/1/12369_1570514951.3915164.png">
-          <span _v-5ac1c0f4=""></span></p>
-          <p _v-5ac1c0f4="">平均薪资（元）</p></li>
+        <li>
+          <p>
+            <img src="static/images/12369_1570514951.3915164.png" alt="12369_1570514951">
+            <span></span>
+          </p>
+          <p>平均薪资（元）</p>
+        </li>
       </ul>
     </div>
-    <div class="solve-problem divtest sdiv on" data-animation="on" _v-5ac1c0f4="">
-      <div class="title" _v-5ac1c0f4=""><h1 class="h1" _v-5ac1c0f4="">360°全方位陪伴式教学</h1></div>
-      <div class="problem-content div-2" _v-5ac1c0f4=""><img _v-5ac1c0f4=""
-                                                             src="//hcdn1.luffycity.com/static/frontend/degreecourse/1/Combined Shape@2x_1570514610.6181679.png">
-        <img _v-5ac1c0f4=""
-             src="//hcdn1.luffycity.com/static/frontend/degreecourse/1/bianzu8@2x_1570514596.9670534.png"></div>
+    <div class="solve-problem divtest sdiv on" data-animation="on">
+      <div class="title">
+        <h1 class="h1">360°全方位陪伴式教学</h1>
+      </div>
+      <div class="problem-content div-2">
+        <img src="static/images/Combined Shape@2x_1570514610.6181679.png" alt="Combined">
+        <img src="static/images/bianzu8@2x_1570514596.9670534.png" alt="bianzu8">
+      </div>
     </div>
-    <div class="nanny divtest sdiv on" data-animation="on" _v-5ac1c0f4="">
-      <div class="title" _v-5ac1c0f4=""><h1 class="h1" _v-5ac1c0f4="">3V1保姆式伴学</h1></div>
-      <ul class="nanny-content1 div-2" _v-5ac1c0f4="">
-        <li _v-5ac1c0f4=""><img _v-5ac1c0f4=""
-                                src="//hcdn1.luffycity.com/static/frontend/degreecourse/1/acon@2x_1570514532.7531736.png">
-          <p _v-5ac1c0f4="">导师</p></li>
-        <img class="pipe" _v-5ac1c0f4=""
-             src="//hcdn1.luffycity.com/static/frontend/degreecourse/1/arrow@2x_1570514535.07801.png">
-        <li _v-5ac1c0f4=""><p _v-5ac1c0f4="">1V1作业批改</p>
-          <p _v-5ac1c0f4="">1V1问题答疑</p>
-          <p _v-5ac1c0f4="">1V1闯关视频考核</p>
-          <p _v-5ac1c0f4="">1V1每周跟进学习进度</p></li>
-        <img class="pipe" _v-5ac1c0f4=""
-             src="//hcdn1.luffycity.com/static/frontend/degreecourse/1/arrow@2x_1570514535.07801.png">
-        <li _v-5ac1c0f4=""><span _v-5ac1c0f4="">导师批注案例展示</span> <img _v-5ac1c0f4=""
-                                                                     src="//hcdn1.luffycity.com/static/frontend/degreecourse/1/13@2x_1570514532.3320534.png">
-          <a _v-5ac1c0f4="">更多导师批注详情&gt;&gt;&gt;</a></li>
+    <div class="nanny divtest sdiv on" data-animation="on">
+      <div class="title">
+        <h1 class="h1">3V1保姆式伴学</h1>
+      </div>
+      <ul class="nanny-content1 div-2">
+        <li>
+          <img src="static/images/acon@2x_1570514532.7531736.png" alt="acon">
+          <p>导师</p>
+        </li>
+        <img class="pipe" src="static/images/arrow@2x_1570514535.07801.png" alt="arrow">
+        <li>
+          <p>1V1作业批改</p>
+          <p>1V1问题答疑</p>
+          <p>1V1闯关视频考核</p>
+          <p>1V1每周跟进学习进度</p>
+        </li>
+        <img class="pipe" src="static/images/arrow@2x_1570514535.07801.png" alt="arrow">
+        <li>
+          <span>导师批注案例展示</span>
+          <img src="static/images/13@2x_1570514532.3320534.png" alt="13">
+          <a>更多导师批注详情&gt;&gt;&gt;</a>
+        </li>
       </ul>
-      <ul class="nanny-content2 div-3" _v-5ac1c0f4="">
-        <li _v-5ac1c0f4=""><img _v-5ac1c0f4=""
-                                src="//hcdn1.luffycity.com/static/frontend/degreecourse/1/icon1@2x_1570514619.7560713.png">
-          <span _v-5ac1c0f4="">班主任</span>
-          <p _v-5ac1c0f4=""> 全程带班跟踪督导，彻底治愈你的拖延症<br _v-5ac1c0f4="">定期跟进你的学习进度，360度暖心鼓励陪伴 </p></li>
-        <li _v-5ac1c0f4=""><img _v-5ac1c0f4=""
-                                src="//hcdn1.luffycity.com/static/frontend/degreecourse/1/icon2@2x_1570514620.1737669.png">
-          <span _v-5ac1c0f4="">讲师</span>
-          <p _v-5ac1c0f4=""> 甄选业界知名网红讲师，带你吃透每一个核心<br _v-5ac1c0f4="">知识点，手把手带你做企业级实战项目 </p></li>
-        <li _v-5ac1c0f4=""><img _v-5ac1c0f4=""
-                                src="//hcdn1.luffycity.com/static/frontend/degreecourse/1/icon3@2x_1570514620.782069.png">
-          <span _v-5ac1c0f4="">就业指导老师</span>
-          <p _v-5ac1c0f4=""> 一对一简历修改，一对一模拟面试<br _v-5ac1c0f4="">就业推荐，试用期辅导 </p></li>
-      </ul>
-    </div>
-    <div class="student divtest sdiv on" data-animation="on" _v-5ac1c0f4="">
-      <div class="title" _v-5ac1c0f4=""><h1 class="h1" _v-5ac1c0f4="">看看学长学姐们怎么说</h1></div>
-      <ul class="div-2" _v-5ac1c0f4="">
-        <li _v-5ac1c0f4="">
-          <div _v-5ac1c0f4=""><img class="img1" _v-5ac1c0f4=""
-                                   src="//hcdn1.luffycity.com/static/frontend/degreecourse/1/lixiao@2x_1570514768.5436137.png">
-            <img class="img2" _v-5ac1c0f4=""
-                 src="//hcdn1.luffycity.com/static/frontend/degreecourse/1/play@2x_1570514835.40506.png"></div>
-          <p _v-5ac1c0f4="">小学老师转行互联网大厂编程老师的故事</p>
-          <p _v-5ac1c0f4="">Python开发工程师</p>
-          <p _v-5ac1c0f4="">李同学的故事</p></li>
-        <li _v-5ac1c0f4="">
-          <div _v-5ac1c0f4=""><img class="img1" _v-5ac1c0f4=""
-                                   src="//hcdn1.luffycity.com/static/frontend/degreecourse/1/nick@2x_1570514818.0077946.png">
-            <img class="img2" _v-5ac1c0f4=""
-                 src="//hcdn1.luffycity.com/static/frontend/degreecourse/1/play@2x_1570514835.40506.png"></div>
-          <p _v-5ac1c0f4="">纽约大学毕业后学习Python成为名企数据分析师</p>
-          <p _v-5ac1c0f4="">Python数据分析师</p>
-          <p _v-5ac1c0f4="">Nick的故事</p></li>
-        <li _v-5ac1c0f4="">
-          <div _v-5ac1c0f4=""><img class="img1" _v-5ac1c0f4=""
-                                   src="//hcdn1.luffycity.com/static/frontend/degreecourse/1/gelujing@2x_1570514618.3553596.png">
-            <img class="img2" _v-5ac1c0f4=""
-                 src="//hcdn1.luffycity.com/static/frontend/degreecourse/1/play@2x_1570514835.40506.png"></div>
-          <p _v-5ac1c0f4="">互联网大厂员工如何在路飞的帮助下工作做的卓有成效</p>
-          <p _v-5ac1c0f4="">58赶集网运维开发工程师</p>
-          <p _v-5ac1c0f4="">葛同学的故事</p></li>
+      <ul class="nanny-content2 div-3">
+        <li>
+          <img src="/static/images/icon1@2x_1570514619.7560713.png" alt="icon1">
+          <span>班主任</span>
+          <p> 全程带班跟踪督导，彻底治愈你的拖延症<br>定期跟进你的学习进度，360度暖心鼓励陪伴 </p>
+        </li>
+        <li>
+          <img src="static/images/icon2@2x_1570514620.1737669.png" alt="icon2">
+          <span>讲师</span>
+          <p> 甄选业界知名网红讲师，带你吃透每一个核心<br>知识点，手把手带你做企业级实战项目 </p>
+        </li>
+        <li>
+          <img src="static/images/icon3@2x_1570514620.782069.png" alt="icon3">
+          <span>就业指导老师</span>
+          <p> 一对一简历修改，一对一模拟面试<br>就业推荐，试用期辅导 </p>
+        </li>
       </ul>
     </div>
-    <div class="problem divtest sdiv on" data-animation="on" _v-5ac1c0f4="">
-      <div class="title" _v-5ac1c0f4=""><h1 class="h1" _v-5ac1c0f4="">常见问题</h1></div>
-      <div class="problem-list div-2" _v-5ac1c0f4=""><img _v-5ac1c0f4=""
-                                                          src="//hcdn1.luffycity.com/static/frontend/degreecourse/1/Combined Shape@2x(1)_1570514612.1463997.png">
-        <ul _v-5ac1c0f4="">
-          <li _v-5ac1c0f4=""><p _v-5ac1c0f4=""><i _v-5ac1c0f4=""></i> <span _v-5ac1c0f4="">什么是就业班课程？</span></p>
-            <article _v-5ac1c0f4="">
+    <div class="student divtest sdiv on" data-animation="on">
+      <div class="title">
+        <h1 class="h1">看看学长学姐们怎么说</h1>
+      </div>
+      <ul class="div-2">
+        <li>
+          <div>
+            <img class="img1" src="static/images/lixiao@2x_1570514768.5436137.png" alt="lixiao">
+            <img class="img2" src="static/images/play@2x_1570514835.40506.png" alt="play"></div>
+          <p>小学老师转行互联网大厂编程老师的故事</p>
+          <p>Python开发工程师</p>
+          <p>李同学的故事</p></li>
+        <li>
+          <div>
+            <img class="img1" src="static/images/nick@2x_1570514818.0077946.png" alt="nick">
+            <img class="img2" src="static/images/play@2x_1570514835.40506.png" alt="play">
+          </div>
+          <p>纽约大学毕业后学习Python成为名企数据分析师</p>
+          <p>Python数据分析师</p>
+          <p>Nick的故事</p>
+        </li>
+        <li>
+          <div>
+            <img class="img1" src="static/images/gelujing@2x_1570514618.3553596.png" alt="gelujing">
+            <img class="img2" src="static/images/play@2x_1570514835.40506.png" alt="play">
+          </div>
+          <p>互联网大厂员工如何在路飞的帮助下工作做的卓有成效</p>
+          <p>58赶集网运维开发工程师</p>
+          <p>葛同学的故事</p>
+        </li>
+      </ul>
+    </div>
+    <div class="problem divtest sdiv on" data-animation="on">
+      <div class="title">
+        <h1 class="h1">常见问题</h1>
+      </div>
+      <div class="problem-list div-2">
+        <img src="static/images/Combined Shape@2x(1)_1570514612.1463997.png" alt="Combined">
+        <ul>
+          <li>
+            <p><i></i><span>什么是就业班课程？</span></p>
+            <article>
               路飞学城就业班课程是业内优先推出“在线一对一VIP辅导”的全新教学模式的课程，通过为零基础的学员制定学习计划，提供系统性课程、一对一辅导、审阅代码、闯关式学习、答疑、推荐就业等服务，有效保障学员通过学习就业班课程后具备独立完成项目与企业所需的技术水准。
             </article>
           </li>
-          <li _v-5ac1c0f4=""><p _v-5ac1c0f4=""><i _v-5ac1c0f4=""></i> <span _v-5ac1c0f4="">我是零基础小白，能够上就业班课程吗？</span></p>
-            <article _v-5ac1c0f4="">
+          <li><p><i></i><span>我是零基础小白，能够上就业班课程吗？</span></p>
+            <article>
               可以，无论你是对全栈开发有着浓厚兴趣的小白，想成为一个优秀的全栈工程师，还是你已经是前端或者后端开发者，打算夯实基础，拓展知识，增加涨薪机会，这门课程都非常适合你，我们的课程内容深入浅出，课程涵盖各个难度等级，能适应所有不同程度的需求。
             </article>
           </li>
-          <li _v-5ac1c0f4=""><p _v-5ac1c0f4=""><i _v-5ac1c0f4=""></i> <span _v-5ac1c0f4="">我可以从就业班课程中获得什么？</span></p>
-            <article _v-5ac1c0f4="">
+          <li><p><i></i><span>我可以从就业班课程中获得什么？</span></p>
+            <article>
               路飞学城真人出境全新为在线学习录制的就业课程，可让你在家随时随地都能学习到专业系统的全栈开发课程，还提供1V1讲师辅导、闯关式学习、知名网红讲师亲自授课、多个互联网企业实战开发项目、完成课程后发放高薪就业班课程学位证书，可享受推荐就业服务。
             </article>
           </li>
-          <li _v-5ac1c0f4=""><p _v-5ac1c0f4=""><i _v-5ac1c0f4=""></i> <span _v-5ac1c0f4="">如果作业和阶段考核不通过怎么办？</span></p>
-            <article _v-5ac1c0f4="">作业和阶段考核是为了督促你能扎实的掌握知识，如果作业成绩和考核不通过，会有讲师进行1对1辅导，答疑，针对作业和考核出现的问题给出指导和建议。</article>
+          <li><p><i></i><span>如果作业和阶段考核不通过怎么办？</span></p>
+            <article>作业和阶段考核是为了督促你能扎实的掌握知识，如果作业成绩和考核不通过，会有讲师进行1对1辅导，答疑，针对作业和考核出现的问题给出指导和建议。</article>
           </li>
-          <li _v-5ac1c0f4=""><p _v-5ac1c0f4=""><i _v-5ac1c0f4=""></i> <span _v-5ac1c0f4="">课程的学习周期是多长呢？</span></p>
-            <article _v-5ac1c0f4="">我们的课程学习周期为6个月，如果你按照建议每周学习至少 8~10
-              个小时，6个月时间你就可以学完十个技术模块。在课程期间我们会对课程进行科学系统的阶段性分类，以保证大家能够高质量地完成课程。
+          <li>
+            <p><i></i> <span>课程的学习周期是多长呢？</span></p>
+            <article>
+              我们的课程学习周期为6个月，如果你按照建议每周学习至少 8~10 个小时，6个月时间你就可以学完十个技术模块。在课程期间我们会对课程进行科学系统的阶段性分类，以保证大家能够高质量地完成课程。
             </article>
           </li>
-          <li _v-5ac1c0f4=""><p _v-5ac1c0f4=""><i _v-5ac1c0f4=""></i> <span _v-5ac1c0f4="">6个月后我还能继续观看课程吗？</span></p>
-            <article _v-5ac1c0f4="">通过所有项目顺利毕业后，你可以反复观看课程。你可以把这当做毕业奖励！但如果超过 6
+          <li>
+            <p><i></i><span>6个月后我还能继续观看课程吗？</span></p>
+            <article>
+              通过所有项目顺利毕业后，你可以反复观看课程。你可以把这当做毕业奖励！但如果超过 6
               个月你未能通过所有模块，你将不再享受的导师服务。你可能会问，如果无法在规定时间完成课程怎么办？其实不用担心，在你正式进入课程学习后，我们会有专业的导师对你的课程进行学习代码审阅、项目审核，阶段考核，还有班主任督促、学习小伙伴激励你的学习。绝大部分学生都能够在
               6 个月内完成课程。
             </article>
           </li>
         </ul>
       </div>
-    </div> <!--v-if--> </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -359,6 +422,7 @@
     height: auto;
     margin-bottom: 30px;
   }
+
   .box .employment-course ul a li .course-item .num img {
     width: 17px;
     height: 17px;

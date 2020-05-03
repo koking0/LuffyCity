@@ -6,8 +6,9 @@
     <div class="header">
       <div class="header-cont">
         <div class="left">
-          <img class="oldboy active"
-               src="//hcdn1.luffycity.com/static/frontend/activity/head-logo_1564141048.3435316.svg">
+          <router-link :to="{ name:'Home' }">
+            <img class="oldboy" src="/static/images/head-logo_1564141048.3435316.svg" alt="head-logo">
+          </router-link>
         </div>
         <nav class="nav">
           <router-link v-for="(list, _) in headerList" :key="list.id" :to="{ name:list.name }" v-if="list.id !== 1"
@@ -17,6 +18,7 @@
         </nav>
         <div class="header-right-box">
           <div class="search">
+            <label for="Input"></label>
             <input type="text" id="Input" placeholder="请输入想搜索的课程" style="display: none;">
             <ul>
               <span>Python</span>
@@ -25,26 +27,37 @@
             <p>
               <img class="icon" src="/static/images/sousuo1_1572509512.0016685.png" alt="搜索1">
               <img class="icon" src="/static/images/sousuo2_1572509511.9415796.png" style="display: none;" alt="搜索2">
-              <img class="new" src="/static/images/new_1572509511.5792108.png" alt="NEw">
+              <img class="new" src="/static/images/new_1572509511.5792108.png" alt="NEW">
             </p>
           </div>
-          <div class="shop-car">
-            <img
-              src="//hcdn1.luffycity.com/static/frontend/activity/shopcart@2x_1568185801.2089324.png"> <span>购物车</span>
-          </div> <!--v-if-->
-          <div class="nav-right-box" @mouseenter='enterHandler' @mouseleave='leaveHandler'>
+          <router-link class="shop-car" :to="{name:'ShoppingTrolley'}">
+            <img src="/static/images/shopcart@2x_1568185801.2089324.png" alt="shopcart">
+            <span>购物车</span>
+          </router-link>
+          <div v-if="!isLogin" class="register">
+            <Login/>
+            <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+            <a target="_blank" href="https://www.luffycity.com/signup">
+              <button class="signup">注册</button>
+            </a>
+          </div>
+          <div v-if="isLogin" class="nav-right-box" @mouseenter='enterHandler' @mouseleave='leaveHandler'>
             <div class="nav-right">
-              <div class="nav-study">我的教室</div>
+              <div class="nav-study">
+                <router-link :to="{ name:'Classroom' }">
+                  我的教室
+                </router-link>
+              </div>
               <div class="nav-img">
-                <img alt=""></div>
+                <img alt="avatar" src="/static/images/qYBYXa4JqwH8OtUp5xq7RBdp.png">
+              </div>
               <ul class="home-my-account" v-show='isShow'>
-                <li>我的账户 <img src="//hcdn1.luffycity.com/static/frontend/activity/back_1568185800.821227.svg"></li>
-                <li>我的订单 <img src="//hcdn1.luffycity.com/static/frontend/activity/back_1568185800.821227.svg"></li>
-                <li>贝里小卖铺 <img src="//hcdn1.luffycity.com/static/frontend/activity/back_1568185800.821227.svg"></li>
-                <li>我的优惠券 <img src="//hcdn1.luffycity.com/static/frontend/activity/back_1568185800.821227.svg"></li>
-                <li><span>我的消息<b>(8)</b><!--v-if--></span><img
-                  src="//hcdn1.luffycity.com/static/frontend/activity/back_1568185800.821227.svg"></li>
-                <li>退出<img src="//hcdn1.luffycity.com/static/frontend/activity/back_1568185800.821227.svg"></li>
+                <li>我的账户<img src="/static/images/back_1568185800.821227.svg" alt="back"></li>
+                <li>我的订单<img src="/static/images/back_1568185800.821227.svg" alt="back"></li>
+                <li>贝里小卖铺<img src="/static/images/back_1568185800.821227.svg" alt="back"></li>
+                <li>我的优惠券<img src="/static/images/back_1568185800.821227.svg" alt="back"></li>
+                <li>我的消息<b>(8)</b><img src="/static/images/back_1568185800.821227.svg" alt="back"></li>
+                <li>退出<img src="/static/images/back_1568185800.821227.svg" alt="back"></li>
               </ul>
             </div>
           </div>
@@ -55,6 +68,7 @@
 </template>
 
 <script>
+  import Login from "./Login";
   export default {
     name: "LuffyHeader",
     data() {
@@ -70,7 +84,11 @@
         ],
         isShow: false,
         currentUrl: null,
+        isLogin: false,
       }
+    },
+    components: {
+      Login,
     },
     computed: {
       urlPath: function () {
@@ -225,6 +243,31 @@
     color: #f5a623;
   }
 
+  .header .header-cont .header-right-box .register {
+    height: 36px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    line-height: 36px;
+  }
+
+  .header .header-cont .header-right-box .register .signin, .header .header-cont .header-right-box .register .signup {
+    font-size: 14px;
+    color: #5e5e5e;
+    white-space: nowrap;
+  }
+
+  button {
+    outline: none;
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+  }
+
   .header .header-cont .header-right-box .search ul span {
     color: #545c63;
     font-size: 12px;
@@ -281,6 +324,10 @@
   .header .header-cont .header-right-box .shop-car span {
     font-size: 14px;
     font-weight: 300;
+    color: #5e5e5e;
+  }
+
+  #app > header > div.header > div > div.header-right-box > div.nav-right-box > div > div.nav-study > a {
     color: #5e5e5e;
   }
 

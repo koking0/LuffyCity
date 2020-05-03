@@ -583,7 +583,7 @@
   }
 
   .students-ach .banner_top img {
-    width: 1920px;
+    width: 1422px;
     height: 240px;
   }
 

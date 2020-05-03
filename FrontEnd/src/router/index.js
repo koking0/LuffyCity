@@ -9,7 +9,11 @@ import PracticalLessons from "../components/PracticalLessons/PracticalLessons";
 import QuestionBank from "../components/QuestionBank/QuestionBank";
 import StudentAchievement from "../components/StudentAchievement/StudentAchievement";
 
+import PracticalCourseDetail from "../components/PracticalLessons/PracticalCourseDetail";
+import ShoppingTrolley from "../components/ShoppingTrolley/ShoppingTrolley";
 import CourseDetail from "../components/FreeLessons/CourseDetail";
+import Classroom from "../components/Classroom/Classroom";
+import Login from "../components/Common/Login";
 
 // 将Router当做局部模块使用一定要用Vue.use(Router)
 Vue.use(Router)
@@ -60,11 +64,35 @@ export default new Router({
       name: 'StudentAchievement',
       component: StudentAchievement
     },
-    // 课程详情
+    // 免费课程详情
     {
       path: "/free/:detailId",
       name: "course.detail",
       component: CourseDetail
-    }
+    },
+    // 实战课程详情
+    {
+      path: "/courses/:detailId/details-introduce",
+      name: "course.detailIntroduce",
+      component: PracticalCourseDetail
+    },
+    // 我的教室
+    {
+      path: "/student/degree",
+      name: "Classroom",
+      component: Classroom
+    },
+    // 登录
+    {
+      path: "/login",
+      name: "Login",
+      component: Login
+    },
+    // 购物车
+    {
+      path: "/shopping-cart",
+      name: "ShoppingTrolley",
+      component: ShoppingTrolley
+    },
   ]
 })

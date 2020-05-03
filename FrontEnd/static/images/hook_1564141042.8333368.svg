@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="9px" viewBox="0 0 11 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>勾选</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="适配M页2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="提交订单" transform="translate(-338.000000, -422.000000)" fill="#FFFFFF">
+            <g id="Checkbox-Copy" transform="translate(332.000000, 414.000000)">
+                <path d="M10.0774647,10.821371 L15.3604494,16.1043557 C15.5555902,16.2994965 15.5564708,16.6150016 15.3558102,16.8156621 L14.940385,17.2310874 C14.7426821,17.4287903 14.4287778,17.4354258 14.2290785,17.2357265 L8.18711858,11.1937666 C8.07935048,11.0859985 8.03082962,10.9415206 8.04278234,10.7999497 C8.0424565,10.6725129 8.08930006,10.5467939 8.18146598,10.454628 L11.2535687,7.38252533 C11.4455876,7.19050637 11.758562,7.19215652 11.9592226,7.39281706 L12.3746478,7.80824229 C12.5723507,8.00594521 12.5707373,8.32809835 12.3849395,8.51389618 L10.0774647,10.821371 Z" id="勾选" transform="translate(11.773784, 12.311423) rotate(-90.000000) translate(-11.773784, -12.311423) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
