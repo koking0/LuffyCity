@@ -49,3 +49,7 @@ a {
 button {
   cursor: pointer;
 }
+.course_item img {
+  width: 100%;
+  height: auto !important;
+}

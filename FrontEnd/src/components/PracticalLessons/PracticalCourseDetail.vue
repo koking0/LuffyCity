@@ -2,30 +2,30 @@
   <div class="courseitem">
     <div class="head-wrap">
       <div class="head-video">
-        <img src="http://hcdn2.luffycity.com/media/frontend/course/%E5%88%97%E8%A1%A8%E5%9B%BE_Lcs535o.png" alt="image">
+        <img :src="courseDetail.course_img" alt="image">
         <div class="item">
-          <p class="name">基于Django开发轻量级Bug管理平台</p>
+          <p class="name">{{courseDetail.name}}</p>
           <p class="data">
             <span>225人在学</span>
             <span>课程小节：250小节</span>
             <span>时长：63小时</span>
           </p>
           <div class="preferential">
-            <p>限时折扣</p>
-            <p>距离结束：仅剩 243天 06小时 08分<span>46</span>秒</p>
+            <p>{{courseDetail.promotion_name}}</p>
+            <p>距离结束{{courseDetail.promotion_end_date}}：剩 243天 06小时 08分<span>46</span>秒</p>
           </div>
           <p class="price bac">
             <span>活动价</span>
-            <span class="sp1">¥69.65</span>
+            <span class="sp1">¥{{courseDetail.promotion_price}}</span>
             <span class="sp2">¥199.00</span>
           </p>
-          <div class="bottom">
+          <div v-if="!courseDetail.is_buy" class="bottom">
             <p class="btns">
               <button class="btn1">立即购买</button>
               <button class="btn2">免费试学</button>
             </p>
-            <p class="add">
-              <img src="//hcdn1.luffycity.com/static/frontend/activity/course-shop_1564141044.099814.svg"
+            <p v-if="!courseDetail.is_buy" class="add" @click="addShopCart">
+              <img src="https://hcdn1.luffycity.com/static/frontend/activity/course-shop_1564141044.099814.svg"
                    alt="course-shop">
               <span>加入购物车</span>
             </p>
@@ -43,36 +43,7 @@
     <div class="item"
          style="flex: 1; background: #FAFAFA;overflow:hidden;padding-bottom: 40px">
       <div>
-        <section class="course_item"><p style="font-size:18px;font-weight:600;line-height: 200%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;基于django开发的Bug管理平台，为用户提供理想的工作云平台，涵盖了众多企业级功能，便捷的团队协作，轻量的项目管理，
-          完备的问题系统，大容量的文件存储等，大大提升了工作效率。</p>
-          <p style="font-size:18px;font-weight:600;line-height: 200%;">项目涵盖技术和知识点概览：</p>
-          <ul>
-            <li style="font-size:16px;font-weight:600;line-height: 200%;">1. 注册、登录、手机短信、图片验证码、redis超时 等企业用户认证。</li>
-            <li style="font-size:16px;font-weight:600;line-height: 200%;">2.
-              git版本控制、local_settings配置管理、virtualenv虚拟环境。
-            </li>
-            <li style="font-size:16px;font-weight:600;line-height: 200%;">3. ModelForm扩展核心应用 &amp; 自定义widget插件 &amp;
-              OOP多继承实现BootStrap应用。
-            </li>
-            <li style="font-size:16px;font-weight:600;line-height: 200%;">4. django离线脚本处理。</li>
-            <li style="font-size:16px;font-weight:600;line-height: 200%;">5. 腾讯对象存储COS应用及文件多级目录控制。</li>
-            <li style="font-size:16px;font-weight:600;line-height: 200%;">6. wiki平台和markdown组件定制。</li>
-            <li style="font-size:16px;font-weight:600;line-height: 200%;">7. 生成器和可迭代对象的应用并实现组合搜索。</li>
-            <li style="font-size:16px;font-weight:600;line-height: 200%;">8. 集成多个插件 datetimepicker.js / select2 /
-              daterangepicker.js / highcharts / bootstrap-select.js。
-            </li>
-            <li style="font-size:16px;font-weight:600;line-height: 200%;">9. 支付宝支付 和 优惠抵扣。</li>
-          </ul>
-          <p style="font-size:18px;font-weight:600;line-height: 200%;">学完本课，你可以掌握用Django开发企业级web应用的技能</p>
-          <p><img alt="" src="//hcdn2.luffycity.com/media/frontend/course/编组 2@2x_XKtYHuT.png"></p>
-          <p><img alt="" src="//hcdn2.luffycity.com/media/frontend/course/编组 3@2x_Z3zpByU.png"></p>
-          <hr>
-          <p style="font-size:28px;font-weight:600;line-height: 200%;">项目截图</p>
-          <hr>
-          <p><img alt="" src="//hcdn2.luffycity.com/media/frontend/course/1_AqGABD6.png"></p>
-          <p><img alt="" src="//hcdn2.luffycity.com/media/frontend/course/2_BC8GSar.png"></p>
-          <p><img alt="" src="//hcdn2.luffycity.com/media/frontend/course/3_GGop4Vr.png"></p>
-          <p><img alt="" src="//hcdn2.luffycity.com/media/frontend/course/4.png"></p></section>
+        <section v-html="detail.content" class="course_item"></section>
       </div>
       <div class="course-side">
         <div class="side-video">
@@ -90,10 +61,12 @@
               <li><img style="width: 21px;height: 18px"
                        src="//hcdn1.luffycity.com/static/frontend/public_class/jiaoliu@2x_1567043312.2520878.png"
                        alt="jiaoliu">
-                <p>学员交流<br>QQ群：701031800</p></li>
-              <li><img style="width: 18px;height: 18px"
-                       src="//hcdn1.luffycity.com/static/frontend/public_class/answer@2x_1567043311.5104716.png"
-                       alt="answer">
+<!--                <p>学员交流<br>QQ群：{{teachDetail.chat_group.group_id}}</p></li>-->
+                <p>学员交流<br>QQ群：242671397</p></li>
+              <li>
+                <img style="width: 18px;height: 18px"
+                     src="//hcdn1.luffycity.com/static/frontend/public_class/answer@2x_1567043311.5104716.png"
+                     alt="answer">
                 <p>导师答疑</p></li>
             </ul>
             <a class="btns add-team" target="_blank" href="https://jq.qq.com/?_wv=1027&amp;k=5XfBMXm">加入学霸团</a>
@@ -103,15 +76,15 @@
           <div class="teacher-item">
             <div class="title">讲师介绍</div>
             <dl>
-              <dt><img alt=""
-                       src="//hcdn1.luffycity.com/static/frontend/activity/peiqi@3x_1517450115.4163337.png">
+              <dt>
+                <img alt="" :src="teachDetail.teacher.image">
               </dt>
-              <dd><p>武Sir 银角大王</p> <span>老男孩教育Python教学总监  多年开发实战经验，先后任职于汽车之家、好大夫在线等多家大型互联网公司。擅长C#,Python,PHP等一大堆语言开发，现任某大型互联网公司高级自动化开发工程师，已精读多个开源软件源码，自行开发过改进版的Tornado WEB框架，讲课风趣幽默，深受学员喜爱。</span>
+              <dd>
+                <p>{{teachDetail.teacher.name}}</p>
+                <span>{{teachDetail.teacher.signature}}</span>
               </dd>
             </dl>
-            <article>多年开发实战经验，先后任职于汽车之家、好大夫在线等多家大型互联网公司。
-              擅长C#,Python,PHP等一大堆语言开发，现任某大型互联网公司高级自动化开发工程师，已精读多个开源软件源码，自行开发过改进版的Tornado WEB框架，讲课风趣幽默。
-            </article>
+            <article>{{teachDetail.teacher.brief}}</article>
           </div>
         </div>
       </div>
@@ -121,7 +94,65 @@
 
 <script>
   export default {
-    name: "CourseDetail"
+    name: "CourseDetail",
+    data() {
+      return {
+        // 课程详情数据
+        courseDetail: [],
+        // 教程详情数据
+        teachDetail: [],
+        // 详情数据
+        detail: [],
+      }
+    },
+    methods: {
+      // 加入购物车
+      addShopCart() {
+        if (window.localStorage.getItem('access_token')) {
+          this.$http.shopCart(this.$route.params.detailId)
+            .then(res => {
+              if (res.error_no === 0) {
+                this.$message('购物车' + res.data.status);
+              }
+              if (res.error_no === 10) {
+                this.$message(res.msg);
+              }
+            })
+            .catch(err => {
+              console.log(err);
+            })
+        } else {
+          // 跳转登录页面，使用编程式导航来跳转
+          this.$router.push({
+            name: 'Login',
+            query: {
+              return_url: window.location.href
+            }
+          })
+        }
+      },
+      getCourseDetail() {
+        this.$http.practicalCourseDetail(this.$route.params.detailId).then(res => {
+          this.courseDetail = res.data;
+        }).catch(err => {
+          console.log(err);
+        });
+        this.$http.getContent(`course/${this.$route.params.detailId}/right/`).then(res => {
+          this.teachDetail = res.data;
+        }).catch(err => {
+          console.log(err);
+        });
+        this.$http.getContent(`course/${this.$route.params.detailId}/detail/`).then(res => {
+          this.detail = res.data;
+          console.log(this.detail);
+        }).catch(err => {
+          console.log(err);
+        });
+      }
+    },
+    created() {
+      this.getCourseDetail();
+    }
   }
 </script>
 
@@ -396,7 +427,6 @@
     align-items: center;
     margin: 0 auto;
     color: #4a4a4a;
-    font-family: PingFangSC-Regular;
   }
 
   .courseitem .tab ul li {
@@ -439,11 +469,6 @@
     overflow: hidden;
     position: relative;
     box-shadow: 0 2px 4px 0 #f0f0f0;
-  }
-
-  .course_item img {
-    width: 100%;
-    height: auto !important;
   }
 
   .course-side {

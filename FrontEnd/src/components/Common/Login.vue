@@ -3,70 +3,70 @@
     <button type="button" class="signin" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
       登录
     </button>
-<!--    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">-->
-<!--      <div class="modal-dialog" role="document">-->
-<!--        <div class="modal-content">-->
-<!--          <div class="popup-content">-->
-<!--            <div class="close-btn" data-dismiss="modal"></div>-->
-<!--            <div class="signin">-->
-<!--              <ul>-->
-<!--                <li class="item_active">密码登录</li>-->
-<!--                <li>短信登录</li>-->
-<!--              </ul>-->
-<!--              <hr>-->
-<!--              <div class="username inputcontain">-->
-<!--                <img alt="shouji" src="/static/images/shouji@1x_1560849098.2282765.svg">-->
-<!--                <label>-->
-<!--                  <input type="text" placeholder="用户名/手机号" maxlength="20" autofocus="autofocus" autocomplete="off">-->
-<!--                </label>-->
-<!--              </div>-->
-<!--              <div class="password inputcontain">-->
-<!--                <img alt="mima" src="/static/images/mima-4@1x_1560849097.9023619.svg">-->
-<!--                <label for="passwordinput"></label>-->
-<!--                <input type="password" id="passwordinput" placeholder="密码" maxlength="20" autocomplete="off">-->
-<!--                <a class="eye" style="display: none;">-->
-<!--                  <img alt="yanjing" src="/static/images/yanjing@1x_1560849097.8918953.svg">-->
-<!--                </a>-->
-<!--                <a class="eye">-->
-<!--                  <img alt="眼睛关闭" src="/static/images/眼睛关闭@1x_1560849097.5098064.svg">-->
-<!--                </a>-->
-<!--              </div>-->
-<!--              <div>-->
-<!--                <div id="embed-captcha"></div>-->
-<!--                <p id="wait" style="display: none;">验证码加载中...</p>-->
-<!--                <p id="notice" style="display: none;">请先拖动验证码到相应位置</p>-->
-<!--              </div>-->
-<!--              <button id="confirmbtn">登录</button>-->
-<!--              <div class="otherway">-->
-<!--                <div class="oauth-box">-->
-<!--                  <div class="oauth-bg">-->
-<!--                    <img src="/static/images/dengluweixin_1561115209.1755617.svg" alt="dengluweixin">-->
-<!--                    <span>微信登录</span>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                  <span>没有账号，</span>-->
-<!--                  <span class="link-btn">立即注册</span>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="popup-content">
+            <div class="close-btn" data-dismiss="modal"></div>
+            <div class="signin">
+              <ul>
+                <li class="item_active">密码登录</li>
+                <li>短信登录</li>
+              </ul>
+              <hr>
+              <div class="username inputcontain">
+                <img alt="shouji" src="/static/images/shouji@1x_1560849098.2282765.svg">
+                <label>
+                  <input type="text" placeholder="用户名/手机号" maxlength="20" autofocus="autofocus" autocomplete="off">
+                </label>
+              </div>
+              <div class="password inputcontain">
+                <img alt="mima" src="/static/images/mima-4@1x_1560849097.9023619.svg">
+                <label for="passwordinput"></label>
+                <input type="password" id="passwordinput" placeholder="密码" maxlength="20" autocomplete="off">
+                <a class="eye" style="display: none;">
+                  <img alt="yanjing" src="/static/images/yanjing@1x_1560849097.8918953.svg">
+                </a>
+                <a class="eye">
+                  <img alt="眼睛关闭" src="/static/images/眼睛关闭@1x_1560849097.5098064.svg">
+                </a>
+              </div>
+              <div>
+                <div id="embed-captcha"></div>
+                <p id="wait" style="display: none;">验证码加载中...</p>
+                <p id="notice" style="display: none;">请先拖动验证码到相应位置</p>
+              </div>
+              <button id="confirmbtn">登录</button>
+              <div class="otherway">
+                <div class="oauth-box">
+                  <div class="oauth-bg">
+                    <img src="/static/images/dengluweixin_1561115209.1755617.svg" alt="dengluweixin">
+                    <span>微信登录</span>
+                  </div>
+                </div>
+                <div>
+                  <span>没有账号，</span>
+                  <span class="link-btn">立即注册</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-  // $('#exampleModal').on('show.bs.modal', function (event) {
-  //   const button = $(event.relatedTarget); // Button that triggered the modal
-  //   const recipient = button.data('whatever'); // Extract info from data-* attributes
-  //   // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-  //   // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-  //   const modal = $(this);
-  //   modal.find('.modal-title').text('New message to ' + recipient)
-  //   modal.find('.modal-body input').val(recipient)
-  // });
+  $('#exampleModal').on('show.bs.modal', function (event) {
+    const button = $(event.relatedTarget); // Button that triggered the modal
+    const recipient = button.data('whatever'); // Extract info from data-* attributes
+    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+    const modal = $(this);
+    modal.find('.modal-title').text('New message to ' + recipient)
+    modal.find('.modal-body input').val(recipient)
+  });
   export default {
     name: 'Login',
   };

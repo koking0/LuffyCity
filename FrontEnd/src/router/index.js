@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 import EmploymentClass from "../components/EmploymentClass/EmploymentClass";
 import FreeLessons from "../components/FreeLessons/FreeLessons";
 import Home from "../components/Home/Home";

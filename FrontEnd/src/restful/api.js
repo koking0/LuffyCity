@@ -16,3 +16,7 @@ export const courseDetail = (courseId) => {
 export const CourseOutline = (courseId) => {
   return Axios.get(`course/${courseId}/sections/`).then(res=>res.data);
 }
+// 实战课程详情数据
+export const practicalCourseDetail = (courseId) => {
+  return Axios.get(`course/${courseId}/payment_info/`).then(res=>res.data);
+}
