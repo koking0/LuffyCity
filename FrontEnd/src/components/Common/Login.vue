@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button type="button" class="signin" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+    <button id="signin" type="button" class="signin" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
       登录
     </button>
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
@@ -16,9 +16,7 @@
               <hr>
               <div class="username inputcontain">
                 <img alt="shouji" src="/static/images/shouji@1x_1560849098.2282765.svg">
-                <label>
-                  <input type="text" placeholder="用户名/手机号" maxlength="20" autofocus="autofocus" autocomplete="off">
-                </label>
+                <input type="text" placeholder="用户名/手机号" maxlength="20" autofocus="autofocus" autocomplete="off">
               </div>
               <div class="password inputcontain">
                 <img alt="mima" src="/static/images/mima-4@1x_1560849097.9023619.svg">

@@ -11,8 +11,9 @@
             <span>时长：63小时</span>
           </p>
           <div class="preferential">
-            <p>{{courseDetail.promotion_name}}</p>
-            <p>距离结束{{courseDetail.promotion_end_date}}：剩 243天 06小时 08分<span>46</span>秒</p>
+            <p style="margin-top: 10px;">{{courseDetail.promotion_name}}</p>
+<!--            <p>{{courseDetail.promotion_end_date}}</p>-->
+            <p style="margin-top: 10px;">距离结束：剩 243天 06小时 08分<span>46</span>秒</p>
           </div>
           <p class="price bac">
             <span>活动价</span>
@@ -109,8 +110,7 @@
       // 加入购物车
       addShopCart() {
         if (window.localStorage.getItem('access_token')) {
-          this.$http.shopCart(this.$route.params.detailId)
-            .then(res => {
+          this.$http.shopCart(this.$route.params.detailId).then(res => {
               if (res.error_no === 0) {
                 this.$message('购物车' + res.data.status);
               }
@@ -122,13 +122,8 @@
               console.log(err);
             })
         } else {
-          // 跳转登录页面，使用编程式导航来跳转
-          this.$router.push({
-            name: 'Login',
-            query: {
-              return_url: window.location.href
-            }
-          })
+          // 跳转登录页面
+          document.getElementById("signin").click();
         }
       },
       getCourseDetail() {

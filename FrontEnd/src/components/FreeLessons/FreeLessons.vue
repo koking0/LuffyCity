@@ -26,7 +26,7 @@
                 <p class="title">{{course.course_slogan}}</p>
                 <div class="item-number">
                   <p class="num">
-                    <img src="/static/images/bofang_1567070083.9337127.png">
+                    <img src="/static/images/bofang_1567070083.9337127.png" alt="bofang_1567070083">
                     {{course.learn_number}}人在学
                   </p>
                   <p class="time">
