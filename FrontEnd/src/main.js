@@ -9,6 +9,9 @@ import 'bootstrap'
 
 import '../static/global/global.css'
 
+// store的引入
+import store from '../src/store'
+
 import * as api from './restful/api'
 Vue.prototype.$http=api
 
