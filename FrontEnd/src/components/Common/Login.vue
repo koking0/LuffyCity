@@ -19,7 +19,7 @@
                 <input type="text" placeholder="用户名/手机号" maxlength="20" autofocus="autofocus" autocomplete="off">
               </div>
               <div class="password inputcontain">
-                <img alt="mima" src="/static/images/mima-4@1x_1560849097.9023619.svg">
+                <img alt="password" src="/static/images/mima-4@1x_1560849097.9023619.svg">
                 <label for="passwordinput"></label>
                 <input type="password" id="passwordinput" placeholder="密码" maxlength="20" autocomplete="off">
                 <a class="eye" style="display: none;">

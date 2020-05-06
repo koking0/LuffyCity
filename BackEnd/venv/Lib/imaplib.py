@@ -1576,7 +1576,7 @@ if __name__ == '__main__':
         else:
             M = IMAP4(host)
         if M.state == 'AUTH':
-            test_seq1 = test_seq1[1:]   # Login not needed
+            test_seq1 = test_seq1[1:]   # Account not needed
         M._mesg('PROTOCOL_VERSION = %s' % M.PROTOCOL_VERSION)
         M._mesg('CAPABILITIES = %r' % (M.capabilities,))
 

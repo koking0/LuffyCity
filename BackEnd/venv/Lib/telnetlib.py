@@ -9,7 +9,7 @@ Example:
 >>> tn = Telnet('www.python.org', 79)   # connect to finger port
 >>> tn.write(b'guido\r\n')
 >>> print(tn.read_all())
-Login       Name               TTY         Idle    When    Where
+Account       Name               TTY         Idle    When    Where
 guido    Guido van Rossum      pts/2        <Dec  2 11:10> snag.cnri.reston..
 
 >>>

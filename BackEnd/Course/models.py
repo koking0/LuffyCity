@@ -2,12 +2,13 @@ from django.db import models
 # Create your models here.
 
 from django.db import models
+from Account.models import Account
 from django.contrib.contenttypes.fields import GenericForeignKey, GenericRelation
 from django.contrib.contenttypes.models import ContentType
 
 # Create your models here.
 __all__ = ["Category", "Course", "CourseDetail", "Teacher", "DegreeCourse", "CourseChapter",
-           "CourseSection", "PricePolicy", "OftenAskedQuestion", "Comment", "Account", "CourseOutline"]
+           "CourseSection", "PricePolicy", "OftenAskedQuestion", "Comment", "CourseOutline"]
 
 
 class Category(models.Model):
@@ -26,12 +27,12 @@ class Course(models.Model):
     """课程表"""
     title = models.CharField(max_length=128, unique=True, verbose_name="课程的名称")
     course_img = models.ImageField(upload_to="course/%Y-%m", verbose_name='课程的图片')
-    category = models.ForeignKey(to="Category", verbose_name="课程的分类", on_delete=None)
+    category = models.ForeignKey(to="Category", verbose_name="课程的分类", on_delete=models.PROTECT)
 
     COURSE_TYPE_CHOICES = ((0, "免费课"), (1, "实战课"), (2, "轻课"), (3, "就业班"))
     course_type = models.SmallIntegerField(choices=COURSE_TYPE_CHOICES)
     degree_course = models.ForeignKey(to="DegreeCourse", blank=True, null=True, help_text="如果是学位课程，必须关联学位表",
-                                      on_delete=None)
+                                      on_delete=models.PROTECT)
 
     brief = models.CharField(verbose_name="课程简介", max_length=1024)
     level_choices = ((0, '初级'), (1, '中级'), (2, '高级'))
@@ -65,7 +66,7 @@ class Course(models.Model):
 
 class CourseDetail(models.Model):
     """课程详细表"""
-    course = models.OneToOneField(to="Course", on_delete=None)
+    course = models.OneToOneField(to="Course", on_delete=models.PROTECT)
     hours = models.IntegerField(verbose_name="课时", default=7)
     course_slogan = models.CharField(max_length=125, blank=True, null=True, verbose_name="课程口号")
     video_brief_link = models.CharField(max_length=255, blank=True, null=True)
@@ -109,7 +110,7 @@ class DegreeCourse(models.Model):
 
 class CourseChapter(models.Model):
     """课程章节表"""
-    course = models.ForeignKey(to="Course", related_name="course_chapters", on_delete=None)
+    course = models.ForeignKey(to="Course", related_name="course_chapters", on_delete=models.PROTECT)
     chapter = models.SmallIntegerField(default=1, verbose_name="第几章")
     title = models.CharField(max_length=32, verbose_name="课程章节名称")
 
@@ -123,7 +124,7 @@ class CourseChapter(models.Model):
 
 class CourseSection(models.Model):
     """课时表"""
-    chapter = models.ForeignKey(to="CourseChapter", related_name="course_sections", on_delete=None)
+    chapter = models.ForeignKey(to="CourseChapter", related_name="course_sections", on_delete=models.PROTECT)
     title = models.CharField(max_length=32, verbose_name="课时")
     section_order = models.SmallIntegerField(verbose_name="课时排序", help_text="建议每个课时之间空1至2个值，以备后续插入课时")
     section_type_choices = ((0, '文档'), (1, '练习'), (2, '视频'))
@@ -147,7 +148,7 @@ class CourseSection(models.Model):
 
 class PricePolicy(models.Model):
     """价格策略表"""
-    content_type = models.ForeignKey(ContentType, on_delete=None)  # 关联course or degree_course
+    content_type = models.ForeignKey(ContentType, on_delete=models.PROTECT)  # 关联course or degree_course
     object_id = models.PositiveIntegerField()
     content_object = GenericForeignKey('content_type', 'object_id')
 
@@ -168,7 +169,7 @@ class PricePolicy(models.Model):
 
 class OftenAskedQuestion(models.Model):
     """常见问题"""
-    content_type = models.ForeignKey(ContentType, on_delete=None)  # 关联course or degree_course
+    content_type = models.ForeignKey(ContentType, on_delete=models.PROTECT)  # 关联course or degree_course
     object_id = models.PositiveIntegerField()
     content_object = GenericForeignKey('content_type', 'object_id')
 
@@ -185,12 +186,12 @@ class OftenAskedQuestion(models.Model):
 
 class Comment(models.Model):
     """通用的评论表"""
-    content_type = models.ForeignKey(ContentType, blank=True, null=True, on_delete=None)
+    content_type = models.ForeignKey(ContentType, blank=True, null=True, on_delete=models.PROTECT)
     object_id = models.PositiveIntegerField(blank=True, null=True)
     content_object = GenericForeignKey('content_type', 'object_id')
 
     content = models.TextField(max_length=1024, verbose_name="评论内容")
-    account = models.ForeignKey("Account", verbose_name="会员名", on_delete=None)
+    account = models.ForeignKey("Account", verbose_name="会员名", on_delete=models.PROTECT)
     date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -200,21 +201,9 @@ class Comment(models.Model):
         verbose_name = "评价表"
 
 
-class Account(models.Model):
-    username = models.CharField(max_length=32, verbose_name="用户姓名")
-    pwd = models.CharField(max_length=32, verbose_name="密文密码")
-    balance = models.IntegerField(verbose_name="贝里余额", default=0)
-
-    def __str__(self):
-        return self.username
-
-    class Meta:
-        verbose_name = "用户表"
-
-
 class CourseOutline(models.Model):
     """课程大纲"""
-    course_detail = models.ForeignKey(to="CourseDetail", related_name="course_outline", on_delete=None)
+    course_detail = models.ForeignKey(to="CourseDetail", related_name="course_outline", on_delete=models.PROTECT)
     title = models.CharField(max_length=128)
     # 前端显示顺序
     order = models.PositiveSmallIntegerField(default=1)

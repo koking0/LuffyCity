@@ -399,7 +399,7 @@ class FTP:
         return self.ntransfercmd(cmd, rest)[0]
 
     def login(self, user = '', passwd = '', acct = ''):
-        '''Login, default anonymous.'''
+        '''Account, default anonymous.'''
         if not user:
             user = 'anonymous'
         if not passwd:

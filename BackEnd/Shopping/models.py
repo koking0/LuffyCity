@@ -5,7 +5,7 @@ from django.db import models
 from django.db import models
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes.fields import GenericForeignKey
-from Course.models import Account
+from Account.models import Account
 
 # Create your models here.
 __all__ = ["Coupon", "CouponRecord", "Order", "OrderDetail", "TransactionRecord"]
@@ -22,7 +22,7 @@ class Coupon(models.Model):
     off_percent = models.PositiveSmallIntegerField("折扣百分比", help_text="只针对折扣券，例7.9折，写79", blank=True, null=True, default=100)
     minimum_consume = models.PositiveIntegerField("最低消费", default=0, help_text="仅在满减券时填写此字段", null=True, blank=True)
 
-    content_type = models.ForeignKey(ContentType, blank=True, null=True, on_delete=None)
+    content_type = models.ForeignKey(ContentType, blank=True, null=True, on_delete=models.PROTECT)
     object_id = models.PositiveIntegerField("绑定课程", blank=True, null=True, help_text="可以把优惠券跟课程绑定")
     content_object = GenericForeignKey('content_type', 'object_id')
 
@@ -55,14 +55,14 @@ class Coupon(models.Model):
 
 class CouponRecord(models.Model):
     """优惠券发放、消费纪录"""
-    coupon = models.ForeignKey("Coupon", on_delete=None)
+    coupon = models.ForeignKey("Coupon", on_delete=models.PROTECT)
     number = models.CharField(max_length=64, unique=True, verbose_name="用户优惠券记录的流水号")
-    account = models.ForeignKey(to=Account, verbose_name="拥有者", on_delete=None)
+    account = models.ForeignKey(to=Account, verbose_name="拥有者", on_delete=models.PROTECT)
     status_choices = ((0, '未使用'), (1, '已使用'), (2, '已过期'))
     status = models.SmallIntegerField(choices=status_choices, default=0)
     get_time = models.DateTimeField(verbose_name="领取时间", help_text="用户领取时间")
     used_time = models.DateTimeField(blank=True, null=True, verbose_name="使用时间")
-    order = models.ForeignKey("Order", blank=True, null=True, verbose_name="关联订单", on_delete=None)  # 一个订单可以有多个优惠券
+    order = models.ForeignKey("Order", blank=True, null=True, verbose_name="关联订单", on_delete=models.PROTECT)  # 一个订单可以有多个优惠券
 
     class Meta:
         verbose_name_plural = "用户优惠券领取使用记录表"
@@ -78,7 +78,7 @@ class Order(models.Model):
 
     payment_number = models.CharField(max_length=128, verbose_name="支付第3方订单号", null=True, blank=True)
     order_number = models.CharField(max_length=128, verbose_name="订单号", unique=True)  # 考虑到订单合并支付的问题
-    account = models.ForeignKey(to=Account, on_delete=None)
+    account = models.ForeignKey(to=Account, on_delete=models.PROTECT)
     actual_amount = models.FloatField(verbose_name="实付金额")
 
     status_choices = ((0, '交易成功'), (1, '待支付'), (2, '退费申请中'), (3, '已退费'), (4, '主动取消'), (5, '超时取消'))
@@ -96,9 +96,9 @@ class Order(models.Model):
 
 class OrderDetail(models.Model):
     """订单详情"""
-    order = models.ForeignKey("Order", on_delete=None)
+    order = models.ForeignKey("Order", on_delete=models.PROTECT)
 
-    content_type = models.ForeignKey(ContentType, on_delete=None)  # 可关联普通课程或学位
+    content_type = models.ForeignKey(ContentType, on_delete=models.PROTECT)  # 可关联普通课程或学位
     object_id = models.PositiveIntegerField()
     content_object = GenericForeignKey('content_type', 'object_id')
 
@@ -117,7 +117,7 @@ class OrderDetail(models.Model):
 
 class TransactionRecord(models.Model):
     """贝里交易纪录"""
-    account = models.ForeignKey(to=Account, on_delete=None)
+    account = models.ForeignKey(to=Account, on_delete=models.PROTECT)
     amount = models.IntegerField("金额")
     balance = models.IntegerField("账户余额")
     # 2 为了处理 订单过期未支付时，锁定期贝里的回退

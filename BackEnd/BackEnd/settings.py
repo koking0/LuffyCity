@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'Account',
+    'Shopping',
+    'Course',
 ]
 
 MIDDLEWARE = [
@@ -133,3 +136,5 @@ STATIC_URL = '/static/'
 # Media配置
 MEDIA_URL = "media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+AUTH_USER_MODEL = "Account.Account"
