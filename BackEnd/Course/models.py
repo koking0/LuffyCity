@@ -13,11 +13,11 @@ __all__ = ["Category", "Course", "CourseDetail", "Teacher", "DegreeCourse", "Cou
 
 class Category(models.Model):
     """课程分类表"""
-    title = models.CharField(max_length=32, unique=True, verbose_name="课程的分类")
+    title = models.CharField(max_length=32, verbose_name="课程的分类")
     categoryType = models.SmallIntegerField(choices=((0, "免费课"), (1, "实战课")))
 
     def __str__(self):
-        return self.title
+        return self.title + str(self.categoryType)
 
     class Meta:
         verbose_name = "课程分类表"
@@ -25,7 +25,7 @@ class Category(models.Model):
 
 class Course(models.Model):
     """课程表"""
-    title = models.CharField(max_length=128, unique=True, verbose_name="课程的名称")
+    title = models.CharField(max_length=128, verbose_name="课程的名称")
     course_img = models.ImageField(upload_to="course/%Y-%m", verbose_name='课程的图片')
     category = models.ForeignKey(to="Category", verbose_name="课程的分类", on_delete=models.PROTECT)
 
@@ -99,7 +99,7 @@ class Teacher(models.Model):
 
 class DegreeCourse(models.Model):
     """字段大体跟课程表相同，哪些不同根据业务逻辑去区分"""
-    title = models.CharField(max_length=32, verbose_name="学位课程名字")
+    title = models.CharField(max_length=32, verbose_name="实战课程名字")
 
     def __str__(self):
         return self.title
