@@ -45,8 +45,8 @@ class Course(models.Model):
     order = models.IntegerField("课程顺序", help_text="从上一个课程数字往后排")
     study_num = models.IntegerField(verbose_name="学习人数", help_text="只要有人买课程，订单表加入数据的同时给这个字段+1")
 
-    order_details = GenericRelation("OrderDetail", related_query_name="course")
-    coupon = GenericRelation("Coupon")
+    order_details = GenericRelation("Shopping.OrderDetail", related_query_name="course")
+    coupon = GenericRelation("Shopping.Coupon")
     price_policy = GenericRelation("PricePolicy")
     often_ask_questions = GenericRelation("OftenAskedQuestion")
     course_comments = GenericRelation("Comment")
@@ -191,7 +191,7 @@ class Comment(models.Model):
     content_object = GenericForeignKey('content_type', 'object_id')
 
     content = models.TextField(max_length=1024, verbose_name="评论内容")
-    account = models.ForeignKey("Account", verbose_name="会员名", on_delete=models.PROTECT)
+    account = models.ForeignKey("Account.Account", verbose_name="会员名", on_delete=models.PROTECT)
     date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <LuffyHeader/>
-    <router-view/>
+    <router-view v-if="isRouterAlive"/>
     <LuffyFooter/>
   </div>
 </template>
@@ -13,6 +13,24 @@
   export default {
     name: 'App',
     components: {LuffyHeader, LuffyFooter},
+    provide(){
+      return {
+        reload:this.reload
+      }
+    },
+    data(){
+      return {
+        isRouterAlive: true
+      }
+    },
+    methods: {
+      reload(){
+        this.isRouterAlive = false;
+        this.$nextTick(function () {
+          this.isRouterAlive = true;
+        })
+      }
+    }
   }
 </script>
 

@@ -16,12 +16,13 @@
               <hr>
               <div class="username inputcontain">
                 <img alt="shouji" src="/static/images/shouji@1x_1560849098.2282765.svg">
-                <input type="text" placeholder="用户名/手机号" maxlength="20" autofocus="autofocus" autocomplete="off">
+                <label for="usernameInput"></label>
+                <input type="text" id="usernameInput" placeholder="手机号" maxlength="20" v-model="username">
               </div>
               <div class="password inputcontain">
                 <img alt="password" src="/static/images/mima-4@1x_1560849097.9023619.svg">
-                <label for="passwordinput"></label>
-                <input type="password" id="passwordinput" placeholder="密码" maxlength="20" autocomplete="off">
+                <label for="passwordInput"></label>
+                <input type="password" id="passwordInput" placeholder="密码" maxlength="20" v-model="password">
                 <a class="eye" style="display: none;">
                   <img alt="yanjing" src="/static/images/yanjing@1x_1560849097.8918953.svg">
                 </a>
@@ -34,7 +35,7 @@
                 <p id="wait" style="display: none;">验证码加载中...</p>
                 <p id="notice" style="display: none;">请先拖动验证码到相应位置</p>
               </div>
-              <button id="confirmbtn">登录</button>
+              <button id="confirmbtn" @click="loginHandler">登录</button>
               <div class="otherway">
                 <div class="oauth-box">
                   <div class="oauth-bg">
@@ -57,16 +58,43 @@
 
 <script>
   $('#exampleModal').on('show.bs.modal', function (event) {
-    const button = $(event.relatedTarget); // Button that triggered the modal
-    const recipient = button.data('whatever'); // Extract info from data-* attributes
-    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+    const button = $(event.relatedTarget);
+    const recipient = button.data('whatever');
     const modal = $(this);
     modal.find('.modal-title').text('New message to ' + recipient)
     modal.find('.modal-body input').val(recipient)
   });
   export default {
     name: 'Login',
+    data(){
+      return {
+        username: "",
+        password: "",
+      }
+    },
+    methods: {
+      loginHandler(){
+        let params = {
+          username: this.username,
+          password: this.password,
+        };
+        this.$http.userLogin(params).then(res=>{
+          console.log(res);
+          if (!res.error) {
+            location.reload();
+            localStorage.setItem("access_token", res.data.access_token);
+            localStorage.setItem("username", res.data.username);
+            localStorage.setItem("avatar", res.data.avatar);
+            localStorage.setItem("shop_cart_num", res.data.shop_cart_num);
+            localStorage.setItem("notice_num", res.data.notice_num);
+
+            this.$store.dispatch("getUserInfo", res.data);
+          }
+        }).catch(err=>{
+          console.log(err);
+        });
+      },
+    },
   };
 </script>
 

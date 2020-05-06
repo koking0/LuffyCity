@@ -32,16 +32,16 @@
           </div>
           <router-link class="shop-car" :to="{name:'ShoppingTrolley'}">
             <img src="/static/images/shopcart@2x_1568185801.2089324.png" alt="shopcart">
-            <span>购物车</span>
+            <span>购物车 <span style="color: red">{{shop_cart_num}}</span></span>
           </router-link>
-          <div v-if="!isLogin" class="register">
+          <div v-if="!isUserLogin" class="register">
             <Login/>
             <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
             <a target="_blank" href="https://www.luffycity.com/signup">
               <button class="signup">注册</button>
             </a>
           </div>
-          <div v-if="isLogin" class="nav-right-box" @mouseenter='enterHandler' @mouseleave='leaveHandler'>
+          <div v-if="isUserLogin" class="nav-right-box" @mouseenter='enterHandler' @mouseleave='leaveHandler'>
             <div class="nav-right">
               <div class="nav-study">
                 <router-link :to="{ name:'Classroom' }">
@@ -49,14 +49,14 @@
                 </router-link>
               </div>
               <div class="nav-img">
-                <img alt="avatar" src="/static/images/qYBYXa4JqwH8OtUp5xq7RBdp.png">
+                <img alt="avatar" :src="avatar">
               </div>
               <ul class="home-my-account" v-show='isShow'>
                 <li>我的账户<img src="/static/images/back_1568185800.821227.svg" alt="back"></li>
                 <li>我的订单<img src="/static/images/back_1568185800.821227.svg" alt="back"></li>
                 <li>贝里小卖铺<img src="/static/images/back_1568185800.821227.svg" alt="back"></li>
                 <li>我的优惠券<img src="/static/images/back_1568185800.821227.svg" alt="back"></li>
-                <li>我的消息<b>(8)</b><img src="/static/images/back_1568185800.821227.svg" alt="back"></li>
+                <li>我的消息<b>({{notice_num}})</b><img src="/static/images/back_1568185800.821227.svg" alt="back"></li>
                 <li>退出<img src="/static/images/back_1568185800.821227.svg" alt="back"></li>
               </ul>
             </div>
@@ -85,16 +85,32 @@
         isShow: false,
         currentUrl: null,
         isLogin: false,
+        username: null,
+        avatar: null,
+        shop_cart_num: null,
+        notice_num: null,
       }
     },
     components: {
       Login,
     },
+    created() {
+      let access_token = localStorage.getItem('access_token')
+      if (access_token) {
+        this.username = localStorage.getItem('username');
+        this.avatar = localStorage.getItem('avatar');
+        this.shop_cart_num = localStorage.getItem('shop_cart_num');
+        this.notice_num = localStorage.getItem('notice_num');
+      }
+    },
     computed: {
       urlPath: function () {
         this.currentUrl = this.$route.name;
         return this.currentUrl;
-      }
+      },
+      isUserLogin(){
+        return this.username;
+      },
     },
     methods: {
       enterHandler() {
@@ -359,7 +375,6 @@
     border-radius: 50%;
     display: inline-block;
     border: 1px solid #f3f3f3;
-    margin-top: 15px;
     margin-left: 10px;
   }
 

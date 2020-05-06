@@ -11,7 +11,6 @@ let store = new Vuex.Store({
   mutations: {
     getUserInfo(state, user) {
       state.userInfo = user;
-      console.log(state.userInfo);
     }
   },
   actions: {
