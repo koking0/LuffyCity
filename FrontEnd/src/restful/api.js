@@ -36,3 +36,7 @@ export const practicalCourseDetail = (courseId) => {
 export const userLogin = (params) => {
   return Axios.post('http://127.0.0.1:8000/api/account/login', qs.stringify(params)).then(res => res.data);
 }
+// 退出
+export const userLogout = () => {
+  return Axios.get('http://127.0.0.1:8000/api/account/logout').then(res => res.data);
+}

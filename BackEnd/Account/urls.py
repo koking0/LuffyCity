@@ -11,8 +11,9 @@
 # >>> Blog      : https://alex007.blog.csdn.net/
 # ☆ ☆ ☆ ☆ ☆ ☆ ☆
 from django.urls import path
-from Account.views import LoginView
+from Account.views import LoginView, LogoutView
 
 urlpatterns = [
-	path('login', LoginView.as_view())
+	path('login', LoginView.as_view()),
+	path('logout', LogoutView.as_view()),
 ]

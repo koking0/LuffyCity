@@ -1,7 +1,7 @@
 import uuid
 
 import redis
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
@@ -47,4 +47,13 @@ class LoginView(APIView):
 			# 验证失败
 			response.code = 501
 			response.error = "ERROR Incorrect username or password!"
+		return Response(response.dict)
+
+
+class LogoutView(APIView):
+	def get(self, request):
+		response = BaseResponse()
+		logout(request)
+		response.code = 200
+		response.data = "logout success"
 		return Response(response.dict)

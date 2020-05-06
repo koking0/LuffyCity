@@ -25,13 +25,13 @@
               <li>
                 <div class="img-box">
                   <div></div>
-                  <img src="//hcdn1.luffycity.com/static/frontend/public_class/PY1@2x_1566529821.1110113.png">
+                  <img src="static/images/PY1@2x_1566529821.1110113.png">
                 </div>
                 <div class="course-item">
                   <p class="title">跟随Alex金角大王3周上手Python开发</p>
                   <div class="item-number">
                     <p class="num">
-                      <img src="//hcdn1.luffycity.com/static/frontend/public_class/bofang_1567070083.9337127.png">
+                      <img src="static/images/bofang_1567070083.9337127.png">
                       <span>784人在学</span>
                       <span>19小时 </span>
                     </p>
@@ -43,13 +43,13 @@
             <li>
               <div class="img-box">
                 <div></div>
-                <img src="//hcdn1.luffycity.com/static/frontend/public_class/Linux1@2x_1566529820.6731546.png">
+                <img src="static/images/Linux1@2x_1566529820.6731546.png">
               </div>
               <div class="course-item">
                 <p class="title">跟随Redhat认证专家讲师2周玩转Linux</p>
                 <div class="item-number">
                   <p class="num">
-                    <img src="//hcdn1.luffycity.com/static/frontend/public_class/bofang_1567070083.9337127.png">
+                    <img src="static/images/bofang_1567070083.9337127.png">
                     <span>106人在学</span>
                     <span>16小时</span>
                   </p>
@@ -62,13 +62,13 @@
               <li>
                 <div class="img-box">
                   <div></div>
-                  <img src="//hcdn1.luffycity.com/static/frontend/public_class/web1@2x(1)_1566529822.6339395.png">
+                  <img src="static/images/web1@2x(1)_1566529822.6339395.png">
                 </div>
                 <div class="course-item">
                   <p class="title">3天搞定网站开发三剑客之HTML</p>
                   <div class="item-number">
                     <p class="num">
-                      <img src="//hcdn1.luffycity.com/static/frontend/public_class/bofang_1567070083.9337127.png">
+                      <img src="static/images/bofang_1567070083.9337127.png">
                       <span>51人在学</span>
                       <span>8小时</span>
                     </p>
@@ -85,13 +85,13 @@
               <li>
                 <div class="img-box">
                   <div></div>
-                  <img src="//hcdn1.luffycity.com/static/frontend/index/algorithm@2x_1567483301.520899.png">
+                  <img src="static/images/algorithm@2x_1567483301.520899.png">
                 </div>
                 <div class="course-item">
                   <p class="title">轻松学好开发人员必备的数据结构及算法知识</p>
                   <div class="item-number">
                     <p class="num">
-                      <img src="//hcdn1.luffycity.com/static/frontend/public_class/bofang_1567070083.9337127.png">
+                      <img src="static/images/bofang_1567070083.9337127.png">
                       <span>3877人在学</span>
                       <span>20小时</span>
                     </p>
@@ -107,13 +107,13 @@
               <li>
                 <div class="img-box">
                   <div></div>
-                  <img src="//hcdn1.luffycity.com/static/frontend/index/K8s@2x_1567483309.490485.png">
+                  <img src="static/images/K8s@2x_1567483309.490485.png">
                 </div>
                 <div class="course-item">
                   <p class="title">2周学会当下最热门的云计算架构之k8s实战</p>
                   <div class="item-number">
                     <p class="num">
-                      <img src="//hcdn1.luffycity.com/static/frontend/public_class/bofang_1567070083.9337127.png">
+                      <img src="static/images/bofang_1567070083.9337127.png">
                       <span>919人在学</span>
                       <span>13小时</span>
                     </p>
@@ -129,13 +129,13 @@
               <li>
                 <div class="img-box">
                   <div></div>
-                  <img src="//hcdn1.luffycity.com/static/frontend/index/go@2x_1567483307.2209833.png">
+                  <img src="static/images/go@2x_1567483307.2209833.png">
                 </div>
                 <div class="course-item">
                   <p class="title">微服务这么火，还不会的是没机会进大厂了</p>
                   <div class="item-number">
                     <p class="num">
-                      <img src="//hcdn1.luffycity.com/static/frontend/public_class/bofang_1567070083.9337127.png">
+                      <img src="static/images/bofang_1567070083.9337127.png">
                       <span>470人在学</span>
                       <span>12小时</span>
                     </p>
@@ -154,19 +154,19 @@
       <div class="title"><h1>官方重磅推荐1v1名师就业班课程</h1>
         <p>网红讲师+在线1V1名企导师辅导 + 闯关学习，逐行审阅代码、视频1v1考核等服务，助你高薪就业</p></div>
       <ul><a target="_blank" href="https://www.luffycity.com/micro/python-middle">
-        <li><img
-          src="//hcdn1.luffycity.com/static/frontend/index/AI@2x_1567483301.224543.png">
+        <li>
+          <img src="static/images/AI@2x_1567483301.224543.png">
           <div class="course-item"><p class="title">迎上AI风口，抓住行业红利，0基础6个月炼成人工智能时代热门人才</p>
-            <p class="num"><img
-              src="//hcdn1.luffycity.com/static/frontend/public_class/bofang_1567070083.9337127.png">
+            <p class="num">
+              <img src="static/images/bofang_1567070083.9337127.png">
               <span>1833人</span> <span>6个月</span></p></div>
         </li>
       </a> <a target="_blank" href="https://www.luffycity.com/micro/linux-middle">
-        <li><img
-          src="//hcdn1.luffycity.com/static/frontend/index/Linuxyun@2x_1567483310.010623.png">
+        <li>
+          <img src="static/images/Linuxyun@2x_1567483310.010623.png">
           <div class="course-item"><p class="title">玩转Linux，不写代码也能高薪，零基础首选，年薪30万不是梦！</p>
-            <p class="num"><img
-              src="//hcdn1.luffycity.com/static/frontend/public_class/bofang_1567070083.9337127.png">
+            <p class="num">
+              <img src="static/images/bofang_1567070083.9337127.png">
               <span>650人</span> <span>5个月</span></p></div>
         </li>
       </a></ul>
@@ -540,9 +540,8 @@
       </button>
     </div>
     <div class="home-img">
-      <img alt="" src="" style="max-width: 1403px; max-height: 737px;"></div>
-
-
+      <img alt="" src="" style="max-width: 1403px; max-height: 737px;">
+    </div>
   </div>
 </template>
 

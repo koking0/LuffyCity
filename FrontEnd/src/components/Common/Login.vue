@@ -92,6 +92,12 @@
           }
         }).catch(err=>{
           console.log(err);
+          this.$http.userLogout().then(res=>{
+            console.log(res);
+            location.reload();
+          }).catch(err=>{
+            console.log(err);
+          })
         });
       },
     },
