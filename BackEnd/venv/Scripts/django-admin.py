@@ -1,4 +1,4 @@
-#!G:/项目/路飞学城/BackEnd/venv/bin/python
+#!G:/Project/LuffyCity/BackEnd/venv/bin/python
 from django.core import management
 
 if __name__ == "__main__":

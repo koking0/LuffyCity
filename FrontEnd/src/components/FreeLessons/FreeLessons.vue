@@ -9,16 +9,15 @@
       <ul>
         <li v-for="(category, index) in categoryList" :key="category.id" :class="{this:index===currentIndex}"
             @click="categoryClick(index, category.id)">
-          {{category.name}}
+          {{category.title}}
         </li>
       </ul>
     </div>
     <div class="course-main">
       <section>
-        <div class="name">{{categoryList[currentIndex].name}}</div>
         <div>
           <ul>
-            <li v-for="(course, index) in courseDetail" :key="course.id" @click="detailHandler(course.id)">
+            <li v-for="(course, _) in courseList" :key="course.id" @click="detailHandler(course.id)">
               <div class="img-box">
                 <img alt="" :src="course.course_img">
               </div>
@@ -27,11 +26,10 @@
                 <div class="item-number">
                   <p class="num">
                     <img src="/static/images/bofang_1567070083.9337127.png" alt="bofang_1567070083">
-                    {{course.learn_number}}人在学
+                    {{course.study_num}}人在学
                   </p>
                   <p class="time">
-                    <span>{{getLevelName(course.level)}}</span>
-                    <span>{{course.hours}}小时</span>
+                    <span>{{course.level}}</span>
                   </p>
                 </div>
               </div>
@@ -50,6 +48,8 @@
       return {
         // 分类列表
         categoryList: [],
+        // 分类课程列表
+        courseList: [],
         // 选中分类列表索引
         currentIndex: 0,
         // 获取课程列表的id
@@ -59,49 +59,33 @@
       }
     },
     methods: {
-      // 处理分类列表
+      // 获取免费课程分类列表
       getCategoryList() {
-        this.$http.getContent('free/category/').then(res => {
-          this.categoryList = res.data;
-          let allItem = {id: 0, name: '全部', courses: []}
-          for (let i = 0; i < this.categoryList.length; i++) {
-            for (let j = 0; j < this.categoryList[i].courses.length; j++) {
-              allItem.courses.push(this.categoryList[i].courses[j]);
-            }
-          }
+        this.$http.getFreeCategory().then(res => {
+          this.categoryList = res;
+          let allItem = {id: 0, title: '全部', categoryType: 0}
           this.categoryList.unshift(allItem);
-          this.courseDetail = this.categoryList[this.currentIndex].courses
-        })
+        }).catch(err => {
+          console.log(err);
+        });
       },
-      // 处理全部课程列表
-      getAllCategoryList() {
-        if (this.categoryList.length) {
-          this.courseDetail = this.categoryList[this.currentIndex].courses
-          console.log(this.courseDetail);
-        }
-      },
-      // 获取课程等级
-      getLevelName(level) {
-        let ans;
-        switch (level) {
-          case 0:
-            ans = "入门";
-            break;
-          case 1:
-            ans = "进阶";
-            break;
-          default:
-            console.log(level);
-            ans = "其它";
-            break;
-        }
-        return ans
+      // 获取免费课程分类列表内的所有课程
+      getCategoryCourseList() {
+        this.$http.getFreeCategoryCourse(this.categoryId).then(res => {
+          for (let i = 0; i < res.length; i++) {
+            res[i].course_img = `http://127.0.0.1:8000/${res[i].course_img}`;
+          }
+          console.log(res);
+          this.courseList = res;
+        }).catch(err => {
+          console.log(err);
+        });
       },
       // 分类点击事件
       categoryClick(index, id) {
         this.currentIndex = index;
         this.categoryId = id;
-        this.getAllCategoryList();
+        this.getCategoryCourseList();
       },
       // 课程详情事件
       detailHandler(id) {
@@ -115,7 +99,7 @@
     },
     created() {
       this.getCategoryList();
-      this.getAllCategoryList();
+      this.getCategoryCourseList();
     },
   };
 </script>

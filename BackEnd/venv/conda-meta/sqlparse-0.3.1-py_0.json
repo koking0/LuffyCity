@@ -39,28 +39,28 @@
     "Lib/site-packages/sqlparse/tokens.py",
     "Lib/site-packages/sqlparse/utils.py",
     ".nonadmin",
-    "Lib/site-packages/sqlparse/__pycache__/__init__.cpython-37.pyc",
-    "Lib/site-packages/sqlparse/__pycache__/__main__.cpython-37.pyc",
-    "Lib/site-packages/sqlparse/__pycache__/cli.cpython-37.pyc",
-    "Lib/site-packages/sqlparse/__pycache__/compat.cpython-37.pyc",
-    "Lib/site-packages/sqlparse/engine/__pycache__/__init__.cpython-37.pyc",
-    "Lib/site-packages/sqlparse/engine/__pycache__/filter_stack.cpython-37.pyc",
-    "Lib/site-packages/sqlparse/engine/__pycache__/grouping.cpython-37.pyc",
-    "Lib/site-packages/sqlparse/engine/__pycache__/statement_splitter.cpython-37.pyc",
-    "Lib/site-packages/sqlparse/__pycache__/exceptions.cpython-37.pyc",
-    "Lib/site-packages/sqlparse/filters/__pycache__/__init__.cpython-37.pyc",
-    "Lib/site-packages/sqlparse/filters/__pycache__/aligned_indent.cpython-37.pyc",
-    "Lib/site-packages/sqlparse/filters/__pycache__/others.cpython-37.pyc",
-    "Lib/site-packages/sqlparse/filters/__pycache__/output.cpython-37.pyc",
-    "Lib/site-packages/sqlparse/filters/__pycache__/reindent.cpython-37.pyc",
-    "Lib/site-packages/sqlparse/filters/__pycache__/right_margin.cpython-37.pyc",
-    "Lib/site-packages/sqlparse/filters/__pycache__/tokens.cpython-37.pyc",
-    "Lib/site-packages/sqlparse/__pycache__/formatter.cpython-37.pyc",
-    "Lib/site-packages/sqlparse/__pycache__/keywords.cpython-37.pyc",
-    "Lib/site-packages/sqlparse/__pycache__/lexer.cpython-37.pyc",
-    "Lib/site-packages/sqlparse/__pycache__/sql.cpython-37.pyc",
-    "Lib/site-packages/sqlparse/__pycache__/tokens.cpython-37.pyc",
-    "Lib/site-packages/sqlparse/__pycache__/utils.cpython-37.pyc",
+    "Lib/site-packages/sqlparse/__pycache__/__init__.cpython-38.pyc",
+    "Lib/site-packages/sqlparse/__pycache__/__main__.cpython-38.pyc",
+    "Lib/site-packages/sqlparse/__pycache__/cli.cpython-38.pyc",
+    "Lib/site-packages/sqlparse/__pycache__/compat.cpython-38.pyc",
+    "Lib/site-packages/sqlparse/engine/__pycache__/__init__.cpython-38.pyc",
+    "Lib/site-packages/sqlparse/engine/__pycache__/filter_stack.cpython-38.pyc",
+    "Lib/site-packages/sqlparse/engine/__pycache__/grouping.cpython-38.pyc",
+    "Lib/site-packages/sqlparse/engine/__pycache__/statement_splitter.cpython-38.pyc",
+    "Lib/site-packages/sqlparse/__pycache__/exceptions.cpython-38.pyc",
+    "Lib/site-packages/sqlparse/filters/__pycache__/__init__.cpython-38.pyc",
+    "Lib/site-packages/sqlparse/filters/__pycache__/aligned_indent.cpython-38.pyc",
+    "Lib/site-packages/sqlparse/filters/__pycache__/others.cpython-38.pyc",
+    "Lib/site-packages/sqlparse/filters/__pycache__/output.cpython-38.pyc",
+    "Lib/site-packages/sqlparse/filters/__pycache__/reindent.cpython-38.pyc",
+    "Lib/site-packages/sqlparse/filters/__pycache__/right_margin.cpython-38.pyc",
+    "Lib/site-packages/sqlparse/filters/__pycache__/tokens.cpython-38.pyc",
+    "Lib/site-packages/sqlparse/__pycache__/formatter.cpython-38.pyc",
+    "Lib/site-packages/sqlparse/__pycache__/keywords.cpython-38.pyc",
+    "Lib/site-packages/sqlparse/__pycache__/lexer.cpython-38.pyc",
+    "Lib/site-packages/sqlparse/__pycache__/sql.cpython-38.pyc",
+    "Lib/site-packages/sqlparse/__pycache__/tokens.cpython-38.pyc",
+    "Lib/site-packages/sqlparse/__pycache__/utils.cpython-38.pyc",
     "Scripts/sqlformat-script.py",
     "Scripts/sqlformat.exe"
   ],
@@ -283,91 +283,91 @@
         "size_in_bytes": 3509
       },
       {
-        "_path": "Lib/site-packages/sqlparse/__pycache__/__init__.cpython-37.pyc",
+        "_path": "Lib/site-packages/sqlparse/__pycache__/__init__.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/sqlparse/__pycache__/__main__.cpython-37.pyc",
+        "_path": "Lib/site-packages/sqlparse/__pycache__/__main__.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/sqlparse/__pycache__/cli.cpython-37.pyc",
+        "_path": "Lib/site-packages/sqlparse/__pycache__/cli.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/sqlparse/__pycache__/compat.cpython-37.pyc",
+        "_path": "Lib/site-packages/sqlparse/__pycache__/compat.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/sqlparse/engine/__pycache__/__init__.cpython-37.pyc",
+        "_path": "Lib/site-packages/sqlparse/engine/__pycache__/__init__.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/sqlparse/engine/__pycache__/filter_stack.cpython-37.pyc",
+        "_path": "Lib/site-packages/sqlparse/engine/__pycache__/filter_stack.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/sqlparse/engine/__pycache__/grouping.cpython-37.pyc",
+        "_path": "Lib/site-packages/sqlparse/engine/__pycache__/grouping.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/sqlparse/engine/__pycache__/statement_splitter.cpython-37.pyc",
+        "_path": "Lib/site-packages/sqlparse/engine/__pycache__/statement_splitter.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/sqlparse/__pycache__/exceptions.cpython-37.pyc",
+        "_path": "Lib/site-packages/sqlparse/__pycache__/exceptions.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/sqlparse/filters/__pycache__/__init__.cpython-37.pyc",
+        "_path": "Lib/site-packages/sqlparse/filters/__pycache__/__init__.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/sqlparse/filters/__pycache__/aligned_indent.cpython-37.pyc",
+        "_path": "Lib/site-packages/sqlparse/filters/__pycache__/aligned_indent.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/sqlparse/filters/__pycache__/others.cpython-37.pyc",
+        "_path": "Lib/site-packages/sqlparse/filters/__pycache__/others.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/sqlparse/filters/__pycache__/output.cpython-37.pyc",
+        "_path": "Lib/site-packages/sqlparse/filters/__pycache__/output.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/sqlparse/filters/__pycache__/reindent.cpython-37.pyc",
+        "_path": "Lib/site-packages/sqlparse/filters/__pycache__/reindent.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/sqlparse/filters/__pycache__/right_margin.cpython-37.pyc",
+        "_path": "Lib/site-packages/sqlparse/filters/__pycache__/right_margin.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/sqlparse/filters/__pycache__/tokens.cpython-37.pyc",
+        "_path": "Lib/site-packages/sqlparse/filters/__pycache__/tokens.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/sqlparse/__pycache__/formatter.cpython-37.pyc",
+        "_path": "Lib/site-packages/sqlparse/__pycache__/formatter.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/sqlparse/__pycache__/keywords.cpython-37.pyc",
+        "_path": "Lib/site-packages/sqlparse/__pycache__/keywords.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/sqlparse/__pycache__/lexer.cpython-37.pyc",
+        "_path": "Lib/site-packages/sqlparse/__pycache__/lexer.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/sqlparse/__pycache__/sql.cpython-37.pyc",
+        "_path": "Lib/site-packages/sqlparse/__pycache__/sql.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/sqlparse/__pycache__/tokens.cpython-37.pyc",
+        "_path": "Lib/site-packages/sqlparse/__pycache__/tokens.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/sqlparse/__pycache__/utils.cpython-37.pyc",
+        "_path": "Lib/site-packages/sqlparse/__pycache__/utils.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {

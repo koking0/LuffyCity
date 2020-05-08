@@ -1,9 +1,7 @@
-What's New in IDLE 3.7.6
+What's New in IDLE 3.8.1
 Released on 2019-12-16?
 ======================================
 
-
-bpo-39781: Selecting code context lines no longer causes a jump.
 
 bpo-39663: Add tests for pyparse find_good_parse_start().
 
@@ -45,8 +43,8 @@ bpo-26353: Stop adding newline when saving an IDLE shell window.
 bpo-38598: Do not try to compile IDLE shell or output windows.
 
 
-What's New in IDLE 3.7.5
-Released on 2019-10-15
+What's New in IDLE 3.8.0 (since 3.7.0)
+Released on 2019-10-14
 ======================================
 
 bpo-36698: IDLE no longer fails when writing non-encodable characters
@@ -117,11 +115,6 @@ of after a random delay.
 bpo-27452: Cleanup config.py by inlining RemoveFile and simplifying
 the handling of __file__ in CreateConfigHandlers/
 
-
-What's New in IDLE 3.7.4
-Released on 2019-07-08
-======================================
-
 bpo-26806: To compensate for stack frames added by IDLE and avoid
 possible problems with low recursion limits, add 30 to limits in the
 user code execution process.  Subtract 30 when reporting recursion
@@ -177,11 +170,6 @@ bpo-36396: Remove fgBg param of idlelib.config.GetHighlight().
 This param was only used twice and changed the return type.
 
 bpo-23216: IDLE: Add docstrings to search modules.
-
-
-What's New in IDLE 3.7.3
-Released on 2019-03-25
-======================================
 
 bpo-36176: Fix IDLE autocomplete & calltip popup colors.
 Prevent conflicts with Linux dark themes
@@ -239,11 +227,6 @@ Zoom Height has moved from the Window menu to the Options menu.
 bpo-35521: Document the editor code context feature.
 Add some internal references within the IDLE doc.
 
-
-What's New in IDLE 3.7.2
-Released on 2018-12-24
-======================================
-
 bpo-34864: When starting IDLE on MacOS, warn if the system setting
 "Prefer tabs when opening documents" is "Always".  As previous
 documented for this issue, running IDLE with this setting causes
@@ -281,11 +264,6 @@ We now use git and backporting instead of hg and forward merging.
 
 bpo-35087: Update idlelib help files for the current doc build.
 The main change is the elimination of chapter-section numbers.
-
-
-What's New in IDLE 3.7.1
-Released on 2018-10-20
-======================================
 
 bpo-1529353: Output over N lines (50 by default) is squeezed down to a button.
 N can be changed in the PyShell section of the General page of the

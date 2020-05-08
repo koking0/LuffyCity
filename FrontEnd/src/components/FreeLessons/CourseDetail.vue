@@ -6,11 +6,10 @@
         <span>返回免费课主页</span>
       </p>
       <div class="intro-data">
-        <h1>{{courseDetail.name}}</h1>
+        <h1>{{courseDetail.title}}</h1>
         <p>
-          <span>课程小节：{{courseDetail.numbers}}小节</span>
-          <span>时长：{{courseDetail.hour}}小时</span>
-          <span>{{courseDetail.learn_number}}人在学</span>
+          <span>时长：{{courseDetail.hours}}小时</span>
+          <span>{{courseDetail.study_num}}人在学</span>
         </p>
       </div>
       <div class="course-nav" style="background: rgb(88, 83, 83);">
@@ -34,48 +33,38 @@
           <div class="content-item">
             <div class="title">介绍</div>
             <article>
-              {{courseDetail.why_study}}
+              {{courseDetail.brief}}
             </article>
             <div class="title">你将会学到的</div>
             <ul>
-              <li key="0">
-                <img src="//hcdn1.luffycity.com/static/frontend/public_class/dui@2x_1567043311.9183662.png">
-                <p>理解Web框架核心原理</p>
+              <li v-for="item in courseDetail.course_outline" :key="item.id">
+                <img src="/static/images/dui@2x_1567043311.9183662.png" alt="dui">
+                <p>{{item.title}}</p>
               </li>
             </ul>
           </div>
           <div class="course-outline">
             <div class="title">
               <p class="title-name">课程大纲</p>
-              <p class="title-side">
-                <span>全部收起</span>
-                <span>58小节</span>
-                <span>9:50:54</span>
-              </p>
             </div>
             <ul class="outline-list">
-              <li v-for="(item, _) in courseOutline.details" class="list-data" :key="item.id">
+              <li v-for="(item, _) in courseDetail.chapter" class="list-data" :key="item.id">
                 <div class="list-data-title">
                   <div class="list-name">
                     <img src="/static/images/jiahao@2x_1567043312.082176.png" alt="加号">
                     <img src="/static/images/jiahaobak@2x_1567043312.1160207.png" alt="减号">
-                    <p>item.name</p>
-                  </div>
-                  <div class="list-num">
-                    <span class="section-num hide">{{item.coursesections.length}}小节</span>
-                    <span>{{item.video_time}}</span>
+                    <p>{{item.title}}</p>
                   </div>
                 </div>
                 <ul class="list-data-item">
-                  <li v-for="(section, _) in item.coursesections" :class="{preview:section.free_trail}" :key="section.id">
+                  <li v-for="(section, _) in item.section" :class="{preview:section.free_trail}"
+                      :key="section.id">
                     <div class="data-item-name">
                       <img class="img1" src="/static/images/bofang@2x_1567043311.5421314.png" alt="播放按钮">
-                      <img class="img1" src="/static/images/bofang_1567070083.9337127.png" alt="播放按钮">
                       <p>{{section.name}}</p>
                     </div>
                     <div class="data-item-num">
                       <span v-if="section.free_trail" class="type">预览</span>
-                      <span class="time">{{section.video_time}}</span>
                     </div>
                   </li>
                 </ul>
@@ -96,19 +85,23 @@
             <div class="title">学霸团专属权益</div>
             <ul>
               <li>
-                <img style="width: 18px;height: 20px" src="//hcdn1.luffycity.com/static/frontend/public_class/ziliao@2x_1567043312.962484.png">
+                <img style="width: 18px;height: 20px"
+                     src="//hcdn1.luffycity.com/static/frontend/public_class/ziliao@2x_1567043312.962484.png">
                 <p>课件下载</p>
               </li>
               <li>
-                <img style="width: 17px;height: 17px" src="//hcdn1.luffycity.com/static/frontend/public_class/gongkaike@2x_1567043311.9599693.png">
+                <img style="width: 17px;height: 17px"
+                     src="//hcdn1.luffycity.com/static/frontend/public_class/gongkaike@2x_1567043311.9599693.png">
                 <p>定期公开课</p>
               </li>
               <li>
-                <img style="width: 21px;height: 18px" src="//hcdn1.luffycity.com/static/frontend/public_class/jiaoliu@2x_1567043312.2520878.png">
+                <img style="width: 21px;height: 18px"
+                     src="//hcdn1.luffycity.com/static/frontend/public_class/jiaoliu@2x_1567043312.2520878.png">
                 <p>学员交流<br>QQ群：701031800</p>
               </li>
               <li>
-                <img style="width: 18px;height: 18px" src="//hcdn1.luffycity.com/static/frontend/public_class/answer@2x_1567043311.5104716.png">
+                <img style="width: 18px;height: 18px"
+                     src="//hcdn1.luffycity.com/static/frontend/public_class/answer@2x_1567043311.5104716.png">
                 <p>导师答疑</p>
               </li>
             </ul>
@@ -121,11 +114,10 @@
             <div class="title">讲师介绍</div>
             <dl>
               <dt>
-                <img alt="" :src="courseDetail.teacher.image">
+                <img alt="" :src="courseDetail.teacher.avatar">
               </dt>
               <dd>
                 <p>{{courseDetail.teacher.name}}</p>
-                <span>{{courseDetail.teacher.signature}}</span>
               </dd>
             </dl>
             <article>
@@ -135,7 +127,7 @@
           <div class="study-route">
             <div class="title">学习路径</div>
             <div class="route-item">
-              <section key="0">
+              <section>
                 <p class="leave">初级</p>
                 <ul>
                   <span class="pipe">
@@ -146,7 +138,7 @@
                   <a style="cursor: pointer;" href="#" target="_blank">面向对象编程</a>
                 </ul>
               </section>
-              <section key="1">
+              <section>
                 <p class="leave">中级</p>
                 <ul>
                   <span class="pipe"><i></i></span>
@@ -157,7 +149,7 @@
                   <a style="cursor: pointer;" href="#" target="_blank">爬虫开发实战</a>
                 </ul>
               </section>
-              <section key="2">
+              <section>
                 <p class="leave">高级</p>
                 <ul>
                   <span class="pipe"><i></i></span>
@@ -165,10 +157,10 @@
                   <a style="cursor: pointer;" href="#" target="_blank">Python数据分析与机器学习实战</a>
                 </ul>
               </section>
-              <section key="3">
+              <section>
                 <p class="leave">就业班</p>
                 <ul><span class="pipe"><i></i></span>
-                  <a style="cursor: pointer;" href="/micro/python-middle" target="_blank">Python全栈开发</a>
+                  <a style="cursor: pointer;" href="#" target="_blank">Python全栈开发</a>
                 </ul>
               </section>
             </div>
@@ -182,33 +174,19 @@
 <script>
   export default {
     name: "CourseDetail",
-    created() {
-      this.getCourseDetail();
-      this.getCourseOutline();
-    },
-    data(){
+    data() {
       return {
         courseDetail: {},
-        courseOutline: {},
       }
     },
-    methods:{
-      getCourseDetail(){
-        this.$http.courseDetail(this.$route.params.detailId).then(res=>{
-          this.courseDetail = res.data;
-          console.log(this.courseDetail);
-        }).catch(err=>{
-          console.log(err);
-        })
-      },
-      getCourseOutline(){
-        this.$http.CourseOutline(this.$route.params.detailId).then(res=>{
-          this.courseOutline = res.data;
-          console.log(this.courseOutline);
-        }).catch(err=>{
-          console.log(err);
-        })
-      },
+    created() {
+      this.$http.courseDetail(this.$route.params.detailId).then(res => {
+        res.teacher.avatar = `http://127.0.0.1:8000/${res.teacher.avatar}`;
+        console.log(res)
+        this.courseDetail = res;
+      }).catch(err => {
+        console.log(err);
+      })
     },
   }
 </script>
@@ -253,6 +231,7 @@
     width: 1200px;
     padding-left: 23px;
   }
+
   .course-intro .intro-top .intro-data h1 {
     width: 780px;
     font-size: 36px;
@@ -262,15 +241,18 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+
   .course-intro .intro-top .intro-data p {
     width: 780px;
     color: #fff;
     font-size: 16px;
     margin-top: 8px;
   }
+
   .course-intro .intro-top .intro-data p span {
     margin-right: 26px;
   }
+
   .course-intro .intro-top .course-nav {
     width: 100%;
     height: 72px;
@@ -284,15 +266,17 @@
     left: 0;
     top: 228px;
   }
+
   .course-intro .intro-top .course-nav ul {
-     width: 1200px;
-     display: -ms-flexbox;
-     display: flex;
-     -ms-flex-align: center;
-     align-items: center;
-     padding-left: 23px;
-     box-sizing: border-box;
-   }
+    width: 1200px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-left: 23px;
+    box-sizing: border-box;
+  }
+
   .course-intro .intro-top .course-nav ul li {
     font-size: 16px;
     color: #e9e9e9;
@@ -303,28 +287,35 @@
     cursor: pointer;
     box-sizing: border-box;
   }
+
   .course-intro .intro-top .course-nav ul .this {
     color: #fff;
     font-weight: 500;
   }
+
   .course-intro .intro-top .course-nav ul .this p {
     box-shadow: 0 2px 0 0 #fff;
   }
+
   .course-intro .intro-top .course-nav ul li p, .course-intro .intro-top .course-nav ul li span {
     padding-bottom: 4px;
   }
+
   .course-intro .course-intro-item {
     width: 1200px;
     margin-top: 24px;
   }
+
   .course-intro .course-intro-item .intro-content {
     width: 780px;
     float: left;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box {
     width: 100%;
     height: auto;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box .content-item {
     width: 100%;
     height: auto;
@@ -334,10 +325,12 @@
     box-sizing: border-box;
     box-shadow: 0 2px 4px 0 #f3f3f3;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box .content-item .title {
     color: #000;
     font-size: 22px;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box .content-item article {
     font-size: 14px;
     color: #5e5e5e;
@@ -345,10 +338,12 @@
     line-height: 28px;
     margin-bottom: 50px;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box .content-item .title {
     color: #000;
     font-size: 22px;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box .content-item ul {
     width: 100%;
     display: -ms-flexbox;
@@ -357,6 +352,7 @@
     flex-wrap: wrap;
     margin-top: 17px;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box .content-item ul li {
     display: -ms-flexbox;
     display: flex;
@@ -365,19 +361,23 @@
     margin-right: 37px;
     margin-bottom: 15px;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box .content-item ul li img {
     width: 18px;
     height: 18px;
     margin-right: 12px;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box .content-item ul li p {
     width: 303px;
     font-size: 14px;
     color: #5e5e5e;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box .course-outline {
     width: 100%;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box .course-outline .title {
     margin-top: 50px;
     margin-bottom: 13px;
@@ -391,10 +391,12 @@
     justify-content: space-between;
     box-sizing: border-box;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box .course-outline .title .title-name {
     color: #000;
     font-size: 22px;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box .course-outline .title .title-side {
     display: -ms-flexbox;
     display: flex;
@@ -402,17 +404,20 @@
     align-items: center;
     font-size: 14px;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box .course-outline .title .title-side span:first-of-type {
     color: #2a2a2a;
     margin-right: 39px;
     cursor: pointer;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box .course-outline .title .title-side span:nth-of-type(2) {
     min-width: 43px;
     text-align: right;
     color: #4a4a4a;
     display: inline-block;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box .course-outline .title .title-side span:nth-of-type(3) {
     width: 80px;
     color: #4a4a4a;
@@ -420,15 +425,18 @@
     text-align: right;
     display: inline-block;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box .course-outline .outline-list {
     width: 100%;
     height: auto;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box .course-outline .outline-list .list-data {
     width: 780px;
     height: auto;
     margin-bottom: 2px;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box .course-outline .outline-list .list-data .list-data-title {
     height: 48px;
     display: -ms-flexbox;
@@ -445,22 +453,26 @@
     margin-bottom: 1px;
     cursor: pointer;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box .course-outline .outline-list .list-data .list-name {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
     align-items: center;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box .course-outline .outline-list .list-data .list-name img {
     width: 10px;
     height: auto;
     margin-right: 15px;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box .course-outline .outline-list .list-data .list-name img {
     width: 10px;
     height: auto;
     margin-right: 15px;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box .course-outline .outline-list .list-data .list-name p {
     width: 546px;
     font-size: 15px;
@@ -469,12 +481,14 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box .course-outline .outline-list .list-data .list-data-item {
     width: 100%;
     height: auto;
     margin-bottom: 4px;
     border-top: 1px solid #dadada;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box .course-outline .outline-list .list-data .list-data-item li {
     cursor: pointer;
     width: 100%;
@@ -494,35 +508,42 @@
     box-sizing: border-box;
     color: #6ca4c5;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box .course-outline .outline-list .list-data .list-data-item li .data-item-name {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
     align-items: center;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box .course-outline .outline-list .list-data .list-data-item li .data-item-name img {
     width: 16px;
     height: 16px;
     margin-right: 9px;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box .course-outline .outline-list .list-data .list-data-item li .data-item-name .img2 {
     display: none;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box .course-outline .outline-list .list-data .list-data-item li .data-item-name p {
     width: 430px;
     font-size: 14px;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box .course-outline .outline-list .list-data .list-data-item li .data-item-num .type {
     min-width: 43px;
     text-align: right;
     display: inline-block;
   }
+
   .course-intro .course-intro-item .intro-content .course-item-box .course-outline .outline-list .list-data .list-data-item li .data-item-num .time {
     width: 80px;
     margin-left: 17px;
     text-align: right;
     display: inline-block;
   }
+
   .course-intro .course-intro-item .course-side {
     width: 374px;
     height: auto;
@@ -531,6 +552,7 @@
     z-index: 2;
     position: relative;
   }
+
   .course-intro .course-intro-item .course-side .side-video {
     width: 100%;
     height: auto;
@@ -539,6 +561,7 @@
     box-shadow: 0 2px 4px 0 #f3f3f3;
     border: 1px solid #e8e8e8;
   }
+
   .course-intro .course-intro-item .course-side .side-video .video-box {
     width: 100%;
     height: auto;
@@ -547,15 +570,17 @@
     box-sizing: border-box;
     cursor: pointer;
   }
+
   .course-intro .course-intro-item .course-side .side-video .video-box img {
     width: 100%;
     height: auto;
   }
+
   .course-intro .course-intro-item .course-side .side-video .video-box p {
     width: 104px;
     height: 104px;
     border-radius: 100%;
-    background: hsla(0,0%,100%,.2);
+    background: hsla(0, 0%, 100%, .2);
     position: absolute;
     left: 50%;
     top: 50%;
@@ -564,22 +589,25 @@
     text-align: center;
     line-height: 104px;
   }
+
   .course-intro .course-intro-item .course-side .side-video .video-box p img {
     width: 46px;
     height: 46px;
     margin-left: 20px;
-    margin-top: 30px;
   }
+
   .course-intro .course-intro-item .course-side .side-video .student-prower {
     padding: 0 31px 30px;
     box-sizing: border-box;
   }
+
   .course-intro .course-intro-item .course-side .side-video .student-prower .title {
     color: #000;
     font-size: 15px;
     font-weight: 400;
     margin-bottom: 20px;
   }
+
   .course-intro .course-intro-item .course-side .side-video .student-prower ul {
     width: 100%;
     height: auto;
@@ -588,13 +616,16 @@
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
+
   .course-intro .course-intro-item .course-side .side-video .student-prower ul li:first-of-type, .course-intro .course-intro-item .course-side .side-video .student-prower ul li:nth-of-type(2) {
     margin-bottom: 18px;
     width: 147px;
   }
+
   .course-intro .course-intro-item .course-side .side-video .student-prower ul li img {
     margin-right: 9px;
   }
+
   .course-intro .course-intro-item .course-side .side-video .student-prower ul li p {
     width: 120px;
     font-size: 12px;
@@ -604,12 +635,14 @@
     white-space: nowrap;
     float: right;
   }
+
   .course-intro .course-intro-item .course-side .side-video .student-prower .start-study {
     color: #fff;
     margin-top: 27px;
     margin-bottom: 12px;
     background: #ffc210;
   }
+
   .course-intro .course-intro-item .course-side .side-video .student-prower .btns {
     width: 100%;
     height: 52px;
@@ -623,11 +656,13 @@
     display: block;
     text-decoration: none;
   }
+
   .course-intro .course-intro-item .course-side .side-video .student-prower .add-team {
     color: #f5a623;
     border: 1px solid #f5a623;
     box-sizing: border-box;
   }
+
   .course-intro .course-intro-item .course-side .teacher-intro {
     width: 100%;
     height: auto;
@@ -639,15 +674,18 @@
     box-sizing: border-box;
     background: #fff;
   }
+
   .course-intro .course-intro-item .course-side .teacher-intro .teacher-item {
     width: 100%;
     padding-bottom: 24px;
     border-bottom: 1px dashed #d0d0d0;
   }
+
   .course-intro .course-intro-item .course-side .teacher-intro .teacher-item .title {
     color: #000;
     font-size: 15px;
   }
+
   .course-intro .course-intro-item .course-side .teacher-intro .teacher-item dl {
     width: 100%;
     margin-top: 12px;
@@ -657,6 +695,7 @@
     -ms-flex-align: center;
     align-items: center;
   }
+
   .course-intro .course-intro-item .course-side .teacher-intro .teacher-item dl dt {
     width: 60px;
     height: 60px;
@@ -666,10 +705,12 @@
     overflow: hidden;
     margin-right: 12px;
   }
+
   .course-intro .course-intro-item .course-side .teacher-intro .teacher-item dl dt img {
     width: 100%;
     height: 100%;
   }
+
   .course-intro .course-intro-item .course-side .teacher-intro .teacher-item dl dd {
     -ms-flex: 1;
     flex: 1;
@@ -677,39 +718,47 @@
     overflow: hidden;
     white-space: nowrap;
   }
+
   .course-intro .course-intro-item .course-side .teacher-intro .teacher-item dl dd p {
     font-size: 16px;
     color: #4a4a4a;
     margin-bottom: 4px;
   }
+
   .course-intro .course-intro-item .course-side .teacher-intro .teacher-item dl dd span {
     font-size: 13px;
     color: #9d9d9d;
   }
+
   .course-intro .course-intro-item .course-side .teacher-intro .teacher-item article {
     width: 100%;
     font-size: 14px;
     color: #5e5e5e;
     line-height: 26px;
   }
+
   .course-intro .course-intro-item .course-side .teacher-intro .study-route {
     width: 100%;
     height: auto;
     margin-top: 30px;
   }
+
   .course-intro .course-intro-item .course-side .teacher-intro .study-route .title {
     font-size: 15px;
     color: #4a4a4a;
     margin-bottom: 23px;
   }
+
   .course-intro .course-intro-item .course-side .teacher-intro .study-route .route-item {
     width: 100%;
     box-sizing: border-box;
   }
+
   .course-intro .course-intro-item .course-side .teacher-intro .study-route .route-item section {
     width: 100%;
     display: flex;
   }
+
   .course-intro .course-intro-item .course-side .teacher-intro .study-route .route-item section .leave {
     width: 44px;
     white-space: nowrap;
@@ -717,6 +766,7 @@
     color: #9d9d9d;
     text-align: right;
   }
+
   .course-intro .course-intro-item .course-side .teacher-intro .study-route .route-item section ul {
     -ms-flex: 1;
     flex: 1;
@@ -724,6 +774,7 @@
     position: relative;
     margin-left: 17px;
   }
+
   .course-intro .course-intro-item .course-side .teacher-intro .study-route .route-item section ul .pipe {
     position: absolute;
     left: 0;
@@ -734,6 +785,7 @@
     border: .5px dashed #ffc6a0;
     box-sizing: border-box;
   }
+
   .course-intro .course-intro-item .course-side .teacher-intro .study-route .route-item section ul a {
     display: inline-block;
     text-decoration: none;
@@ -747,18 +799,21 @@
     white-space: nowrap;
     cursor: pointer;
   }
+
   .beyond {
-    overflow-y: scroll!important;
-    -ms-flex-pack: start!important;
-    justify-content: flex-start!important;
+    overflow-y: scroll !important;
+    -ms-flex-pack: start !important;
+    justify-content: flex-start !important;
     padding-top: 20px;
     padding-bottom: 20px;
   }
+
   .preview-video .content {
     width: 732px;
     height: auto;
     background: #000;
   }
+
   .preview-video .content .title {
     width: 100%;
     height: 68px;
@@ -772,6 +827,7 @@
     padding-left: 20px;
     padding-right: 20px;
   }
+
   .preview-video .content .title h1 {
     font-weight: 400;
     width: 600px;
@@ -781,24 +837,29 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+
   .preview-video .content .title .close {
     width: 20px;
     height: 20px;
   }
+
   .preview-video .content .title .close img {
     width: 100%;
     height: 100%;
     cursor: pointer;
   }
+
   .preview-video .content .video {
     width: 100%;
     height: 460px;
     background: #000;
   }
+
   .preview-video .content ul {
     width: 100%;
     height: auto;
   }
+
   .preview-video .content ul li {
     height: 98px;
     padding: 10px 20px;
@@ -812,11 +873,13 @@
     cursor: pointer;
     border-bottom: 1px solid #686f7a;
   }
+
   .preview-video .content ul li img:first-of-type {
     width: 139px;
     height: 78px;
     margin-right: 20px;
   }
+
   .preview-video .content ul li img:nth-of-type(2) {
     width: 16px;
     height: 16px;

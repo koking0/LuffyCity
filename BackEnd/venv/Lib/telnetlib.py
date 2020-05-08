@@ -9,7 +9,7 @@ Example:
 >>> tn = Telnet('www.python.org', 79)   # connect to finger port
 >>> tn.write(b'guido\r\n')
 >>> print(tn.read_all())
-Account       Name               TTY         Idle    When    Where
+Login       Name               TTY         Idle    When    Where
 guido    Guido van Rossum      pts/2        <Dec  2 11:10> snag.cnri.reston..
 
 >>>
@@ -231,6 +231,7 @@ class Telnet:
         self.host = host
         self.port = port
         self.timeout = timeout
+        sys.audit("telnetlib.Telnet.open", self, host, port)
         self.sock = socket.create_connection((host, port), timeout)
 
     def __del__(self):
@@ -286,6 +287,7 @@ class Telnet:
         """
         if IAC in buffer:
             buffer = buffer.replace(IAC, IAC+IAC)
+        sys.audit("telnetlib.Telnet.write", self, buffer)
         self.msg("send %r", buffer)
         self.sock.sendall(buffer)
 

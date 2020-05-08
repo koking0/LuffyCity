@@ -1,0 +1,141 @@
+{
+  "build": "py38_0",
+  "build_number": 0,
+  "channel": "https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.8,<3.9.0a0"
+  ],
+  "extracted_package_dir": "D:\\MiniConda\\pkgs\\certifi-2020.4.5.1-py38_0",
+  "features": "",
+  "files": [
+    "Lib/site-packages/certifi-2020.4.5.1-py3.8.egg-info/PKG-INFO",
+    "Lib/site-packages/certifi-2020.4.5.1-py3.8.egg-info/SOURCES.txt",
+    "Lib/site-packages/certifi-2020.4.5.1-py3.8.egg-info/dependency_links.txt",
+    "Lib/site-packages/certifi-2020.4.5.1-py3.8.egg-info/installed-files.txt",
+    "Lib/site-packages/certifi-2020.4.5.1-py3.8.egg-info/not-zip-safe",
+    "Lib/site-packages/certifi-2020.4.5.1-py3.8.egg-info/top_level.txt",
+    "Lib/site-packages/certifi/__init__.py",
+    "Lib/site-packages/certifi/__main__.py",
+    "Lib/site-packages/certifi/__pycache__/__init__.cpython-38.pyc",
+    "Lib/site-packages/certifi/__pycache__/__main__.cpython-38.pyc",
+    "Lib/site-packages/certifi/__pycache__/core.cpython-38.pyc",
+    "Lib/site-packages/certifi/cacert.pem",
+    "Lib/site-packages/certifi/core.py",
+    ".nonadmin"
+  ],
+  "fn": "certifi-2020.4.5.1-py38_0.conda",
+  "legacy_bz2_md5": "5c51f83d1f9c7371361bc7ac2d1b5d55",
+  "license": "ISC",
+  "link": {
+    "source": "D:\\MiniConda\\pkgs\\certifi-2020.4.5.1-py38_0",
+    "type": 1
+  },
+  "md5": "fa9feeaaf8f134d4c967330536f45950",
+  "name": "certifi",
+  "package_tarball_full_path": "D:\\MiniConda\\pkgs\\certifi-2020.4.5.1-py38_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "Lib/site-packages/certifi-2020.4.5.1-py3.8.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "8fcd5959ffe2bfd845a22753c120a93872cbff56af8833b295d8b78b18f78a1c",
+        "sha256_in_prefix": "8fcd5959ffe2bfd845a22753c120a93872cbff56af8833b295d8b78b18f78a1c",
+        "size_in_bytes": 3216
+      },
+      {
+        "_path": "Lib/site-packages/certifi-2020.4.5.1-py3.8.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "c114f069d008d26b348202e02bfe15105bad6ff7bf233a1a3f874d4889c584b0",
+        "sha256_in_prefix": "c114f069d008d26b348202e02bfe15105bad6ff7bf233a1a3f874d4889c584b0",
+        "size_in_bytes": 278
+      },
+      {
+        "_path": "Lib/site-packages/certifi-2020.4.5.1-py3.8.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "Lib/site-packages/certifi-2020.4.5.1-py3.8.egg-info/installed-files.txt",
+        "path_type": "hardlink",
+        "sha256": "3f52cfc5e810ba5dfd3726a9ce414349111226232a6778dbf8a5d9576c38afb3",
+        "sha256_in_prefix": "3f52cfc5e810ba5dfd3726a9ce414349111226232a6778dbf8a5d9576c38afb3",
+        "size_in_bytes": 305
+      },
+      {
+        "_path": "Lib/site-packages/certifi-2020.4.5.1-py3.8.egg-info/not-zip-safe",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "Lib/site-packages/certifi-2020.4.5.1-py3.8.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "28cbb8bd409fb232eb90f6d235d81d7a44bea552730402453bffe723c345ebe5",
+        "sha256_in_prefix": "28cbb8bd409fb232eb90f6d235d81d7a44bea552730402453bffe723c345ebe5",
+        "size_in_bytes": 8
+      },
+      {
+        "_path": "Lib/site-packages/certifi/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "00eaaca6f8203ff17ad90ff8526240871e6b664a111e8458044dd20a7489cc09",
+        "sha256_in_prefix": "00eaaca6f8203ff17ad90ff8526240871e6b664a111e8458044dd20a7489cc09",
+        "size_in_bytes": 64
+      },
+      {
+        "_path": "Lib/site-packages/certifi/__main__.py",
+        "path_type": "hardlink",
+        "sha256": "c410688fdd394d45812d118034e71fee88ba7beddd30fe1c1281bd3b232cd758",
+        "sha256_in_prefix": "c410688fdd394d45812d118034e71fee88ba7beddd30fe1c1281bd3b232cd758",
+        "size_in_bytes": 243
+      },
+      {
+        "_path": "Lib/site-packages/certifi/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "e633d8fa4077138420cf2b7e8e39461545950137b43beba85c909ac046b575d3",
+        "sha256_in_prefix": "e633d8fa4077138420cf2b7e8e39461545950137b43beba85c909ac046b575d3",
+        "size_in_bytes": 214
+      },
+      {
+        "_path": "Lib/site-packages/certifi/__pycache__/__main__.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "f027ff7afae5330d8097d1f9589dedc10626cf981800f0db9df931941903e60c",
+        "sha256_in_prefix": "f027ff7afae5330d8097d1f9589dedc10626cf981800f0db9df931941903e60c",
+        "size_in_bytes": 377
+      },
+      {
+        "_path": "Lib/site-packages/certifi/__pycache__/core.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "6100c6afce1ce94ce9b2b41d70b08bfcec03dbbf371f69a1b20b147a014bc177",
+        "sha256_in_prefix": "6100c6afce1ce94ce9b2b41d70b08bfcec03dbbf371f69a1b20b147a014bc177",
+        "size_in_bytes": 866
+      },
+      {
+        "_path": "Lib/site-packages/certifi/cacert.pem",
+        "path_type": "hardlink",
+        "sha256": "870068ef78059c5d012a23f715029f1b7db19060e1c65e12c024221f6ac32abd",
+        "sha256_in_prefix": "870068ef78059c5d012a23f715029f1b7db19060e1c65e12c024221f6ac32abd",
+        "size_in_bytes": 284099
+      },
+      {
+        "_path": "Lib/site-packages/certifi/core.py",
+        "path_type": "hardlink",
+        "sha256": "73c86835c616cfaad0a3654033977499c11689ec02bd0b8e51b0b0273e3dbe14",
+        "sha256_in_prefix": "73c86835c616cfaad0a3654033977499c11689ec02bd0b8e51b0b0273e3dbe14",
+        "size_in_bytes": 792
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "98956f90417a3d98642846758ac2b8c494857f4f81aa81883da34ac5b7767803",
+  "size": 159867,
+  "subdir": "win-64",
+  "timestamp": 1586198747972,
+  "track_features": "",
+  "url": "https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/certifi-2020.4.5.1-py38_0.conda",
+  "version": "2020.4.5.1"
+}

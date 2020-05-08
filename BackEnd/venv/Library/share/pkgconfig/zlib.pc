@@ -1,8 +1,8 @@
-prefix=G:/项目/路飞学城/BackEnd/venv/Library
-exec_prefix=G:/项目/路飞学城/BackEnd/venv/Library
-libdir=G:/项目/路飞学城/BackEnd/venv/Library/lib
-sharedlibdir=G:/项目/路飞学城/BackEnd/venv/Library/lib
-includedir=G:/项目/路飞学城/BackEnd/venv/Library/include
+prefix=G:/Project/LuffyCity/BackEnd/venv/Library
+exec_prefix=G:/Project/LuffyCity/BackEnd/venv/Library
+libdir=G:/Project/LuffyCity/BackEnd/venv/Library/lib
+sharedlibdir=G:/Project/LuffyCity/BackEnd/venv/Library/lib
+includedir=G:/Project/LuffyCity/BackEnd/venv/Library/include
 
 Name: zlib
 Description: zlib compression library

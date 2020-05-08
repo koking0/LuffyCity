@@ -41,6 +41,7 @@ export default new Router({
       name: 'FreeLessons',
       component: FreeLessons
     },
+    // 实战课
     {
       path: '/courses',
       name: 'PracticalLessons',

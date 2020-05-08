@@ -95,7 +95,7 @@ class MimeTypes:
             exts.append(ext)
 
     def guess_type(self, url, strict=True):
-        """Guess the type of a file based on its URL.
+        """Guess the type of a file which is either a URL or a path-like object.
 
         Return value is a tuple (type, encoding) where type is None if
         the type can't be guessed (no or unknown suffix) or a string
@@ -114,7 +114,7 @@ class MimeTypes:
         but non-standard types.
         """
         url = os.fspath(url)
-        scheme, url = urllib.parse.splittype(url)
+        scheme, url = urllib.parse._splittype(url)
         if scheme == 'data':
             # syntax of data URLs:
             # dataurl   := "data:" [ mediatype ] [ ";base64" ] "," data
@@ -414,6 +414,7 @@ def _default_mime_types():
         '.js'     : 'application/javascript',
         '.mjs'    : 'application/javascript',
         '.json'   : 'application/json',
+        '.webmanifest': 'application/manifest+json',
         '.doc'    : 'application/msword',
         '.dot'    : 'application/msword',
         '.wiz'    : 'application/msword',
@@ -562,7 +563,7 @@ def _default_mime_types():
 _default_mime_types()
 
 
-if __name__ == '__main__':
+def _main():
     import getopt
 
     USAGE = """\
@@ -606,3 +607,7 @@ More than one type argument may be given.
             guess, encoding = guess_type(gtype, strict)
             if not guess: print("I don't know anything about type", gtype)
             else: print('type:', guess, 'encoding:', encoding)
+
+
+if __name__ == '__main__':
+    _main()
