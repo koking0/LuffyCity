@@ -1,7 +1,7 @@
 from django.db import models
 
 
-__all__ = ['Category', 'FreeCourse', 'PracticalCourse', 'Teacher', 'CourseDetail', 'CourseChapter', 'CourseSection']
+__all__ = ['Category', 'FreeCourse', 'PracticalCourse', 'Teacher', 'CourseDetail', 'GoLearn', 'CourseChapter', 'CourseSection']
 
 
 # Create your models here.
@@ -66,6 +66,9 @@ class CourseDetail(models.Model):
 class GoLearn(models.Model):
     title = models.CharField(verbose_name="将会学到的内容", max_length=256)
     courseDetail = models.ForeignKey(to="CourseDetail", on_delete=models.PROTECT)
+
+    def __str__(self):
+        return self.title
 
 
 class CourseChapter(models.Model):

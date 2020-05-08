@@ -19,14 +19,14 @@
           <ul>
             <li v-for="(course, _) in courseList" :key="course.id" @click="detailHandler(course.id)">
               <div class="img-box">
-                <img alt="" :src="course.course_img">
+                <img alt="" :src="course.courseImage">
               </div>
               <div class="course-item">
-                <p class="title">{{course.course_slogan}}</p>
+                <p class="title">{{course.slogan}}</p>
                 <div class="item-number">
                   <p class="num">
                     <img src="/static/images/bofang_1567070083.9337127.png" alt="bofang_1567070083">
-                    {{course.study_num}}人在学
+                    {{course.studyNumber}}人在学
                   </p>
                   <p class="time">
                     <span>{{course.level}}</span>
@@ -73,7 +73,7 @@
       getCategoryCourseList() {
         this.$http.getFreeCategoryCourse(this.categoryId).then(res => {
           for (let i = 0; i < res.length; i++) {
-            res[i].course_img = `http://127.0.0.1:8000/${res[i].course_img}`;
+            res[i].courseImage = `http://127.0.0.1:8000/${res[i].courseImage}`;
           }
           console.log(res);
           this.courseList = res;

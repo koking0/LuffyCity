@@ -1,30 +1,16 @@
 <template>
   <div class="course-intro">
     <div class="intro-top" style="background: rgb(88, 83, 83);">
-      <p class="return active">
+      <router-link class="return active" :to="{name:'FreeLessons'}">
         <img src="/static/images/triangle@2x_1567043312.649715.png" alt="triangle">
         <span>返回免费课主页</span>
-      </p>
+      </router-link>
       <div class="intro-data">
         <h1>{{courseDetail.title}}</h1>
         <p>
           <span>时长：{{courseDetail.hours}}小时</span>
-          <span>{{courseDetail.study_num}}人在学</span>
+          <span>{{courseDetail.studyNumber}}人在学</span>
         </p>
-      </div>
-      <div class="course-nav" style="background: rgb(88, 83, 83);">
-        <ul>
-          <li class="this">
-            <p>课程详情</p>
-          </li>
-          <li>
-            <p>讨论提问</p>
-            <span>（30）</span>
-          </li>
-          <li>
-            <p>课件下载</p>
-          </li>
-        </ul>
       </div>
     </div>
     <div class="course-intro-item">
@@ -37,7 +23,7 @@
             </article>
             <div class="title">你将会学到的</div>
             <ul>
-              <li v-for="item in courseDetail.course_outline" :key="item.id">
+              <li v-for="item in courseDetail.get" :key="item.id">
                 <img src="/static/images/dui@2x_1567043311.9183662.png" alt="dui">
                 <p>{{item.title}}</p>
               </li>
@@ -57,51 +43,45 @@
                   </div>
                 </div>
                 <ul class="list-data-item">
-                  <li v-for="(section, _) in item.section" :class="{preview:section.free_trail}"
-                      :key="section.id">
+                  <li v-for="(section, _) in item.section" :class="{preview:section.freeTrail}"
+                      :key="section.id" data-toggle="modal" data-target="#videoModal">
                     <div class="data-item-name">
                       <img class="img1" src="/static/images/bofang@2x_1567043311.5421314.png" alt="播放按钮">
                       <p>{{section.name}}</p>
                     </div>
                     <div class="data-item-num">
-                      <span v-if="section.free_trail" class="type">预览</span>
+                      <span v-if="section.freeTrail" class="type">预览</span>
                     </div>
                   </li>
                 </ul>
               </li>
             </ul>
+            <Video/>
           </div>
         </div>
       </div>
       <div class="course-side">
         <div class="side-video">
           <div class="video-box">
-            <img alt="" src="//hcdn1.luffycity.com/static/frontend/public_class/PY4@2x_1566529821.493215.png">
-            <p>
-              <img src="//hcdn1.luffycity.com/static/frontend/public_class/triangle_1567043312.5798736.svg">
-            </p>
+            <img alt="" :src="courseDetail.courseImage">
           </div>
           <div class="student-prower">
             <div class="title">学霸团专属权益</div>
             <ul>
               <li>
-                <img style="width: 18px;height: 20px"
-                     src="//hcdn1.luffycity.com/static/frontend/public_class/ziliao@2x_1567043312.962484.png">
+                <img style="width: 18px;height: 20px" src="/static/images/ziliao.png" alt="ziliao">
                 <p>课件下载</p>
               </li>
               <li>
-                <img style="width: 17px;height: 17px"
-                     src="//hcdn1.luffycity.com/static/frontend/public_class/gongkaike@2x_1567043311.9599693.png">
+                <img style="width: 17px;height: 17px" src="/static/images/gongkaike.png" alt="gongkaike">
                 <p>定期公开课</p>
               </li>
               <li>
-                <img style="width: 21px;height: 18px"
-                     src="//hcdn1.luffycity.com/static/frontend/public_class/jiaoliu@2x_1567043312.2520878.png">
+                <img style="width: 21px;height: 18px" src="/static/images/jiaoliu.png" alt="jiaoliu">
                 <p>学员交流<br>QQ群：701031800</p>
               </li>
               <li>
-                <img style="width: 18px;height: 18px"
-                     src="//hcdn1.luffycity.com/static/frontend/public_class/answer@2x_1567043311.5104716.png">
+                <img style="width: 18px;height: 18px" src="/static/images/answer.png" alt="answer">
                 <p>导师答疑</p>
               </li>
             </ul>
@@ -172,6 +152,8 @@
 </template>
 
 <script>
+  import Video from "../Common/Video";
+
   export default {
     name: "CourseDetail",
     data() {
@@ -179,10 +161,13 @@
         courseDetail: {},
       }
     },
+    components: {
+      Video,
+    },
     created() {
       this.$http.courseDetail(this.$route.params.detailId).then(res => {
-        res.teacher.avatar = `http://127.0.0.1:8000/${res.teacher.avatar}`;
-        console.log(res)
+        res.courseImage = `http://127.0.0.1:8000/${res.courseImage}`;
+        res.teacher.avatar = `http://127.0.0.1:8000/media/${res.teacher.avatar}`;
         this.courseDetail = res;
       }).catch(err => {
         console.log(err);
@@ -230,6 +215,7 @@
   .course-intro .intro-top .intro-data {
     width: 1200px;
     padding-left: 23px;
+    margin-top: 20px;
   }
 
   .course-intro .intro-top .intro-data h1 {
