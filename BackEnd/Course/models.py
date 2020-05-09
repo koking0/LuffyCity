@@ -42,6 +42,7 @@ class FreeCourse(BaseCourse):
 
 class PracticalCourse(BaseCourse):
     price = models.IntegerField(verbose_name="价格", default=99)
+    isBuy = models.BooleanField(default=False)
 
 
 class Teacher(models.Model):

@@ -2,32 +2,27 @@
   <div class="courseitem">
     <div class="head-wrap">
       <div class="head-video">
-        <img :src="courseDetail.course_img" alt="image">
-        <div class="item">
-          <p class="name">{{courseDetail.name}}</p>
+        <img :src="courseDetail.courseImage" alt="image">
+        <div class="item" style="padding-top: 120px;">
+          <p class="name">{{courseDetail.title}}</p>
           <p class="data">
-            <span>225人在学</span>
-            <span>课程小节：250小节</span>
-            <span>时长：63小时</span>
+            <span>{{courseDetail.studyNumber}}人在学</span>
+            <span>课程小节：{{courseDetail.number}}小节</span>
+            <span>时长：{{courseDetail.hours}}小时</span>
           </p>
-          <div class="preferential">
-            <p style="margin-top: 10px;">{{courseDetail.promotion_name}}</p>
-<!--            <p>{{courseDetail.promotion_end_date}}</p>-->
-            <p style="margin-top: 10px;">距离结束：剩 243天 06小时 08分<span>46</span>秒</p>
-          </div>
-          <p class="price bac">
+          <p class="price bac preferential">
+            <span>限时折扣</span>
             <span>活动价</span>
-            <span class="sp1">¥{{courseDetail.promotion_price}}</span>
-            <span class="sp2">¥199.00</span>
+            <span class="sp1">¥{{courseDetail.price}}</span>
+            <span class="sp2">¥1{{courseDetail.price}}</span>
           </p>
-          <div v-if="!courseDetail.is_buy" class="bottom">
+          <div v-if="!courseDetail.isBuy" class="bottom">
             <p class="btns">
-              <button class="btn1">立即购买</button>
+              <button class="btn1" @click="addShopCart">立即购买</button>
               <button class="btn2">免费试学</button>
             </p>
-            <p v-if="!courseDetail.is_buy" class="add" @click="addShopCart">
-              <img src="https://hcdn1.luffycity.com/static/frontend/activity/course-shop_1564141044.099814.svg"
-                   alt="course-shop">
+            <p v-if="!courseDetail.isBuy" class="add" @click="addShopCart">
+              <img src="/static/images/course-shop_1564141044.099814.svg" alt="course-shop">
               <span>加入购物车</span>
             </p>
           </div>
@@ -36,39 +31,58 @@
     </div>
     <div class="tab">
       <ul>
-        <li class="this active">课程详情</li>
-        <li>课程大纲 <span>(试学)</span></li>
-        <li>讨论提问</li>
+        <li class="this active">课程大纲 <span>(试学)</span></li>
       </ul>
     </div>
     <div class="item"
          style="flex: 1; background: #FAFAFA;overflow:hidden;padding-bottom: 40px">
-      <div>
-        <section v-html="detail.content" class="course_item"></section>
+      <div class="course-outline">
+        <ul class="outline-list">
+          <li v-for="(item, _) in courseDetail.chapter" class="list-data" :key="item.id">
+            <div class="list-data-title">
+              <div class="list-name">
+                <img src="/static/images/jiahao@2x_1567043312.082176.png" alt="加号">
+                <img src="/static/images/jiahaobak@2x_1567043312.1160207.png" alt="减号">
+                <p>{{item.title}}</p>
+              </div>
+            </div>
+            <ul class="list-data-item">
+              <li v-for="(section, _) in item.section" :class="{preview:section.freeTrail}"
+                  :key="section.id" data-toggle="modal" data-target="#videoModal">
+                <div class="data-item-name">
+                  <img class="img1" src="/static/images/bofang@2x_1567043311.5421314.png" alt="播放按钮">
+                  <p>{{section.name}}</p>
+                </div>
+                <div class="data-item-num">
+                  <span v-if="section.freeTrail" class="type">预览</span>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <Video/>
       </div>
       <div class="course-side">
         <div class="side-video">
           <div class="student-prower">
             <div class="title">学霸团专属权益</div>
             <ul>
-              <li><img style="width: 18px;height: 20px"
-                       src="//hcdn1.luffycity.com/static/frontend/public_class/ziliao@2x_1567043312.962484.png"
-                       alt="ziliao">
-                <p>课件下载</p></li>
-              <li><img style="width: 17px;height: 17px"
-                       src="//hcdn1.luffycity.com/static/frontend/public_class/gongkaike@2x_1567043311.9599693.png"
-                       alt="gongkaike">
-                <p>定期公开课</p></li>
-              <li><img style="width: 21px;height: 18px"
-                       src="//hcdn1.luffycity.com/static/frontend/public_class/jiaoliu@2x_1567043312.2520878.png"
-                       alt="jiaoliu">
-<!--                <p>学员交流<br>QQ群：{{teachDetail.chat_group.group_id}}</p></li>-->
-                <p>学员交流<br>QQ群：242671397</p></li>
               <li>
-                <img style="width: 18px;height: 18px"
-                     src="//hcdn1.luffycity.com/static/frontend/public_class/answer@2x_1567043311.5104716.png"
-                     alt="answer">
-                <p>导师答疑</p></li>
+                <img style="width: 18px;height: 20px" src="/static/images/ziliao.png" alt="ziliao">
+                <p>课件下载</p>
+              </li>
+              <li>
+                <img style="width: 17px;height: 17px" src="/static/images/gongkaike.png" alt="gongkaike">
+                <p>定期公开课</p>
+              </li>
+              <li>
+                <img style="width: 21px;height: 18px" src="/static/images/jiaoliu.png" alt="jiaoliu">
+                <p>学员交流<br>QQ群：{{courseDetail.qqGroup}}</p>
+              </li>
+              <li>
+                <img style="width: 18px;height: 18px" src="/static/images/answer.png" alt="answer">
+                <p>导师答疑</p>
+              </li>
             </ul>
             <a class="btns add-team" target="_blank" href="https://jq.qq.com/?_wv=1027&amp;k=5XfBMXm">加入学霸团</a>
           </div>
@@ -78,14 +92,13 @@
             <div class="title">讲师介绍</div>
             <dl>
               <dt>
-                <img alt="" :src="teachDetail.teacher.image">
+                <img alt="" :src="courseDetail.teacher.avatar">
               </dt>
               <dd>
-                <p>{{teachDetail.teacher.name}}</p>
-                <span>{{teachDetail.teacher.signature}}</span>
+                <p>{{courseDetail.teacher.name}}</p>
               </dd>
             </dl>
-            <article>{{teachDetail.teacher.brief}}</article>
+            <article>{{courseDetail.teacher.brief}}</article>
           </div>
         </div>
       </div>
@@ -94,17 +107,18 @@
 </template>
 
 <script>
+  import Video from "../Common/Video";
+
   export default {
     name: "CourseDetail",
     data() {
       return {
         // 课程详情数据
         courseDetail: [],
-        // 教程详情数据
-        teachDetail: [],
-        // 详情数据
-        detail: [],
       }
+    },
+    components: {
+      Video,
     },
     methods: {
       // 加入购物车
@@ -128,18 +142,10 @@
       },
       getCourseDetail() {
         this.$http.practicalCourseDetail(this.$route.params.detailId).then(res => {
-          this.courseDetail = res.data;
-        }).catch(err => {
-          console.log(err);
-        });
-        this.$http.getContent(`course/${this.$route.params.detailId}/right/`).then(res => {
-          this.teachDetail = res.data;
-        }).catch(err => {
-          console.log(err);
-        });
-        this.$http.getContent(`course/${this.$route.params.detailId}/detail/`).then(res => {
-          this.detail = res.data;
-          console.log(this.detail);
+          res.teacher.avatar = `http://127.0.0.1:8000/media/${res.teacher.avatar}`;
+          res.courseImage = `http://127.0.0.1:8000/${res.courseImage}`;
+          console.log(res);
+          this.courseDetail = res;
         }).catch(err => {
           console.log(err);
         });
@@ -152,6 +158,176 @@
 </script>
 
 <style scoped>
+  .course-outline {
+    width: 780px;
+    float: left;
+  }
+
+  .course-outline .title {
+    margin-top: 50px;
+    margin-bottom: 13px;
+    padding-left: 17px;
+    padding-right: 20px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  .course-outline .title .title-name {
+    color: #000;
+    font-size: 22px;
+  }
+
+  .course-outline .title .title-side {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 14px;
+  }
+
+  .course-outline .title .title-side span:first-of-type {
+    color: #2a2a2a;
+    margin-right: 39px;
+    cursor: pointer;
+  }
+
+  .course-outline .title .title-side span:nth-of-type(2) {
+    min-width: 43px;
+    text-align: right;
+    color: #4a4a4a;
+    display: inline-block;
+  }
+
+  .course-outline .title .title-side span:nth-of-type(3) {
+    width: 80px;
+    color: #4a4a4a;
+    margin-left: 17px;
+    text-align: right;
+    display: inline-block;
+  }
+
+  .course-outline .outline-list {
+    width: 100%;
+    height: auto;
+  }
+
+  .course-outline .outline-list .list-data {
+    width: 780px;
+    height: auto;
+    margin-bottom: 2px;
+  }
+
+  .course-outline .outline-list .list-data .list-data-title {
+    height: 48px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background: #f9f9f9;
+    padding-left: 26px;
+    padding-right: 20px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    margin-bottom: 1px;
+    cursor: pointer;
+  }
+
+  .course-outline .outline-list .list-data .list-name {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .course-outline .outline-list .list-data .list-name img {
+    width: 10px;
+    height: auto;
+    margin-right: 15px;
+  }
+
+  .course-outline .outline-list .list-data .list-name img {
+    width: 10px;
+    height: auto;
+    margin-right: 15px;
+  }
+
+  .course-outline .outline-list .list-data .list-name p {
+    width: 546px;
+    font-size: 15px;
+    color: #5e5e5e;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .course-outline .outline-list .list-data .list-data-item {
+    width: 100%;
+    height: auto;
+    margin-bottom: 4px;
+    border-top: 1px solid #dadada;
+  }
+
+  .course-outline .outline-list .list-data .list-data-item li {
+    cursor: pointer;
+    width: 100%;
+    height: 48px;
+    background: #fff;
+    border-radius: 2px;
+    border: 1px solid #dadada;
+    border-top: none;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    color: #6ca4c5;
+  }
+
+  .course-outline .outline-list .list-data .list-data-item li .data-item-name {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .course-outline .outline-list .list-data .list-data-item li .data-item-name img {
+    width: 16px;
+    height: 16px;
+    margin-right: 9px;
+  }
+
+  .course-outline .outline-list .list-data .list-data-item li .data-item-name .img2 {
+    display: none;
+  }
+
+  .course-outline .outline-list .list-data .list-data-item li .data-item-name p {
+    width: 430px;
+    font-size: 14px;
+  }
+
+  .course-outline .outline-list .list-data .list-data-item li .data-item-num .type {
+    min-width: 43px;
+    text-align: right;
+    display: inline-block;
+  }
+
+  .course-outline .outline-list .list-data .list-data-item li .data-item-num .time {
+    width: 80px;
+    margin-left: 17px;
+    text-align: right;
+    display: inline-block;
+  }
   .courseitem {
     -ms-flex: 1;
     flex: 1;

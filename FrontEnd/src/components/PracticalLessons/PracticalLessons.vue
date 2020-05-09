@@ -6,7 +6,7 @@
           <ul>
             <li v-for="(item, index) in categoryList" :key="item.id" :class="{this1:index===currentCategoryId}"
                 @click="categoryClick(index, item.id)">
-              {{item.name}}
+              {{item.title}}
             </li>
           </ul>
         </div>
@@ -14,32 +14,29 @@
       <div class="course-list">
         <dl v-for="(item, index) in courseList" :key="item.id" @click="detailHandler(item.id)">
           <dt>
-            <img alt=" " :src="item.course_img">
+            <img alt="" :src="item.courseImage">
           </dt>
           <dd>
             <div class="name">
-              <p>{{item.name}}</p>
+              <p>{{item.title}}</p>
               <p>
                 <img src="/static/images/course-num_1564141043.723208.svg" alt="course-num">
-                <span>200人已加入学习</span>
+                <span>{{item.studyNumber}}人已加入学习</span>
               </p>
             </div>
-            <div class="teacher">
-              <p>{{item.teacher_description}}</p>
-              <p>共{{item.complete_numbers}}课时<span>/更新完成</span></p></div>
             <ul>
-              <li v-for="(section, i) in item.free_sections" :key="section.id">
-                <img class="img1" src="/static/images/course-video1_1564141044.1611981.svg">
-                <img class="img2" src="/static/images/course-video2_1564141044.3260088.svg">
-                <p>0{{i+1}} | {{section.name}}</p>
-                <span v-if="section.free_trail">免费</span>
+              <li v-for="(section, i) in item.simpleChapter" :key="section.id">
+                <img class="img1" src="/static/images/course-video1_1564141044.1611981.svg" alt="course-video1">
+                <img class="img2" src="/static/images/course-video2_1564141044.3260088.svg" alt="course-video2">
+                <p>0{{i+1}} | {{section.title}}</p>
+                <span v-if="section.freeTrail">免费</span>
               </li>
             </ul>
             <div class="price">
               <p>
                 <span class="discount">限时折扣</span>
-                <span class="present-price">￥{{item.promotion_price}}元</span>
-                <span class="original-price">原价：{{item.price}}元</span>
+                <span class="present-price">￥{{item.price}}元</span>
+                <span class="original-price">原价：1{{item.price}}元</span>
               </p>
               <button>立即购买</button>
             </div>
@@ -70,17 +67,24 @@
     methods: {
       // 处理分类列表
       getCategoryList() {
-        this.$http.getContent('course_sub/category/list/?belong=0').then(res => {
-          this.categoryList = res.data;
-          let allItem = {id: 0, name: "全部", belong: 0, hide: false, category: 1}
+        this.$http.getPracticalCategory().then(res => {
+          this.categoryList = res;
+          let allItem = {id: 0, title: '全部', categoryType: 0}
           this.categoryList.unshift(allItem);
-        })
+        }).catch(err => {
+          console.log(err);
+        });
       },
       // 处理分类全部课程列表
       getAllCategoryCourseList() {
-        this.$http.getContent(`courses/?sub_category=${this.categoryId}&ordering=`).then(res => {
-          this.courseList = res.data;
-        })
+        this.$http.getPracticalCategoryCourse(this.categoryId).then(res => {
+          for (let i = 0; i < res.length; i++) {
+            res[i].courseImage = `http://127.0.0.1:8000/${res[i].courseImage}`;
+          }
+          this.courseList = res;
+        }).catch(err => {
+          console.log(err);
+        });
       },
       // 分类点击事件
       categoryClick(index, id) {
@@ -301,6 +305,7 @@
     height: 20px;
     color: #fd7b4d;
     margin-left: 10px;
+    margin-bottom: 10px;
     border: 1px solid #fd7b4d;
     border-radius: 2px;
     text-align: center;

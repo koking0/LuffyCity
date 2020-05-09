@@ -28,19 +28,23 @@ export const getFreeCategory = () => {
 export const getFreeCategoryCourse = (id) => {
   return Axios.get(`http://127.0.0.1:8000/api/free/course/${id}`).then(res => res.data);
 }
+// 实战课程分类列表
+export const getPracticalCategory = () => {
+  return Axios.get("http://127.0.0.1:8000/api/practical/practicalcategory").then(res => res.data);
+}
+// 实战课程分类列表内的所有课程
+export const getPracticalCategoryCourse = (id) => {
+  return Axios.get(`http://127.0.0.1:8000/api/practical/practicalcourse/${id}`).then(res => res.data);
+}
 
 // 免费课程详情数据
 export const courseDetail = (courseId) => {
   return Axios.get(`http://127.0.0.1:8000/api/free/${courseId}/detail`).then(res => res.data);
 }
 
-// 免费课程大纲数据
-export const CourseOutline = (courseId) => {
-  return Axios.get(`https://www.luffycity.com/api/v1/course/${courseId}/sections/`).then(res => res.data);
-}
 // 实战课程详情数据
 export const practicalCourseDetail = (courseId) => {
-  return Axios.get(`https://www.luffycity.com/api/v1/course/${courseId}/payment_info/`).then(res => res.data);
+  return Axios.get(`http://127.0.0.1:8000/api/practical/${courseId}/payment_info`).then(res => res.data);
 }
 // 登录
 export const userLogin = (params) => {
