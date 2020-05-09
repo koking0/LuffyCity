@@ -19,5 +19,5 @@ class crossDomain(MiddlewareMixin):
 		if request.method == "OPTIONS":
 			response["Access-Control-Allow-Methods"] = "DELETE, PUT, POST"
 			response["Access-Control-Allow-Headers"] = "content-type"
-			response["Access-Control-Allow-Headers"] = "authorization "
+			response["Access-Control-Allow-Headers"] = "access_token"
 		return response

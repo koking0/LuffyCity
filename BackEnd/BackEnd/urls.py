@@ -20,8 +20,10 @@ from django.views.static import serve
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/account/', include("Account.urls")),
     path('api/free/', include("Course.urls")),
     path('api/practical/', include("Course.urls")),
+    path('api/shopping/', include("Shopping.urls")),
     path('api/course/', include("Course.urls")),
     re_path('media/(?P<path>.*)', serve, {'document_root': settings.MEDIA_ROOT})
 ]

@@ -1,0 +1,14 @@
+INSERT INTO luffycity.course_freecourse_chapter (id, freecourse_id, coursechapter_id) VALUES (1, 1, 1);
+INSERT INTO luffycity.course_freecourse_chapter (id, freecourse_id, coursechapter_id) VALUES (2, 1, 2);
+INSERT INTO luffycity.course_freecourse_chapter (id, freecourse_id, coursechapter_id) VALUES (3, 1, 3);
+INSERT INTO luffycity.course_freecourse_chapter (id, freecourse_id, coursechapter_id) VALUES (4, 2, 4);
+INSERT INTO luffycity.course_freecourse_chapter (id, freecourse_id, coursechapter_id) VALUES (5, 3, 5);
+INSERT INTO luffycity.course_freecourse_chapter (id, freecourse_id, coursechapter_id) VALUES (6, 3, 6);
+INSERT INTO luffycity.course_freecourse_chapter (id, freecourse_id, coursechapter_id) VALUES (8, 4, 7);
+INSERT INTO luffycity.course_freecourse_chapter (id, freecourse_id, coursechapter_id) VALUES (7, 4, 8);
+INSERT INTO luffycity.course_freecourse_chapter (id, freecourse_id, coursechapter_id) VALUES (9, 5, 9);
+INSERT INTO luffycity.course_freecourse_chapter (id, freecourse_id, coursechapter_id) VALUES (10, 5, 10);
+INSERT INTO luffycity.course_freecourse_chapter (id, freecourse_id, coursechapter_id) VALUES (11, 6, 11);
+INSERT INTO luffycity.course_freecourse_chapter (id, freecourse_id, coursechapter_id) VALUES (12, 6, 12);
+INSERT INTO luffycity.course_freecourse_chapter (id, freecourse_id, coursechapter_id) VALUES (13, 6, 13);
+INSERT INTO luffycity.course_freecourse_chapter (id, freecourse_id, coursechapter_id) VALUES (14, 7, 14);

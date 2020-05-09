@@ -30,16 +30,14 @@
               <img class="new" src="/static/images/new_1572509511.5792108.png" alt="NEW">
             </p>
           </div>
-          <router-link class="shop-car" :to="{name:'ShoppingTrolley'}">
+          <router-link class="shop-car" :to="{name:'ShoppingCar'}">
             <img src="/static/images/shopcart@2x_1568185801.2089324.png" alt="shopcart">
             <span>购物车 <span style="color: red">{{shop_cart_num}}</span></span>
           </router-link>
           <div v-if="!isUserLogin" class="register">
             <Login/>
             <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-            <a target="_blank" href="https://www.luffycity.com/signup">
-              <button class="signup">注册</button>
-            </a>
+            <Register/>
           </div>
           <div v-if="isUserLogin" class="nav-right-box" @mouseenter='enterHandler' @mouseleave='leaveHandler'>
             <div class="nav-right">
@@ -69,6 +67,8 @@
 
 <script>
   import Login from "./Login";
+  import Register from "./Register";
+
   export default {
     name: "LuffyHeader",
     data() {
@@ -93,6 +93,7 @@
     },
     components: {
       Login,
+      Register,
     },
     created() {
       let access_token = localStorage.getItem('access_token')
@@ -121,6 +122,13 @@
       },
       logoutHandler(){
         localStorage.clear();
+        this.$http.userLogout().then(res=>{
+          this.$message(res.data);
+          console.log(res);
+          location.reload();
+        }).catch(err=>{
+          console.log(err);
+        })
       },
     },
   };

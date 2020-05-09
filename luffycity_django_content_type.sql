@@ -1,0 +1,14 @@
+INSERT INTO luffycity.django_content_type (id, app_label, model) VALUES (1, 'admin', 'logentry');
+INSERT INTO luffycity.django_content_type (id, app_label, model) VALUES (3, 'auth', 'group');
+INSERT INTO luffycity.django_content_type (id, app_label, model) VALUES (2, 'auth', 'permission');
+INSERT INTO luffycity.django_content_type (id, app_label, model) VALUES (4, 'auth', 'user');
+INSERT INTO luffycity.django_content_type (id, app_label, model) VALUES (5, 'contenttypes', 'contenttype');
+INSERT INTO luffycity.django_content_type (id, app_label, model) VALUES (11, 'Course', 'category');
+INSERT INTO luffycity.django_content_type (id, app_label, model) VALUES (10, 'Course', 'coursechapter');
+INSERT INTO luffycity.django_content_type (id, app_label, model) VALUES (9, 'Course', 'coursedetail');
+INSERT INTO luffycity.django_content_type (id, app_label, model) VALUES (12, 'Course', 'coursesection');
+INSERT INTO luffycity.django_content_type (id, app_label, model) VALUES (7, 'Course', 'freecourse');
+INSERT INTO luffycity.django_content_type (id, app_label, model) VALUES (14, 'Course', 'golearn');
+INSERT INTO luffycity.django_content_type (id, app_label, model) VALUES (8, 'Course', 'practicalcourse');
+INSERT INTO luffycity.django_content_type (id, app_label, model) VALUES (13, 'Course', 'teacher');
+INSERT INTO luffycity.django_content_type (id, app_label, model) VALUES (6, 'sessions', 'session');

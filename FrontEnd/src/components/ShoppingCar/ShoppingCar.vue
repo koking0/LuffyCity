@@ -77,7 +77,7 @@
 
 <script>
   export default {
-    name: "ShoppingTrolley",
+    name: "ShoppingCar",
     data() {
       return {
         // 商品列表

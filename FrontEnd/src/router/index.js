@@ -12,10 +12,10 @@ import QuestionBank from "../components/QuestionBank/QuestionBank";
 import StudentAchievement from "../components/StudentAchievement/StudentAchievement";
 
 import PracticalCourseDetail from "../components/PracticalLessons/PracticalCourseDetail";
-import ShoppingTrolley from "../components/ShoppingTrolley/ShoppingTrolley";
 import CourseDetail from "../components/FreeLessons/CourseDetail";
 import Classroom from "../components/Classroom/Classroom";
 import Login from "../components/Common/Login";
+import ShoppingCar from "../components/ShoppingCar/ShoppingCar";
 
 // 将Router当做局部模块使用一定要用Vue.use(Router)
 Vue.use(Router)
@@ -94,8 +94,8 @@ export default new Router({
     // 购物车
     {
       path: "/shopping-cart",
-      name: "ShoppingTrolley",
-      component: ShoppingTrolley
+      name: "ShoppingCar",
+      component: ShoppingCar
     },
   ]
 })

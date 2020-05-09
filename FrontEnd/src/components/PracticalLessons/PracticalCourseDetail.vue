@@ -124,15 +124,17 @@
       // 加入购物车
       addShopCart() {
         if (window.localStorage.getItem('access_token')) {
-          this.$http.shopCart(this.$route.params.detailId).then(res => {
-              if (res.error_no === 0) {
-                this.$message('购物车' + res.data.status);
+          let goodsInfo = {
+            courseId: this.$route.params.detailId,
+            token: localStorage.getItem('access_token')
+          };
+          this.$http.shopCart(goodsInfo).then(res => {
+              if (res.code === 200) {
+                this.$message(res.data);
+              } else if (res.code === 501) {
+                this.$message(res.data);
               }
-              if (res.error_no === 10) {
-                this.$message(res.msg);
-              }
-            })
-            .catch(err => {
+            }).catch(err => {
               console.log(err);
             })
         } else {
