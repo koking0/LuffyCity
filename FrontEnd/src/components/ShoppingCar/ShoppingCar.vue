@@ -1,76 +1,37 @@
 <template>
   <div class="shopping-cart-wrap">
     <h3 class="shopping-cart-tit">
-      <span>我的购物车 </span>
-      <small>共<span>1</span>门课程</small>
+      <span>我的购物车</span>
+      <small>共<span>{{goods.length}}</span>门课程</small>
     </h3>
-    <div class="row col-xs-12">
-      <table class="table shopping-cart-list" style="table-layout:fixed">
-        <thead class="shopping-cart-list-head" style="background: #F7F7F7; width: 100%; height: 80px">
-        <tr class="shopping-cart-list-head-wrap" style="background: #F7F7F7; width: 100%">
-          <th class="shopping-cart-list-head-item" width="8%"></th>
-          <th class="shopping-cart-list-head-item" width="50%">课程</th>
-          <th class="shopping-cart-list-head-item" width="20%">有效期</th>
-          <th class="shopping-cart-list-head-item" width="15%">单价</th>
-          <th class="shopping-cart-list-head-item" width="15%">操作</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr id="195">
-          <td width="8%" class="pad-left">
-            <input class="check J-check-btn" type="checkbox" id="color-input0">
-            <label for="color-input0">
-              <img src="//hcdn1.luffycity.com/static/frontend/activity/hook_1564141042.8333368.svg">
-            </label>
-          </td>
-          <td width="50%">
-            <img alt=" " class="product-img"
-                 src="//hcdn1.luffycity.comhttp://hcdn2.luffycity.com/media/frontend/course/列表图_Lcs535o.png">
-            <a class="shopping-cart-course-title" href="/courses/195/details-introduce">
-              基于Django开发轻量级Bug管理平台
-            </a>
-          </td>
-          <td width="20%">
-            <select class="select-option" name="datetime">
-              <option value="10000" selected="">永久有效</option>
-            </select>
-          </td>
-          <td width="15%" class="shopping-cart-course-price">¥199.0</td>
-          <td width="15%" style="text-align: left;position: relative">
-            <button class="do-btn">删除</button>
-            <div class="delete-wrap">
-              <div style="padding: 20px 0 24px 20px">
-                <img width="14" height="14"
-                     src="//hcdn1.luffycity.com/static/frontend/activity/warn-icon_1564127731.1963127.png">
-                <span class="delete-text" style="display: inline-block; margin-left: 10px">
-                  你确定删除该课程吗？
-                </span>
-              </div>
-              <div class="delete-btn-wrap">
-                <button class="delete-cancel">取消</button>
-                <button class="delete-sure">确定</button>
-              </div>
-            </div>
-          </td>
-        </tr>
-        </tbody>
-      </table>
-      <ul class="pad-left"
-          style="width: 100%; height: 80px; background: #F7F7F7; margin-bottom: 100px;margin-top:50px; display: flex; align-items: center">
-        <li class="charge-list">
-          <label for="color-input-red"></label>
-          <input class="select_all" id="color-input-red" type="checkbox" width="20px" height="20px">
-          <span class="shopping-cart-bot-font" style="margin-left: 15px; cursor: pointer">全选</span>
-        </li>
-        <li class="charge-list" style="margin-left: 58px">
-          <img src="static/images/delete-icon_1564127719.3867524.png" alt="delete-icon">
-          <span class="shopping-cart-bot-font" style="margin-left: 15px; cursor: pointer">删除</span>
-        </li>
-        <li class="charge-list" style="margin-left: auto">
-          <span class="shopping-cart-bot-font" style="margin-right: 62px">总计：¥0.0</span>
-          <button class="go-charge-btn">去结算</button>
-        </li>
-      </ul>
+
+    <el-table ref="multipleTable" :data="goods" tooltip-effect="dark" style="width: 100%"
+              @selection-change="handleSelectionChange">
+      <el-table-column type="selection" width="150"></el-table-column>
+      <el-table-column label="课程" width="800">
+        <template slot-scope="scope">
+          <img :src="scope.row.courseImage" alt="" width="250" height="125">
+          <span style="margin-left: 30px;">{{scope.row.title}}</span>
+        </template>
+      </el-table-column>
+      <el-table-column label="单价" width="250">
+        <template slot-scope="scope">
+          <span>￥{{scope.row.price}}.0</span>
+        </template>
+      </el-table-column>
+    </el-table>
+    <div style="margin-top: 20px">
+      <el-button @click="toggleSelection()">
+        <span class="shopping-cart-bot-font" style="margin-left: 15px; cursor: pointer">取消选择</span>
+      </el-button>
+      <el-button @click="deleteGoods()">
+        <img src="/static/images/delete-icon_1564127719.3867524.png" alt="delete-icon" style="margin-bottom: 5px;">
+        <span class="shopping-cart-bot-font" style="margin-left: 15px; cursor: pointer">删除</span>
+      </el-button>
+      <el-button class="charge-list" style="float: right;">
+        <span class="shopping-cart-bot-font" style="margin-right: 40px;">总计：¥ {{this.totalPrice}}.0</span>
+        <button class="go-charge-btn">去结算</button>
+      </el-button>
     </div>
   </div>
 </template>
@@ -80,15 +41,59 @@
     name: "ShoppingCar",
     data() {
       return {
-        // 商品列表
         goods: [],
+        totalPrice: 0,
+        multipleSelection: [],
       }
     },
     methods: {
+      toggleSelection(rows) {
+        if (rows) {
+          rows.forEach(row => {
+            this.$refs.multipleTable.toggleRowSelection(row);
+          });
+        } else {
+          this.$refs.multipleTable.clearSelection();
+        }
+      },
+      deleteGoods() {
+        console.log(this.multipleSelection);
+        let deleteCourseList = "";
+        for (let i = 0; i < this.multipleSelection.length; i++) {
+          deleteCourseList += this.multipleSelection[i].id;
+        }
+        $.ajax({
+          url: 'http://127.0.0.1:8000/api/shopping/delete',
+          type: 'DELETE',
+          data: {'deleteCourseList': deleteCourseList, 'userToken': localStorage.getItem('access_token')},
+          success: function (res) {
+            console.log(res);
+          },
+          error: function (err) {
+            console.log(err);
+          }
+        });
+        // this.$http.shopCarDeleteGoods(deleteCourseList).then(res => {
+        //   console.log(res);
+        // }).catch(err => {
+        //   console.log(err);
+        // })
+      },
+      handleSelectionChange(val) {
+        this.totalPrice = 0;
+        this.multipleSelection = val;
+        for (let i = 0; i < this.multipleSelection.length; i++) {
+          this.totalPrice += Number(this.multipleSelection[i].price);
+        }
+      },
       getGoods() {
-        this.$http.getContent('user/shop_cart/list/').then(res => {
+        this.$http.shopCarList().then(res => {
+          for (let i = 0; i < res.data.length; i++) {
+            res.data[i]['courseImage'] = `http://127.0.0.1:8000/media/${res.data[i]['courseImage']}`
+          }
           this.goods = res.data;
-          console.log(this.goods);
+        }).catch(err => {
+          console.log(err);
         })
       }
     },
@@ -116,12 +121,6 @@
     display: inline-block;
   }
 
-  .table {
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
-
   table {
     background-color: transparent;
   }
@@ -145,12 +144,6 @@
     height: 80px;
     line-height: 80px;
     padding: 0 0 0 10px;
-  }
-
-  .shopping-cart-list-head-item {
-    font-size: 14px;
-    color: #333;
-    height: 80px;
   }
 
   .table > thead > tr > th {
@@ -295,7 +288,7 @@
 
   .go-charge-btn {
     width: 159px;
-    height: 80px;
+    height: 50px;
     outline: none;
     border: none;
     background: #ffc210;

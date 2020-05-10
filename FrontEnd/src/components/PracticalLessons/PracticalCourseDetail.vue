@@ -18,7 +18,7 @@
           </p>
           <div v-if="!courseDetail.isBuy" class="bottom">
             <p class="btns">
-              <button class="btn1" @click="addShopCart">立即购买</button>
+              <button class="btn1" @click="buy">立即购买</button>
               <button class="btn2">免费试学</button>
             </p>
             <p v-if="!courseDetail.isBuy" class="add" @click="addShopCart">
@@ -121,6 +121,11 @@
       Video,
     },
     methods: {
+      // 立即购买
+      buy() {
+        this.addShopCart();
+        this.$router.push({name: 'ShoppingCar'});
+      },
       // 加入购物车
       addShopCart() {
         if (window.localStorage.getItem('access_token')) {
@@ -128,7 +133,7 @@
             courseId: this.$route.params.detailId,
             token: localStorage.getItem('access_token')
           };
-          this.$http.shopCart(goodsInfo).then(res => {
+          this.$http.shopCartAdd(goodsInfo).then(res => {
               if (res.code === 200) {
                 this.$message(res.data);
               } else if (res.code === 501) {

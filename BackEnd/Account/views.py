@@ -24,14 +24,19 @@ class LoginView(APIView):
 			login(request, user)
 			redisConnect = redis.Redis(connection_pool=POOL)
 			try:
+				response.code = 200
 				token = uuid.uuid4()
 				redisConnect.set(str(token), user.id)
-				response.code = 200
+
+				goods, shoppingCarKey = [], "SHOPPING_CAR_%s_%s" % (user.id, '*')
+				for key in redisConnect.scan_iter(shoppingCarKey):
+					goods.append(redisConnect.hgetall(key))
+
 				data = {
 					"access_token": token,
 					"username": user.username,
 					"avatar": f"http://127.0.0.1:8000/media/{str(user.avatar)}",
-					"shop_cart_num": 1,
+					"shop_cart_num": len(goods),
 					"notice_num": 9,
 					"redirect_url": None,
 					"phone": 18812649207,

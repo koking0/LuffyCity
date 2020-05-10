@@ -17,4 +17,5 @@ from Shopping.views import ShoppingView
 urlpatterns = [
 	path('list', ShoppingView.as_view()),
 	path('add', ShoppingView.as_view()),
+	path('delete', ShoppingView.as_view()),
 ]

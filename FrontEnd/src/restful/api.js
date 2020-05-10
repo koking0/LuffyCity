@@ -6,18 +6,18 @@ Axios.create({
 
 import qs from 'qs'
 
-// // 添加请求拦截器
-// Axios.interceptors.request.use(function (config) {
-//   // 在发送请求之前做些什么
-//   if (localStorage.getItem('access_token')) {
-//     config.headers['access_token'] = localStorage.getItem('access_token');
-//   }
-//   console.log(config);
-//   return config;
-// }, function (error) {
-//   // 对请求错误做些什么
-//   return Promise.reject(error);
-// });
+// 添加请求拦截器
+Axios.interceptors.request.use(function (config) {
+  // 在发送请求之前做些什么
+  if (localStorage.getItem('access_token')) {
+    config.headers['access_token'] = localStorage.getItem('access_token');
+  }
+  console.log(config);
+  return config;
+}, function (error) {
+  // 对请求错误做些什么
+  return Promise.reject(error);
+});
 
 // 登录
 export const userLogin = (params) => {
@@ -60,7 +60,16 @@ export const practicalCourseDetail = (courseId) => {
   return Axios.get(`http://127.0.0.1:8000/api/practical/${courseId}/payment_info`).then(res => res.data);
 }
 
+// 购物车页面列表
+export const shopCarList = () => {
+  return Axios.get(`http://127.0.0.1:8000/api/shopping/list`,
+    {params:{'token': localStorage.getItem('access_token')}}).then(res => res.data);
+}
 // 商品课程添加到购物车
-export const shopCart = (goodsInfo) => {
+export const shopCartAdd = (goodsInfo) => {
   return Axios.post(`http://127.0.0.1:8000/api/shopping/add`, qs.stringify(goodsInfo)).then(res => res.data);
+}
+// 删除购物车中的商品
+export const shopCarDeleteGoods = (deleteCourseList) => {
+  return Axios.delete(`http://127.0.0.1:8000/api/shopping/delete`, deleteCourseList).then(res => res.data);
 }
