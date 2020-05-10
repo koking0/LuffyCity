@@ -1,29 +1,29 @@
 <template>
-  <div class="studyhome">
+  <div class="studyHome">
     <main>
       <div class="study-head">
         <ul class="study-data">
           <li>
-            <img src="/static/images/study-icon1_1564141053.5879214.svg" alt="study-icon1">
+            <img src="/static/images/study-icon1.svg" alt="study-icon1">
             <p>
               <span>今日/累计学习（课时）</span><b>0/1620</b>
             </p>
           </li>
           <li>
-            <img src="/static/images/study-icon2_1564141053.7789178.svg" alt="study-icon2">
+            <img src="/static/images/study-icon2.svg" alt="study-icon2">
             <p>
               <span>可挑战奖学金余额（贝里）</span><b>0</b>
             </p>
           </li>
           <li>
-            <img src="/static/images/study-icon3_1564141053.8348582.svg" alt="study-icon3">
+            <img src="/static/images/study-icon3.svg" alt="study-icon3">
             <p>
               <span>作业平均成绩（分）</span><b>84.42</b><br>
               <a href="#">查看作业成绩</a>
             </p>
           </li>
           <li>
-            <img src="/static/images/study-icon4_1564141054.1084983.svg" alt="study-icon4">
+            <img src="/static/images/study-icon4.svg" alt="study-icon4">
             <p>
               <span>已获得奖学金余额（贝里）</span><b>4345</b><br>
               <a href="#">查看奖惩详情</a>
@@ -52,27 +52,14 @@
       </div>
       <nav>
         <p class="color active">就业班课程</p>
-        <p>专题课程</p>
-        <p>我的提问</p>
       </nav>
       <div>
         <div>
           <div class="degree">
-            <div class="options_tab">
-              <ul class="time">
-                <li> 我报名课程：<span>视频有效期至 2021/12/04</span></li>
-                <li style="display: none;"> 我报名课程：<span>视频有效期至 2021/12/29</span>
-                </li>
-              </ul>
-              <ul class="name">
-                <li class="this">Python全栈开发（中级）</li>
-                <li>Python全栈开发（高级）</li>
-              </ul>
-            </div>
             <div class="box">
               <section class="module">
                 <p class="num">
-                  <img src="/static/images/angle-of1_1564141046.773574.svg" alt="angle">
+                  <img src="/static/images/angle-of.svg" alt="angle">
                   <span>第九模块</span>
                 </p>
                 <p class="name">项目实战二(vue &amp; 路飞学城开发)</p>
@@ -82,68 +69,12 @@
                   <span>
                     <a>查看章节</a>
                     <a>模块作业</a>
-                  <a href="//hcdn1.luffycity.com/data/course_related/21/courseware/课件.zip">课件下载</a>
                   </span>
-                  <button>
-                    <span>继续学习</span>
-                  </button>
+                  <button><span>继续学习</span></button>
                 </p>
-                <img class="overdue"
-                     src="//hcdn1.luffycity.com/static/frontend/activity/expired_1564141040.048035.svg"
-                     style="display: none;">
-                <img class="through"
-                     src="//hcdn1.luffycity.com/static/frontend/activity/angle-of2_1564141046.9720798.svg"
-                     style="display: none;">
-                <span class="status gray"
-                      style="display: none;">未开通</span>
-                <span class="status green">正在学</span>
-              </section>
-              <section class="module" key="3"><p class="num"><img
-                src="//hcdn1.luffycity.com/static/frontend/activity/angle-of1_1564141046.773574.svg">
-                <span>第一模块</span></p>
-                <p class="name">开发基础（极速版）</p>
-                <p class="tips">建议时长·7天&nbsp;&nbsp;已学140天</p>
-                <p class="theprogress">课时观看进度：<span>76 / 78</span></p>
-                <p class="function"><span> <a>查看章节</a> <a>模块作业</a> <a
-                  href="//hcdn1.luffycity.com/data/course_related/103/courseware/课件.zip">课件下载</a> </span>
-                  <button><span>再次学习</span>
-                  </button>
-                </p>
-                <img class="overdue" src="//hcdn1.luffycity.com/static/frontend/activity/expired_1564141040.048035.svg"
-                     style="display: none;">
-                <img class="through"
-                     src="//hcdn1.luffycity.com/static/frontend/activity/angle-of2_1564141046.9720798.svg">
+                <img src="/static/images/angle-of.svg" alt="angle-of" style="display: none;">
                 <span class="status gray" style="display: none;">未开通</span>
-                <span class="status green" style="display: none;">正在学</span>
-              </section>
-              <section class="module">
-                <p class="num">
-                  <img src="//hcdn1.luffycity.com/static/frontend/activity/angle-of1_1564141046.773574.svg">
-                  <span>第十模块</span>
-                </p>
-                <p class="name">就业指导</p>
-                <p class="tips">建议时长·7天&nbsp;&nbsp;已学0天</p>
-                <p class="theprogress">课时观看进度：<span>0 / 5</span></p>
-                <p class="function">
-                  <span>
-                  <a>查看章节</a>
-                  <a>模块作业</a>
-                  <a href="//hcdn1.luffycity.com/data/course_related/22/courseware/课件.zip">课件下载</a>
-                </span>
-                  <button class="start">
-                    <span>
-                      <img src="//hcdn1.luffycity.com/static/frontend/activity/lock_1564141049.397546.svg">
-                    <span>开始学习</span>
-                    </span>
-                  </button>
-                </p>
-                <img class="overdue" src="//hcdn1.luffycity.com/static/frontend/activity/expired_1564141040.048035.svg"
-                     style="display: none;">
-                <img class="through"
-                     src="//hcdn1.luffycity.com/static/frontend/activity/angle-of2_1564141046.9720798.svg"
-                     style="display: none;">
-                <span class="status gray">未开通</span>
-                <span class="status green" style="display: none;">正在学</span>
+                <span class="status green">正在学</span>
               </section>
             </div>
           </div>
@@ -160,21 +91,21 @@
 </script>
 
 <style scoped>
-  .studyhome {
+  .studyHome {
     -ms-flex: 1;
     flex: 1;
     width: 100%;
     background: #fafafa;
   }
 
-  .studyhome main {
+  .studyHome main {
     width: 1200px;
     height: auto;
     margin: 0 auto;
     overflow: hidden;
   }
 
-  .studyhome main .study-head {
+  .studyHome main .study-head {
     width: 100%;
     height: 255px;
     display: -ms-flexbox;
@@ -187,13 +118,14 @@
     margin-bottom: 30px;
   }
 
-  .studyhome main .study-head .study-data {
+  .studyHome main .study-head .study-data {
     width: 789px;
     height: 255px;
     background: #fff;
     box-shadow: 0 4px 8px 0 #e8e8e8;
     border-radius: 3px;
     margin-right: 20px;
+    top: 20px;
     padding-left: 40px;
     display: -ms-flexbox;
     display: flex;
@@ -201,50 +133,46 @@
     flex-wrap: wrap;
   }
 
-  .studyhome main .study-head .study-data li p a {
+  .studyHome main .study-head .study-data li p a {
     text-decoration: none;
     font-size: 14px;
     color: #4a90e2;
     margin-top: 8px;
-
     cursor: pointer;
   }
 
-  .studyhome main .study-head .study-data li {
+  .studyHome main .study-head .study-data li {
     width: 50%;
     height: auto;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
     align-items: center;
-    margin-bottom: 40px;
   }
 
-  .studyhome main .study-head .study-data li img {
+  .studyHome main .study-head .study-data li img {
     width: 38px;
     height: auto;
     margin-right: 25px;
   }
 
-  .studyhome main .study-head .study-data li p span {
+  .studyHome main .study-head .study-data li p span {
     font-size: 14px;
     color: #666;
     margin-bottom: 8px;
-
   }
 
-  .studyhome main .study-head .study-data li span {
+  .studyHome main .study-head .study-data li span {
     display: block;
   }
 
-  .studyhome main .study-head .study-data li p b {
+  .studyHome main .study-head .study-data li p b {
     font-weight: 400;
     font-size: 24px;
     color: #4a4a4a;
-
   }
 
-  .studyhome main .study-head .dashboard {
+  .studyHome main .study-head .dashboard {
     width: 390px;
     height: 255px;
     background: #fff;
@@ -253,12 +181,12 @@
     position: relative;
   }
 
-  .studyhome main .study-head .mentor {
+  .studyHome main .study-head .mentor {
     padding: 15px 10px;
     text-align: center;
   }
 
-  .studyhome main .study-head .mentor .time {
+  .studyHome main .study-head .mentor .time {
     padding-bottom: 10px;
     border-bottom: 1px dashed #e8e8e8;
     font-size: 13px;
@@ -267,36 +195,35 @@
     text-align: center;
   }
 
-  .studyhome main .study-head .mentor .time img {
+  .studyHome main .study-head .mentor .time img {
     width: 24px;
     height: 24px;
     margin-right: 8px;
   }
 
-  .studyhome main .study-head .mentor .time span {
+  .studyHome main .study-head .mentor .time span {
     color: #fa6240;
-
   }
 
-  .studyhome main .study-head .mentor .time a {
+  .studyHome main .study-head .mentor .time a {
     text-decoration: none;
     display: block;
     color: #5e5e5e;
   }
 
-  .studyhome main .study-head .mentor .teacher img {
+  .studyHome main .study-head .mentor .teacher img {
     width: 45px;
     height: 45px;
     margin-bottom: 8px;
   }
 
-  .studyhome main .study-head .mentor .teacher .name {
+  .studyHome main .study-head .mentor .teacher .name {
 
     font-size: 14px;
     color: #4a4a4a;
   }
 
-  .studyhome main .study-head .mentor .teacher .service {
+  .studyHome main .study-head .mentor .teacher .service {
     font-size: 14px;
     color: #4a4a4a;
     margin-top: 6px;
@@ -304,7 +231,7 @@
 
   }
 
-  .studyhome main .study-head .mentor .teacher button {
+  .studyHome main .study-head .mentor .teacher button {
     width: 132px;
     height: 32px;
     color: #fff;
@@ -322,31 +249,31 @@
     background: transparent;
   }
 
-  .studyhome main .study-head .mentor .teacher button img {
+  .studyHome main .study-head .mentor .teacher button img {
     width: 16px;
     height: auto;
     margin-right: 55px;
     margin-top: 10px;
   }
 
-  .studyhome main .study-head .mentor .teacher button span {
+  .studyHome main .study-head .mentor .teacher button span {
     position: absolute;
     top: 190px;
     right: 145px;
   }
 
-  .studyhome main .study-head .mentor .teacher img {
+  .studyHome main .study-head .mentor .teacher img {
     width: 45px;
     height: 45px;
     margin-bottom: 8px;
   }
 
-  .studyhome main .study-head .mentor .teacher .asof {
+  .studyHome main .study-head .mentor .teacher .asof {
     font-size: 12px;
     color: #9d9d9d;
   }
 
-  .studyhome main nav {
+  .studyHome main nav {
     width: 100%;
     height: 74px;
     display: -ms-flexbox;
@@ -360,16 +287,14 @@
     position: relative;
   }
 
-  .studyhome main nav .color {
+  .studyHome main nav .color {
     color: #ffc210;
     border-bottom: 2px solid #ffc210;
-
   }
 
-  .studyhome main nav p {
+  .studyHome main nav p {
     height: 74px;
     text-align: center;
-
     font-size: 18px;
     color: #000;
     padding: 0 10px;
@@ -378,10 +303,9 @@
     cursor: pointer;
   }
 
-  .studyhome main nav p {
+  .studyHome main nav p {
     height: 74px;
     text-align: center;
-
     font-size: 18px;
     color: #000;
     padding: 0 10px;
@@ -398,26 +322,13 @@
     position: relative;
   }
 
-  .degree .options_tab {
-    width: 100%;
-    height: auto;
-    background: #fff;
-    box-shadow: 0 4px 8px 0 hsla(0, 0%, 91%, .5);
-    margin-bottom: 40px;
-  }
-
   .degree .options_tab .time {
     padding-top: 30px;
     padding-bottom: 20px;
     padding-left: 28px;
-    font-family: PingFangSC-Light;
     font-size: 16px;
     color: #9d9d9d;
     margin-bottom: 20px;
-  }
-
-  li {
-    list-style: none;
   }
 
   .degree .options_tab .time span {
@@ -459,19 +370,16 @@
 
   .degree .box section {
     float: left;
-    width: 314px;
+    width: 350px;
     height: auto;
-    padding: 18px;
-    padding-top: 37px;
     border-radius: 3px;
     margin-right: 72px;
     margin-bottom: 50px;
-    padding-bottom: 18px;
+    padding: 37px 18px 18px;
     background: #fff;
     cursor: pointer;
     position: relative;
     box-shadow: 0 2px 4px 0 #d0d0d0;
-
     transition: all .2s linear;
   }
 
@@ -499,8 +407,6 @@
   .degree .box section .num span {
     color: #fff;
     font-size: 12px;
-    letter-spacing: .19px;
-
     position: absolute;
     left: 5px;
     top: 3px;
@@ -514,20 +420,17 @@
     text-overflow: ellipsis;
     overflow: hidden;
     padding-bottom: 14px;
-    letter-spacing: .41px;
   }
 
   .degree .box section .tips {
     font-size: 13px;
     color: #666;
     padding-bottom: 7px;
-    letter-spacing: .56px;
   }
 
   .degree .box section .theprogress {
     font-size: 13px;
     color: #666;
-    letter-spacing: .29px;
     padding-bottom: 20px;
   }
 
@@ -544,7 +447,6 @@
     align-items: center;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    letter-spacing: .27px;
   }
 
   .degree .box section .function span a {
@@ -561,7 +463,6 @@
     color: #4a90e2;
     line-height: 28px;
     border-radius: 2px;
-    letter-spacing: .29px;
     border: 1px solid #4a90e2;
   }
 
@@ -580,7 +481,6 @@
   .degree .box section .status {
     font-size: 14px;
     color: #9d9d9d;
-    letter-spacing: .32px;
     position: absolute;
     top: 10px;
     right: 18px;
@@ -593,7 +493,6 @@
   .degree .box section .status {
     font-size: 14px;
     color: #9d9d9d;
-    letter-spacing: .32px;
     position: absolute;
     top: 10px;
     right: 18px;

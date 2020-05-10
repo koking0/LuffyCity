@@ -75,7 +75,6 @@
           for (let i = 0; i < res.length; i++) {
             res[i].courseImage = `http://127.0.0.1:8000/${res[i].courseImage}`;
           }
-          console.log(res);
           this.courseList = res;
         }).catch(err => {
           console.log(err);

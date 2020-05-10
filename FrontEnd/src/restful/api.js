@@ -12,7 +12,6 @@ Axios.interceptors.request.use(function (config) {
   if (localStorage.getItem('access_token')) {
     config.headers['access_token'] = localStorage.getItem('access_token');
   }
-  console.log(config);
   return config;
 }, function (error) {
   // 对请求错误做些什么

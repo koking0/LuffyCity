@@ -1,6 +1,5 @@
 import redis
 from django.http import JsonResponse, QueryDict
-from django.views import View
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
@@ -58,8 +57,11 @@ class ShoppingView(APIView):
 		response = BaseResponse()
 		requestData = QueryDict(request.body)
 		userToken = requestData.get('userToken', None)
-		deleteCourseList = requestData.get('deleteCourseList[]', None)
-		print(deleteCourseList)
+		userId = CONNECT.get(str(userToken))
+		deleteCourseList = requestData.get('deleteCourseList', None)[:-1].split(',')
+		for courseId in deleteCourseList:
+			key = SHOPPING_CAR_KEY % (userId, courseId)
+			CONNECT.delete(key)
 		response.code = 200
 		response.data = 'Item deleted successfully!'
 		return JsonResponse(response.dict)

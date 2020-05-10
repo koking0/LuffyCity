@@ -57,10 +57,9 @@
         }
       },
       deleteGoods() {
-        console.log(this.multipleSelection);
         let deleteCourseList = "";
         for (let i = 0; i < this.multipleSelection.length; i++) {
-          deleteCourseList += this.multipleSelection[i].id;
+          deleteCourseList += `${this.multipleSelection[i].id},`;
         }
         $.ajax({
           url: 'http://127.0.0.1:8000/api/shopping/delete',
@@ -68,16 +67,12 @@
           data: {'deleteCourseList': deleteCourseList, 'userToken': localStorage.getItem('access_token')},
           success: function (res) {
             console.log(res);
+            location.reload();
           },
           error: function (err) {
             console.log(err);
           }
         });
-        // this.$http.shopCarDeleteGoods(deleteCourseList).then(res => {
-        //   console.log(res);
-        // }).catch(err => {
-        //   console.log(err);
-        // })
       },
       handleSelectionChange(val) {
         this.totalPrice = 0;
