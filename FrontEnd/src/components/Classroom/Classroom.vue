@@ -86,7 +86,25 @@
 
 <script>
   export default {
-    name: "Classroom"
+    name: "Classroom",
+    data() {
+      return {
+        courseSection: [],
+      }
+    },
+    methods: {
+      getCourse() {
+        this.$http.classroomCourseList().then(res => {
+          console.log(res);
+          this.courseSection = res.data;
+        }).catch(err => {
+          console.log(err);
+        })
+      },
+    },
+    created() {
+      this.getCourse();
+    }
   }
 </script>
 

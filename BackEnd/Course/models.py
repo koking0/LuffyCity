@@ -1,7 +1,7 @@
 from django.db import models
 
-
-__all__ = ['Category', 'FreeCourse', 'PracticalCourse', 'Teacher', 'CourseDetail', 'GoLearn', 'CourseChapter', 'CourseSection']
+__all__ = ['Category', 'FreeCourse', 'PracticalCourse', 'Teacher', 'CourseDetail', 'GoLearn', 'CourseChapter',
+           'CourseSection', 'EmploymentCourse', 'Module']
 
 
 # Create your models here.
@@ -42,7 +42,31 @@ class FreeCourse(BaseCourse):
 
 class PracticalCourse(BaseCourse):
     price = models.IntegerField(verbose_name="价格", default=99)
-    isBuy = models.BooleanField(default=False)
+
+
+class EmploymentCourse(models.Model):
+    title = models.CharField(max_length=128, verbose_name="课程的名称")
+    courseImage = models.ImageField(upload_to="course/%Y-%m", verbose_name='课程的图片')
+    studyNumber = models.IntegerField(verbose_name="学习人数")
+    hours = models.IntegerField(verbose_name="时长")
+    slogan = models.CharField(verbose_name="课程概述", max_length=1024)
+    courseType = models.SmallIntegerField(choices=((0, "免费课"), (1, "实战课"), (2, "轻课"), (3, "就业班")))
+    courseDetail = models.OneToOneField(to="CourseDetail", on_delete=models.CASCADE)
+    price = models.IntegerField(verbose_name="价格", default=99)
+    salary = models.CharField(max_length=128, verbose_name="就业薪资")
+    employmentRate = models.FloatField(verbose_name="就业率")
+
+    def __str__(self):
+        return self.title
+
+
+class Module(models.Model):
+    course = models.ForeignKey(to='EmploymentCourse', on_delete=models.CASCADE)
+    title = models.CharField(verbose_name="模块", max_length=256)
+    chapter = models.ManyToManyField(to="CourseChapter")
+
+    def __str__(self):
+        return self.title
 
 
 class Teacher(models.Model):

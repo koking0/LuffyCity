@@ -6,17 +6,17 @@ Axios.create({
 
 import qs from 'qs'
 
-// 添加请求拦截器
-Axios.interceptors.request.use(function (config) {
-  // 在发送请求之前做些什么
-  if (localStorage.getItem('access_token')) {
-    config.headers['access_token'] = localStorage.getItem('access_token');
-  }
-  return config;
-}, function (error) {
-  // 对请求错误做些什么
-  return Promise.reject(error);
-});
+// // 添加请求拦截器
+// Axios.interceptors.request.use(function (config) {
+//   // 在发送请求之前做些什么
+//   if (localStorage.getItem('access_token')) {
+//     config.headers['access_token'] = localStorage.getItem('access_token');
+//   }
+//   return config;
+// }, function (error) {
+//   // 对请求错误做些什么
+//   return Promise.reject(error);
+// });
 
 // 登录
 export const userLogin = (params) => {
@@ -71,4 +71,9 @@ export const shopCartAdd = (goodsInfo) => {
 // 删除购物车中的商品
 export const shopCarDeleteGoods = (deleteCourseList) => {
   return Axios.delete(`http://127.0.0.1:8000/api/shopping/delete`, deleteCourseList).then(res => res.data);
+}
+
+// 我的教室页面列表
+export const classroomCourseList = () => {
+  return Axios.get(`http://127.0.0.1:8000/api/v1/enroll/degree/1/`).then(res => res.data);
 }
