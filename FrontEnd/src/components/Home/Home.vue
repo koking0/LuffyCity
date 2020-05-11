@@ -31,7 +31,7 @@
                   <p class="title">跟随Alex金角大王3周上手Python开发</p>
                   <div class="item-number">
                     <p class="num">
-                      <img src="static/images/bofang_1567070083.9337127.png">
+                      <img src="../../../static/images/bofang.png">
                       <span>784人在学</span>
                       <span>19小时 </span>
                     </p>
@@ -49,7 +49,7 @@
                 <p class="title">跟随Redhat认证专家讲师2周玩转Linux</p>
                 <div class="item-number">
                   <p class="num">
-                    <img src="static/images/bofang_1567070083.9337127.png">
+                    <img src="../../../static/images/bofang.png">
                     <span>106人在学</span>
                     <span>16小时</span>
                   </p>
@@ -68,7 +68,7 @@
                   <p class="title">3天搞定网站开发三剑客之HTML</p>
                   <div class="item-number">
                     <p class="num">
-                      <img src="static/images/bofang_1567070083.9337127.png">
+                      <img src="../../../static/images/bofang.png">
                       <span>51人在学</span>
                       <span>8小时</span>
                     </p>
@@ -91,7 +91,7 @@
                   <p class="title">轻松学好开发人员必备的数据结构及算法知识</p>
                   <div class="item-number">
                     <p class="num">
-                      <img src="static/images/bofang_1567070083.9337127.png">
+                      <img src="../../../static/images/bofang.png">
                       <span>3877人在学</span>
                       <span>20小时</span>
                     </p>
@@ -113,7 +113,7 @@
                   <p class="title">2周学会当下最热门的云计算架构之k8s实战</p>
                   <div class="item-number">
                     <p class="num">
-                      <img src="static/images/bofang_1567070083.9337127.png">
+                      <img src="../../../static/images/bofang.png">
                       <span>919人在学</span>
                       <span>13小时</span>
                     </p>
@@ -135,7 +135,7 @@
                   <p class="title">微服务这么火，还不会的是没机会进大厂了</p>
                   <div class="item-number">
                     <p class="num">
-                      <img src="static/images/bofang_1567070083.9337127.png">
+                      <img src="../../../static/images/bofang.png">
                       <span>470人在学</span>
                       <span>12小时</span>
                     </p>
@@ -155,18 +155,18 @@
         <p>网红讲师+在线1V1名企导师辅导 + 闯关学习，逐行审阅代码、视频1v1考核等服务，助你高薪就业</p></div>
       <ul><a target="_blank" href="https://www.luffycity.com/micro/python-middle">
         <li>
-          <img src="static/images/AI@2x_1567483301.224543.png">
+          <img src="../../../static/images/AI@2x.png">
           <div class="course-item"><p class="title">迎上AI风口，抓住行业红利，0基础6个月炼成人工智能时代热门人才</p>
             <p class="num">
-              <img src="static/images/bofang_1567070083.9337127.png">
+              <img src="../../../static/images/bofang.png">
               <span>1833人</span> <span>6个月</span></p></div>
         </li>
       </a> <a target="_blank" href="https://www.luffycity.com/micro/linux-middle">
         <li>
-          <img src="static/images/Linuxyun@2x_1567483310.010623.png">
+          <img src="../../../static/images/Linuxyun@2x.png">
           <div class="course-item"><p class="title">玩转Linux，不写代码也能高薪，零基础首选，年薪30万不是梦！</p>
             <p class="num">
-              <img src="static/images/bofang_1567070083.9337127.png">
+              <img src="../../../static/images/bofang.png">
               <span>650人</span> <span>5个月</span></p></div>
         </li>
       </a></ul>

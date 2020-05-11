@@ -13,13 +13,14 @@
 from django.urls import path
 
 from Course.views import CategoryView, CourseView, CourseDetailView, PracticalCourseDetailView, PracticalCategoryView, \
-	PracticalCourseView
+	PracticalCourseView, DegreeCourseView
 
 urlpatterns = [
 	path('category', CategoryView.as_view()),
 	path('course/<int:pk>', CourseView.as_view()),
 	path('practicalcategory', PracticalCategoryView.as_view()),
 	path('practicalcourse/<int:pk>', PracticalCourseView.as_view()),
+	path('degreecourse/<int:pk>', DegreeCourseView.as_view()),
 	path('<int:pk>/detail', CourseDetailView.as_view()),
 	path('<int:pk>/payment_info', PracticalCourseDetailView.as_view()),
 ]

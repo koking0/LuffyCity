@@ -43,6 +43,11 @@ class PracticalCourseView(APIView):
 		return Response(serializerObject.data)
 
 
+class DegreeCourseView(APIView):
+	def get(self, request, pk):
+		pass
+
+
 class CourseDetailView(APIView):
 	def get(self, request, pk):
 		courseDetailObject = models.FreeCourse.objects.filter(id=pk).first()

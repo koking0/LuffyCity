@@ -33,7 +33,7 @@
       <ul class="div-3">
         <a target="_blank" href="https://www.luffycity.com/micro/python-middle">
           <li>
-            <img src="/static/images/AI@2x_1567483301.224543.png" alt="AI">
+            <img src="/static/images/AI@2x.png" alt="AI">
             <div class="course-item">
               <p class="title">迎上AI风口，抓住行业红利，0基础6个月炼成人工智能时代热门人才</p>
               <div class="num">
@@ -42,7 +42,7 @@
                   <span>学员评论：15753条</span>
                 </p>
                 <p>
-                  <img src="/static/images/bofang_1567070083.9337127.png" alt="bofang">
+                  <img src="/static/images/bofang.png" alt="bofang">
                   <span>2061人</span>
                 </p>
               </div>
@@ -51,7 +51,7 @@
         </a>
         <a target="_blank" href="https://www.luffycity.com/micro/linux-middle">
           <li>
-            <img src="/static/images/Linuxyun@2x_1567483310.010623.png" alt="Linuxyun">
+            <img src="/static/images/Linuxyun@2x.png" alt="Linuxyun">
             <div class="course-item">
               <p class="title">玩转Linux，不写代码也能高薪，零基础首选，年薪30万不是梦！</p>
               <div class="num">
@@ -60,7 +60,7 @@
                   <span>学员评论：3947条</span>
                 </p>
                 <p>
-                  <img src="/static/images/bofang_1567070083.9337127.png" alt="bofang">
+                  <img src="/static/images/bofang.png" alt="bofang">
                   <span>768人</span>
                 </p>
               </div>
@@ -68,7 +68,7 @@
           </li>
         </a> <a target="_blank" href="https://www.luffycity.com/micro/python-high">
         <li>
-          <img src="/static/images/AI@2x(1)_1570514562.7293007.png" alt="AI@2x(1)">
+          <img src="/static/images/AI@2x(1).png" alt="AI@2x(1)">
           <div class="course-item">
             <p class="title">新增数据分析、人工智能和Golang语言开发课程，助你抢占薪资制高点</p>
             <div class="num">
@@ -77,7 +77,7 @@
                 <span>学员评论：360条</span>
               </p>
               <p>
-                <img src="/static/images/bofang_1567070083.9337127.png" alt="bofang">
+                <img src="/static/images/bofang.png" alt="bofang">
                 <span>434人</span>
               </p>
             </div>
@@ -85,7 +85,7 @@
         </li>
       </a> <a target="_blank" href="https://www.luffycity.com/micro/linux-high">
         <li>
-          <img src="static/images/Linuxyun@2x_1570514760.3316157.png" alt="Linuxyun@2x">
+          <img src="/static/images/Linuxyun@2x(1).png" alt="Linuxyun@2x">
           <div class="course-item">
             <p class="title">新增python自动化开发课程，向自动化运维方向奋进！</p>
             <div class="num"><p>
@@ -93,7 +93,7 @@
               <span>学员评论：734条</span>
             </p>
               <p>
-                <img src="/static/images/bofang_1567070083.9337127.png" alt="bofang">
+                <img src="/static/images/bofang.png" alt="bofang">
                 <span>1162人</span>
               </p>
             </div>
@@ -112,21 +112,21 @@
       <ul class="div-3">
         <li>
           <p>
-            <img src="static/images/salary@2x_1570514840.5431542.png" alt="salary@2x">
+            <img src="/static/images/salary@2x_1570514840.5431542.png" alt="salary@2x">
             <span></span>
           </p>
           <p>总计毕业人数（人）</p>
         </li>
         <li>
           <p>
-            <img src="static/images/95@2x_1570515194.9583223.png" alt="95@2x">
+            <img src="/static/images/95@2x_1570515194.9583223.png" alt="95@2x">
             <span></span>
           </p>
           <p>就业率</p>
         </li>
         <li>
           <p>
-            <img src="static/images/12369_1570514951.3915164.png" alt="12369_1570514951">
+            <img src="/static/images/12369_1570514951.3915164.png" alt="12369_1570514951">
             <span></span>
           </p>
           <p>平均薪资（元）</p>
@@ -138,8 +138,8 @@
         <h1 class="h1">360°全方位陪伴式教学</h1>
       </div>
       <div class="problem-content div-2">
-        <img src="static/images/Combined Shape@2x_1570514610.6181679.png" alt="Combined">
-        <img src="static/images/bianzu8@2x_1570514596.9670534.png" alt="bianzu8">
+        <img src="/static/images/Combined%20Shape@2x.png" alt="Combined">
+        <img src="/static/images/bianzu8@2x.png" alt="bianzu8">
       </div>
     </div>
     <div class="nanny divtest sdiv on" data-animation="on">
@@ -148,70 +148,38 @@
       </div>
       <ul class="nanny-content1 div-2">
         <li>
-          <img src="static/images/acon@2x_1570514532.7531736.png" alt="acon">
+          <img src="/static/images/acon@2x.png" alt="acon">
           <p>导师</p>
         </li>
-        <img class="pipe" src="static/images/arrow@2x_1570514535.07801.png" alt="arrow">
+        <img class="pipe" src="/static/images/arrow@2x.png" alt="arrow">
         <li>
           <p>1V1作业批改</p>
           <p>1V1问题答疑</p>
           <p>1V1闯关视频考核</p>
           <p>1V1每周跟进学习进度</p>
         </li>
-        <img class="pipe" src="static/images/arrow@2x_1570514535.07801.png" alt="arrow">
+        <img class="pipe" src="/static/images/arrow@2x.png" alt="arrow">
         <li>
           <span>导师批注案例展示</span>
-          <img src="static/images/13@2x_1570514532.3320534.png" alt="13">
+          <img src="/static/images/13@2x.png" alt="13">
           <a>更多导师批注详情&gt;&gt;&gt;</a>
         </li>
       </ul>
       <ul class="nanny-content2 div-3">
         <li>
-          <img src="/static/images/icon1@2x_1570514619.7560713.png" alt="icon1">
+          <img src="/static/images/icon1@2x.png" alt="icon1">
           <span>班主任</span>
           <p> 全程带班跟踪督导，彻底治愈你的拖延症<br>定期跟进你的学习进度，360度暖心鼓励陪伴 </p>
         </li>
         <li>
-          <img src="static/images/icon2@2x_1570514620.1737669.png" alt="icon2">
+          <img src="/static/images/icon2@2x.png" alt="icon2">
           <span>讲师</span>
           <p> 甄选业界知名网红讲师，带你吃透每一个核心<br>知识点，手把手带你做企业级实战项目 </p>
         </li>
         <li>
-          <img src="static/images/icon3@2x_1570514620.782069.png" alt="icon3">
+          <img src="/static/images/icon3@2x.png" alt="icon3">
           <span>就业指导老师</span>
           <p> 一对一简历修改，一对一模拟面试<br>就业推荐，试用期辅导 </p>
-        </li>
-      </ul>
-    </div>
-    <div class="student divtest sdiv on" data-animation="on">
-      <div class="title">
-        <h1 class="h1">看看学长学姐们怎么说</h1>
-      </div>
-      <ul class="div-2">
-        <li>
-          <div>
-            <img class="img1" src="static/images/lixiao@2x_1570514768.5436137.png" alt="lixiao">
-            <img class="img2" src="static/images/play@2x_1570514835.40506.png" alt="play"></div>
-          <p>小学老师转行互联网大厂编程老师的故事</p>
-          <p>Python开发工程师</p>
-          <p>李同学的故事</p></li>
-        <li>
-          <div>
-            <img class="img1" src="static/images/nick@2x_1570514818.0077946.png" alt="nick">
-            <img class="img2" src="static/images/play@2x_1570514835.40506.png" alt="play">
-          </div>
-          <p>纽约大学毕业后学习Python成为名企数据分析师</p>
-          <p>Python数据分析师</p>
-          <p>Nick的故事</p>
-        </li>
-        <li>
-          <div>
-            <img class="img1" src="static/images/gelujing@2x_1570514618.3553596.png" alt="gelujing">
-            <img class="img2" src="static/images/play@2x_1570514835.40506.png" alt="play">
-          </div>
-          <p>互联网大厂员工如何在路飞的帮助下工作做的卓有成效</p>
-          <p>58赶集网运维开发工程师</p>
-          <p>葛同学的故事</p>
         </li>
       </ul>
     </div>
@@ -220,7 +188,7 @@
         <h1 class="h1">常见问题</h1>
       </div>
       <div class="problem-list div-2">
-        <img src="static/images/Combined Shape@2x(1)_1570514612.1463997.png" alt="Combined">
+        <img src="/static/images/Combined%20Shape@2x(1).png" alt="Combined">
         <ul>
           <li>
             <p><i></i><span>什么是就业班课程？</span></p>
@@ -268,6 +236,10 @@
 </script>
 
 <style scoped>
+  a {
+    text-decoration: none;
+  }
+
   .box {
     width: 100%;
     height: auto;
