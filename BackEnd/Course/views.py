@@ -6,7 +6,7 @@ from rest_framework.views import APIView
 
 from Course import models
 from Course.serializers import CategorySerializer, FreeCourseSerializer, CourseDetailSerializer, \
-	PracticalCourseSerializer
+	PracticalCourseSerializer, EmploymentCourseSerializer
 
 
 class CategoryView(APIView):
@@ -44,8 +44,10 @@ class PracticalCourseView(APIView):
 
 
 class DegreeCourseView(APIView):
-	def get(self, request, pk):
-		pass
+	def get(self, request):
+		courseList = models.EmploymentCourse.objects.all()
+		serializerObject = EmploymentCourseSerializer(courseList, many=True)
+		return Response(serializerObject.data)
 
 
 class CourseDetailView(APIView):

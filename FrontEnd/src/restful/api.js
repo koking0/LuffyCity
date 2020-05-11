@@ -59,6 +59,15 @@ export const practicalCourseDetail = (courseId) => {
   return Axios.get(`http://127.0.0.1:8000/api/practical/${courseId}/payment_info`).then(res => res.data);
 }
 
+// 就业班课程列表数据
+export const getDegreeCourse = () => {
+  return Axios.get(`http://127.0.0.1:8000/api/course/degreecourse/list`).then(res => res.data);
+}
+// 就业班课程详情数据
+export const degreeCourseDetail = (courseId) => {
+  return Axios.get(`http://127.0.0.1:8000/api/degreecourse/${courseId}`).then(res => res.data);
+}
+
 // 购物车页面列表
 export const shopCarList = () => {
   return Axios.get(`http://127.0.0.1:8000/api/shopping/list`,

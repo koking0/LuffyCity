@@ -31,75 +31,23 @@
         <p class="p">网红讲师 + 在线1V1名企导师辅导 + 闯关学习，逐行审阅代码、视频1v1考核等服务，助你高薪就业</p>
       </div>
       <ul class="div-3">
-        <a target="_blank" href="https://www.luffycity.com/micro/python-middle">
-          <li>
-            <img src="/static/images/AI@2x.png" alt="AI">
+          <li v-for="(item, index) in courseList" :key="item.id">
+            <a target="_blank" href="https://www.luffycity.com/micro/python-middle">
+            <img :src="item.courseImage" alt="AI">
             <div class="course-item">
-              <p class="title">迎上AI风口，抓住行业红利，0基础6个月炼成人工智能时代热门人才</p>
+              <p class="title">{{item.slogan}}</p>
               <div class="num">
                 <p>
-                  <span>学习周期：319小时</span>
-                  <span>学员评论：15753条</span>
+                  <span>学习周期：{{item.hours}}小时</span>
                 </p>
                 <p>
                   <img src="/static/images/bofang.png" alt="bofang">
-                  <span>2061人</span>
+                  <span>{{item.studyNumber}}人</span>
                 </p>
               </div>
             </div>
+            </a>
           </li>
-        </a>
-        <a target="_blank" href="https://www.luffycity.com/micro/linux-middle">
-          <li>
-            <img src="/static/images/Linuxyun@2x.png" alt="Linuxyun">
-            <div class="course-item">
-              <p class="title">玩转Linux，不写代码也能高薪，零基础首选，年薪30万不是梦！</p>
-              <div class="num">
-                <p>
-                  <span>学习周期：167小时</span>
-                  <span>学员评论：3947条</span>
-                </p>
-                <p>
-                  <img src="/static/images/bofang.png" alt="bofang">
-                  <span>768人</span>
-                </p>
-              </div>
-            </div>
-          </li>
-        </a> <a target="_blank" href="https://www.luffycity.com/micro/python-high">
-        <li>
-          <img src="/static/images/AI@2x(1).png" alt="AI@2x(1)">
-          <div class="course-item">
-            <p class="title">新增数据分析、人工智能和Golang语言开发课程，助你抢占薪资制高点</p>
-            <div class="num">
-              <p>
-                <span>学习周期：178小时</span>
-                <span>学员评论：360条</span>
-              </p>
-              <p>
-                <img src="/static/images/bofang.png" alt="bofang">
-                <span>434人</span>
-              </p>
-            </div>
-          </div>
-        </li>
-      </a> <a target="_blank" href="https://www.luffycity.com/micro/linux-high">
-        <li>
-          <img src="/static/images/Linuxyun@2x(1).png" alt="Linuxyun@2x">
-          <div class="course-item">
-            <p class="title">新增python自动化开发课程，向自动化运维方向奋进！</p>
-            <div class="num"><p>
-              <span>学习周期：110小时</span>
-              <span>学员评论：734条</span>
-            </p>
-              <p>
-                <img src="/static/images/bofang.png" alt="bofang">
-                <span>1162人</span>
-              </p>
-            </div>
-          </div>
-        </li>
-      </a>
       </ul>
     </div>
     <div class="why-choose divtest sdiv on" data-animation="on">
@@ -231,7 +179,28 @@
 
 <script>
   export default {
-    name: "EmploymentClass"
+    name: "EmploymentClass",
+    data() {
+      return {
+        courseList: [],
+      }
+    },
+    methods: {
+      getCourseList() {
+        this.$http.getDegreeCourse().then(res => {
+          for (let i = 0; i < res.length; i++){
+            res[i]['courseImage'] = `http://127.0.0.1:8000/${res[i]['courseImage']}`;
+          }
+          console.log(res);
+          this.courseList = res;
+        }).catch(err => {
+          console.log(err);
+        });
+      },
+    },
+    created() {
+      this.getCourseList();
+    }
   }
 </script>
 
@@ -389,25 +358,25 @@
     justify-content: space-between;
   }
 
-  .box .employment-course ul a li {
+  .box .employment-course ul li {
     width: 586px;
     height: auto;
     margin-bottom: 30px;
   }
 
-  .box .employment-course ul a li .course-item .num img {
+  .box .employment-course ul li a .course-item .num img {
     width: 17px;
     height: 17px;
     margin-right: 4px;
   }
 
-  .box .employment-course ul a li img {
+  .box .employment-course ul li a img {
     width: 100%;
     height: 248px;
     border-radius: 4px 4px 0 0;
   }
 
-  .box .employment-course ul a li .course-item {
+  .box .employment-course ul li a .course-item {
     width: 100%;
     background: #fff;
     padding: 32px 22px 34px;
@@ -416,20 +385,20 @@
     border-radius: 0 0 4px 4px;
   }
 
-  .box .employment-course ul a li .course-item .title {
+  .box .employment-course ul li a .course-item .title {
     color: #5e5e5e;
     font-size: 16px;
     margin-bottom: 12px;
   }
 
-  .box .employment-course ul a li .course-item .num, .box .employment-course ul a li .course-item .num p {
+  .box .employment-course ul li a .course-item .num, .box .employment-course ul li a .course-item .num p {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
     align-items: center;
   }
 
-  .box .employment-course ul a li .course-item .num {
+  .box .employment-course ul li a .course-item .num {
     width: 100%;
     font-size: 14px;
     color: #9d9d9d;
@@ -437,19 +406,19 @@
     justify-content: space-between;
   }
 
-  .box .employment-course ul a li .course-item .num, .box .employment-course ul a li .course-item .title {
+  .box .employment-course ul li a .course-item .num, .box .employment-course ul li a .course-item .title {
     width: 100%;
     text-align: left;
   }
 
-  .box .employment-course ul a li .course-item .num, .box .employment-course ul a li .course-item .num p {
+  .box .employment-course ul li a .course-item .num, .box .employment-course ul li a .course-item .num p {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
     align-items: center;
   }
 
-  .box .employment-course ul a li .course-item .num p:first-of-type span:nth-of-type(2) {
+  .box .employment-course ul li a .course-item .num p:first-of-type span:nth-of-type(2) {
     margin-left: 20px;
   }
 

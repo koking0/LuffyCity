@@ -236,284 +236,6 @@
         </div>
       </div>
     </div>
-    <div class="home-teacher"><h1>跟随业内知名网红讲师学习牛逼的课程</h1>
-      <div class="teacher-wrap">
-        <div class="left"><img
-          src="//hcdn1.luffycity.com/static/frontend/index/left@2x_1567483309.3167448.png">
-          <!--v-if-->  </div>
-        <div class="right cancl"><img
-          src="//hcdn1.luffycity.com/static/frontend/index/right@2x_1567483310.2263303.png">
-          <!--v-if-->  </div>
-        <div class="teacher-item">
-          <ul>
-            <li><img class="teacher-img"
-                     src="//hcdn1.luffycity.com/static/frontend/index/big1_1567483304.1961453.png">
-              <div class="teacher-intro"><p class="name">Alex | 教学总监</p>
-                <article> 老男孩教育CTO &amp; CO-FOUNDER；<br> 国内知名PYTHON语言推广者；<br
-                > 51CTO学院2016\2017年度最受学员喜爱10大讲师之一；<br> 多款开源软件作者；<br>
-                  曾任职公安部、飞信、中金公司、NOKIA中国研究院、华尔街英语、ADVENT、汽车之家等公司；
-                </article>
-                <div class="thumbnail-box"><p><img class="img1"
-                                                   src="//hcdn1.luffycity.com/static/frontend/index/item1_1567483307.4876392.png">
-                  <img class="play"
-                       src="//hcdn1.luffycity.com/static/frontend/index/bofang-bak14@2x_1567483306.550233.png"> <span
-                  >Django介绍</span></p>
-                  <p><img class="img1"
-                          src="//hcdn1.luffycity.com/static/frontend/index/item2_1567483307.661028.png">
-                    <img class="play"
-                         src="//hcdn1.luffycity.com/static/frontend/index/bofang-bak14@2x_1567483306.550233.png"> <span
-                    >软件开发目录规范</span></p></div>
-              </div>
-            </li>
-            <li><img class="teacher-img"
-                     src="//hcdn1.luffycity.com/static/frontend/index/big2_1567483304.886989.png">
-              <div class="teacher-intro"><p class="name">老男孩 | 老男孩教育创始人</p>
-                <article> 老男孩，北京老男孩IT教育创始人，<br>
-                  拥有十多年一线大规模网站集群运维架构实战经验及教学培训经验，曾主导了从几台到上千台规模集群运维架构的扩展，运维架构实战知识体系全面；<br>
-                  擅长大规模集群架构部署调优、虚拟化、云计算、大数据、MySQL数据库等技术，是IT界资深的Linux集群架构实战专家。
-                </article>
-                <div class="thumbnail-box"><p><img class="img1"
-                                                   src="//hcdn1.luffycity.com/static/frontend/index/item3_1567483307.8005805.png">
-                  <img class="play"
-                       src="//hcdn1.luffycity.com/static/frontend/index/bofang-bak14@2x_1567483306.550233.png"> <span
-                  >如何才能学好Shell编程</span></p>
-                  <p><img class="img1"
-                          src="//hcdn1.luffycity.com/static/frontend/index/item4_1567483308.015547.png">
-                    <img class="play"
-                         src="//hcdn1.luffycity.com/static/frontend/index/bofang-bak14@2x_1567483306.550233.png"> <span
-                    >Shell编程实战开篇</span></p></div>
-              </div>
-            </li>
-            <li><img class="teacher-img"
-                     src="//hcdn1.luffycity.com/static/frontend/index/big3_1567483304.996755.png">
-              <div class="teacher-intro"><p class="name">Wusir | Python学科带头人</p>
-                <article> 多年开发实战经验，先后任职于汽车之家、好大夫在线等多家大型互联网公司；<br> 擅长C#,Python,PHP等一大堆语言开发；<br
-                > 现任某大型互联网公司高级自动化开发工程师；已精读多个开源软件源码；<br> 自行开发过改进版的Tornado WEB框架，讲课风趣幽默。
-                </article>
-                <div class="thumbnail-box"><p><img class="img1"
-                                                   src="//hcdn1.luffycity.com/static/frontend/index/item5_1567483308.156477.png">
-                  <img class="play"
-                       src="//hcdn1.luffycity.com/static/frontend/index/bofang-bak14@2x_1567483306.550233.png"> <span
-                  >初识编码</span></p>
-                  <p><img class="img1"
-                          src="//hcdn1.luffycity.com/static/frontend/index/item6_1567483308.3672535.png">
-                    <img class="play"
-                         src="//hcdn1.luffycity.com/static/frontend/index/bofang-bak14@2x_1567483306.550233.png"> <span
-                    >登录了解一下</span></p></div>
-              </div>
-            </li>
-            <li><img class="teacher-img"
-                     src="//hcdn1.luffycity.com/static/frontend/index/big4_1567483305.7660875.png">
-              <div class="teacher-intro"><p class="name">林海峰 | 金牌讲师</p>
-                <article> 老男孩教育Python学科金牌讲师，<br> 曾任某上市公司云计算部门主管。<br>
-                  多年一线运维和开发经验，<br> 追求完美的技术分享者，<br> 被技术耽误的相声演员。
-                </article>
-                <div class="thumbnail-box"><p><img class="img1"
-                                                   src="//hcdn1.luffycity.com/static/frontend/index/item7_1567483308.4830608.png">
-                  <img class="play"
-                       src="//hcdn1.luffycity.com/static/frontend/index/bofang-bak14@2x_1567483306.550233.png"> <span
-                  >面向过程编程</span></p>
-                  <p><img class="img1"
-                          src="//hcdn1.luffycity.com/static/frontend/index/item8_1567483308.5856338.png">
-                    <img class="play"
-                         src="//hcdn1.luffycity.com/static/frontend/index/bofang-bak14@2x_1567483306.550233.png"> <span
-                    >编程范式</span></p></div>
-              </div>
-            </li>
-            <li><img class="teacher-img"
-                     src="//hcdn1.luffycity.com/static/frontend/index/big5_1567483305.5877552.png">
-              <div class="teacher-intro"><p class="name">赵博士 | 金牌讲师</p>
-                <article> 清华大学计算机博士，<br> 爱好研究高精尖算法，精读Python源码，<br>
-                  了解Python解释器底层技术实现；<br> 擅长领域：C/C++、Python、Java、金融量化分析、机器学习与人工智能等；<br>
-                  擅长将枯燥的专业知识生动形象的表达出来，深入浅出，深受学员喜爱。
-                </article>
-                <div class="thumbnail-box"><p><img class="img1"
-                                                   src="//hcdn1.luffycity.com/static/frontend/index/item9_1567483308.625625.png">
-                  <img class="play"
-                       src="//hcdn1.luffycity.com/static/frontend/index/bofang-bak14@2x_1567483306.550233.png"> <span
-                  >股票基本知识和股票分类</span></p>
-                  <p><img class="img1"
-                          src="//hcdn1.luffycity.com/static/frontend/index/item10_1567483308.8588307.png">
-                    <img class="play"
-                         src="//hcdn1.luffycity.com/static/frontend/index/bofang-bak14@2x_1567483306.550233.png"> <span
-                    >基本金融知识介绍</span></p></div>
-              </div>
-            </li>
-            <li><img class="teacher-img"
-                     src="//hcdn1.luffycity.com/static/frontend/index/big6_1567483306.210167.png">
-              <div class="teacher-intro"><p class="name">苑昊 | 金牌讲师</p>
-                <article> 老男孩教育金牌讲师，<br> 曾参与新加坡南洋理工大学大数据医疗相关项目，就职过多家互联网企业，<br
-                > 有着多年开发经验，<br>
-                  精通java,python,go等编程语言，Uric开源软件作者，致力于人工智能与大数据方向，对机器学习，深度学习等算法有深度研究。
-                </article>
-                <div class="thumbnail-box"><p><img class="img1"
-                                                   src="//hcdn1.luffycity.com/static/frontend/index/item11_1567483308.8585577.png">
-                  <img class="play"
-                       src="//hcdn1.luffycity.com/static/frontend/index/bofang-bak14@2x_1567483306.550233.png"> <span
-                  >web应用程序</span></p>
-                  <p><img class="img1" src="//hcdn1.luffycity.com/static/frontend/index/item12_1567483308.996621.png">
-                    <img class="play"
-                         src="//hcdn1.luffycity.com/static/frontend/index/bofang-bak14@2x_1567483306.550233.png"> <span
-                    >Django基础介绍</span></p></div>
-              </div>
-            </li>
-            <li><img class="teacher-img"
-                     src="//hcdn1.luffycity.com/static/frontend/index/big7_1567483306.6965044.png">
-              <div class="teacher-intro"><p class="name">李泳谊 | 金牌讲师</p>
-                <article> 90后新兴讲师，师从业内顶级Linux专家老男孩老师，多年一线运维经验，<br> 讲课坚持以各种图形表达抽象概念。<br
-                > 用简单粗暴的例子表达课上内容。<br>
-                  追求讲到你懂了为止，适合零基础入门的小伙伴。曾分享录制awk数组实战分享，http原理实战分享等精品视频，受益数千人，深得网友喜爱！
-                </article>
-                <div class="thumbnail-box"><p><img class="img1"
-                                                   src="//hcdn1.luffycity.com/static/frontend/index/item13_1567483309.090055.png">
-                  <img class="play"
-                       src="//hcdn1.luffycity.com/static/frontend/index/bofang-bak14@2x_1567483306.550233.png"> <span
-                  >添加用户</span></p>
-                  <p><img class="img1"
-                          src="//hcdn1.luffycity.com/static/frontend/index/item14_1567483309.1793697.png">
-                    <img class="play"
-                         src="//hcdn1.luffycity.com/static/frontend/index/bofang-bak14@2x_1567483306.550233.png"> <span
-                    >变量与PS1</span></p></div>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <ul class="teacher-page">
-          <li class="this">
-            <p>
-              <img src="//hcdn1.luffycity.com/static/frontend/index/small1_1567483310.3304322.png">
-            </p>
-          </li>
-          <li>
-            <p>
-              <img src="//hcdn1.luffycity.com/static/frontend/index/small2_1567483310.3595684.png">
-            </p>
-          </li>
-          <li>
-            <p>
-              <img src="//hcdn1.luffycity.com/static/frontend/index/small3_1567483310.4708838.png">
-            </p>
-          </li>
-          <li>
-            <p>
-              <img src="//hcdn1.luffycity.com/static/frontend/index/small4_1567483310.4806776.png">
-            </p>
-          </li>
-          <li>
-            <p>
-              <img src="//hcdn1.luffycity.com/static/frontend/index/small5_1567483310.6073756.png">
-            </p>
-          </li>
-          <li>
-            <p>
-              <img src="//hcdn1.luffycity.com/static/frontend/index/small6_1567483310.7209144.png">
-            </p>
-          </li>
-          <li>
-            <p>
-              <img src="//hcdn1.luffycity.com/static/frontend/index/small7_1567483310.7275276.png">
-            </p>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="learn-outcomes">
-      <div class="outcomes-cotent">
-        <ul class="side">
-          <li class="this">同学说</li>
-          <li>Offer墙</li>
-          <li>同学感言</li>
-          <li>学员上课笔记</li>
-          <li>作业批改</li>
-        </ul>
-        <div class="outcomes-items">
-          <h1>路飞学员成果</h1>
-          <div class="module-wrap classmate-say">
-            <section key="0">
-              <dl>
-                <dt class="user-img">
-                  <img alt="" src="//hcdn1.luffycity.com/static/frontend/head_portrait/logo@2x.png">
-                </dt>
-                <dd>
-                  <p class="name">刘**</p>
-                  <p class="intro">
-                    <span>电商运营经理 | 立白集团</span>
-                    <span>2020-05-01报名</span>
-                  </p>
-                </dd>
-              </dl>
-              <ul>
-                <li>
-                  <span>报名课程：</span>
-                  <article>Python全栈开发（中级）</article>
-                </li>
-                <li>
-                  <span>为何报此课：</span>
-                  <article>
-                    主要目的提升个人能力，目前主要希望学习爬虫和数据分析方面的技巧，毕竟在电商销售行业目前，复盘都是结合数据来的，但是目前个人能力还是仅限excel，个人会一些VBA，正是因为这样，也知道学好pyhton的重要性
-                  </article>
-                </li>
-                <li>
-                  <span>为何选路飞：</span>
-                  <article>
-                    看了Alex老师的视频，更加下决心要学好python，以前自己自学过，进度非常慢，因为大学专业不是计算机，理解一些计算机的运行方式以及相关的专业词汇很绕，感觉很浪费时间，为了提高效率，选择报班。
-                  </article>
-                </li>
-                <li>
-                  <span>你的期待：</span>
-                  <article>6个月后能通过爬虫获取数据，并结合现有数据，进行数据分析，给项目运营带来有价值的参考。</article>
-                </li>
-              </ul>
-            </section>
-            <section key="1">
-              <dl>
-                <dt class="user-img">
-                  <img alt="" src="//hcdn1.luffycity.comstatic/frontend/head_portrait/logo@2x.png">
-                </dt>
-                <dd>
-                  <p class="name">王**</p>
-                  <p class="intro">
-                    <span>运维工程师 | 更美app</span>
-                    <span>2020-04-28报名</span>
-                  </p></dd>
-              </dl>
-              <ul>
-                <li>
-                  <span>报名课程：</span>
-                  <article>Python全栈开发（中级）</article>
-                </li>
-                <li>
-                  <span>为何报此课：</span>
-                  <article>运维要会开发 提升自己。运维不会开发不行。多挣钱。还得写这么多。不会开发发展有瓶颈。</article>
-                </li>
-                <li>
-                  <span>为何选路飞：</span>
-                  <article>入行就是老男孩、从linux培训班开始的。实际运维工作已经满三年。好评。好的没话说。真的真的 。oldboy，人生导师，指路明灯</article>
-                </li>
-                <li>
-                  <span>你的期待：</span>
-                  <article>有成熟的、独立的平台开发能力。差异化发展，要做运维工程师中，开发能力最牛逼的那帮人。</article>
-                </li>
-              </ul>
-            </section>
-          </div>
-          <div class="module-wrap offer-wall" style="display: none;">
-            <div class="offer-wall-contain"></div>
-          </div>
-          <div class="module-wrap classmate-speech" style="display: none;"></div>
-          <div class="module-wrap lecture-notes" style="display: none;">
-            <div class="lecture-notes-contain"></div>
-          </div>
-          <div class="module-wrap home-homework" style="display: none;">
-            <img src="//hcdn1.luffycity.com/static/frontend/index/QQ20190903-0_1567505672.220265.jpeg">
-            <img src="//hcdn1.luffycity.com/static/frontend/index/QQ20190903-1_1567505672.3231828.jpeg">
-            <img src="//hcdn1.luffycity.com/static/frontend/index/QQ20190903-2_1567505674.3654132.jpeg">
-            <img src="//hcdn1.luffycity.com/static/frontend/index/QQ20190903-3_1567505672.7459126.jpeg">
-          </div>
-          <a target="_blank" class="look-more" href="https://www.luffycity.com/students">查看更多</a>
-        </div>
-      </div>
-    </div>
     <div class="know-luffy">
       <h1>带你认识路飞学城</h1>
       <ul class="luffy-items">
@@ -533,14 +255,22 @@
           <span>诚实正直、追求卓越、团队精神、信守承诺<br>公平正义</span>
         </li>
       </ul>
-      <button>
-        <img class="img1" src="//hcdn1.luffycity.com/static/frontend/index/bofang-2@2x_1567483306.3789.png">
-        <img class="img2" src="//hcdn1.luffycity.com/static/frontend/index/bofang-bak14@2x_1567483306.550233.png">
+      <button data-toggle="modal" data-target="#LuffyCityVideo" data-whatever="@mdo">
+        <img class="img1" src="/static/images/bofang.png" alt="bofang">
+        <img class="img2" src="/static/images/bofang-bak14.png" alt="bofang-bak14">
         <span>带你认识路飞学城</span>
       </button>
-    </div>
-    <div class="home-img">
-      <img alt="" src="" style="max-width: 1403px; max-height: 737px;">
+      <div class="modal fade" id="LuffyCityVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="popup-content">
+              <iframe src="//player.bilibili.com/player.html?aid=24491161&bvid=BV1mW411A7vm&cid=41131694&page=1"
+                      width="750" height="500" scrolling="no" border="0" frameborder="no" framespacing="0"
+                      allowfullscreen="true"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -555,15 +285,15 @@
         sliderImages: [
           {
             id: 1,
-            imgSrc: 'https://hcdn2.luffycity.com/media/frontend/index/banner.png'
+            imgSrc: '/static/images/homeBanner1.png'
           },
           {
             id: 2,
-            imgSrc: 'https://hcdn2.luffycity.com/media/frontend/index/%E7%94%BB%E6%9D%BF.png'
+            imgSrc: '/static/images/homeBanner2.png'
           },
           {
             id: 3,
-            imgSrc: 'https://hcdn1.luffycity.com/static/frontend/index/banner@2x_1574647618.8112254.png'
+            imgSrc: '/static/images/homeBanner3.png'
           }
         ]
       };
@@ -575,6 +305,10 @@
 </script>
 
 <style scoped>
+  a {
+    text-decoration: none;
+  }
+
   .luffy-city .home-courses {
     margin-top: 58px;
     width: 100%;
@@ -959,7 +693,6 @@
   .luffy-city .study-problem ul li span {
     color: #5e5e5e;
     font-size: 18px;
-    font-family: DIN Alternate Bold;
   }
 
   .luffy-city .solve-problem {
@@ -1050,37 +783,9 @@
     bottom: 115px;
   }
 
-  .luffy-city .home-teacher .teacher-wrap .left, .luffy-city .home-teacher .teacher-wrap .right {
-    width: 29px;
-    height: 54px;
-    position: absolute;
-    top: 180px;
-  }
-
-  .luffy-city .home-teacher .teacher-wrap .right {
-    right: 0;
-  }
-
-  .luffy-city .home-teacher .teacher-wrap .left, .luffy-city .home-teacher .teacher-wrap .right {
-    width: 29px;
-    height: 54px;
-    position: absolute;
-    top: 180px;
-  }
-
   .luffy-city .solve-problem .item5 {
     left: 240px;
     bottom: 50px;
-  }
-
-  .luffy-city .home-teacher .teacher-page {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: end;
-    align-items: flex-end;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin-top: 50px;
   }
 
   .luffy-city .home-teacher .teacher-page li {
@@ -1132,17 +837,6 @@
     margin-top: 3px;
   }
 
-  .luffy-city .home-teacher {
-    width: 100%;
-    height: auto;
-    margin-bottom: 119px;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-align: center;
-    align-items: center;
-  }
 
   .luffy-city .home-teacher h1 {
     font-weight: 400;
@@ -1152,39 +846,10 @@
     margin-bottom: 33px;
   }
 
-  .luffy-city .home-teacher .teacher-wrap {
-    width: 1100px;
-    height: auto;
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-
-  .luffy-city .home-teacher .teacher-wrap .left {
-    left: 0;
-  }
 
   .luffy-city .home-teacher .teacher-wrap .left img, .luffy-city .home-teacher .teacher-wrap .right img {
     width: 100%;
     height: 100%;
-  }
-
-  .luffy-city .home-teacher .teacher-wrap .cancl {
-    cursor: pointer;
-  }
-
-  .luffy-city .home-teacher .teacher-wrap .right {
-    right: 0;
-  }
-
-  .luffy-city .home-teacher .teacher-item {
-    width: 822px;
-    height: 100%;
-    overflow: hidden;
   }
 
   .luffy-city .home-teacher .teacher-item ul {
@@ -1205,22 +870,6 @@
     justify-content: space-between;
   }
 
-  .luffy-city .home-teacher .teacher-item ul li .teacher-img {
-    width: 503px;
-    height: 428px;
-  }
-
-  .luffy-city .home-teacher .teacher-item ul li .teacher-intro {
-    width: 273px;
-    height: auto;
-  }
-
-  .luffy-city .home-teacher .teacher-item ul li .teacher-intro .name {
-    font-size: 18px;
-    font-weight: 400;
-    color: #f5a623;
-  }
-
   .luffy-city .home-teacher .teacher-item ul li .teacher-intro article {
     width: 100%;
     height: 192px;
@@ -1232,36 +881,11 @@
     margin-bottom: 42px;
   }
 
-  .luffy-city .home-teacher .teacher-item ul li .teacher-intro .thumbnail-box {
-    width: 100%;
-    height: auto;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-
   .luffy-city .home-teacher .teacher-item ul li .teacher-intro .thumbnail-box p {
     width: 128px;
     height: auto;
     position: relative;
     cursor: pointer;
-  }
-
-  .luffy-city .home-teacher .teacher-item ul li .teacher-intro .thumbnail-box p .img1 {
-    width: 100%;
-    height: 90px;
-    margin-bottom: 10px;
-  }
-
-  .luffy-city .home-teacher .teacher-item ul li .teacher-intro .thumbnail-box p .play {
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    left: 50%;
-    top: 37px;
-    margin-left: -8px;
-    transition: all .3s ease-in-out;
   }
 
   .luffy-city .home-teacher .teacher-item ul li .teacher-intro .thumbnail-box p span {
@@ -1271,39 +895,6 @@
     color: #9d9d9d;
     font-size: 13px;
     font-weight: 300;
-  }
-
-  .luffy-city .learn-outcomes {
-    width: 100%;
-    height: 784px;
-    background: url(//hcdn1.luffycity.com/static/frontend/index/bg_1567483304.237666.png);
-    background-size: 100% 100%;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-
-  .luffy-city .learn-outcomes .outcomes-cotent {
-    width: 1198px;
-    height: auto;
-    display: -ms-flexbox;
-    display: flex;
-  }
-
-  .luffy-city .learn-outcomes .outcomes-cotent .side {
-    width: 282px;
-    height: 784px;
-    background: linear-gradient(180deg, rgba(25, 28, 36, .28), #1b1d26 43%, rgba(27, 29, 39, .21));
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    margin-right: 66px;
-    -ms-flex-pack: center;
-    justify-content: center;
   }
 
   .luffy-city .learn-outcomes .outcomes-cotent .side .this, .luffy-city .learn-outcomes .outcomes-cotent .side li:hover {
@@ -1352,10 +943,6 @@
     cursor: pointer;
   }
 
-  .luffy-city .learn-outcomes .outcomes-cotent .outcomes-items {
-    position: relative;
-  }
-
   .luffy-city .learn-outcomes .outcomes-cotent .outcomes-items h1 {
     margin-top: 67px;
     margin-left: 150px;
@@ -1363,10 +950,6 @@
     font-size: 36px;
     font-weight: 400;
     color: #fff;
-  }
-
-  .luffy-city .learn-outcomes .outcomes-cotent .outcomes-items .module-wrap {
-    width: 850px !important;
   }
 
   .luffy-city .learn-outcomes .outcomes-cotent .outcomes-items .classmate-say section {
@@ -1382,14 +965,6 @@
     align-items: center;
   }
 
-  .luffy-city .learn-outcomes .outcomes-cotent .outcomes-items .classmate-say section dl .user-img {
-    width: 44px;
-    height: 44px;
-    border-radius: 100%;
-    overflow: hidden;
-    margin-right: 13px;
-  }
-
   .luffy-city .learn-outcomes .outcomes-cotent .outcomes-items .classmate-say section dl .user-img img {
     width: 100%;
     height: 100%;
@@ -1400,81 +975,12 @@
     flex: 1;
   }
 
-  .luffy-city .learn-outcomes .outcomes-cotent .outcomes-items .classmate-say section dl dd .name {
-    color: #fff;
-    font-size: 16px;
-    margin-bottom: 7px;
-  }
-
-  .luffy-city .learn-outcomes .outcomes-cotent .outcomes-items .classmate-say section dl dd .intro {
-    width: 100%;
-    color: #d0d0d0;
-    font-size: 14px;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-
   .luffy-city .learn-outcomes .outcomes-cotent .outcomes-items .classmate-say section:nth-of-type(2) {
     border: none;
     margin-bottom: 0;
     padding-bottom: 0;
   }
 
-  .luffy-city .learn-outcomes .outcomes-cotent .outcomes-items .offer-wall {
-    height: 500px;
-    overflow: hidden;
-  }
-
-  .luffy-city .learn-outcomes .outcomes-cotent .outcomes-items .offer-wall .offer-wall-contain {
-    width: 100%;
-    text-align: center;
-    -webkit-column-count: 3;
-    column-count: 3;
-  }
-
-  .luffy-city .learn-outcomes .outcomes-cotent .outcomes-items .classmate-speech {
-    width: 850px;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-
-  .luffy-city .learn-outcomes .outcomes-cotent .outcomes-items .lecture-notes {
-    height: 500px;
-    overflow: hidden;
-  }
-
-  .luffy-city .learn-outcomes .outcomes-cotent .outcomes-items .lecture-notes .lecture-notes-contain {
-    width: 100%;
-    text-align: center;
-    -webkit-column-count: 3;
-    column-count: 3;
-  }
-
-  .luffy-city .learn-outcomes .outcomes-cotent .outcomes-items .home-homework {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-
-  .luffy-city .learn-outcomes .outcomes-cotent .outcomes-items .look-more {
-    display: block;
-    margin-top: 30px;
-    width: 148px;
-    height: 42px;
-    color: #f5a623;
-    font-size: 14px;
-    font-weight: 400;
-    border: 1px solid #f5a623;
-    line-height: 42px;
-    margin-left: 186px;
-    text-align: center;
-    transition: all .2s ease-in-out;
-  }
 
   .luffy-city .know-luffy {
     display: -ms-flexbox;
@@ -1543,6 +1049,7 @@
     height: 48px;
     border: 1px solid #f5a623;
     margin-top: 46px;
+    margin-bottom: 46px;
     font-size: 16px;
     font-weight: 400;
     color: #f5a623;

@@ -29,6 +29,12 @@ class FreeCourseSerializer(serializers.ModelSerializer):
 		fields = ['id', 'title', 'slogan', 'courseImage', 'level', 'studyNumber']
 
 
+class EmploymentCourseSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = models.EmploymentCourse
+		fields = "__all__"
+
+
 class PracticalCourseSerializer(serializers.ModelSerializer):
 	number = serializers.SerializerMethodField()
 	simpleChapter = serializers.SerializerMethodField()
