@@ -31,8 +31,8 @@
         <p class="p">网红讲师 + 在线1V1名企导师辅导 + 闯关学习，逐行审阅代码、视频1v1考核等服务，助你高薪就业</p>
       </div>
       <ul class="div-3">
-          <li v-for="(item, index) in courseList" :key="item.id">
-            <a target="_blank" href="https://www.luffycity.com/micro/python-middle">
+        <li v-for="(item, index) in courseList" :key="item.id" @click="detailHandler(item.id)">
+          <a>
             <img :src="item.courseImage" alt="AI">
             <div class="course-item">
               <p class="title">{{item.slogan}}</p>
@@ -46,8 +46,8 @@
                 </p>
               </div>
             </div>
-            </a>
-          </li>
+          </a>
+        </li>
       </ul>
     </div>
     <div class="why-choose divtest sdiv on" data-animation="on">
@@ -188,7 +188,7 @@
     methods: {
       getCourseList() {
         this.$http.getDegreeCourse().then(res => {
-          for (let i = 0; i < res.length; i++){
+          for (let i = 0; i < res.length; i++) {
             res[i]['courseImage'] = `http://127.0.0.1:8000/${res[i]['courseImage']}`;
           }
           console.log(res);
@@ -196,6 +196,14 @@
         }).catch(err => {
           console.log(err);
         });
+      },
+      detailHandler(courseId) {
+        this.$router.push({
+          name: "degreeCourse.detail",
+          params: {
+            detailId: courseId
+          }
+        })
       },
     },
     created() {

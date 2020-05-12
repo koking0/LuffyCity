@@ -41,8 +41,8 @@
           <li v-for="(item, _) in courseDetail.chapter" class="list-data" :key="item.id">
             <div class="list-data-title">
               <div class="list-name">
-                <img src="/static/images/jiahao@2x_1567043312.082176.png" alt="加号">
-                <img src="/static/images/jiahaobak@2x_1567043312.1160207.png" alt="减号">
+                <img src="/static/images/jiahao@2x.png" alt="加号">
+                <img src="/static/images/jiahaobak@2x.png" alt="减号">
                 <p>{{item.title}}</p>
               </div>
             </div>
@@ -50,7 +50,7 @@
               <li v-for="(section, _) in item.section" :class="{preview:section.freeTrail}"
                   :key="section.id" data-toggle="modal" data-target="#videoModal">
                 <div class="data-item-name">
-                  <img class="img1" src="/static/images/bofang@2x_1567043311.5421314.png" alt="播放按钮">
+                  <img class="img1" src="/static/images/bofang@2x.png" alt="播放按钮">
                   <p>{{section.name}}</p>
                 </div>
                 <div class="data-item-num">
@@ -123,29 +123,7 @@
     methods: {
       // 立即购买
       buy() {
-        this.addShopCart();
-        this.$router.push({name: 'ShoppingCar'});
-      },
-      // 加入购物车
-      addShopCart() {
-        if (window.localStorage.getItem('access_token')) {
-          let goodsInfo = {
-            courseId: this.$route.params.detailId,
-            token: localStorage.getItem('access_token')
-          };
-          this.$http.shopCartAdd(goodsInfo).then(res => {
-              if (res.code === 200) {
-                this.$message(res.data);
-              } else if (res.code === 501) {
-                this.$message(res.data);
-              }
-            }).catch(err => {
-              console.log(err);
-            })
-        } else {
-          // 跳转登录页面
-          document.getElementById("signin").click();
-        }
+        
       },
       getCourseDetail() {
         this.$http.practicalCourseDetail(this.$route.params.detailId).then(res => {

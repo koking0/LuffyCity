@@ -6,7 +6,7 @@ from rest_framework.views import APIView
 
 from Course import models
 from Course.serializers import CategorySerializer, FreeCourseSerializer, CourseDetailSerializer, \
-	PracticalCourseSerializer, EmploymentCourseSerializer
+	PracticalCourseSerializer, EmploymentCourseSerializer, DegreeCourseDetailSerializer
 
 
 class CategoryView(APIView):
@@ -47,6 +47,13 @@ class DegreeCourseView(APIView):
 	def get(self, request):
 		courseList = models.EmploymentCourse.objects.all()
 		serializerObject = EmploymentCourseSerializer(courseList, many=True)
+		return Response(serializerObject.data)
+
+	def post(self, request, pk):
+		courseDetailObject = models.EmploymentCourse.objects.filter(id=pk).first()
+		if not courseDetailObject:
+			return Response({"code": 501, "error": "The course doesn't exist!"})
+		serializerObject = DegreeCourseDetailSerializer(courseDetailObject)
 		return Response(serializerObject.data)
 
 

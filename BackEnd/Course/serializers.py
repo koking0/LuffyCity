@@ -95,5 +95,44 @@ class CourseDetailSerializer(serializers.ModelSerializer):
 
 	class Meta:
 		model = models.PracticalCourse
-		fields = ['id', 'title', 'price', 'brief', 'courseImage', 'studyNumber', 'hours', 'brief', 'qqGroup', 'teacher',
-		          'isBuy', 'number', 'chapter']
+		fields = ['id', 'title', 'price', 'brief', 'courseImage', 'studyNumber', 'hours', 'qqGroup', 'teacher',
+		          'number', 'chapter']
+
+
+class DegreeCourseDetailSerializer(serializers.ModelSerializer):
+	brief = serializers.SerializerMethodField()
+	teachers = serializers.SerializerMethodField()
+	modules = serializers.SerializerMethodField()
+	number = serializers.SerializerMethodField()
+
+	def get_number(self, obj):
+		return obj.courseDetail.number
+
+	def get_brief(self, obj):
+		return obj.courseDetail.brief
+
+	def get_teachers(self, obj):
+		courseDetailTeacher = models.Teacher.objects.filter(coursedetail__employmentcourse=obj)
+		return [{'id': teacher.id, 'name': teacher.name, 'brief': teacher.brief, 'avatar': str(teacher.avatar)}
+		        for teacher in courseDetailTeacher]
+
+	def get_modules(self, obj):
+		courseModule = models.Module.objects.filter(course=obj)
+		modules = [{'id': module.id, 'index': module.module, 'title': module.title} for module in courseModule]
+		for module in modules:
+			chapters = models.CourseChapter.objects.filter(module=models.Module.objects.filter(id=module['id']).first())
+			module['chapters'] = [{'id': chapter.id, 'index': chapter.chapter, 'title': chapter.title} for chapter in
+			                      chapters]
+			for item in module['chapters']:
+				sections = models.CourseSection.objects.filter(chapter_id=item['id'])
+				item['sections'] = [{'id': section.id,
+				                     'name': section.name,
+				                     'freeTrail': section.freeTrail,
+				                     'sectionType': section.sectionType}
+				                    for section in sections]
+		return modules
+
+	class Meta:
+		model = models.EmploymentCourse
+		fields = ['id', 'title', 'price', 'slogan', 'brief', 'courseImage', 'studyNumber', 'hours', 'price', 'salary',
+		          'employmentRate', 'teachers', 'number', 'modules']

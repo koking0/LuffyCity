@@ -16,6 +16,7 @@ import CourseDetail from "../components/FreeLessons/CourseDetail";
 import Classroom from "../components/Classroom/Classroom";
 import Login from "../components/Common/Login";
 import ShoppingCar from "../components/ShoppingCar/ShoppingCar";
+import DegreeCourseDetail from "../components/EmploymentClass/DegreeCourseDetail";
 
 // 将Router当做局部模块使用一定要用Vue.use(Router)
 Vue.use(Router)
@@ -72,6 +73,12 @@ export default new Router({
       path: "/free/:detailId",
       name: "course.detail",
       component: CourseDetail
+    },
+    // 就业班课程详情
+    {
+      path: "/degree/:detailId",
+      name: "degreeCourse.detail",
+      component: DegreeCourseDetail
     },
     // 实战课程详情
     {

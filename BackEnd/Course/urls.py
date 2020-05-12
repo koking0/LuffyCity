@@ -21,6 +21,7 @@ urlpatterns = [
 	path('practicalcategory', PracticalCategoryView.as_view()),
 	path('practicalcourse/<int:pk>', PracticalCourseView.as_view()),
 	path('degreecourse/list', DegreeCourseView.as_view()),
+	path('degreecourse/<int:pk>', DegreeCourseView.as_view()),
 	path('<int:pk>/detail', CourseDetailView.as_view()),
 	path('<int:pk>/payment_info', PracticalCourseDetailView.as_view()),
 ]

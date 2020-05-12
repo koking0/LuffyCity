@@ -65,7 +65,7 @@ export const getDegreeCourse = () => {
 }
 // 就业班课程详情数据
 export const degreeCourseDetail = (courseId) => {
-  return Axios.get(`http://127.0.0.1:8000/api/degreecourse/${courseId}`).then(res => res.data);
+  return Axios.post(`http://127.0.0.1:8000/api/course/degreecourse/${courseId}`).then(res => res.data);
 }
 
 // 购物车页面列表

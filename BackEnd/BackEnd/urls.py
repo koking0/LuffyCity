@@ -17,9 +17,12 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path, re_path, include
 from django.views.static import serve
+from Payment import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('page1/', views.page1),
+    path('page2/', views.page2),
     path('api/account/', include("Account.urls")),
     path('api/free/', include("Course.urls")),
     path('api/practical/', include("Course.urls")),

@@ -62,6 +62,7 @@ class EmploymentCourse(models.Model):
 
 class Module(models.Model):
     course = models.ForeignKey(to='EmploymentCourse', on_delete=models.CASCADE)
+    module = models.SmallIntegerField(verbose_name="第几模块")
     title = models.CharField(verbose_name="模块", max_length=256)
     chapter = models.ManyToManyField(to="CourseChapter")
 
