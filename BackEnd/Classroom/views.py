@@ -30,6 +30,18 @@ class CourseView(APIView):
 		return Response(serializerObject.data)
 
 
+class HomeworkView(APIView):
+	def get(self, request, pk):
+		token = request.GET.get('token', None)
+		userId = CONNECT.get(str(token))
+		user = Student.objects.filter(student=Account.objects.filter(id=userId).first()).first()
+		courseDetailObject = models.EmploymentCourse.objects.filter(userCourse=user).first()
+		if not courseDetailObject:
+			return Response({"code": 501, "error": "The course doesn't exist!"})
+		serializerObject = ClassroomDetailSerializer(user)
+		return Response(serializerObject.data)
+
+
 class QuestionView(APIView):
 	def post(self, request):
 		userId = CONNECT.get(str(request.data.get('token', None)))

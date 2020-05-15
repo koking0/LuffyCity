@@ -102,3 +102,8 @@ export const classroomCourseList = () => {
 export const questions = (data) => {
   return Axios.post(`http://127.0.0.1:8000/api/questions/askQuestions`, qs.stringify(data)).then(res => res.data);
 }
+// 作业
+export const homeworkDetail = (id) => {
+  return Axios.get(`http://127.0.0.1:8000/api/homework/homeworkDetail/${id}`,
+    {params: {'token': localStorage.getItem('access_token')}}).then(res => res.data);
+}

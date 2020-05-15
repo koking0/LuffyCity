@@ -103,6 +103,7 @@ class CourseChapter(models.Model):
     title = models.CharField(max_length=32, verbose_name="课程章节名称")
     homeworkTitle = models.CharField(verbose_name="作业题目", max_length=32, null=True, blank=True)
     homeworkContent = models.TextField(verbose_name="作业内容", null=True, blank=True)
+    homeworkPrice = models.IntegerField(verbose_name="奖学金", null=True, blank=True)
 
     def __str__(self):
         return self.title

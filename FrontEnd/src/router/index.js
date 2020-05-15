@@ -19,6 +19,7 @@ import ShoppingCar from "../components/ShoppingCar/ShoppingCar";
 import DegreeCourseDetail from "../components/EmploymentClass/DegreeCourseDetail";
 import Settlement from "../components/ShoppingCar/Settlement";
 import Questions from "../components/Classroom/Questions";
+import Homework from "../components/Classroom/Homework";
 
 // 将Router当做局部模块使用一定要用Vue.use(Router)
 Vue.use(Router)
@@ -94,6 +95,12 @@ export default new Router({
       name: "Classroom",
       component: Classroom
     },
+    // 模块作业
+    {
+      path: "/homework/detail/:detailId",
+      name: "Homework.detail",
+      component: Homework
+    },
     // 提问
     {
       path: "/ask-questions",
@@ -112,7 +119,7 @@ export default new Router({
       name: "ShoppingCar",
       component: ShoppingCar
     },
-    // 购物车
+    // 结算
     {
       path: "/buy",
       name: "Settlement",

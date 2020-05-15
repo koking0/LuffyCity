@@ -11,9 +11,10 @@
 # >>> Blog      : https://alex007.blog.csdn.net/
 # ☆ ☆ ☆ ☆ ☆ ☆ ☆
 from django.urls import path
-from Classroom.views import CourseView, QuestionView
+from Classroom.views import CourseView, QuestionView, HomeworkView
 
 urlpatterns = [
 	path('degree', CourseView.as_view()),
 	path('askQuestions', QuestionView.as_view()),
+	path('homeworkDetail/<int:pk>', HomeworkView.as_view()),
 ]

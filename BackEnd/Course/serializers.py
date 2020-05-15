@@ -151,7 +151,12 @@ class ClassroomDetailSerializer(serializers.ModelSerializer):
 		           for module in courseModule]
 		for module in modules:
 			chapters = models.CourseChapter.objects.filter(module=models.Module.objects.filter(id=module['id']).first())
-			module['chapters'] = [{'id': chapter.id, 'index': chapter.chapter, 'title': chapter.title}
+			module['chapters'] = [{'id': chapter.id,
+			                       'index': chapter.chapter,
+			                       'title': chapter.title,
+			                       'homeworkTitle': chapter.homeworkTitle,
+			                       'homeworkContent': chapter.homeworkContent,
+			                       'homeworkPrice': chapter.homeworkPrice}
 			                      for chapter in chapters]
 			for item in module['chapters']:
 				sections = models.CourseSection.objects.filter(chapter_id=item['id'])
