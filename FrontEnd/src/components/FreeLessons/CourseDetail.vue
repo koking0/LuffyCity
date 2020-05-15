@@ -2,7 +2,7 @@
   <div class="course-intro">
     <div class="intro-top" style="background: rgb(88, 83, 83);">
       <router-link class="return active" :to="{name:'FreeLessons'}">
-        <img src="/static/images/triangle@2x_1567043312.649715.png" alt="triangle">
+        <img src="/static/images/triangle@2x.png" alt="triangle">
         <span>返回免费课主页</span>
       </router-link>
       <div class="intro-data">
@@ -24,7 +24,7 @@
             <div class="title">你将会学到的</div>
             <ul>
               <li v-for="item in courseDetail.get" :key="item.id">
-                <img src="/static/images/dui@2x_1567043311.9183662.png" alt="dui">
+                <img src="/static/images/dui@2x.png" alt="dui">
                 <p>{{item.title}}</p>
               </li>
             </ul>

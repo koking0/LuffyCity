@@ -101,6 +101,8 @@ class CourseChapter(models.Model):
     """课程章节表"""
     chapter = models.SmallIntegerField(verbose_name="第几章")
     title = models.CharField(max_length=32, verbose_name="课程章节名称")
+    homeworkTitle = models.CharField(verbose_name="作业题目", max_length=32, null=True, blank=True)
+    homeworkContent = models.TextField(verbose_name="作业内容", null=True, blank=True)
 
     def __str__(self):
         return self.title

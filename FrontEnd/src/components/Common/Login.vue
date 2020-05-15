@@ -15,12 +15,12 @@
               </ul>
               <hr>
               <div class="username inputcontain">
-                <img alt="shouji" src="/static/images/shouji@1x_1560849098.2282765.svg">
+                <img alt="shouji" src="/static/images/shouji@1x.svg">
                 <label for="usernameInput"></label>
                 <input type="text" id="usernameInput" placeholder="手机号" maxlength="20" v-model="username">
               </div>
               <div class="password inputcontain">
-                <img alt="password" src="/static/images/mima-4@1x_1560849097.9023619.svg">
+                <img alt="password" src="/static/images/mima-4@1x.svg">
                 <label for="passwordInput"></label>
                 <input type="password" id="passwordInput" placeholder="密码" maxlength="20" v-model="password">
                 <a class="eye" style="display: none;">
@@ -39,7 +39,7 @@
               <div class="otherway">
                 <div class="oauth-box">
                   <div class="oauth-bg">
-                    <img src="/static/images/dengluweixin_1561115209.1755617.svg" alt="dengluweixin">
+                    <img src="/static/images/dengluweixin.svg" alt="dengluweixin">
                     <span>微信登录</span>
                   </div>
                 </div>
@@ -89,6 +89,7 @@
             location.reload();
             localStorage.setItem("access_token", res.data.access_token);
             localStorage.setItem("username", res.data.username);
+            localStorage.setItem("identity", res.data.identity);
             localStorage.setItem("avatar", res.data.avatar);
             localStorage.setItem("shop_cart_num", res.data.shop_cart_num);
             localStorage.setItem("notice_num", res.data.notice_num);

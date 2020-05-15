@@ -22,7 +22,7 @@
               <button class="btn2">免费试学</button>
             </p>
             <p v-if="!courseDetail.isBuy" class="add" @click="addShopCart">
-              <img src="/static/images/course-shop_1564141044.099814.svg" alt="course-shop">
+              <img src="/static/images/course-shop.svg" alt="course-shop">
               <span>加入购物车</span>
             </p>
           </div>
@@ -123,7 +123,7 @@
     methods: {
       // 立即购买
       buy() {
-        
+
       },
       getCourseDetail() {
         this.$http.practicalCourseDetail(this.$route.params.detailId).then(res => {

@@ -54,7 +54,7 @@
       <div class="specification">
         <div class="title">
           <p>提问正确范例</p></div>
-        <img class="pimg" src="/static/images/study-img2_1564127717.0785766.png" alt="">
+        <img class="pimg" src="/static/images/study-img2.png" alt="">
       </div>
       <div class="instructions">
         <div class="title"><span></span>

@@ -60,21 +60,21 @@
       <ul class="div-3">
         <li>
           <p>
-            <img src="/static/images/salary@2x_1570514840.5431542.png" alt="salary@2x">
+            <img src="/static/images/salary@2x.png" alt="salary@2x">
             <span></span>
           </p>
           <p>总计毕业人数（人）</p>
         </li>
         <li>
           <p>
-            <img src="/static/images/95@2x_1570515194.9583223.png" alt="95@2x">
+            <img src="/static/images/95@2x.png" alt="95@2x">
             <span></span>
           </p>
           <p>就业率</p>
         </li>
         <li>
           <p>
-            <img src="/static/images/12369_1570514951.3915164.png" alt="12369_1570514951">
+            <img src="/static/images/12369.png" alt="12369_1570514951">
             <span></span>
           </p>
           <p>平均薪资（元）</p>

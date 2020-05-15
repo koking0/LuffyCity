@@ -25,7 +25,7 @@
         <span class="shopping-cart-bot-font" style="margin-left: 15px; cursor: pointer">取消选择</span>
       </el-button>
       <el-button @click="deleteGoods()">
-        <img src="/static/images/delete-icon_1564127719.3867524.png" alt="delete-icon" style="margin-bottom: 5px;">
+        <img src="/static/images/delete-icon.png" alt="delete-icon" style="margin-bottom: 5px;">
         <span class="shopping-cart-bot-font" style="margin-left: 15px; cursor: pointer">删除</span>
       </el-button>
       <el-button class="charge-list" style="float: right;">

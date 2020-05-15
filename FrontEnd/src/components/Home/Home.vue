@@ -16,7 +16,7 @@
         <div class="more">
           <router-link :to="{name:'PracticalLessons'}">
             <span>更多实战</span>
-            <img src="static/images/home-right_1567483307.3430119.png" alt="home-right">
+            <img src="../../../static/images/home-right.png" alt="home-right">
           </router-link>
         </div>
         <div class="courses">
@@ -25,7 +25,7 @@
               <li>
                 <div class="img-box">
                   <div></div>
-                  <img src="static/images/PY1@2x_1566529821.1110113.png">
+                  <img src="../../../static/images/PY1@2x.png">
                 </div>
                 <div class="course-item">
                   <p class="title">跟随Alex金角大王3周上手Python开发</p>
@@ -43,7 +43,7 @@
             <li>
               <div class="img-box">
                 <div></div>
-                <img src="static/images/Linux1@2x_1566529820.6731546.png">
+                <img src="../../../static/images/Linux1@2x.png">
               </div>
               <div class="course-item">
                 <p class="title">跟随Redhat认证专家讲师2周玩转Linux</p>
@@ -62,7 +62,7 @@
               <li>
                 <div class="img-box">
                   <div></div>
-                  <img src="static/images/web1@2x(1)_1566529822.6339395.png">
+                  <img src="../../../static/images/web1@2x.png">
                 </div>
                 <div class="course-item">
                   <p class="title">3天搞定网站开发三剑客之HTML</p>
@@ -85,7 +85,7 @@
               <li>
                 <div class="img-box">
                   <div></div>
-                  <img src="static/images/algorithm@2x_1567483301.520899.png">
+                  <img src="../../../static/images/algorithm@2x.png">
                 </div>
                 <div class="course-item">
                   <p class="title">轻松学好开发人员必备的数据结构及算法知识</p>
@@ -107,7 +107,7 @@
               <li>
                 <div class="img-box">
                   <div></div>
-                  <img src="static/images/K8s@2x_1567483309.490485.png">
+                  <img src="../../../static/images/K8s@2x.png">
                 </div>
                 <div class="course-item">
                   <p class="title">2周学会当下最热门的云计算架构之k8s实战</p>
@@ -129,7 +129,7 @@
               <li>
                 <div class="img-box">
                   <div></div>
-                  <img src="static/images/go@2x_1567483307.2209833.png">
+                  <img src="../../../static/images/go@2x.png">
                 </div>
                 <div class="course-item">
                   <p class="title">微服务这么火，还不会的是没机会进大厂了</p>

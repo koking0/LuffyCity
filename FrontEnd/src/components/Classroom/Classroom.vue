@@ -33,16 +33,16 @@
         <div class="dashboard">
           <div class="mentor">
             <p class="time">
-              <img src="/static/images/study-icon5_1564141054.0534444.svg" alt="study-icon5">
+              <img src="/static/images/study-icon5.svg" alt="study-icon5">
               <span>紧急快速提问：2小时内响应</span>
               <a>如果2小时后您的导师没有响应，将有别的导师为您服务！</a>
             </p>
             <div class="teacher">
-              <img src="/static/images/study-head_1564141053.5894575.svg" alt="study-head">
+              <img src="/static/images/study-head.svg" alt="study-head">
               <p class="name">我的导师:<span>M组-冯国富</span></p>
               <p class="service">服务时间 09:00-21:00 工作日</p>
               <button>
-                <img src="/static/images/study-icon6_1564141054.279604.svg" alt="study-icon6">
+                <img src="/static/images/study-icon6.svg" alt="study-icon6">
                 <router-link :to="{name:'Questions'}">
                   <span>立即提问</span>
                 </router-link>
@@ -69,8 +69,8 @@
                 <p class="theprogress">课时观看进度：<span>{{item.completeCount}} / {{item.count}}</span></p>
                 <p class="function">
                   <span>
-                    <a>查看章节</a>
-                    <a>模块作业</a>
+                    <a @click="detailChapterHandler(item.id)">查看章节</a>
+                    <a @click="detailHomeworkHandler(item.id)">模块作业</a>
                   </span>
                   <button><span>继续学习</span></button>
                 </p>
@@ -101,6 +101,22 @@
           console.log(this.courseDetail);
         }).catch(err => {
           console.log(err);
+        })
+      },
+      detailHomeworkHandler(id) {
+        this.$router.push({
+          name: "Homework.detail",
+          params: {
+            detailId: id
+          }
+        })
+      },
+      detailChapterHandler(id) {
+        this.$router.push({
+          name: "Chapter.detail",
+          params: {
+            detailId: id
+          }
         })
       },
     },

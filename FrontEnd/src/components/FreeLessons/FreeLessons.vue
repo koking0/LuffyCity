@@ -2,7 +2,7 @@
   <div class="course-home container">
     <div class="course-img">
       <a href="" target="_blank">
-        <img alt="" src="static/images/ketang@2x_1567059626.6092663.png">
+        <img alt="" src="../../../static/images/ketang@2x.png">
       </a>
     </div>
     <div class="course-screening">

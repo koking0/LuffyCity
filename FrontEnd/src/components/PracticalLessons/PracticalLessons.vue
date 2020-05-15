@@ -20,14 +20,14 @@
             <div class="name">
               <p>{{item.title}}</p>
               <p>
-                <img src="/static/images/course-num_1564141043.723208.svg" alt="course-num">
+                <img src="/static/images/course-num.svg" alt="course-num">
                 <span>{{item.studyNumber}}人已加入学习</span>
               </p>
             </div>
             <ul>
               <li v-for="(section, i) in item.simpleChapter" :key="section.id">
-                <img class="img1" src="/static/images/course-video1_1564141044.1611981.svg" alt="course-video1">
-                <img class="img2" src="/static/images/course-video2_1564141044.3260088.svg" alt="course-video2">
+                <img class="img1" src="/static/images/course-video1.svg" alt="course-video1">
+                <img class="img2" src="/static/images/course-video2.svg" alt="course-video2">
                 <p>0{{i+1}} | {{section.title}}</p>
                 <span v-if="section.freeTrail">免费</span>
               </li>

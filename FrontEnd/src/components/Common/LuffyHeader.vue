@@ -7,7 +7,7 @@
       <div class="header-cont">
         <div class="left">
           <router-link :to="{ name:'Home' }">
-            <img class="oldboy" src="/static/images/head-logo_1564141048.3435316.svg" alt="head-logo">
+            <img class="oldboy" src="/static/images/head-logo.svg" alt="head-logo">
           </router-link>
         </div>
         <nav class="nav">
@@ -25,13 +25,13 @@
               <span>Linux</span>
             </ul>
             <p>
-              <img class="icon" src="/static/images/sousuo1_1572509512.0016685.png" alt="搜索1">
-              <img class="icon" src="/static/images/sousuo2_1572509511.9415796.png" style="display: none;" alt="搜索2">
-              <img class="new" src="/static/images/new_1572509511.5792108.png" alt="NEW">
+              <img class="icon" src="/static/images/sousuo1.png" alt="搜索1">
+              <img class="icon" src="/static/images/sousuo2.png" style="display: none;" alt="搜索2">
+              <img class="new" src="/static/images/new.png" alt="NEW">
             </p>
           </div>
           <router-link class="shop-car" :to="{name:'ShoppingCar'}">
-            <img src="/static/images/shopcart@2x_1568185801.2089324.png" alt="shopcart">
+            <img src="/static/images/shopcart@2x.png" alt="shopcart">
             <span>购物车 <span style="color: red">{{shop_cart_num}}</span></span>
           </router-link>
           <div v-if="!isUserLogin" class="register">

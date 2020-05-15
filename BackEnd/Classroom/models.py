@@ -1,4 +1,8 @@
 from django.db import models
+from django.utils import timezone
+from django.core.validators import MinValueValidator, MaxValueValidator
+
+__all__ = ["Question", "Task"]
 
 
 class Question(models.Model):
@@ -13,3 +17,19 @@ class Question(models.Model):
 
 	def __str__(self):
 		return self.student.student.username + self.teacher.teacher.username + self.title
+
+
+class Task(models.Model):
+	"""作业表"""
+	student = models.ForeignKey(verbose_name="学生", to="Account.Account", on_delete=models.PROTECT)
+	teacher = models.ForeignKey(verbose_name="导师", to="Account.Teacher", on_delete=models.PROTECT)
+	chapter = models.ForeignKey(verbose_name="章节", to='Course.CourseChapter', on_delete=models.PROTECT)
+
+	file = models.FileField(verbose_name="作业内容", upload_to="media/task/")
+	date = models.DateTimeField(verbose_name="提交时间", default=timezone.now)
+	achievement = models.IntegerField(verbose_name="成绩", validators=[MaxValueValidator(100), MinValueValidator(1)],
+	                                  null=True, blank=True)
+	comment = models.TextField(verbose_name="老师点评", null=True, blank=True)
+
+	def __str__(self):
+		return "%s-%s" % (self.student.username, self.chapter.homeworkTitle)

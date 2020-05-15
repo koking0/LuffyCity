@@ -1,13 +1,8 @@
-from django.db import models
-
-# Create your models here.
 from django.contrib.auth.models import AbstractUser
-from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
-from django.utils import timezone
 
 
-__all__ = ["Account", "Classes", "Student", "Teacher", "Task"]
+__all__ = ["Account", "Classes", "Student", "Teacher"]
 
 
 class Account(AbstractUser):
@@ -15,6 +10,7 @@ class Account(AbstractUser):
 	avatar = models.ImageField(upload_to='avatars/', default='avatars/default.png')
 	telephone = models.CharField(max_length=11, null=True, blank=True, unique=True)
 	balance = models.IntegerField(verbose_name="贝里余额", default=0)
+	identity = models.IntegerField(verbose_name="身份", choices=[(0, "管理员"), (2, "导师"), (3, "学员")], default=3)
 
 	def __str__(self):
 		return self.username
@@ -60,21 +56,3 @@ class Teacher(models.Model):
 
 	def __str__(self):
 		return "%s" % self.teacher.username
-
-
-class Task(models.Model):
-	"""作业表"""
-	student = models.ForeignKey(verbose_name="学生", to="Account", on_delete=models.PROTECT)
-	teacher = models.ForeignKey(verbose_name="批改老师", to="Course.Teacher", on_delete=models.PROTECT, null=True,
-	                            blank=True)
-
-	chapters = models.CharField(verbose_name="模块章节", max_length=64)
-	title = models.CharField(verbose_name="题目", max_length=32)
-	file = models.FileField(verbose_name="作业内容", upload_to="media/task/")
-	date = models.DateTimeField(verbose_name="提交时间", default=timezone.now)
-	achievement = models.IntegerField(verbose_name="成绩", validators=[MaxValueValidator(100), MinValueValidator(1)],
-	                                  null=True, blank=True)
-	comment = models.TextField(verbose_name="老师点评", null=True, blank=True)
-
-	def __str__(self):
-		return "%s-%s" % (self.student.username, self.title)

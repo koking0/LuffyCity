@@ -10,17 +10,17 @@
             <div class="close-btn" data-dismiss="modal"></div>
             <div class="signup">
               <div class="username inputcontain">
-                <img alt="shouji" src="/static/images/shouji@1x_1560849098.2282765.svg">
+                <img alt="shouji" src="/static/images/shouji@1x.svg">
                 <label for="usernameInput"></label>
                 <input type="text" id="usernameInput" placeholder="用户名" maxlength="20" v-model="username">
               </div>
               <div class="password inputcontain">
-                <img alt="password" src="/static/images/mima-4@1x_1560849097.9023619.svg">
+                <img alt="password" src="/static/images/mima-4@1x.svg">
                 <label for="passwordInput"></label>
                 <input type="password" id="passwordInput" placeholder="密码" maxlength="20" v-model="password">
               </div>
               <div class="password inputcontain">
-                <img alt="password" src="/static/images/mima-4@1x_1560849097.9023619.svg">
+                <img alt="password" src="/static/images/mima-4@1x.svg">
                 <label for="confirm_passwordInput"></label>
                 <input type="password" id="confirm_passwordInput" placeholder="确认密码" maxlength="20">
               </div>

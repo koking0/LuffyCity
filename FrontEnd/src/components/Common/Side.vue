@@ -26,7 +26,7 @@
       <p>咨询</p> <span>在线<br>咨询</span>
     </li>
     <li>
-      <img class="wechat" src="/static/images/side-wechat_1564141045.4245212.svg" alt="side-wechat">
+      <img class="wechat" src="/static/images/side-wechat.svg" alt="side-wechat">
     </li>
   </ul>
 </template>

@@ -64,7 +64,7 @@
       </div>
       <div class="side-box" style="">
         <p class="title">
-          <img src="/static/images/qushi@2x_1570514838.2565973.png" alt="qushi">
+          <img src="/static/images/qushi@2x.png" alt="qushi">
           <span>本课程精英教师</span>
         </p>
         <div class="side-content course-side">

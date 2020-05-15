@@ -18,7 +18,7 @@
           <p>
             <a class="report-link" target="_blank"
                href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010102002019&amp;token=1ee3034d-ba3a-4cc3-89d4-89875e2dd0b1">
-              <img class="report-img" src="/static/images/TB1..50QpXXXXX7XpXXXXXXXXXX-40-40.png" style="float:left" alt="TB1">
+              <img class="report-img" src="/static/images/TB1.png" style="float:left" alt="TB1">
               <span>京公网安备 11010102002019号</span>
             </a>
           </p>

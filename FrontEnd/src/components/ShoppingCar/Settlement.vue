@@ -33,7 +33,7 @@
 <!--        <div style="height: 30px; margin-top: 40px; display: flex; align-items: center; justify-content: flex-end">-->
 <!--          <input type="checkbox" class="ok" id="color-input-red">-->
 <!--          <label for="color-input-red">-->
-<!--            <img src="//hcdn1.luffycity.com/static/frontend/activity/hook_1564141042.8333368.svg" alt="">-->
+<!--            <img src="//hcdn1.luffycity.com/static/frontend/activity/hook.svg" alt="">-->
 <!--          </label>-->
 <!--          <p class="discount-num" style="color:#9B9B9B; margin-bottom: 0">使用我的贝里</p>-->
 <!--          <p class="discount-num" style="margin-right: 45px">-->
@@ -46,14 +46,14 @@
           <span>支付方式：</span>
           <div class="paytype">
             <li class="payment bor">
-              <img class="img1" src="/static/images/wx_1564141045.9807134.svg" alt="">
+              <img class="img1" src="/static/images/wx.svg" alt="">
               <span>微信</span>
-              <img class="icon" src="/static/images/wx-selected_1564141045.8646557.svg" alt="">
+              <img class="icon" src="/static/images/wx-selected.svg" alt="">
             </li>
             <li class="payment">
               <img class="img1" src="/static/images/zfb_1564141046.0915222.svg" alt="">
               <span>支付宝</span>
-              <img class="icon" src="/static/images/wx-selected_1564141045.8646557.svg" style="display: none;" alt="">
+              <img class="icon" src="/static/images/wx-selected.svg" style="display: none;" alt="">
             </li>
           </div>
         </div>
@@ -71,7 +71,7 @@
         <div class="code" id="Qrcode"></div>
         <span>使用微信扫描二维码进行支付</span>
         <p>
-          <img src="/static/images/overloading_1564141044.5465724.svg" alt="">
+          <img src="/static/images/overloading.svg" alt="">
           重新选择支付方式
         </p>
       </div>
