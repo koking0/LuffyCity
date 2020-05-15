@@ -655,7 +655,7 @@ def requires_mac_ver(*min_version):
 def requires_hashdigest(digestname, openssl=None):
     """Decorator raising SkipTest if a hashing algorithm is not available
 
-    The hashing algorithm could be missing or blocked by a strict crypto
+    The hashing algorithm could be missing or blocked by a strict Crypto
     policy.
 
     If 'openssl' is True, then the decorator checks that OpenSSL provides

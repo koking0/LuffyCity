@@ -7,7 +7,7 @@ from django.db import models
 from django.utils import timezone
 
 
-__all__ = ["Account", "Classes", "Student", "Task"]
+__all__ = ["Account", "Classes", "Student", "Teacher", "Task"]
 
 
 class Account(AbstractUser):
@@ -15,7 +15,6 @@ class Account(AbstractUser):
 	avatar = models.ImageField(upload_to='avatars/', default='avatars/default.png')
 	telephone = models.CharField(max_length=11, null=True, blank=True, unique=True)
 	balance = models.IntegerField(verbose_name="贝里余额", default=0)
-	identity = models.SmallIntegerField(choices=((0, '学员'), (1, '导师'), (2, '管理员')), default=1)
 
 	def __str__(self):
 		return self.username
@@ -42,11 +41,25 @@ class Student(models.Model):
 	QQ = models.CharField(verbose_name="学生QQ", max_length=32)
 	telephone = models.CharField(verbose_name="学生手机号", max_length=32)
 	classList = models.ManyToManyField(verbose_name="已报班级", to="Classes", blank=True)
+	teacher = models.ForeignKey(to='Teacher', related_name='studentTeacher', on_delete=models.PROTECT)
 	state = models.IntegerField(verbose_name="学生状态", choices=[(1, "审核"), (2, "在读"), (3, "毕业")], default=1)
 	remark = models.TextField(verbose_name="备注", null=True, blank=True)
 
+	courses = models.ManyToManyField(to='Course.EmploymentCourse', related_name='userCourse')
+	completeSection = models.ManyToManyField(to='Course.CourseSection')
+
 	def __str__(self):
 		return "%s" % self.student.username
+
+
+class Teacher(models.Model):
+	"""老师表"""
+	teacher = models.OneToOneField(verbose_name="老师信息", to="Account", on_delete=models.PROTECT)
+	telephone = models.CharField(verbose_name="老师手机号", max_length=32)
+	remark = models.TextField(verbose_name="备注", null=True, blank=True)
+
+	def __str__(self):
+		return "%s" % self.teacher.username
 
 
 class Task(models.Model):

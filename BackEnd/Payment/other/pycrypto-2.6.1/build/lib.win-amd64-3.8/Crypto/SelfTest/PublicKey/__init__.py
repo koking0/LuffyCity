@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-#  SelfTest/PublicKey/__init__.py: Self-test for public key crypto
+#  SelfTest/PublicKey/__init__.py: Self-test for public key Crypto
 #
 # Written in 2008 by Dwayne C. Litzenberger <dlitz@dlitz.net>
 #
@@ -22,7 +22,7 @@
 # SOFTWARE.
 # ===================================================================
 
-"""Self-test for public-key crypto"""
+"""Self-test for public-key Crypto"""
 
 __revision__ = "$Id$"
 

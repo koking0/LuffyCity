@@ -1,5 +1,6 @@
 // 导入axios
 import Axios from 'axios'
+
 Axios.create({
   headers: 'access_token'
 });
@@ -68,10 +69,20 @@ export const degreeCourseDetail = (courseId) => {
   return Axios.post(`http://127.0.0.1:8000/api/course/degreecourse/${courseId}`).then(res => res.data);
 }
 
+// 购物车结算页面列表
+export const settlementList = () => {
+  return Axios.get(`http://127.0.0.1:8000/api/payment/list`,
+    {params: {'token': localStorage.getItem('access_token')}}).then(res => res.data);
+}
+// 购物车结算支付接口
+export const settlement = (paymentData) => {
+  return Axios.post(`http://127.0.0.1:8000/api/payment/pay`, qs.stringify(paymentData)).then(res => res.data);
+}
+
 // 购物车页面列表
 export const shopCarList = () => {
   return Axios.get(`http://127.0.0.1:8000/api/shopping/list`,
-    {params:{'token': localStorage.getItem('access_token')}}).then(res => res.data);
+    {params: {'token': localStorage.getItem('access_token')}}).then(res => res.data);
 }
 // 商品课程添加到购物车
 export const shopCartAdd = (goodsInfo) => {
@@ -84,5 +95,10 @@ export const shopCarDeleteGoods = (deleteCourseList) => {
 
 // 我的教室页面列表
 export const classroomCourseList = () => {
-  return Axios.get(`http://127.0.0.1:8000/api/v1/enroll/degree/1/`).then(res => res.data);
+  return Axios.get(`http://127.0.0.1:8000/api/enroll/degree`,
+    {params: {'token': localStorage.getItem('access_token')}}).then(res => res.data);
+}
+// 提问
+export const questions = (data) => {
+  return Axios.post(`http://127.0.0.1:8000/api/questions/askQuestions`, qs.stringify(data)).then(res => res.data);
 }

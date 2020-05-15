@@ -43,7 +43,9 @@
               <p class="service">服务时间 09:00-21:00 工作日</p>
               <button>
                 <img src="/static/images/study-icon6_1564141054.279604.svg" alt="study-icon6">
-                <span>立即提问</span>
+                <router-link :to="{name:'Questions'}">
+                  <span>立即提问</span>
+                </router-link>
               </button>
               <p class="asof">服务截止 2020-06-12</p>
             </div>
@@ -57,14 +59,14 @@
         <div>
           <div class="degree">
             <div class="box">
-              <section class="module">
+              <section class="module" v-for="(item, index) in courseDetail.modules" :key="item.id">
                 <p class="num">
                   <img src="/static/images/angle-of.svg" alt="angle">
-                  <span>第九模块</span>
+                  <span>第{{item.index}}模块</span>
                 </p>
-                <p class="name">项目实战二(vue &amp; 路飞学城开发)</p>
-                <p class="tips">建议时长·29天&nbsp;&nbsp;已学5天</p>
-                <p class="theprogress">课时观看进度：<span>95 / 188</span></p>
+                <p class="name">{{item.title}}</p>
+                <p class="tips">建议时长·{{item.count}}天</p>
+                <p class="theprogress">课时观看进度：<span>{{item.completeCount}} / {{item.count}}</span></p>
                 <p class="function">
                   <span>
                     <a>查看章节</a>
@@ -89,14 +91,14 @@
     name: "Classroom",
     data() {
       return {
-        courseSection: [],
+        courseDetail: null,
       }
     },
     methods: {
       getCourse() {
         this.$http.classroomCourseList().then(res => {
-          console.log(res);
-          this.courseSection = res.data;
+          this.courseDetail = res;
+          console.log(this.courseDetail);
         }).catch(err => {
           console.log(err);
         })

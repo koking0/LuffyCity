@@ -29,8 +29,8 @@
         <span class="shopping-cart-bot-font" style="margin-left: 15px; cursor: pointer">删除</span>
       </el-button>
       <el-button class="charge-list" style="float: right;">
-        <span class="shopping-cart-bot-font" style="margin-right: 40px;">总计：¥ {{this.totalPrice}}.0</span>
-        <button class="go-charge-btn">去结算</button>
+        <span class="shopping-cart-bot-font" style="margin-right: 40px;">总计：¥ {{totalPrice}}.0</span>
+        <button class="go-charge-btn" @click="buy()">去结算</button>
       </el-button>
     </div>
   </div>
@@ -90,7 +90,25 @@
         }).catch(err => {
           console.log(err);
         })
-      }
+      },
+      buy() {
+        let buyCourseList = "";
+        for (let i = 0; i < this.multipleSelection.length; i++) {
+          buyCourseList += `${this.multipleSelection[i].id},`;
+        }
+        $.ajax({
+          url: 'http://127.0.0.1:8000/api/shopping/buy',
+          type: 'PUT',
+          data: {'buyCourseList': buyCourseList, 'userToken': localStorage.getItem('access_token')},
+          success: function (res) {
+            console.log(res);
+          },
+          error: function (err) {
+            console.log(err);
+          }
+        });
+        this.$router.push({name:"Settlement"});
+      },
     },
     created() {
       this.getGoods();

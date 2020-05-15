@@ -46,6 +46,8 @@ class ShoppingView(APIView):
 			'title': course.title,
 			'price': course.price,
 			'courseImage': str(course.courseImage),
+			# state 表示状态 0：加入购物车但是未结算，1：进入结算，2：结算完毕
+			'state': 0,
 		}
 		# 5.写入 Redis
 		CONNECT.hmset(key, shoppingCourseInfo)
@@ -64,4 +66,17 @@ class ShoppingView(APIView):
 			CONNECT.delete(key)
 		response.code = 200
 		response.data = 'Item deleted successfully!'
+		return JsonResponse(response.dict)
+
+	def put(self, request):
+		response = BaseResponse()
+		requestData = QueryDict(request.body)
+		userToken = requestData.get('userToken', None)
+		userId = CONNECT.get(str(userToken))
+		buyCourseList = requestData.get('buyCourseList', None)[:-1].split(',')
+		for courseId in buyCourseList:
+			key = SHOPPING_CAR_KEY % (userId, courseId)
+			CONNECT.hset(key, 'state', 1)
+		response.code = 200
+		response.data = 'Enter Settlement!'
 		return JsonResponse(response.dict)

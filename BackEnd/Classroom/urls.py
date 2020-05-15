@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# @Time     : 2020/5/9 16:02
+# @Time     : 2020/5/14 0:08
 # @File     : urls.py
 # ----------------------------------------------
 # ☆ ☆ ☆ ☆ ☆ ☆ ☆ 
@@ -11,12 +11,9 @@
 # >>> Blog      : https://alex007.blog.csdn.net/
 # ☆ ☆ ☆ ☆ ☆ ☆ ☆
 from django.urls import path
-
-from Shopping.views import ShoppingView
+from Classroom.views import CourseView, QuestionView
 
 urlpatterns = [
-	path('list', ShoppingView.as_view()),
-	path('add', ShoppingView.as_view()),
-	path('delete', ShoppingView.as_view()),
-	path('buy', ShoppingView.as_view()),
+	path('degree', CourseView.as_view()),
+	path('askQuestions', QuestionView.as_view()),
 ]

@@ -65,7 +65,7 @@ class Cryptor(object):
             if response.exitcode == 0:
                 stdout(encrypted_outpath + " was generated from " + inpath)
                 if checksum:  # add a SHA256 hash digest of the encrypted file - requested by user --hash flag in command
-                    from crypto.library import hash
+                    from Crypto.library import hash
                     encrypted_file_hash = hash.generate_hash(encrypted_outpath)
                     if len(encrypted_file_hash) == 64:
                         stdout("SHA256 hash digest for " + encrypted_outpath + " :")
@@ -100,7 +100,7 @@ class Cryptor(object):
     # ------------------------------------------------------------------------------
 
     def _create_outfilepath(self, inpath):
-        """private method that generates the crypto saved file path string with a .crypt file type"""
+        """private method that generates the Crypto saved file path string with a .crypt file type"""
         return inpath + '.crypt'
 
     def _is_compress_filetype(self, inpath):

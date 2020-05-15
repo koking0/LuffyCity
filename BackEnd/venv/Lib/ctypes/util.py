@@ -368,8 +368,8 @@ def test():
                 print(f"Using cdll.LoadLibrary(): {cdll.LoadLibrary('libc.a(shr_64.o)')}")
             print(f"crypt\t:: {find_library('crypt')}")
             print(f"crypt\t:: {cdll.LoadLibrary(find_library('crypt'))}")
-            print(f"crypto\t:: {find_library('crypto')}")
-            print(f"crypto\t:: {cdll.LoadLibrary(find_library('crypto'))}")
+            print(f"Crypto\t:: {find_library('Crypto')}")
+            print(f"Crypto\t:: {cdll.LoadLibrary(find_library('Crypto'))}")
         else:
             print(cdll.LoadLibrary("libm.so"))
             print(cdll.LoadLibrary("libcrypt.so"))

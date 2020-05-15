@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# @Time     : 2020/5/9 16:02
+# @Time     : 2020/5/13 12:01
 # @File     : urls.py
 # ----------------------------------------------
 # ☆ ☆ ☆ ☆ ☆ ☆ ☆ 
@@ -12,11 +12,10 @@
 # ☆ ☆ ☆ ☆ ☆ ☆ ☆
 from django.urls import path
 
-from Shopping.views import ShoppingView
+from Payment.views import PaymentView, PayHandlerView
 
 urlpatterns = [
-	path('list', ShoppingView.as_view()),
-	path('add', ShoppingView.as_view()),
-	path('delete', ShoppingView.as_view()),
-	path('buy', ShoppingView.as_view()),
+	path('list', PaymentView.as_view()),
+	path('pay', PaymentView.as_view()),
+	path('aliPayHandler', PayHandlerView.as_view()),
 ]

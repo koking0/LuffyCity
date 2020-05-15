@@ -12,6 +12,7 @@
 # ☆ ☆ ☆ ☆ ☆ ☆ ☆
 from rest_framework import serializers
 
+from Account.models import Account
 from Course import models
 
 
@@ -136,3 +137,36 @@ class DegreeCourseDetailSerializer(serializers.ModelSerializer):
 		model = models.EmploymentCourse
 		fields = ['id', 'title', 'price', 'slogan', 'brief', 'courseImage', 'studyNumber', 'hours', 'price', 'salary',
 		          'employmentRate', 'teachers', 'number', 'modules']
+
+
+class ClassroomDetailSerializer(serializers.ModelSerializer):
+	modules = serializers.SerializerMethodField()
+
+	def get_modules(self, obj):
+		courseObject = models.EmploymentCourse.objects.filter(userCourse=obj).first()
+		courseModule = models.Module.objects.filter(course=courseObject)
+		userCompleteSection = models.CourseSection.objects.filter(student=obj).values('name')
+		userCompleteSectionName = [item['name'] for item in userCompleteSection]
+		modules = [{'id': module.id, 'index': module.module, 'title': module.title, 'count': 0, 'completeCount': 0}
+		           for module in courseModule]
+		for module in modules:
+			chapters = models.CourseChapter.objects.filter(module=models.Module.objects.filter(id=module['id']).first())
+			module['chapters'] = [{'id': chapter.id, 'index': chapter.chapter, 'title': chapter.title}
+			                      for chapter in chapters]
+			for item in module['chapters']:
+				sections = models.CourseSection.objects.filter(chapter_id=item['id'])
+				item['sections'] = []
+				for section in sections:
+					module['count'] += 1
+					flag = True if section.name in userCompleteSectionName else False
+					if flag:
+						module['completeCount'] += 1
+					item['sections'].append({'id': section.id,
+					                         'name': section.name,
+					                         'complete': flag,
+					                         'sectionType': section.sectionType})
+		return modules
+
+	class Meta:
+		model = Account
+		fields = ['id', 'modules']

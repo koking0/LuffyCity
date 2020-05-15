@@ -1,14 +1,9 @@
-from django.shortcuts import render
-
-# Create your views here.
 import uuid
-
 import redis
 from django.contrib.auth import authenticate, login, logout
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from Account.models import Account
 from Account.serializers import RegisterSerializer
 from utils.naseResponse import BaseResponse
 from utils.redisPool import POOL
@@ -17,7 +12,7 @@ from utils.redisPool import POOL
 class LoginView(APIView):
 	def post(self, request):
 		response = BaseResponse()
-		username, password = request.data.get("username", ""), request.data.get("password", "")
+		username, password = request.data.get("username", None), request.data.get("password", None)
 		user = authenticate(request=request, username=username, password=password)
 		if user:
 			# 如果验证通过

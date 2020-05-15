@@ -81,7 +81,7 @@ def crypt(word, salt=None):
     return _crypt.crypt(word, salt)
 
 
-#  available salting/crypto methods
+#  available salting/Crypto methods
 methods = []
 
 def _add_method(name, *args, rounds=None):

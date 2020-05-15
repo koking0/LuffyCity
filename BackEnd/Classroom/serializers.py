@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# @Time     : 2020/5/9 16:02
-# @File     : urls.py
+# @Time     : 2020/5/14 17:36
+# @File     : serializers.py
 # ----------------------------------------------
 # ☆ ☆ ☆ ☆ ☆ ☆ ☆ 
 # >>> Author    : Alex 007
@@ -10,13 +10,13 @@
 # >>> Github    : https://github.com/koking0
 # >>> Blog      : https://alex007.blog.csdn.net/
 # ☆ ☆ ☆ ☆ ☆ ☆ ☆
-from django.urls import path
+from rest_framework import serializers
 
-from Shopping.views import ShoppingView
+from Classroom.models import Question
 
-urlpatterns = [
-	path('list', ShoppingView.as_view()),
-	path('add', ShoppingView.as_view()),
-	path('delete', ShoppingView.as_view()),
-	path('buy', ShoppingView.as_view()),
-]
+
+class QuestionSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Question
+        fields = "__all__"
