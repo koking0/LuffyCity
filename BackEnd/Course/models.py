@@ -115,6 +115,7 @@ class CourseSection(models.Model):
     name = models.CharField(max_length=32, verbose_name="课时名称")
     freeTrail = models.BooleanField(default=False, help_text="是否可试看")
     sectionType = models.SmallIntegerField(default=2, choices=((0, '文档'), (1, '练习'), (2, '视频')))
+    videoUrl = models.URLField(default='//player.bilibili.com/player.html?aid=82861347&bvid=BV1aJ411H7Ej&cid=141761157&page=1')
 
     def __str__(self):
         return self.name

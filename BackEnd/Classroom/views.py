@@ -1,4 +1,5 @@
 import redis
+from django.conf import settings
 from django.shortcuts import render
 
 
@@ -7,7 +8,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from Account.models import Account, Teacher
-from Classroom.models import Question
+from Classroom.models import Question, Task
 from Classroom.serializers import QuestionSerializer
 from Course import models
 from Account.models import Student
@@ -41,6 +42,22 @@ class HomeworkView(APIView):
 		serializerObject = ClassroomDetailSerializer(user)
 		return Response(serializerObject.data)
 
+	def post(self, request, pk):
+		token = request.GET.get('token', None)
+		userId = CONNECT.get(str(token))
+		user = Student.objects.filter(student=Account.objects.filter(id=userId).first()).first()
+		file = request.FILES.get('file', None)
+		Task.objects.create(
+			student_id=userId,
+			teacher_id=user.teacher.id,
+			chapter_id=pk,
+			file=file,
+		)
+		response = BaseResponse()
+		response.code = 200
+		response.data = "File uploaded successfully!"
+		return Response(response.dict)
+
 
 class QuestionView(APIView):
 	def post(self, request):
@@ -51,7 +68,6 @@ class QuestionView(APIView):
 		requestData['student'] = user.id
 		teacher = Teacher.objects.filter(studentTeacher=user).first()
 		requestData['teacher'] = teacher.id
-		print(requestData)
 		Question.objects.create(
 			student=user,
 			teacher=teacher,

@@ -51,7 +51,7 @@
               <img class="icon" src="/static/images/wx-selected.svg" alt="">
             </li>
             <li class="payment">
-              <img class="img1" src="/static/images/zfb_1564141046.0915222.svg" alt="">
+              <img class="img1" src="/static/images/zfb.svg" alt="">
               <span>支付宝</span>
               <img class="icon" src="/static/images/wx-selected.svg" style="display: none;" alt="">
             </li>

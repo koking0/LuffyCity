@@ -42,7 +42,7 @@
               <span>空空如也，您还未提交作业</span>
             </div>
             <div class="dropzonebox" style="">
-              <el-upload class="upload-demo" drag action="http://127.0.0.1:8000/api/homework/homeworkDetail" multiple>
+              <el-upload class="upload-demo" drag :action='item.action' multiple>
                 <i class="el-icon-upload"></i>
                 <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
               </el-upload>
@@ -67,8 +67,10 @@
       this.moduleId = this.$route.params.detailId;
       this.$http.homeworkDetail(this.$route.params.detailId).then(res => {
         this.homeworkDetail = res.modules[this.$route.params.detailId]['chapters'];
+        for (let i = 0; i < this.homeworkDetail.length; i++) {
+          this.homeworkDetail[i]['action'] = `http://127.0.0.1:8000/api/homework/homeworkDetail/${this.homeworkDetail[i]['id']}?token=${localStorage.getItem('access_token')}`;
+        }
         console.log(res.modules[this.$route.params.detailId]['chapters'])
-        console.log(res);
       }).catch(err => {
         console.log(err);
       })

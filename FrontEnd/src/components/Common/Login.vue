@@ -24,10 +24,10 @@
                 <label for="passwordInput"></label>
                 <input type="password" id="passwordInput" placeholder="密码" maxlength="20" v-model="password">
                 <a class="eye" style="display: none;">
-                  <img alt="yanjing" src="/static/images/yanjing@1x_1560849097.8918953.svg">
+                  <img alt="yanjing" src="/static/images/yanjing@1x.svg">
                 </a>
                 <a class="eye">
-                  <img alt="眼睛关闭" src="/static/images/眼睛关闭@1x_1560849097.5098064.svg">
+                  <img alt="眼睛关闭" src="/static/images/眼睛关闭@1x.svg">
                 </a>
               </div>
               <div>

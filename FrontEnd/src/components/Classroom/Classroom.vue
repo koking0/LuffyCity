@@ -113,7 +113,7 @@
       },
       detailChapterHandler(id) {
         this.$router.push({
-          name: "Chapter.detail",
+          name: "Chapters.detail",
           params: {
             detailId: id
           }

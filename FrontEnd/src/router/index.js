@@ -10,7 +10,7 @@ import LightClass from "../components/LightClass/LightClass";
 import PracticalLessons from "../components/PracticalLessons/PracticalLessons";
 import QuestionBank from "../components/QuestionBank/QuestionBank";
 import StudentAchievement from "../components/StudentAchievement/StudentAchievement";
-
+import Chapters from "../components/Classroom/Chapters";
 import PracticalCourseDetail from "../components/PracticalLessons/PracticalCourseDetail";
 import CourseDetail from "../components/FreeLessons/CourseDetail";
 import Classroom from "../components/Classroom/Classroom";
@@ -100,6 +100,12 @@ export default new Router({
       path: "/homework/detail/:detailId",
       name: "Homework.detail",
       component: Homework
+    },
+    // 查看章节
+    {
+      path: "/chapter/detail/:detailId",
+      name: "Chapters.detail",
+      component: Chapters
     },
     // 提问
     {
