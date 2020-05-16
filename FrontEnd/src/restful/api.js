@@ -7,21 +7,13 @@ Axios.create({
 
 import qs from 'qs'
 
-// // 添加请求拦截器
-// Axios.interceptors.request.use(function (config) {
-//   // 在发送请求之前做些什么
-//   if (localStorage.getItem('access_token')) {
-//     config.headers['access_token'] = localStorage.getItem('access_token');
-//   }
-//   return config;
-// }, function (error) {
-//   // 对请求错误做些什么
-//   return Promise.reject(error);
-// });
-
 // 登录
 export const userLogin = (params) => {
   return Axios.post('http://127.0.0.1:8000/api/account/login', qs.stringify(params)).then(res => res.data);
+}
+// 注册
+export const userRegister = (params) => {
+  return Axios.post('http://127.0.0.1:8000/api/account/register', qs.stringify(params)).then(res => res.data);
 }
 // 退出
 export const userLogout = () => {

@@ -25,5 +25,5 @@ class RegisterSerializer(serializers.ModelSerializer):
         password = validated_data["password"]
         passwordSalt = "luffy_password" + password
         md5Str = hashlib.md5(passwordSalt.encode()).hexdigest()
-        user = Account.objects.create(username=validated_data["username"], pwd=md5Str)
+        user = Account.objects.create(username=validated_data["username"], password=md5Str)
         return user

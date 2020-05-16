@@ -4,6 +4,7 @@ from django.contrib.auth import authenticate, login, logout
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
+from Account.models import Account, Student
 from Account.serializers import RegisterSerializer
 from utils.naseResponse import BaseResponse
 from utils.redisPool import POOL
@@ -65,11 +66,8 @@ class LogoutView(APIView):
 class RegisterView(APIView):
 	def post(self, request):
 		response = BaseResponse()
-		serializer = RegisterSerializer(data=request.data)
-		if serializer.is_valid():
-			serializer.save()
-			response.data = serializer.data
-		else:
-			response.code = 501
-			response.error = serializer.errors
+		username, password = request.data.get('username'), request.data.get('password')
+		user = Account.objects.create_user(username=username, password=password)
+		Student.objects.create(student=user)
+		response.code, response.data = 200, 'Register Successful!'
 		return Response(response.dict)

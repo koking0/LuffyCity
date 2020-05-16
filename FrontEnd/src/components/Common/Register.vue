@@ -55,8 +55,9 @@
           username: this.username,
           password: this.password,
         };
-        this.$http.userLogin(params).then(res=>{
-
+        console.log(params);
+        this.$http.userRegister(params).then(res=>{
+          console.log(res);
         }).catch(err=>{
           console.log(err);
         });
