@@ -32,7 +32,7 @@
           </div>
           <router-link class="shop-car" :to="{name:'ShoppingCar'}">
             <img src="/static/images/shopcart@2x.png" alt="shopcart">
-            <span>购物车 <span style="color: red">{{shop_cart_num}}</span></span>
+            <span>购物车</span>
           </router-link>
           <div v-if="!isUserLogin" class="register">
             <Login/>

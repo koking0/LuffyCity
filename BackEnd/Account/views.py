@@ -33,16 +33,9 @@ class LoginView(APIView):
 					"username": user.username,
 					"identity": user.identity,
 					"avatar": f"http://127.0.0.1:8000/media/{str(user.avatar)}",
-					"shop_cart_num": len(goods),
-					"notice_num": 9,
-					"redirect_url": None,
 					"phone": 18812649207,
-					"is_bind": True,
-					"has_openid": True,
 					"has_password": True,
 					"balance": 3648,
-					"is_new": True,
-					"is_cash": False,
 					"message": 'Login Successful!',
 				}
 				response.data = data

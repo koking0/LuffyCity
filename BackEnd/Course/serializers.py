@@ -168,6 +168,7 @@ class ClassroomDetailSerializer(serializers.ModelSerializer):
 						module['completeCount'] += 1
 					item['sections'].append({'id': section.id,
 					                         'name': section.name,
+					                         'videoUrl': section.videoUrl,
 					                         'complete': flag,
 					                         'sectionType': section.sectionType})
 		return modules

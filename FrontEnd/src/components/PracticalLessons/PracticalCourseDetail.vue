@@ -125,6 +125,27 @@
       buy() {
 
       },
+      // 加入购物车
+      addShopCart() {
+        if (window.localStorage.getItem('access_token')) {
+          let goodsInfo = {
+            courseId: this.$route.params.detailId,
+            token: localStorage.getItem('access_token')
+          };
+          this.$http.shopCartAdd(goodsInfo).then(res => {
+            if (res.code === 200) {
+              this.$message(res.data);
+            } else if (res.code === 501) {
+              this.$message(res.data);
+            }
+          }).catch(err => {
+            console.log(err);
+          })
+        } else {
+          // 跳转登录页面
+          document.getElementById("signin").click();
+        }
+      },
       getCourseDetail() {
         this.$http.practicalCourseDetail(this.$route.params.detailId).then(res => {
           res.teacher.avatar = `http://127.0.0.1:8000/media/${res.teacher.avatar}`;
