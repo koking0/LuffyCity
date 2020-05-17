@@ -123,8 +123,7 @@
         localStorage.clear();
         this.$http.userLogout().then(res=>{
           this.$message(res.data);
-          console.log(res);
-          location.reload();
+          window.location.href = 'http://localhost:8080/home';
         }).catch(err=>{
           console.log(err);
         })

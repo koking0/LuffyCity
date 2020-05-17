@@ -10,7 +10,7 @@ class Account(AbstractUser):
 	avatar = models.ImageField(upload_to='avatars/', default='avatars/default.png')
 	telephone = models.CharField(max_length=11, null=True, blank=True, unique=True)
 	balance = models.IntegerField(verbose_name="贝里余额", default=0)
-	identity = models.IntegerField(verbose_name="身份", choices=[(0, "管理员"), (2, "导师"), (3, "学员")], default=3)
+	identity = models.IntegerField(verbose_name="身份", choices=[(1, "管理员"), (2, "导师"), (3, "学员")], default=3)
 
 	def __str__(self):
 		return self.username

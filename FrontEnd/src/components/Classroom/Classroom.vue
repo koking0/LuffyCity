@@ -1,41 +1,13 @@
 <template>
   <div class="studyHome">
-    <main>
+    <main v-if="identity === 3">
       <div class="study-head">
-        <ul class="study-data">
-          <li>
-            <img src="/static/images/study-icon1.svg" alt="study-icon1">
-            <p>
-              <span>今日/累计学习（课时）</span><b>0/1620</b>
-            </p>
-          </li>
-          <li>
-            <img src="/static/images/study-icon2.svg" alt="study-icon2">
-            <p>
-              <span>可挑战奖学金余额（贝里）</span><b>0</b>
-            </p>
-          </li>
-          <li>
-            <img src="/static/images/study-icon3.svg" alt="study-icon3">
-            <p>
-              <span>作业平均成绩（分）</span><b>84.42</b><br>
-              <a href="#">查看作业成绩</a>
-            </p>
-          </li>
-          <li>
-            <img src="/static/images/study-icon4.svg" alt="study-icon4">
-            <p>
-              <span>已获得奖学金余额（贝里）</span><b>4345</b><br>
-              <a href="#">查看奖惩详情</a>
-            </p>
-          </li>
-        </ul>
         <div class="dashboard">
           <div class="mentor">
             <p class="time">
               <img src="/static/images/study-icon5.svg" alt="study-icon5">
               <span>紧急快速提问：2小时内响应</span>
-              <a>如果2小时后您的导师没有响应，将有别的导师为您服务！</a>
+              <b>如果2小时后您的导师没有响应，将有别的导师为您服务！</b>
             </p>
             <div class="teacher">
               <img src="/static/images/study-head.svg" alt="study-head">
@@ -59,7 +31,7 @@
         <div>
           <div class="degree">
             <div class="box">
-              <section class="module" v-for="(item, index) in courseDetail.modules" :key="item.id">
+              <section class="module" v-for="item in courseDetail.modules" :key="item.id">
                 <p class="num">
                   <img src="/static/images/angle-of.svg" alt="angle">
                   <span>第{{item.index}}模块</span>
@@ -83,6 +55,9 @@
         </div>
       </div>
     </main>
+    <main v-if="identity === 2">
+
+    </main>
   </div>
 </template>
 
@@ -92,13 +67,13 @@
     data() {
       return {
         courseDetail: null,
+        identity: null,
       }
     },
     methods: {
       getCourse() {
         this.$http.classroomCourseList().then(res => {
           this.courseDetail = res;
-          console.log(this.courseDetail);
         }).catch(err => {
           console.log(err);
         })
@@ -121,6 +96,7 @@
       },
     },
     created() {
+      this.identity = Number(localStorage.getItem('identity'));
       this.getCourse();
     }
   }
@@ -152,21 +128,6 @@
     justify-content: space-between;
     margin-top: 30px;
     margin-bottom: 30px;
-  }
-
-  .studyHome main .study-head .study-data {
-    width: 789px;
-    height: 255px;
-    background: #fff;
-    box-shadow: 0 4px 8px 0 #e8e8e8;
-    border-radius: 3px;
-    margin-right: 20px;
-    top: 20px;
-    padding-left: 40px;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
   }
 
   .studyHome main .study-head .study-data li p a {
@@ -209,7 +170,7 @@
   }
 
   .studyHome main .study-head .dashboard {
-    width: 390px;
+    width: 1200px;
     height: 255px;
     background: #fff;
     box-shadow: 0 4px 8px 0 #e8e8e8;
@@ -254,7 +215,6 @@
   }
 
   .studyHome main .study-head .mentor .teacher .name {
-
     font-size: 14px;
     color: #4a4a4a;
   }
@@ -288,14 +248,14 @@
   .studyHome main .study-head .mentor .teacher button img {
     width: 16px;
     height: auto;
-    margin-right: 55px;
+    margin-right: 70px;
     margin-top: 10px;
   }
 
   .studyHome main .study-head .mentor .teacher button span {
     position: absolute;
-    top: 190px;
-    right: 145px;
+    top: 173px;
+    left: 590px;
   }
 
   .studyHome main .study-head .mentor .teacher img {

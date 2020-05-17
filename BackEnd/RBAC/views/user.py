@@ -43,7 +43,7 @@ def logout(request):
 
 
 def index(request):
-    if request.session["user_info"]:
+    if request.session.get('user_info', None):
         return render(request, 'RBAC/index.html')
     else:
         return redirect('/login/')

@@ -28,14 +28,17 @@ urlpatterns = [
     path('index/', user.index, name="index"),
 
     path('api/account/', include("Account.urls")),
+
+    path('api/course/', include("Course.urls")),
     path('api/free/', include("Course.urls")),
-    path('api/enroll/', include("Classroom.urls")),
-    path('api/questions/', include("Classroom.urls")),
-    path('api/homework/', include("Classroom.urls")),
     path('api/practical/', include("Course.urls")),
+
     path('api/shopping/', include("Shopping.urls")),
     path('api/payment/', include("Payment.urls")),
-    path('api/course/', include("Course.urls")),
+
+    path('api/enroll/', include("Classroom.urls")),
+    path('api/homework/', include("Classroom.urls")),
+    path('api/questions/', include("Classroom.urls")),
 
     re_path('media/(?P<path>.*)', serve, {'document_root': settings.MEDIA_ROOT})
 ]
