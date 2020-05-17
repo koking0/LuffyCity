@@ -18,11 +18,14 @@ from django.contrib import admin
 from django.urls import path, re_path, include
 from django.views.static import serve
 
+from RBAC.views import user
+from Stark.main import starkSite
+
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    # path('pay/', views.AliPayView.as_view()),
-    # path('alipay_handler/', views.PayHandlerView.as_view()),
+    path('stark/', starkSite.urls),
+    path('index/', user.index, name="index"),
 
     path('api/account/', include("Account.urls")),
     path('api/free/', include("Course.urls")),
@@ -33,5 +36,6 @@ urlpatterns = [
     path('api/shopping/', include("Shopping.urls")),
     path('api/payment/', include("Payment.urls")),
     path('api/course/', include("Course.urls")),
+
     re_path('media/(?P<path>.*)', serve, {'document_root': settings.MEDIA_ROOT})
 ]
