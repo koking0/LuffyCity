@@ -85,9 +85,14 @@ export const shopCarDeleteGoods = (deleteCourseList) => {
   return Axios.delete(`http://127.0.0.1:8000/api/shopping/delete`, deleteCourseList).then(res => res.data);
 }
 
-// 我的教室页面列表
+// 我的教室学生页面列表内容
 export const classroomCourseList = () => {
   return Axios.get(`http://127.0.0.1:8000/api/enroll/degree`,
+    {params: {'token': localStorage.getItem('access_token')}}).then(res => res.data);
+}
+// 我的教室老师页面列表内容
+export const getTeacherDetailList = () => {
+  return Axios.get(`http://127.0.0.1:8000/api/enroll/teacher`,
     {params: {'token': localStorage.getItem('access_token')}}).then(res => res.data);
 }
 // 提问

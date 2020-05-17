@@ -56,7 +56,75 @@
       </div>
     </main>
     <main v-if="identity === 2">
-
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">我的学生</h3>
+        </div>
+        <div class="panel-body">
+          <ul>
+            <li v-for="item in teacherDetailList.studentList" :key="item.id">
+              <img :src='item.studentAvatar' :alt="item.studentName">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title">学生问题</h3>
+        </div>
+        <div class="panel-body">
+          <ul>
+            <li v-for="item in teacherDetailList.questionList" :key="item.id">
+              <div class="panel panel-success">
+                <div class="panel-heading">
+                  <h3 class="panel-title">{{item.questionTitle}}</h3>
+                </div>
+                <div class="panel-body">
+                  <p><span style="color: red;">问题内容：</span>{{item.questionContent}}</p>
+                  <p><span style="color: red;">环境：</span>{{item.questionEnvironment}}</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-warning">
+        <div class="panel-heading">
+          <h3 class="panel-title">学生作业</h3>
+        </div>
+        <div class="panel-body">
+          <ul>
+            <li v-for="item in teacherDetailList.taskList" :key="item.id">
+              <div class="panel panel-warning col-md-5" style="margin-right: 5px">
+                <div class="panel-heading">
+                  <h3 class="panel-title">{{item.taskTitle}}</h3>
+                </div>
+                <div class="panel-body">
+                  <p><span style="color: red;">学生：</span>{{item.taskStudent}}</p>
+                  <div class="btns">
+                    <span style="color: red;">文件：</span>
+                    <el-link target="_blank" :href="item.taskFilePath" :underline="false">
+                      <el-button size="mini" type="warning">文件下载</el-button>
+                    </el-link>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-warning col-md-6" style="margin-left: 5px">
+                <div class="panel-heading">
+                  <h3 class="panel-title">导师批改</h3>
+                </div>
+                <div class="panel-body">
+                  <p>
+                    <span style="color: red;">成绩：</span>
+                    <el-rate v-model="value" show-text allow-half></el-rate>
+                  </p>
+                  <p><span style="color: red;">文件：</span>{{item.taskFilePath}}</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </main>
   </div>
 </template>
@@ -66,14 +134,30 @@
     name: "Classroom",
     data() {
       return {
+        value: null,
         courseDetail: null,
         identity: null,
+        teacherDetailList: null,
       }
     },
     methods: {
       getCourse() {
         this.$http.classroomCourseList().then(res => {
           this.courseDetail = res;
+        }).catch(err => {
+          console.log(err);
+        })
+      },
+      getTeacherDetail() {
+        this.$http.getTeacherDetailList().then(result => {
+          console.log(result);
+          for (let i = 0; i < result.studentList.length; i++) {
+            result.studentList[i]['studentAvatar'] = `http://127.0.0.1:8000/media/${result.studentList[i]['studentAvatar']}`;
+          }
+          for (let i = 0; i < result.taskList.length; i++) {
+            result.taskList[i]['taskFilePath'] = `http://127.0.0.1:8000/api/get/file/${result.taskList[i]['taskFilePath']}`;
+          }
+          this.teacherDetailList = result;
         }).catch(err => {
           console.log(err);
         })
@@ -97,8 +181,12 @@
     },
     created() {
       this.identity = Number(localStorage.getItem('identity'));
-      this.getCourse();
-    }
+      if (this.identity === 3) {
+        this.getCourse();
+      } else if (this.identity === 2) {
+        this.getTeacherDetail();
+      }
+    },
   }
 </script>
 
@@ -113,7 +201,7 @@
   .studyHome main {
     width: 1200px;
     height: auto;
-    margin: 0 auto;
+    margin: 20px auto;
     overflow: hidden;
   }
 
@@ -242,7 +330,6 @@
     outline: none;
     cursor: pointer;
     border: none;
-    background: transparent;
   }
 
   .studyHome main .study-head .mentor .teacher button img {

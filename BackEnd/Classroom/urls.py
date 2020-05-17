@@ -10,11 +10,13 @@
 # >>> Github    : https://github.com/koking0
 # >>> Blog      : https://alex007.blog.csdn.net/
 # ☆ ☆ ☆ ☆ ☆ ☆ ☆
-from django.urls import path
-from Classroom.views import CourseView, QuestionView, HomeworkView
+from django.urls import path, re_path
+from Classroom.views import CourseView, QuestionView, HomeworkView, TeacherView, FileView
 
 urlpatterns = [
+	re_path('file/(?P<path>.*)', FileView.as_view()),
 	path('degree', CourseView.as_view()),
+	path('teacher', TeacherView.as_view()),
 	path('askQuestions', QuestionView.as_view()),
 	path('homeworkDetail/<int:pk>', HomeworkView.as_view()),
 ]

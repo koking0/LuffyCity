@@ -1,5 +1,6 @@
 import redis
 from django.conf import settings
+from django.http import StreamingHttpResponse
 from django.shortcuts import render
 
 
@@ -12,7 +13,7 @@ from Classroom.models import Question, Task
 from Classroom.serializers import QuestionSerializer
 from Course import models
 from Account.models import Student
-from Course.serializers import ClassroomDetailSerializer
+from Course.serializers import ClassroomDetailSerializer, TeacherViewSerializer
 from utils.naseResponse import BaseResponse
 from utils.redisPool import POOL
 
@@ -28,6 +29,33 @@ class CourseView(APIView):
 		if not courseDetailObject:
 			return Response({"code": 501, "error": "The course doesn't exist!"})
 		serializerObject = ClassroomDetailSerializer(user)
+		return Response(serializerObject.data)
+
+
+class FileView(APIView):
+	def get(self, request, path):
+		def fileIterator(filePath, chunk_size=512):
+			with open(filePath) as fp:
+				while True:
+					c = fp.read(chunk_size)
+					if c:
+						yield c
+					else:
+						break
+		path = f'media/{path}'
+		response = StreamingHttpResponse(fileIterator(path))
+		response['Content-Type'] = 'application/octet-stream'
+		response['Content-Disposition'] = 'attachment;filename="{0}"'.format(path)
+		return response
+
+
+class TeacherView(APIView):
+	def get(self, request):
+		token = request.GET.get('token', None)
+		userId = CONNECT.get(str(token))
+		user = Teacher.objects.filter(teacher=Account.objects.filter(id=userId).first()).first()
+		print(f'导师：{user.teacher.username}，正在获取我的教室内容。')
+		serializerObject = TeacherViewSerializer(user)
 		return Response(serializerObject.data)
 
 

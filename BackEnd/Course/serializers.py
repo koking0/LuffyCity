@@ -12,7 +12,8 @@
 # ☆ ☆ ☆ ☆ ☆ ☆ ☆
 from rest_framework import serializers
 
-from Account.models import Account
+from Account.models import Account, Teacher, Student
+from Classroom.models import Question, Task
 from Course import models
 
 
@@ -176,3 +177,40 @@ class ClassroomDetailSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Account
 		fields = ['id', 'modules']
+
+
+class TeacherViewSerializer(serializers.ModelSerializer):
+	teacherName = serializers.SerializerMethodField()
+	studentList = serializers.SerializerMethodField()
+	questionList = serializers.SerializerMethodField()
+	taskList = serializers.SerializerMethodField()
+
+	def get_teacherName(self, obj):
+		return obj.teacher.username
+
+	def get_studentList(self, obj):
+		return [{'studentId': student.id,
+		         'studentName': student.student.username,
+		         'studentAvatar': str(student.student.avatar)}
+		        for student in Student.objects.filter(teacher=obj)]
+
+	def get_questionList(self, obj):
+		return [{'questionId': question.id,
+		         'questionTitle': question.title,
+		         'questionContent': question.content,
+		         'questionEnvironment': question.environment}
+		        for question in Question.objects.filter(teacher=obj)]
+
+	def get_taskList(self, obj):
+		return [{'taskId': task.id,
+		         'taskStudent': task.student.username,
+		         'taskTitle': task.chapter.title,
+		         'taskFilePath': str(task.file),
+		         'taskDate': task.date,
+		         'taskAchievement': task.achievement,
+		         'taskComment': task.comment}
+		        for task in Task.objects.filter(teacher=obj)]
+
+	class Meta:
+		model = Teacher
+		fields = ['id', 'teacherName', 'studentList', 'questionList', 'taskList']

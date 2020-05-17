@@ -18,7 +18,7 @@ class Account(AbstractUser):
 
 class Student(models.Model):
 	"""学生表"""
-	student = models.OneToOneField(verbose_name="学生信息", to="Account", on_delete=models.PROTECT)
+	student = models.OneToOneField(verbose_name="学生信息", to="Account.Account", on_delete=models.PROTECT)
 	QQ = models.CharField(verbose_name="学生QQ", max_length=32, null=True, blank=True)
 	telephone = models.CharField(verbose_name="学生手机号", max_length=32, null=True, blank=True)
 	teacher = models.ForeignKey(to='Teacher', related_name='studentTeacher', on_delete=models.PROTECT, null=True, blank=True)

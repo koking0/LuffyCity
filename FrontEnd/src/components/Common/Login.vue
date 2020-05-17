@@ -91,8 +91,6 @@
             localStorage.setItem("username", res.data.username);
             localStorage.setItem("identity", res.data.identity);
             localStorage.setItem("avatar", res.data.avatar);
-            localStorage.setItem("shop_cart_num", res.data.shop_cart_num);
-            localStorage.setItem("notice_num", res.data.notice_num);
             this.$store.dispatch("getUserInfo", res.data);
           }
         }).catch(err=>{
