@@ -54,7 +54,6 @@
                 <li>我的订单<img src="/static/images/back.svg" alt="back"></li>
                 <li>贝里小卖铺<img src="/static/images/back.svg" alt="back"></li>
                 <li>我的优惠券<img src="/static/images/back.svg" alt="back"></li>
-                <li>我的消息<b>({{notice_num}})</b><img src="/static/images/back.svg" alt="back"></li>
                 <li @click="logoutHandler">退出<img src="/static/images/back.svg" alt="back"></li>
               </ul>
             </div>
