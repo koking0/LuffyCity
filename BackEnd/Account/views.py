@@ -1,6 +1,7 @@
 import uuid
 import redis
 from django.contrib.auth import authenticate, login, logout
+from django.db import IntegrityError
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
@@ -67,7 +68,11 @@ class RegisterView(APIView):
 	def post(self, request):
 		response = BaseResponse()
 		username, password = request.data.get('username'), request.data.get('password')
-		user = Account.objects.create_user(username=username, password=password)
-		Student.objects.create(student=user)
-		response.code, response.data = 200, 'Register Successful!'
-		return Response(response.dict)
+		try:
+			user = Account.objects.create_user(username=username, password=password)
+			Student.objects.create(student=user)
+			response.code, response.data = 200, 'Register Successful!'
+			return Response(response.dict)
+		except IntegrityError:
+			response.code, response.data = 500, 'Username Already Exists!'
+			return Response(response.dict)

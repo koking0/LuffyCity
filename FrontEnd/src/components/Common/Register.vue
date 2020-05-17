@@ -7,7 +7,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="popup-content">
-            <div class="close-btn" data-dismiss="modal"></div>
+            <div class="close-btn" data-dismiss="modal" id="closeRegister"></div>
             <div class="signup">
               <div class="username inputcontain">
                 <img alt="shouji" src="/static/images/shouji@1x.svg">
@@ -34,13 +34,6 @@
 </template>
 
 <script>
-  $('#exampleModal').on('show.bs.modal', function (event) {
-    const button = $(event.relatedTarget);
-    const recipient = button.data('whatever');
-    const modal = $(this);
-    modal.find('.modal-title').text('New message to ' + recipient)
-    modal.find('.modal-body input').val(recipient)
-  });
   export default {
     name: 'Register',
     data(){
@@ -57,7 +50,13 @@
         };
         console.log(params);
         this.$http.userRegister(params).then(res=>{
-          console.log(res);
+          if (res.code === 200){
+            this.$message(res.data);
+            document.getElementById("closeRegister").click();
+            document.getElementById("signin").click();
+          } else {
+            this.$message(res.data);
+          }
         }).catch(err=>{
           console.log(err);
         });

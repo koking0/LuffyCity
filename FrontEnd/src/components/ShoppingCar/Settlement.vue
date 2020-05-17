@@ -61,19 +61,22 @@
           <span class="bot-font-small"> 实付款：
             <span class="true-price">¥{{totalPrice}}.00</span>
             </span>
-          <button class="go-buy-btn" @click="payment()">立即支付</button>
+<!--          <button class="go-buy-btn" @click="payment()">立即支付</button>-->
+          <button class="go-buy-btn" data-toggle="modal" data-target="#vxPayment">立即支付</button>
         </li>
       </ul>
     </div>
-    <div class="wx-pay" style="display: none;">
-      <div class="mask">
-        <p> 微信支付 <i>¥{{totalPrice}}.00</i></p>
-        <div class="code" id="Qrcode"></div>
-        <span>使用微信扫描二维码进行支付</span>
-        <p>
-          <img src="/static/images/overloading.svg" alt="">
-          重新选择支付方式
-        </p>
+    <div class="modal fade" id="vxPayment" tabindex="-1" role="dialog" aria-labelledby="vxPayment">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <img src="/static/images/WeChatPayment.png" alt="" style="width: 568px;">
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </div>
