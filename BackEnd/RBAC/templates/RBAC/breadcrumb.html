@@ -1,0 +1,14 @@
+<ol class="breadcrumb">
+    <li>
+        <a href="{% url 'index' %}">
+            <i class="fa fa-home"></i>
+        </a>
+    </li>
+    {% for item in recordList %}
+        {% if item.class %}
+            <li class="{{ item.class }}"><span style="font-size: 17px; line-height: 50px;">{{ item.title }}</span></li>
+        {% else %}
+            <li><a href="{{ item.url }}" style="font-size: 17px; line-height: 50px;">{{ item.title }}</a></li>
+        {% endif %}
+    {% endfor %}
+</ol>

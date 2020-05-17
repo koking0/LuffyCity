@@ -1,0 +1,87 @@
+{% extends 'formwork.html' %}
+{% block content %}
+    <div class="container" style="width: 100%; background-color: rgba(245, 245, 245, 0.7)">
+        {% if searchGroupRowList %}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-filter" aria-hidden="true"></i>
+                    <span>快速筛选</span>
+                </div>
+                <div class="panel-body">
+                    <div class="search-group">
+                        {% for row in searchGroupRowList %}
+                            <div class="row">
+                                {% for obj in row %}
+                                    {{ obj|safe }}
+                                {% endfor %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        {% if searchList %}
+            <div style="float: right;margin: 5px 0;">
+                <form method="GET" class="form-inline">
+                    <div class="form-group">
+                        <label>
+                            <input class="form-control" type="text" name="keyword" value="{{ search_value }}"
+                                   placeholder="关键字搜索">
+                        </label>
+                        <button class="btn btn-primary" type="submit">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        {% endif %}
+        <form method="post">
+            {% csrf_token %}
+            {% if actionDict %}
+                <div style="float: left;margin-right: 10px;">
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <label>
+                                <select class="form-control" name="action">
+                                    <option value="">请选择操作</option>
+                                    {% for funcName, funcText in actionDict.items %}
+                                        <option value="{{ funcName }}">{{ funcText }}</option>
+                                    {% endfor %}
+                                </select>
+                            </label>
+                            <input class="btn btn-primary" type="submit" value="执行"/>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+            {% if addButton %}
+                <div style="margin: 10px;">
+                    {{ addButton|safe }}
+                </div>
+            {% endif %}
+            <table class="table table-hover table-bordered table-striped">
+                <thead>
+                <tr class="info">
+                    {% for header in headerList %}
+                        <th style="text-align: center; font-size: 15px;">{{ header }}</th>
+                    {% endfor %}
+                </tr>
+                </thead>
+                <tbody>
+                {% for row in bodyList %}
+                    <tr class="default">
+                        {% for element in row %}
+                            <td style="font-size: 15px; line-height: 30px;">{{ element }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </form>
+        <nav class="center">
+            <ul class="pagination">
+                {{ pager.pageHtml|safe }}
+            </ul>
+        </nav>
+    </div>
+{% endblock %}

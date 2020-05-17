@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="fixed" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="HTML5 Admin Template"/>
+    <meta name="description" content="Porto Admin - Responsive HTML5 Template">
+    <meta name="author" content="okler.net">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="/static/vendor/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/theme.css">
+    <link rel="stylesheet" href="/static/css/default.css">
+    <script src="/static/vendor/jQuery%203.4.1/jquery-3.4.1.min.js"></script>
+    <script src="/static/vendor/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <title>404 Not Found</title>
+</head>
+<body>
+<!-- start: page -->
+<section class="body-error error-outside">
+    <div class="center-error">
+        <div class="error-header">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <a href="/" class="logo">
+                                <img src="/static/images/MatrixLogo.png" style="height: 54px;" alt="Porto Admin"/>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <form class="form">
+                                <div class="input-group input-search">
+                                    <label for="q"></label>
+                                    <input type="text" class="form-control" name="q" id="q" placeholder="Search...">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="submit">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="main-error mb-xlg">
+                    <h2 class="error-code text-dark text-center text-semibold m-none">404 <i class="fa fa-file"></i>
+                    </h2>
+                    <p class="error-explanation text-center">
+                        We're sorry, but the page you were looking for doesn't exist.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h4 class="text">Here are some useful links</h4>
+                <ul class="nav nav-list primary">
+                    <li>
+                        <a href="{% url 'index' %}"><i class="fa fa-caret-right text-dark"></i> Dashboard </a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-caret-right text-dark"></i> User Profile </a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-caret-right text-dark"></i> FAQ's </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end: page -->
+</body>
+</html>

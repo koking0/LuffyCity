@@ -1,0 +1,260 @@
+{% load static %}
+{% load menu %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Matrix工作室管理系统</title>
+    <link rel="stylesheet" href="/static/vendor/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/theme.css">
+    <link rel="stylesheet" href="/static/css/default.css">
+    <script src="/static/vendor/jQuery%203.4.1/jquery-3.4.1.min.js"></script>
+    <script src="/static/vendor/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<header class="header">
+    <div class="logo-container" style="margin-left: 20px;">
+        <a href="#" class="logo">
+            <img src="/static/images/MatrixLogo.png" style="height: 35px;" alt="MatrixLogo"/>
+        </a>
+    </div>
+    <div class="header-right">
+        <form action="#" class="search nav-form">
+            <div class="input-group input-search">
+                <label for="search"></label>
+                <input type="text" class="form-control" name="search" id="search" placeholder="Search...">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </form>
+        <span class="separator"></span>
+        <ul class="notifications">
+            <li>
+                <a href="#" class="dropdown-toggle notification-icon" data-toggle="dropdown">
+                    <i class="fa fa-tasks"></i>
+                    <span class="badge">3</span>
+                </a>
+                <div class="dropdown-menu notification-menu large">
+                    <div class="notification-title">
+                        <span class="pull-right label label-default">3</span>
+                        TASKS
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li>
+                                <p class="clearfix mb-xs">
+                                    <span class="message pull-left">生成销售报告</span>
+                                    <span class="message pull-right text-dark">60%</span>
+                                </p>
+                                <div class="progress progress-xs light">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="60"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="clearfix mb-xs">
+                                    <span class="message pull-left">导入联系人</span>
+                                    <span class="message pull-right text-dark">98%</span>
+                                </p>
+                                <div class="progress progress-xs light">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="98"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 98%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="clearfix mb-xs">
+                                    <span class="message pull-left">上传一些大的文件</span>
+                                    <span class="message pull-right text-dark">33%</span>
+                                </p>
+                                <div class="progress progress-xs light mb-xs">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="33"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 33%;"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="dropdown-toggle notification-icon" data-toggle="dropdown">
+                    <i class="fa fa-envelope"></i>
+                    <span class="badge">4</span>
+                </a>
+                <div class="dropdown-menu notification-menu">
+                    <div class="notification-title">
+                        <span class="pull-right label label-default">230</span>
+                        Messages
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li>
+                                <a href="#" class="clearfix">
+                                    <figure class="image">
+                                        <img src="/static/images/Alex0.jpg" alt="Joseph Doe Junior"
+                                             class="img-circle" style="height: 40px"/>
+                                    </figure>
+                                    <span class="title">Joseph Doe</span>
+                                    <span class="message">Lorem ipsum dolor sit.</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="clearfix">
+                                    <figure class="image">
+                                        <img src="/static/images/Alex0.jpg" alt="Joseph Junior"
+                                             class="img-circle" style="height: 40px"/>
+                                    </figure>
+                                    <span class="title">Joseph Junior</span>
+                                    <span class="message truncate">Truncated message. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lacinia orci. Proin vestibulum eget risus non luctus. Nunc cursus lacinia lacinia. Nulla molestie malesuada est ac tincidunt. Quisque eget convallis diam, nec venenatis risus. Vestibulum blandit faucibus est et malesuada. Sed interdum cursus dui nec venenatis. Pellentesque non nisi lobortis, rutrum eros ut, convallis nisi. Sed tellus turpis, dignissim sit amet tristique quis, pretium id est. Sed aliquam diam diam, sit amet faucibus tellus ultricies eu. Aliquam lacinia nibh a metus bibendum, eu commodo eros commodo. Sed commodo molestie elit, a molestie lacus porttitor id. Donec facilisis varius sapien, ac fringilla velit porttitor et. Nam tincidunt gravida dui, sed pharetra odio pharetra nec. Duis consectetur venenatis pharetra. Vestibulum egestas nisi quis elementum elementum.</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="clearfix">
+                                    <figure class="image">
+                                        <img src="/static/images/Alex0.jpg" alt="Joe Junior"
+                                             class="img-circle" style="height: 40px"/>
+                                    </figure>
+                                    <span class="title">Joe Junior</span>
+                                    <span class="message">Lorem ipsum dolor sit.</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="clearfix">
+                                    <figure class="image">
+                                        <img src="/static/images/Alex0.jpg" alt="Joseph Junior"
+                                             class="img-circle" style="height: 40px"/>
+                                    </figure>
+                                    <span class="title">Joseph Junior</span>
+                                    <span class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lacinia orci. Proin vestibulum eget risus non luctus. Nunc cursus lacinia lacinia. Nulla molestie malesuada est ac tincidunt. Quisque eget convallis diam.</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <hr/>
+                        <div class="text-right">
+                            <a href="#" class="view-more">View All</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="dropdown-toggle notification-icon" data-toggle="dropdown">
+                    <i class="fa fa-bell"></i>
+                    <span class="badge">3</span>
+                </a>
+
+                <div class="dropdown-menu notification-menu">
+                    <div class="notification-title">
+                        <span class="pull-right label label-default">3</span>
+                        Alerts
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li>
+                                <a href="#" class="clearfix">
+                                    <div class="image">
+                                        <i class="fa fa-thumbs-down bg-danger"></i>
+                                    </div>
+                                    <span class="title">Server is Down!</span>
+                                    <span class="message">Just now</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="clearfix">
+                                    <div class="image">
+                                        <i class="fa fa-lock bg-warning"></i>
+                                    </div>
+                                    <span class="title">User Locked</span>
+                                    <span class="message">15 minutes ago</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="clearfix">
+                                    <div class="image">
+                                        <i class="fa fa-signal bg-success"></i>
+                                    </div>
+                                    <span class="title">Connection Restaured</span>
+                                    <span class="message">10/10/2014</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <hr/>
+                        <div class="text-right">
+                            <a href="#" class="view-more">View All</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <span class="separator"></span>
+        <div id="userbox" class="userbox">
+            <a href="#" data-toggle="dropdown">
+                <figure class="profile-picture">
+                    <img src="/static/images/Alex0.jpg" alt="Alex" class="img-circle" style="height: 50px;"
+                         data-lock-picture="/static/images/!logged-user.jpg"/>
+                </figure>
+                <div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@JSOFT.com">
+                    <span class="name">Alex</span>
+                    <span class="role">算法组组长</span>
+                </div>
+                <i class="fa custom-caret"></i>
+            </a>
+            <div class="dropdown-menu">
+                <ul class="list-unstyled">
+                    <li class="divider"></li>
+                    <li>
+                        <a role="menuitem" tabindex="-1" href="#">
+                            <i class="fa fa-user"></i>
+                            <span>My Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a role="menuitem" tabindex="-1" href="#" data-lock-screen="true">
+                            <i class="fa fa-lock"></i>
+                            <span>Lock Screen</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a role="menuitem" tabindex="-1" href="{% url 'logout' %}">
+                            <i class="fa fa-power-off"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="inner-wrapper">
+    <aside id="sidebar-left" class="sidebar-left">
+        <div class="sidebar-header">
+            <div class="sidebar-title" style="color: white; font-weight: bold;">
+                Navigation
+            </div>
+            <div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html"
+                 data-fire-event="sidebar-left-toggle">
+                <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+            </div>
+        </div>
+        {% multiMenu request %}
+    </aside>
+    <section role="main" class="content-body">
+        <header class="page-header">
+            <h2>{% breadcrumb request %}</h2>
+            <div class="right-wrapper pull-right">
+                <a class="sidebar-right-toggle" data-open="sidebar-right">
+                    <i class="fa fa-chevron-left"></i>
+                </a>
+            </div>
+        </header>
+        {% block content %}
+
+        {% endblock %}
+    </section>
+</div>
+
+<script src="{% static 'RBAC/js/menu.js' %}"></script>
+</body>
+</html>

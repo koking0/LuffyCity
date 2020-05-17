@@ -1,0 +1,142 @@
+{% extends 'formwork.html' %}
+
+{% block content %}
+    <div class="luffy-container">
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-book" aria-hidden="true"></i>
+                    <span>一级菜单</span>
+                    <a href="{% url 'stark:RBAC_menu_add' %}" class="right btn btn-success btn-xs pull-right"
+                       style="padding: 2px 8px;margin: -3px;">
+                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                        <span>新建</span>
+                    </a>
+                </div>
+
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>名称</th>
+                        <th>图标</th>
+                        <th>选项</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for row in menus %}
+                        <tr class="{% if row.id|safe == menu_id %}active{% endif %}">
+                            <td>
+                                <a href="?mid={{ row.id }}">{{ row.name }}</a>
+                            </td>
+                            <td>
+                                <i class="fa {{ row.icon }}" aria-hidden="true"></i>
+                            </td>
+                            <td>
+                                <a style="color: #333333;" href="{% url 'stark:RBAC_menu_change' row.id %}">
+                                    <i class="fa fa-edit" aria-hidden="true"></i>
+                                </a>
+                                <a style="color: #d9534f;" href="{% url 'stark:RBAC_menu_delete' row.id %}">
+                                    <i class="fa fa-trash-o"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-gavel" aria-hidden="true"></i>
+                    <span>二级菜单</span>
+                    {% if menu_id %}
+                        <a href="{% url 'stark:RBAC_permission_add' %}"
+                           class="right btn btn-success btn-xs pull-right"
+                           style="padding: 2px 8px;margin: -3px;">
+                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            <span>新建</span>
+                        </a>
+                    {% endif %}
+                </div>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>名称</th>
+                        <th>CODE&URL</th>
+                        <th>选项</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for row in second_menus %}
+                        <tr class="{% if row.id|safe == second_menu_id %}active {% endif %}">
+                            <td rowspan="2">
+                                <a href="?mid={{ menu_id }}&sid={{ row.id }}">{{ row.title }}</a>
+                            </td>
+                            <td>{{ row.title }}</td>
+                            <td>
+                                <a style="color: #333333;" href="{% url 'stark:RBAC_permission_change' row.id %}">
+                                    <i class="fa fa-edit" aria-hidden="true"></i></a>
+                                <a style="color: #d9534f;" href="{% url 'stark:RBAC_permission_delete' row.id %}">
+                                    <i class="fa fa-trash-o"></i></a>
+                            </td>
+                        </tr>
+                        <tr class="{% if row.id|safe == second_menu_id %}active {% endif %}">
+                            <td colspan="2" style="border-top: 0">{{ row.url }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-gavel" aria-hidden="true"></i>
+                    <span>权限</span>
+                    <div class="btn-group pull-right">
+                        {% if second_menu_id %}
+                            <a href="{% url 'stark:RBAC_permission_add' %}" class="right btn btn-success btn-xs" style="margin-right: 10px;">
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                <span>新建</span>
+                            </a>
+                        {% endif %}
+                        <a href="#" class="btn btn-xs btn-primary">
+                            <i class="fa fa-mail-forward" aria-hidden="true"></i>
+                            <span>批量操作</span>
+                        </a>
+                    </div>
+                </div>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>名称</th>
+                        <th>CODE&URL</th>
+                        <th>选项</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for row in permissions %}
+                        <tr>
+                            <td rowspan="2">{{ row.title }}</td>
+                            <td>{{ row.name }}</td>
+                            <td>
+                                <a style="color: #333333;"
+                                   href="{% url 'stark:RBAC_permission_change' row.id %}">
+                                    <i class="fa fa-edit" aria-hidden="true"></i></a>
+                                <a style="color: #d9534f;"
+                                   href="{% url 'stark:RBAC_permission_delete' row.id %}">
+                                    <i class="fa fa-trash-o"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="border-top: 0">{{ row.url }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

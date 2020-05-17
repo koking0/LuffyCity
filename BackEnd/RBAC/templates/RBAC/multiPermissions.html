@@ -1,0 +1,115 @@
+{% extends 'formwork.html' %}
+{% block content %}
+    <div class="container">
+        <form method="post" action="?type=generate" style="width: 90%">
+            {% csrf_token %}
+            {{ generateFormset.management_form }}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-th-list" aria-hidden="true"></i>
+                    <span>待新建权限列表</span>
+                    <button href="#" class="right btn btn-primary btn-xs pull-right"
+                            style="padding: 2px 8px;margin: -3px;">
+                        <i class="fa fa-save" aria-hidden="true"></i>
+                        <span>新建</span>
+                    </button>
+                </div>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th style="text-align: center">序号</th>
+                        <th style="text-align: center">名称</th>
+                        <th style="text-align: center">URL</th>
+                        <th style="text-align: center">别名</th>
+                        <th style="text-align: center">菜单</th>
+                        <th style="text-align: center">父权限</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for form in generateFormset %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+                            {% for field in  form %}
+                                <td>{{ field }}<span style="color: red;">{{ field.errors.0 }}</span></td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </form>
+        <form method="post" action="?type=update" style="width: 90%">
+            {% csrf_token %}
+            {{ updateFormset.management_form }}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-th-list" aria-hidden="true"></i>
+                    <span>待更新权限列表</span>
+                    <button href="#" class="right btn btn-primary btn-xs pull-right"
+                            style="padding: 2px 8px;margin: -3px;">
+                        <i class="fa fa-save" aria-hidden="true"></i>
+                        <span>保存</span>
+                    </button>
+                </div>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th style="text-align: center">序号</th>
+                        <th style="text-align: center">名称</th>
+                        <th style="text-align: center">URL</th>
+                        <th style="text-align: center">别名</th>
+                        <th style="text-align: center">菜单</th>
+                        <th style="text-align: center">父权限</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for form in updateFormset %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+                            {% for field in  form %}
+                                {% if forloop.first %}
+                                    {{ field }}
+                                {% else %}
+                                    <td>{{ field }}<span style="color: red;">{{ field.errors.0 }}</span></td>
+                                {% endif %}
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </form>
+        <div class="panel panel-default" style="width: 90%">
+            <div class="panel-heading">
+                <i class="fa fa-th-list" aria-hidden="true"></i>
+                <span>待删除权限列表</span>
+            </div>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th style="text-align: center">序号</th>
+                    <th style="text-align: center">名称</th>
+                    <th style="text-align: center">URL</th>
+                    <th style="text-align: center">别名</th>
+                    <th style="text-align: center">删除</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for row in deleteRowList %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ row.name }}</td>
+                        <td>{{ row.url }}</td>
+                        <td>{{ row.alias }}</td>
+                        <td>
+                            <a style="color: #d9534f;" href="#">
+                                <i class="fa fa-trash-o"></i>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}
