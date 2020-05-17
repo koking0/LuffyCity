@@ -39,6 +39,8 @@ INSTALLED_APPS = [
 	'Account.apps.AccountConfig',
 	'Classroom.apps.ClassroomConfig',
 	'Shopping.apps.ShoppingConfig',
+	'RBAC.apps.RbacConfig',
+	'Stark.apps.StarkConfig',
 ]
 
 MIDDLEWARE = [
