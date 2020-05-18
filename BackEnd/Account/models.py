@@ -2,7 +2,7 @@ from django.contrib.auth.models import AbstractUser
 from django.db import models
 
 
-__all__ = ["Account", "Student", "Teacher"]
+__all__ = ["Account", "Student", "Teacher", 'Manager']
 
 
 class Account(AbstractUser):
@@ -32,9 +32,18 @@ class Student(models.Model):
 
 class Teacher(models.Model):
 	"""老师表"""
-	teacher = models.OneToOneField(verbose_name="老师信息", to="Account", on_delete=models.PROTECT)
+	teacher = models.OneToOneField(verbose_name="老师信息", to="Account.Account", on_delete=models.PROTECT)
 	telephone = models.CharField(verbose_name="老师手机号", max_length=32)
 	remark = models.TextField(verbose_name="备注", null=True, blank=True)
 
 	def __str__(self):
 		return "%s" % self.teacher.username
+
+
+class Manager(models.Model):
+	"""管理员表"""
+	manager = models.OneToOneField(verbose_name="管理员信息", to="Account.Account", on_delete=models.PROTECT)
+	telephone = models.CharField(verbose_name="管理员信手机号", max_length=32)
+
+	def __str__(self):
+		return "%s" % self.manager.username
