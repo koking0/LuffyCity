@@ -12,7 +12,7 @@
 # ☆ ☆ ☆ ☆ ☆ ☆ ☆
 from django.urls import path
 
-from Course.views import CategoryView, CourseView, CourseDetailView, PracticalCourseDetailView, PracticalCategoryView, \
+from Course.view import CategoryView, CourseView, CourseDetailView, PracticalCourseDetailView, PracticalCategoryView, \
 	PracticalCourseView, DegreeCourseView
 
 urlpatterns = [

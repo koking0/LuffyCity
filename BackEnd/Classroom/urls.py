@@ -11,7 +11,7 @@
 # >>> Blog      : https://alex007.blog.csdn.net/
 # ☆ ☆ ☆ ☆ ☆ ☆ ☆
 from django.urls import path, re_path
-from Classroom.views import CourseView, QuestionView, HomeworkView, TeacherView, FileView, ApprovalView, \
+from Classroom.view import CourseView, QuestionView, HomeworkView, TeacherView, FileView, ApprovalView, \
 	QuestionReplyView
 
 urlpatterns = [
