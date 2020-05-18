@@ -199,7 +199,7 @@ class TeacherViewSerializer(serializers.ModelSerializer):
 		         'questionTitle': question.title,
 		         'questionContent': question.content,
 		         'questionEnvironment': question.environment}
-		        for question in Question.objects.filter(teacher=obj)]
+		        for question in Question.objects.filter(teacher=obj).filter(state=0)]
 
 	def get_taskList(self, obj):
 		return [{'taskId': task.id,
@@ -209,7 +209,7 @@ class TeacherViewSerializer(serializers.ModelSerializer):
 		         'taskDate': task.date,
 		         'taskAchievement': task.achievement,
 		         'taskComment': task.comment}
-		        for task in Task.objects.filter(teacher=obj)]
+		        for task in Task.objects.filter(teacher=obj).filter(state=0)]
 
 	class Meta:
 		model = Teacher

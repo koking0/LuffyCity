@@ -104,3 +104,13 @@ export const homeworkDetail = (id) => {
   return Axios.get(`http://127.0.0.1:8000/api/homework/homeworkDetail/${id}`,
     {params: {'token': localStorage.getItem('access_token')}}).then(res => res.data);
 }
+// 作业批改
+export const submitApproval = (data) => {
+  return Axios.post(`http://127.0.0.1:8000/api/homework/approval`,
+    qs.stringify(data)).then(res => res.data);
+}
+// 问题回复
+export const questionReply = (data) => {
+  return Axios.post(`http://127.0.0.1:8000/api/questions/reply`,
+    qs.stringify(data)).then(res => res.data);
+}

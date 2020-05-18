@@ -59,6 +59,18 @@ class TeacherView(APIView):
 		return Response(serializerObject.data)
 
 
+class ApprovalView(APIView):
+	def post(self, request):
+		taskId = request.data.get('taskId', None)
+		value = request.data.get('value', None)
+		comment = request.data.get('comment', None)
+		Task.objects.filter(id=taskId).update(achievement=value, comment=comment, state=1)
+		response = BaseResponse()
+		response.code = 200
+		response.data = "Successful Correction!"
+		return Response(response.dict)
+
+
 class HomeworkView(APIView):
 	def get(self, request, pk):
 		token = request.GET.get('token', None)
@@ -108,4 +120,15 @@ class QuestionView(APIView):
 		response = BaseResponse()
 		response.code = 200
 		response.data = "Successful questioning, Please wait for the good news!"
+		return Response(response.dict)
+
+
+class QuestionReplyView(APIView):
+	def post(self, request):
+		questionId = request.data.get('questionId', None)
+		reply = request.data.get('reply', None)
+		Question.objects.filter(id=questionId).update(solve=reply, state=1)
+		response = BaseResponse()
+		response.code = 200
+		response.data = "Reply Succeeded!"
 		return Response(response.dict)

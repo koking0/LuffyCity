@@ -11,12 +11,15 @@
 # >>> Blog      : https://alex007.blog.csdn.net/
 # ☆ ☆ ☆ ☆ ☆ ☆ ☆
 from django.urls import path, re_path
-from Classroom.views import CourseView, QuestionView, HomeworkView, TeacherView, FileView
+from Classroom.views import CourseView, QuestionView, HomeworkView, TeacherView, FileView, ApprovalView, \
+	QuestionReplyView
 
 urlpatterns = [
 	re_path('file/(?P<path>.*)', FileView.as_view()),
 	path('degree', CourseView.as_view()),
 	path('teacher', TeacherView.as_view()),
+	path('approval', ApprovalView.as_view()),
 	path('askQuestions', QuestionView.as_view()),
+	path('reply', QuestionReplyView.as_view()),
 	path('homeworkDetail/<int:pk>', HomeworkView.as_view()),
 ]

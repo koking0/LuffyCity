@@ -74,14 +74,24 @@
         </div>
         <div class="panel-body">
           <ul>
-            <li v-for="item in teacherDetailList.questionList" :key="item.id">
-              <div class="panel panel-success">
+            <li v-for="item in teacherDetailList.questionList" :key="item.questionId">
+              <div class="panel panel-success col-md-5" style="margin-right: 90px">
                 <div class="panel-heading">
                   <h3 class="panel-title">{{item.questionTitle}}</h3>
                 </div>
                 <div class="panel-body">
                   <p><span style="color: red;">问题内容：</span>{{item.questionContent}}</p>
                   <p><span style="color: red;">环境：</span>{{item.questionEnvironment}}</p>
+                  <p>
+                    <span style="color: red;">回复：</span>
+                    <label>
+                      <textarea style="width: 400px; height: 200px;" :id="item.questionId"></textarea>
+                    </label>
+                  </p>
+                  <button class="btn btn-info" style="width: 100px; height: 30px;"
+                          @click="submitQuestionReply(item.questionId)">
+                    提交
+                  </button>
                 </div>
               </div>
             </li>
@@ -94,10 +104,10 @@
         </div>
         <div class="panel-body">
           <ul>
-            <li v-for="item in teacherDetailList.taskList" :key="item.id">
-              <div class="panel panel-warning col-md-5" style="margin-right: 5px">
+            <li v-for="item in teacherDetailList.taskList" :key="item.taskId">
+              <div class="panel panel-warning col-md-5" style="margin-right: 90px">
                 <div class="panel-heading">
-                  <h3 class="panel-title">{{item.taskTitle}}</h3>
+                  <h3 class="panel-title">{{item.taskId}}:{{item.taskTitle}}</h3>
                 </div>
                 <div class="panel-body">
                   <p><span style="color: red;">学生：</span>{{item.taskStudent}}</p>
@@ -108,8 +118,6 @@
                     </el-link>
                   </div>
                 </div>
-              </div>
-              <div class="panel panel-warning col-md-6" style="margin-left: 5px">
                 <div class="panel-heading">
                   <h3 class="panel-title">导师批改</h3>
                 </div>
@@ -118,7 +126,16 @@
                     <span style="color: red;">成绩：</span>
                     <el-rate v-model="value" show-text allow-half></el-rate>
                   </p>
-                  <p><span style="color: red;">文件：</span>{{item.taskFilePath}}</p>
+                  <p>
+                    <span style="color: red;">点评：</span>
+                    <label>
+                      <textarea style="width: 400px; height: 200px;" v-model="comment"></textarea>
+                    </label>
+                  </p>
+                  <button class="btn btn-info" style="width: 100px; height: 30px;"
+                          @click="submitForApproval(item.taskId)">
+                    提交
+                  </button>
                 </div>
               </div>
             </li>
@@ -135,12 +152,41 @@
     data() {
       return {
         value: null,
+        comment: null,
+        reply: null,
         courseDetail: null,
         identity: null,
         teacherDetailList: null,
       }
     },
     methods: {
+      submitForApproval(taskId) {
+        let data = {
+          taskId: taskId,
+          value: this.value * 20,
+          comment: this.comment,
+        };
+        this.$http.submitApproval(data).then(res => {
+          console.log(res);
+          this.$message(res.data);
+          location.reload();
+        }).catch(err => {
+          console.log(err);
+        })
+      },
+      submitQuestionReply(questionId) {
+        let data = {
+          questionId: questionId,
+          reply: document.getElementById(questionId).value,
+        };
+        this.$http.questionReply(data).then(res => {
+          console.log(res);
+          this.$message(res.data);
+          location.reload();
+        }).catch(err => {
+          console.log(err);
+        })
+      },
       getCourse() {
         this.$http.classroomCourseList().then(res => {
           this.courseDetail = res;
