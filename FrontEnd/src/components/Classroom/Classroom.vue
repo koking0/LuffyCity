@@ -63,7 +63,8 @@
         <div class="panel-body">
           <ul>
             <li v-for="item in teacherDetailList.studentList" :key="item.id">
-              <img :src='item.studentAvatar' :alt="item.studentName">
+              <img :src='item.studentAvatar' :alt="item.studentName"
+                   style="height: 100px;width: 100px;float: left;margin-left: 20px;">
             </li>
           </ul>
         </div>

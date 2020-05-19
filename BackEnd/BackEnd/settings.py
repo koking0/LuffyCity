@@ -142,6 +142,7 @@ MENU_SESSION_KEY = "MatrixPermissionMenuKey"
 AUTO_DISCOVER_EXCLUDE = [
 	'/admin/.*',
 	'/api/.*',
+	'/media/.*',
 	'/login/',
 	'/logout/',
 	'/index/',
@@ -151,7 +152,7 @@ NO_PERMISSION_LIST = [
 	'/favicon.ico',
 	'/index/',
 	'/static/',
-	'/media/',
+	'/media/.*',
 	'/logout/',
 	'/api/',
 ]
@@ -159,7 +160,8 @@ NO_PERMISSION_LIST = [
 VALID_URL_LIST = [
 	'/api/.*',
 	'/login/',
+	'/media/.*',
+	'//media/.*',
 	'/static/',
-	'/media/',
 	'/admin/.*'
 ]
