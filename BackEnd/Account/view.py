@@ -6,7 +6,6 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from Account.models import Account, Student
-from Account.serializers import RegisterSerializer
 from utils.naseResponse import BaseResponse
 from utils.redisPool import POOL
 
