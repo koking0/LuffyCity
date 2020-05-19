@@ -22,10 +22,12 @@ class RbacMiddleware(MiddlewareMixin):
         """当用户请求进入时执行"""
         # 1.获取当前用户请求的 URL
         currentURL = request.path_info
+        print(f'当前请求URL:{currentURL}')
 
         # 2.验证 URL 是否在白名单
         for valid_url in settings.VALID_URL_LIST:
             if re.match(valid_url, currentURL):
+                print(f'当前请求URL:{currentURL}在白名单中。')
                 return None  # 返回 None 将继续执行该中间件之后的操作
 
         # 3.获取当前用户在 session 中的权限信息
@@ -47,12 +49,14 @@ class RbacMiddleware(MiddlewareMixin):
             if re.match("^%s$" % permission['url'], currentURL):
                 # 5.1、设置选中二级菜单
                 request.current_selected_permission = permission['pid'] or permission['id']
+                print(f'当前选中的菜单：{request.current_selected_permission}')
                 # 5.2、如果存在 pid，说明是三级菜单，否则是二级菜单
                 URLRecord.extend([{'title': permission['p_title'], 'url': permission['p_url']},
                                   {'title': permission['title'], 'url': permission['url']}]
                                  if permission['pid'] else
                                  [{'title': permission['title'], 'url': permission['url']}])
                 request.breadcrumb = URLRecord
+                print(f'路径导航：{request.breadcrumb}')
                 break
         else:
             return render(request, "RBAC/404.html")

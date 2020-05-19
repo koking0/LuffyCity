@@ -10,3 +10,10 @@
 # >>> Github    : https://github.com/koking0
 # >>> Blog      : https://alex007.blog.csdn.net/
 # ☆ ☆ ☆ ☆ ☆ ☆ ☆
+from Stark.main import StarkHandler, getChoice
+
+
+class EmploymentCourseHandler(StarkHandler):
+	def __init__(self, site, modelClass, prefix):
+		super().__init__(site, modelClass, prefix)
+		self.displayList = ["title", "studyNumber", "hours", 'slogan', 'price']

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 	'Shopping.apps.ShoppingConfig',
 	'RBAC.apps.RbacConfig',
 	'Stark.apps.StarkConfig',
+	'RBAC.templatetags'
 ]
 
 MIDDLEWARE = [
@@ -52,6 +53,7 @@ MIDDLEWARE = [
 	'django.contrib.messages.middleware.MessageMiddleware',
 	'django.middleware.clickjacking.XFrameOptionsMiddleware',
 	'utils.crossDomain.crossDomain',
+	'RBAC.middlewares.rbac.RbacMiddleware',
 ]
 
 ROOT_URLCONF = 'BackEnd.urls'
@@ -123,9 +125,41 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+	os.path.join(BASE_DIR, 'static')
+]
 
 # Media配置
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 AUTH_USER_MODEL = "Account.Account"
+
+# ----------------------------------- 权限配置 -----------------------------------
+PERMISSION_SESSION_KEY = "MatrixPermissionUrlListKey"
+MENU_SESSION_KEY = "MatrixPermissionMenuKey"
+
+AUTO_DISCOVER_EXCLUDE = [
+	'/admin/.*',
+	'/api/.*',
+	'/login/',
+	'/logout/',
+	'/index/',
+]
+
+NO_PERMISSION_LIST = [
+	'/favicon.ico',
+	'/index/',
+	'/static/',
+	'/media/',
+	'/logout/',
+	'/api/',
+]
+
+VALID_URL_LIST = [
+	'/api/.*',
+	'/login/',
+	'/static/',
+	'/media/',
+	'/admin/.*'
+]

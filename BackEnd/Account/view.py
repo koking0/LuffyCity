@@ -35,9 +35,6 @@ class LoginView(APIView):
 					"username": user.username,
 					"identity": user.identity,
 					"avatar": f"http://127.0.0.1:8000/media/{str(user.avatar)}",
-					"phone": 18812649207,
-					"has_password": True,
-					"balance": 3648,
 					"message": 'Login Successful!',
 				}
 				response.data = data

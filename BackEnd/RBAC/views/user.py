@@ -11,7 +11,6 @@
 # >>> Blog      : https://blog.csdn.net/weixin_43336281
 # ☆ ☆ ☆ ☆ ☆ ☆ ☆
 from RBAC import models
-from RBAC.parts.encryption import getMd5
 from django.shortcuts import render, redirect
 from RBAC.parts.initPermission import initPermission
 
@@ -22,10 +21,12 @@ def login(request):
         return render(request, 'RBAC/login.html')
     elif request.method == "POST":
         # 1.获取前端发送的用户名和密码
-        username = request.POST.get('username')
-        password = getMd5(request.POST.get('password', ''))
+        username = request.POST.get('username', None)
+        password = request.POST.get('password', None)
         # 2.根据用户名和密码去用户表中获取用户对象
+        print(f'username = {username}, password = {password}')
         user = models.RbacUserInfo.objects.filter(username=username, password=password).first()
+        print(user)
         # 3.如果用户不存在，返回错误信息
         if not user:
             return render(request, 'RBAC/login.html', {'msg': '用户名或密码错误'})

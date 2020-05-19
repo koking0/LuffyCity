@@ -13,3 +13,12 @@
 from Course import models
 from Stark.main import starkSite
 
+from Course.views.FreeCourse import FreeCourseHandler
+from Course.views.PracticalCourse import PracticalCourseHandler
+from Course.views.EmploymentCourse import EmploymentCourseHandler
+from Course.views.Category import CategoryHandler
+
+starkSite.register(models.FreeCourse, FreeCourseHandler)
+starkSite.register(models.PracticalCourse, PracticalCourseHandler)
+starkSite.register(models.EmploymentCourse, EmploymentCourseHandler)
+starkSite.register(models.Category, CategoryHandler)

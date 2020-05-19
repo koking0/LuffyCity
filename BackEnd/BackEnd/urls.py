@@ -24,9 +24,6 @@ from Stark.main import starkSite
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('stark/', starkSite.urls),
-    path('index/', user.index, name="index"),
-
     path('api/account/', include("Account.urls")),
 
     path('api/course/', include("Course.urls")),
@@ -41,5 +38,10 @@ urlpatterns = [
     path('api/get/', include("Classroom.urls")),
     path('api/questions/', include("Classroom.urls")),
 
-    re_path('media/(?P<path>.*)', serve, {'document_root': settings.MEDIA_ROOT})
+    re_path('media/(?P<path>.*)', serve, {'document_root': settings.MEDIA_ROOT}),
+
+    path('stark/', starkSite.urls),
+    path('index/', user.index, name="index"),
+    path('login/', user.login, name="login"),
+    path('logout/', user.logout, name="logout"),
 ]

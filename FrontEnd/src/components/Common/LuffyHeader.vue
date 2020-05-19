@@ -41,10 +41,13 @@
           </div>
           <div v-if="isUserLogin" class="nav-right-box" @mouseenter='enterHandler' @mouseleave='leaveHandler'>
             <div class="nav-right">
-              <div class="nav-study">
+              <div v-if="identity !== 1" class="nav-study">
                 <router-link :to="{ name:'Classroom' }">
                   我的教室
                 </router-link>
+              </div>
+              <div v-if="identity === 1" class="nav-study">
+                <a href="http://127.0.0.1:8000/index/" style="text-decoration: none;">后台管理</a>
               </div>
               <div class="nav-img">
                 <img alt="avatar" :src="avatar">
@@ -85,6 +88,7 @@
         currentUrl: null,
         isLogin: false,
         username: null,
+        identity: null,
         avatar: null,
         shop_cart_num: null,
         notice_num: null,
@@ -95,7 +99,8 @@
       Register,
     },
     created() {
-      let access_token = localStorage.getItem('access_token')
+      this.identity = Number(localStorage.getItem('identity'));
+      let access_token = localStorage.getItem('access_token');
       if (access_token) {
         this.username = localStorage.getItem('username');
         this.avatar = localStorage.getItem('avatar');

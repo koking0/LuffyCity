@@ -13,3 +13,12 @@
 from Account import models
 from Stark.main import starkSite
 
+from Account.views.Account import AccountHandler
+from Account.views.Student import StudentHandler
+from Account.views.Teacher import TeacherHandler
+from Account.views.Manager import ManagerHandler
+
+starkSite.register(models.Account, AccountHandler)
+starkSite.register(models.Student, StudentHandler)
+starkSite.register(models.Teacher, TeacherHandler)
+starkSite.register(models.Manager, ManagerHandler)
