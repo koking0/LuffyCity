@@ -16,4 +16,4 @@ from Stark.main import StarkHandler, getChoice
 class CategoryHandler(StarkHandler):
 	def __init__(self, site, modelClass, prefix):
 		super().__init__(site, modelClass, prefix)
-		self.displayList = ["title", getChoice('类别', 'courseType')]
+		self.displayList = ["title", getChoice('类别', 'categoryType')]
