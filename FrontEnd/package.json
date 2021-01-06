@@ -10,7 +10,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "element-ui": "^2.13.1",
     "popper.js": "^1.16.1",
     "qs": "^6.9.4",
