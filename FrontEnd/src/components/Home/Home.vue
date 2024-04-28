@@ -171,107 +171,107 @@
         </li>
       </a></ul>
     </div>
-    <div class="study-problem"><h1>在自学的路上，你是否也遇到了这些问题？</h1>
-      <ul>
-        <li><img
-          src="//hcdn1.luffycity.com/static/frontend/index/1@2x_1567483299.734612.png">
-          <p>自学自制力差坚持不下去</p> <span>01</span></li>
-        <li><img
-          src="//hcdn1.luffycity.com/static/frontend/index/2@2x_1567483299.815959.png">
-          <p>遇到问题不知道该问谁</p> <span>02</span></li>
-        <li><img
-          src="//hcdn1.luffycity.com/static/frontend/index/3@2x_1567483299.9631536.png">
-          <p>没有学习方向</p> <span>03</span></li>
-        <li><img
-          src="//hcdn1.luffycity.com/static/frontend/index/4@2x_1567483299.974014.png">
-          <p>浪费大量时间&amp;机会成本</p> <span>04</span></li>
-        <li><img
-          src="//hcdn1.luffycity.com/static/frontend/index/5@2x_1567483300.1571927.png">
-          <p>能看懂代码但不会写</p> <span>05</span></li>
-        <li><img
-          src="//hcdn1.luffycity.com/static/frontend/index/6@2x_1567483300.1598253.png">
-          <p>没有学习氛围 严重拖延症</p> <span>06</span></li>
-        <li><img
-          src="//hcdn1.luffycity.com/static/frontend/index/7@2x_1567483300.3511646.png">
-          <p>不知道该怎么学、学什么</p> <span>07</span></li>
-        <li><img
-          src="//hcdn1.luffycity.com/static/frontend/index/8@2x_1567483300.3661962.png">
-          <p>学习进度慢到窒息，慢到放弃</p> <span>08</span></li>
-      </ul>
-    </div>
-    <div class="solve-problem"><h1 class="problem-title">路飞学城帮你解决所有问题！</h1>
-      <div class="content">
-        <div class="title"><h1>更符合在线学习的“学、练、改、管、测”教学模式</h1>
-          <p>基于“输入、输出、纠正”的科学方法论，业内独创1v1辅导+闯关考核学习模式，自学失败者的救星，学好IT的正确途径</p></div>
-        <div class="content-item"><img
-          src="//hcdn1.luffycity.com/static/frontend/index/line@2x_1567483309.5746026.png">
-          <section class="item1"><img
-            src="//hcdn1.luffycity.com/static/frontend/index/study@2x_1567483310.8556564.png">
-            <p>在线视频学习</p>
-            <article>知名网红讲师真人出境，专为线上录<br>制。高清录播，重复观看，利用碎片化<br>时间系统学习，巩固复习。
-            </article>
-          </section>
-          <section class="item2"><img
-            src="//hcdn1.luffycity.com/static/frontend/index/practice@2x_1567483309.9485178.png">
-            <p>章节作业 + 阶段测试</p>
-            <article>章节结束，导师布置作业。<br>阶段结束，导师指导实战测试，根<br>据结果为学员量身定制学习计划。
-            </article>
-          </section>
-          <section class="item3"><img
-            src="//hcdn1.luffycity.com/static/frontend/index/fix@2x_1567483306.8539662.png">
-            <p>逐行代码批改</p>
-            <article>所有作业和实战，我们针对每一位学员1对1批改；<br>不是简单的打分式批改，是详细的逐行代码批改。</article>
-          </section>
-          <section class="item4"><img
-            src="//hcdn1.luffycity.com/static/frontend/index/manage@2x_1567483309.7750795.png">
-            <p>导师 + 班主任督学</p>
-            <article>导师全程陪伴式辅导，7*24h学习群答<br>疑。班主任定期跟进学习进度，彻底治<br>愈您的拖延症。
-            </article>
-          </section>
-          <section class="item5"><img
-            src="//hcdn1.luffycity.com/static/frontend/index/test@2x_1567483310.9115348.png">
-            <p>能力测验 + 就业推荐</p>
-            <article>智能题库针对知识点精准测验，<br>查漏补缺；就业老师1V1模拟面<br>试，推荐就业。</article>
-          </section>
-        </div>
-      </div>
-    </div>
-    <div class="know-luffy">
-      <h1>带你认识路飞学城</h1>
-      <ul class="luffy-items">
-        <li>
-          <img src="//hcdn1.luffycity.com/static/frontend/index/qiye@2x_1567483310.1013422.png">
-          <p>路飞的愿景</p>
-          <span>成为中国社会公认的最受信赖IT教育品牌</span>
-        </li>
-        <li>
-          <img src="//hcdn1.luffycity.com/static/frontend/index/diannao@2x_1567483308.2864695.png">
-          <p>路飞的使命</p>
-          <span>为学员提供高质量的IT课程和服务，帮助年轻<br>人通过努力学习获得体面的工作和生活</span>
-        </li>
-        <li>
-          <img src="//hcdn1.luffycity.com/static/frontend/index/renwu@2x_1567483310.1931462.png">
-          <p>路飞的价值观</p>
-          <span>诚实正直、追求卓越、团队精神、信守承诺<br>公平正义</span>
-        </li>
-      </ul>
-      <button data-toggle="modal" data-target="#LuffyCityVideo" data-whatever="@mdo">
-        <img class="img1" src="/static/images/bofang.png" alt="bofang">
-        <img class="img2" src="/static/images/bofang-bak14.png" alt="bofang-bak14">
-        <span>带你认识路飞学城</span>
-      </button>
-      <div class="modal fade" id="LuffyCityVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="popup-content">
-              <iframe src="//player.bilibili.com/player.html?aid=24491161&bvid=BV1mW411A7vm&cid=41131694&page=1"
-                      width="750" height="500" scrolling="no" border="0" frameborder="no" framespacing="0"
-                      allowfullscreen="true"></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<!--    <div class="study-problem"><h1>在自学的路上，你是否也遇到了这些问题？</h1>-->
+<!--      <ul>-->
+<!--        <li><img-->
+<!--          src="//hcdn1.luffycity.com/static/frontend/index/1@2x_1567483299.734612.png">-->
+<!--          <p>自学自制力差坚持不下去</p> <span>01</span></li>-->
+<!--        <li><img-->
+<!--          src="//hcdn1.luffycity.com/static/frontend/index/2@2x_1567483299.815959.png">-->
+<!--          <p>遇到问题不知道该问谁</p> <span>02</span></li>-->
+<!--        <li><img-->
+<!--          src="//hcdn1.luffycity.com/static/frontend/index/3@2x_1567483299.9631536.png">-->
+<!--          <p>没有学习方向</p> <span>03</span></li>-->
+<!--        <li><img-->
+<!--          src="//hcdn1.luffycity.com/static/frontend/index/4@2x_1567483299.974014.png">-->
+<!--          <p>浪费大量时间&amp;机会成本</p> <span>04</span></li>-->
+<!--        <li><img-->
+<!--          src="//hcdn1.luffycity.com/static/frontend/index/5@2x_1567483300.1571927.png">-->
+<!--          <p>能看懂代码但不会写</p> <span>05</span></li>-->
+<!--        <li><img-->
+<!--          src="//hcdn1.luffycity.com/static/frontend/index/6@2x_1567483300.1598253.png">-->
+<!--          <p>没有学习氛围 严重拖延症</p> <span>06</span></li>-->
+<!--        <li><img-->
+<!--          src="//hcdn1.luffycity.com/static/frontend/index/7@2x_1567483300.3511646.png">-->
+<!--          <p>不知道该怎么学、学什么</p> <span>07</span></li>-->
+<!--        <li><img-->
+<!--          src="//hcdn1.luffycity.com/static/frontend/index/8@2x_1567483300.3661962.png">-->
+<!--          <p>学习进度慢到窒息，慢到放弃</p> <span>08</span></li>-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--    <div class="solve-problem"><h1 class="problem-title">路飞学城帮你解决所有问题！</h1>-->
+<!--      <div class="content">-->
+<!--        <div class="title"><h1>更符合在线学习的“学、练、改、管、测”教学模式</h1>-->
+<!--          <p>基于“输入、输出、纠正”的科学方法论，业内独创1v1辅导+闯关考核学习模式，自学失败者的救星，学好IT的正确途径</p></div>-->
+<!--        <div class="content-item"><img-->
+<!--          src="//hcdn1.luffycity.com/static/frontend/index/line@2x_1567483309.5746026.png">-->
+<!--          <section class="item1"><img-->
+<!--            src="//hcdn1.luffycity.com/static/frontend/index/study@2x_1567483310.8556564.png">-->
+<!--            <p>在线视频学习</p>-->
+<!--            <article>知名网红讲师真人出境，专为线上录<br>制。高清录播，重复观看，利用碎片化<br>时间系统学习，巩固复习。-->
+<!--            </article>-->
+<!--          </section>-->
+<!--          <section class="item2"><img-->
+<!--            src="//hcdn1.luffycity.com/static/frontend/index/practice@2x_1567483309.9485178.png">-->
+<!--            <p>章节作业 + 阶段测试</p>-->
+<!--            <article>章节结束，导师布置作业。<br>阶段结束，导师指导实战测试，根<br>据结果为学员量身定制学习计划。-->
+<!--            </article>-->
+<!--          </section>-->
+<!--          <section class="item3"><img-->
+<!--            src="//hcdn1.luffycity.com/static/frontend/index/fix@2x_1567483306.8539662.png">-->
+<!--            <p>逐行代码批改</p>-->
+<!--            <article>所有作业和实战，我们针对每一位学员1对1批改；<br>不是简单的打分式批改，是详细的逐行代码批改。</article>-->
+<!--          </section>-->
+<!--          <section class="item4"><img-->
+<!--            src="//hcdn1.luffycity.com/static/frontend/index/manage@2x_1567483309.7750795.png">-->
+<!--            <p>导师 + 班主任督学</p>-->
+<!--            <article>导师全程陪伴式辅导，7*24h学习群答<br>疑。班主任定期跟进学习进度，彻底治<br>愈您的拖延症。-->
+<!--            </article>-->
+<!--          </section>-->
+<!--          <section class="item5"><img-->
+<!--            src="//hcdn1.luffycity.com/static/frontend/index/test@2x_1567483310.9115348.png">-->
+<!--            <p>能力测验 + 就业推荐</p>-->
+<!--            <article>智能题库针对知识点精准测验，<br>查漏补缺；就业老师1V1模拟面<br>试，推荐就业。</article>-->
+<!--          </section>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="know-luffy">-->
+<!--      <h1>带你认识路飞学城</h1>-->
+<!--      <ul class="luffy-items">-->
+<!--        <li>-->
+<!--          <img src="//hcdn1.luffycity.com/static/frontend/index/qiye@2x_1567483310.1013422.png">-->
+<!--          <p>路飞的愿景</p>-->
+<!--          <span>成为中国社会公认的最受信赖IT教育品牌</span>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <img src="//hcdn1.luffycity.com/static/frontend/index/diannao@2x_1567483308.2864695.png">-->
+<!--          <p>路飞的使命</p>-->
+<!--          <span>为学员提供高质量的IT课程和服务，帮助年轻<br>人通过努力学习获得体面的工作和生活</span>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <img src="//hcdn1.luffycity.com/static/frontend/index/renwu@2x_1567483310.1931462.png">-->
+<!--          <p>路飞的价值观</p>-->
+<!--          <span>诚实正直、追求卓越、团队精神、信守承诺<br>公平正义</span>-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--      <button data-toggle="modal" data-target="#LuffyCityVideo" data-whatever="@mdo">-->
+<!--        <img class="img1" src="/static/images/bofang.png" alt="bofang">-->
+<!--        <img class="img2" src="/static/images/bofang-bak14.png" alt="bofang-bak14">-->
+<!--        <span>带你认识路飞学城</span>-->
+<!--      </button>-->
+<!--      <div class="modal fade" id="LuffyCityVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">-->
+<!--        <div class="modal-dialog" role="document">-->
+<!--          <div class="modal-content">-->
+<!--            <div class="popup-content">-->
+<!--              <iframe src="//player.bilibili.com/player.html?aid=24491161&bvid=BV1mW411A7vm&cid=41131694&page=1"-->
+<!--                      width="750" height="500" scrolling="no" border="0" frameborder="no" framespacing="0"-->
+<!--                      allowfullscreen="true"></iframe>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
   </div>
 </template>
 

@@ -4,7 +4,6 @@
       <span>我的购物车</span>
       <small>共<span>{{goods.length}}</span>门课程</small>
     </h3>
-
     <el-table ref="multipleTable" :data="goods" tooltip-effect="dark" style="width: 100%"
               @selection-change="handleSelectionChange">
       <el-table-column type="selection" width="150"></el-table-column>

@@ -9,7 +9,6 @@ import 'bootstrap'
 import '../static/global/global.css'
 
 
-
 // store的引入
 import store from '../src/store'
 // 全局守卫
@@ -17,20 +16,20 @@ router.beforeEach((to, from, next) => {
   if (localStorage.getItem('access_token')) {
     // 用户登录过
     let user = {
-      access_token:localStorage.getItem('access_token'),
-      username:localStorage.getItem('username'),
-      avatar:localStorage.getItem('avatar'),
-      shop_cart_num:localStorage.getItem('shop_cart_num')
+      access_token: localStorage.getItem('access_token'),
+      username: localStorage.getItem('username'),
+      avatar: localStorage.getItem('avatar'),
+      shop_cart_num: localStorage.getItem('shop_cart_num')
     };
-    store.dispatch('getUserInfo',user);
+    store.dispatch('getUserInfo', user);
   }
   next();
 })
 
 
-
 import * as api from './restful/api'
-Vue.prototype.$http=api
+
+Vue.prototype.$http = api
 
 // 导入elementUI
 import ElementUI from 'element-ui'
@@ -44,6 +43,6 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  components: { App },
+  components: {App},
   template: '<App/>'
 })

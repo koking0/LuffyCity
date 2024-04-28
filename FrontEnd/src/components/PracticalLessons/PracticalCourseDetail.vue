@@ -18,13 +18,13 @@
           </p>
           <div v-if="!courseDetail.isBuy" class="bottom">
             <p class="btns">
-              <button class="btn1" @click="buy">立即购买</button>
-              <button class="btn2">免费试学</button>
+              <button class="btn1" @click="addShopCart">加入购物车</button>
+<!--              <button class="btn2">免费试学</button>-->
             </p>
-            <p v-if="!courseDetail.isBuy" class="add" @click="addShopCart">
-              <img src="/static/images/course-shop.svg" alt="course-shop">
-              <span>加入购物车</span>
-            </p>
+<!--            <p v-if="!courseDetail.isBuy" class="add" @click="addShopCart">-->
+<!--              <img src="/static/images/course-shop.svg" alt="course-shop">-->
+<!--              <span>加入购物车</span>-->
+<!--            </p>-->
           </div>
         </div>
       </div>

@@ -77,12 +77,12 @@
       return {
         headerList: [
           {id: 1, name: 'Home', title: '首页'},
-          {id: 2, name: 'FreeLessons', title: '免费课'},
+          // {id: 2, name: 'FreeLessons', title: '免费课'},
           {id: 3, name: 'PracticalLessons', title: '实战课'},
-          {id: 4, name: 'LightClass', title: '轻课'},
-          {id: 5, name: 'EmploymentClass', title: '就业班'},
-          {id: 6, name: 'QuestionBank', title: '题库'},
-          {id: 7, name: 'StudentAchievement', title: '学员成果'},
+          // {id: 4, name: 'LightClass', title: '轻课'},
+          // {id: 5, name: 'EmploymentClass', title: '就业班'},
+          // {id: 6, name: 'QuestionBank', title: '题库'},
+          // {id: 7, name: 'StudentAchievement', title: '学员成果'},
         ],
         isShow: false,
         currentUrl: null,
